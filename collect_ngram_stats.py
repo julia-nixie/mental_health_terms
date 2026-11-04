@@ -31,20 +31,29 @@ BATCH = 10             # phrases per request (viewer allows ~12 comma-separated)
 PAUSE = 1.5            # seconds between requests (be polite / avoid 429)
 
 
-def to_query(variant: str) -> str:
+def to_query(variant: str, keep_punctuation: bool = False) -> str:
     """Convert a variant into Ngram Viewer syntax.
 
-    The viewer tokenizes punctuation as separate tokens ("post-traumatic" ->
-    "post - traumatic"), and '-', '/', '+', '(' ')' etc. are query operators,
-    so each punctuation mark is padded with spaces and the phrase is later
-    wrapped in no extra quoting. Commas separate queries, so they are dropped
-    from the phrase (and counted as a token by the viewer: we keep them as
-    token for length checking only).
+    Default (symbol-free): everything that is not a letter or digit becomes a
+    space, so 'attention-deficit/hyperactivity disorder' is searched as
+    'attention deficit hyperactivity disorder'. A trailing parenthetical
+    ('... disorder (adhd)') is dropped (abbreviations are separate variants),
+    a mid-phrase one keeps its words, and "'s" is removed
+    ("alzheimer's disease" -> "alzheimer disease").
+    This matches only text written without the symbols, but avoids the
+    viewer counting '-', '/', '(' ... as extra tokens and as operators.
+
+    keep_punctuation=True pads each of - / ( ) , with spaces instead, which is
+    how the viewer tokenizes them (each then counts as a token).
     """
     v = variant.strip().lower()
-    v = re.sub(r"([/()\-,])", r" \1 ", v)
-    v = re.sub(r"\s+", " ", v).strip()
-    return v
+    if keep_punctuation:
+        v = re.sub(r"([/()\-,])", r" \1 ", v)
+    else:
+        v = re.sub(r"\s*\([^()]*\)\s*$", "", v)
+        v = re.sub(r"['\u2019]s\b", "", v)
+        v = re.sub(r"[^\w]+|_", " ", v)
+    return re.sub(r"\s+", " ", v).strip()
 
 
 def is_acronym(variant: str, all_variants) -> bool:
@@ -148,6 +157,9 @@ def main():
                     help="match every variant case-sensitively (lower-case)")
     ap.add_argument("--no-acronym-case", action="store_true",
                     help="do not search abbreviations upper-case/case-sensitive")
+    ap.add_argument("--keep-punctuation", action="store_true",
+                    help="search hyphens, slashes, parentheses and commas as tokens "
+                         "instead of replacing them with spaces")
     ap.add_argument("--no-truncate", action="store_true",
                     help="drop variants over 5 tokens instead of cutting them to 5")
     args = ap.parse_args()
@@ -160,7 +172,7 @@ def main():
 
     def plan(v, variants):
         """-> (query, case_insensitive) for one variant."""
-        q = to_query(v)
+        q = to_query(v, args.keep_punctuation)
         if not args.no_acronym_case and is_acronym(v, variants):
             return q.upper(), False
         return q, ci
@@ -181,7 +193,7 @@ def main():
     cut_owners = {}                             # cut query -> set of term indexes
     for i, (_, _, variants) in enumerate(terms):
         for v in variants:
-            q = to_query(v)
+            q = to_query(v, args.keep_punctuation)
             if token_count(q) > MAX_NGRAM and not args.no_truncate:
                 cut_owners.setdefault(truncate_query(q), set()).add(i)
 
