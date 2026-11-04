@@ -31,7 +31,7 @@ BATCH = 10             # phrases per request (viewer allows ~12 comma-separated)
 PAUSE = 1.5            # seconds between requests (be polite / avoid 429)
 
 
-def to_query(variant: str, keep_punctuation: bool = False) -> str:
+def to_query(variant: str, keep_punctuation: bool = True) -> str:
     """Convert a variant into Ngram Viewer syntax.
 
     Default (symbol-free): everything that is not a letter or digit becomes a
@@ -48,12 +48,32 @@ def to_query(variant: str, keep_punctuation: bool = False) -> str:
     """
     v = variant.strip().lower()
     if keep_punctuation:
+        v = v.replace("\u2019", "'")
+        v = re.sub(r"(\w)'s\b", r"\1 's", v)   # the form the API itself echoes back
         v = re.sub(r"([/()\-,])", r" \1 ", v)
     else:
         v = re.sub(r"\s*\([^()]*\)\s*$", "", v)
         v = re.sub(r"['\u2019]s\b", "", v)
         v = re.sub(r"[^\w]+|_", " ", v)
     return re.sub(r"\s+", " ", v).strip()
+
+
+def spellings(q: str):
+    """Alternative spellings of one query, in the order they are tried.
+
+    The JSON endpoint is inconsistent: 'Newcomb - Benford' can return [] while
+    'Newcomb-Benford' returns data (and the other way round for other terms).
+    So the as-written (spaced) form is tried first, then ' - ' collapsed to
+    '-', then " 's" collapsed to "'s", then both. Same tokens in every case.
+    """
+    hy = q.replace(" - ", "-")
+    ap = q.replace(" 's", "'s")
+    both = hy.replace(" 's", "'s")
+    out = []
+    for x in (q, hy, ap, both):
+        if x not in out:
+            out.append(x)
+    return out
 
 
 def is_acronym(variant: str, all_variants) -> bool:
@@ -227,26 +247,46 @@ def main():
                 truncated.append((v, t))
         final.append(used)
 
-    todo = {True: [], False: []}                # keyed by case_insensitive
+    pairs = []                                  # every (query, case_insensitive) in use
     for used in final:
-        for q, c in used:
-            if cache_key(q, c) not in cache and q not in todo[c]:
-                todo[c].append(q)
+        for pr in used:
+            if pr not in pairs:
+                pairs.append(pr)
 
-    n = len(todo[True]) + len(todo[False])
-    print(f"{n} queries to fetch; {len(truncated)} long variants cut to {MAX_NGRAM} tokens, "
-          f"{len(dropped)} dropped", file=sys.stderr)
-    done = 0
-    for c, queries in todo.items():   # case mode is per request, so batch separately
-        for i in range(0, len(queries), BATCH):
-            batch = queries[i:i + BATCH]
-            data = fetch_batch(batch, args.corpus, args.start, args.end, args.smoothing, c)
-            for q, series in match_results(batch, data, c).items():
-                cache[cache_key(q, c)] = series  # None => no data in corpus
-            cache_path.write_text(json.dumps(cache))
-            done += len(batch)
-            print(f"  fetched {done}/{n}", file=sys.stderr)
-            time.sleep(PAUSE)
+    def resolve(q, c):
+        """First non-empty answer over the spellings, or None if all are empty."""
+        for sp in spellings(q):
+            series = cache.get(cache_key(sp, c))
+            if series:
+                return series
+        return None
+
+    n_spell = max(len(spellings(q)) for q, _ in pairs)
+    for level in range(n_spell):                # round k: try the k-th spelling where still needed
+        todo = {True: [], False: []}            # keyed by case_insensitive
+        for q, c in pairs:
+            sps = spellings(q)
+            if level >= len(sps) or any(cache.get(cache_key(x, c)) for x in sps[:level]):
+                continue                        # no such spelling, or already answered
+            if cache_key(sps[level], c) not in cache and sps[level] not in todo[c]:
+                todo[c].append(sps[level])
+        n = len(todo[True]) + len(todo[False])
+        print(f"spelling {level + 1}: {n} queries to fetch"
+              + (f"; {len(truncated)} long variants cut to {MAX_NGRAM} tokens, "
+                 f"{len(dropped)} dropped" if level == 0 else ""), file=sys.stderr)
+        done = 0
+        for c, queries in todo.items():   # case mode is per request, so batch separately
+            for i in range(0, len(queries), BATCH):
+                batch = queries[i:i + BATCH]
+                data = fetch_batch(batch, args.corpus, args.start, args.end, args.smoothing, c)
+                for q, series in match_results(batch, data, c).items():
+                    cache[cache_key(q, c)] = series  # None => empty for this spelling
+                cache_path.write_text(json.dumps(cache))
+                done += len(batch)
+                print(f"  fetched {done}/{n}", file=sys.stderr)
+                time.sleep(PAUSE)
+
+    absent = [q for q, c in pairs if resolve(q, c) is None]
 
     years = list(range(args.start, args.end + 1))
     with open(args.output, "w", newline="", encoding="utf-8") as f:
@@ -255,13 +295,17 @@ def main():
         for (term, category, _), used in zip(terms, final):
             total = [0.0] * len(years)
             for q, c in used:
-                series = cache.get(cache_key(q, c))
+                series = resolve(q, c)
                 if series:
                     for k, x in enumerate(series[:len(years)]):
                         total[k] += x
             for y, x in zip(years, total):
                 w.writerow([term, category, y, f"{x:.6e}"])
 
+    if absent:
+        print(f"No data under any spelling ({len(absent)}):", file=sys.stderr)
+        for q in absent:
+            print("  -", q, file=sys.stderr)
     if truncated:
         print("Cut to 5 tokens:", file=sys.stderr)
         for v, t in truncated:
