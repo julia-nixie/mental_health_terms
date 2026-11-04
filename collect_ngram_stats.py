@@ -157,12 +157,14 @@ def main():
                     help="match every variant case-sensitively (lower-case)")
     ap.add_argument("--no-acronym-case", action="store_true",
                     help="do not search abbreviations upper-case/case-sensitive")
-    ap.add_argument("--keep-punctuation", action="store_true",
-                    help="search hyphens, slashes, parentheses and commas as tokens "
-                         "instead of replacing them with spaces")
+    ap.add_argument("--strip-punctuation", action="store_true",
+                    help="replace hyphens, slashes, parentheses and commas with spaces "
+                         "(fits more variants in 5 tokens, but then only matches text "
+                         "written WITHOUT those symbols)")
     ap.add_argument("--no-truncate", action="store_true",
                     help="drop variants over 5 tokens instead of cutting them to 5")
     args = ap.parse_args()
+    args.keep_punctuation = not args.strip_punctuation
     ci = not args.case_sensitive
 
     terms = list(load_terms(Path(args.input)))
