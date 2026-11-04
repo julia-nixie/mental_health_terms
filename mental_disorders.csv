@@ -8,13 +8,13 @@ separation anxiety disorder,anxiety disorder,separation anxiety disorder
 specific phobia,anxiety disorder,specific phobia
 social anxiety disorder,anxiety disorder,social anxiety disorder; sad; social phobia
 anxiety due to another medical condition,anxiety disorder,anxiety due to another medical condition
-substance/medication-induced anxiety disorder,anxiety disorder,substance/medication-induced anxiety disorder; substance-induced anxiety disorder; medication-induced anxiety disorder
+substance/medication-induced anxiety disorder,anxiety disorder,substance/medication-induced anxiety disorder; substance-induced anxiety disorder; medication-induced anxiety disorder; substance/medication induced anxiety disorder; substance medication-induced anxiety disorder; substance medication induced anxiety disorder; substance induced anxiety disorder; medication induced anxiety disorder
 other specified anxiety disorder,anxiety disorder,other specified anxiety disorder
 unspecified anxiety disorder,anxiety disorder,unspecified anxiety disorder
 dissociative disorder,n/a,dissociative disorder
 dissociative identity disorder,dissociative disorder,dissociative identity disorder; did
 dissociative amnesia,dissociative disorder,dissociative amnesia; psychogenic amnesia
-depersonalization/derealization disorder,dissociative disorder,depersonalization/derealization disorder; depersonalisation/derealisation disorder; dpdr
+depersonalization/derealization disorder,dissociative disorder,depersonalization/derealization disorder; depersonalisation/derealisation disorder; dpdr; depersonalization derealization disorder; depersonalisation derealisation disorder
 dissociative amnesia with dissociative fugue,dissociative disorder,dissociative amnesia with dissociative fugue
 dissociative neurological symptom disorder,dissociative disorder,dissociative neurological symptom disorder
 other specified dissociative disorder (osdd),dissociative disorder,other specified dissociative disorder (osdd); other specified dissociative disorder; osdd
@@ -33,34 +33,34 @@ bipolar and related disorder,n/a,bipolar and related disorder
 bipolar i disorder,bipolar and related disorder,bipolar i disorder
 bipolar ii disorder,bipolar and related disorder,bipolar ii disorder
 bipolar and related disorder due to another medical condition,bipolar and related disorder,bipolar and related disorder due to another medical condition
-substance/medication-induced bipolar and related disorders,bipolar and related disorder,substance/medication-induced bipolar and related disorders; substance-induced bipolar and related disorders; medication-induced bipolar and related disorders
+substance/medication-induced bipolar and related disorders,bipolar and related disorder,substance/medication-induced bipolar and related disorders; substance-induced bipolar and related disorders; medication-induced bipolar and related disorders; substance/medication induced bipolar and related disorders; substance medication-induced bipolar and related disorders; substance medication induced bipolar and related disorders; substance induced bipolar and related disorders; medication induced bipolar and related disorders
 other specified and related bipolar disorder,bipolar and related disorder,other specified and related bipolar disorder
 unspecified bipolar and related disorder,bipolar and related disorder,unspecified bipolar and related disorder
 cyclothymia,bipolar and related disorder,cyclothymia
-trauma- and stressor-related disorder,n/a,trauma- and stressor-related disorder
+trauma- and stressor-related disorder,n/a,trauma- and stressor-related disorder; trauma and stressor related disorder
 reactive attachment disorder,trauma- and stressor-related disorder,reactive attachment disorder
 disinhibited social engagement disorder,trauma- and stressor-related disorder,disinhibited social engagement disorder
-post-traumatic stress disorder (ptsd),trauma- and stressor-related disorder,post-traumatic stress disorder (ptsd); post-traumatic stress disorder; posttraumatic stress disorder; ptsd
-post-traumatic embitterment disorder (pted),trauma- and stressor-related disorder,post-traumatic embitterment disorder (pted); post-traumatic embitterment disorder; posttraumatic embitterment disorder; pted
+post-traumatic stress disorder (ptsd),trauma- and stressor-related disorder,post-traumatic stress disorder (ptsd); post-traumatic stress disorder; posttraumatic stress disorder; ptsd; post traumatic stress disorder
+post-traumatic embitterment disorder (pted),trauma- and stressor-related disorder,post-traumatic embitterment disorder (pted); post-traumatic embitterment disorder; posttraumatic embitterment disorder; pted; post traumatic embitterment disorder
 acute stress disorder,trauma- and stressor-related disorder,acute stress disorder
 adjustment disorders,trauma- and stressor-related disorder,adjustment disorders
-complex post-traumatic stress disorder (c-ptsd),trauma- and stressor-related disorder,complex post-traumatic stress disorder (c-ptsd); complex post-traumatic stress disorder; complex ptsd; c-ptsd; cptsd
+complex post-traumatic stress disorder (c-ptsd),trauma- and stressor-related disorder,complex post-traumatic stress disorder (c-ptsd); complex post-traumatic stress disorder; complex ptsd; c-ptsd; cptsd; complex post traumatic stress disorder
 prolonged grief disorder,trauma- and stressor-related disorder,prolonged grief disorder
-other specified trauma- and stressor-related disorder,trauma- and stressor-related disorder,other specified trauma- and stressor-related disorder
-unspecified trauma- and stressor-related disorder,trauma- and stressor-related disorder,unspecified trauma- and stressor-related disorder
+other specified trauma- and stressor-related disorder,trauma- and stressor-related disorder,other specified trauma- and stressor-related disorder; other specified trauma and stressor related disorder
+unspecified trauma- and stressor-related disorder,trauma- and stressor-related disorder,unspecified trauma- and stressor-related disorder; unspecified trauma and stressor related disorder
 neurodevelopmental disorder,n/a,neurodevelopmental disorder
 intellectual developmental disorder,neurodevelopmental disorder,intellectual developmental disorder; intellectual disability
 language disorder,neurodevelopmental disorder,language disorder
 sensory processing disorder,neurodevelopmental disorder,sensory processing disorder; spd
 speech sound disorder,neurodevelopmental disorder,speech sound disorder
-childhood-onset fluency disorder (stuttering),neurodevelopmental disorder,childhood-onset fluency disorder (stuttering); childhood-onset fluency disorder; stuttering
+childhood-onset fluency disorder (stuttering),neurodevelopmental disorder,childhood-onset fluency disorder (stuttering); childhood-onset fluency disorder; stuttering; childhood onset fluency disorder
 aphasia,neurodevelopmental disorder,aphasia
 social (pragmatic) communication disorder,neurodevelopmental disorder,social (pragmatic) communication disorder
 pervasive developmental disorder,neurodevelopmental disorder,pervasive developmental disorder
 auditory processing disorder,neurodevelopmental disorder,auditory processing disorder; apd
 communication disorder,neurodevelopmental disorder,communication disorder
 autism spectrum disorder,neurodevelopmental disorder,autism spectrum disorder; asd
-attention-deficit/hyperactivity disorder (adhd),neurodevelopmental disorder,attention-deficit/hyperactivity disorder (adhd); attention-deficit/hyperactivity disorder; attention deficit hyperactivity disorder; adhd
+attention-deficit/hyperactivity disorder (adhd),neurodevelopmental disorder,attention-deficit/hyperactivity disorder (adhd); attention-deficit/hyperactivity disorder; attention deficit hyperactivity disorder; adhd; attention deficit/hyperactivity disorder; attention-deficit hyperactivity disorder
 developmental coordination disorder (dyspraxia),neurodevelopmental disorder,developmental coordination disorder (dyspraxia); developmental coordination disorder; dyspraxia; dcd
 stereotypic movement disorder,neurodevelopmental disorder,stereotypic movement disorder
 tourette syndrome,neurodevelopmental disorder,tourette syndrome; tourette's syndrome; tourette's; ts
@@ -69,22 +69,22 @@ tic disorders,neurodevelopmental disorder,tic disorders
 specific learning disorder with impairment in reading (dyslexia),neurodevelopmental disorder,specific learning disorder with impairment in reading (dyslexia); specific learning disorder with impairment in reading; dyslexia
 specific learning disorder with impairment in mathematics (dyscalculia),neurodevelopmental disorder,specific learning disorder with impairment in mathematics (dyscalculia); specific learning disorder with impairment in mathematics; dyscalculia
 specific learning disorder with impairment in written expression (dysgraphia),neurodevelopmental disorder,specific learning disorder with impairment in written expression (dysgraphia); specific learning disorder with impairment in written expression; dysgraphia
-"nonverbal learning disorder (nvld, nld)",neurodevelopmental disorder,"nonverbal learning disorder (nvld, nld); nonverbal learning disorder; non-verbal learning disorder; nvld; nld"
+"nonverbal learning disorder (nvld, nld)",neurodevelopmental disorder,"nonverbal learning disorder (nvld, nld); nonverbal learning disorder; non-verbal learning disorder; nvld; nld; non verbal learning disorder"
 other specified neurodevelopmental disorder,neurodevelopmental disorder,other specified neurodevelopmental disorder
 unspecified neurodevelopmental disorder,neurodevelopmental disorder,unspecified neurodevelopmental disorder
-sleep-wake disorder,n/a,sleep-wake disorder
+sleep-wake disorder,n/a,sleep-wake disorder; sleep wake disorder
 insomnia,sleep-wake disorder,insomnia
 hypersomnolence,sleep-wake disorder,hypersomnolence
-kleine–levin syndrome,sleep-wake disorder,kleine–levin syndrome; kleine-levin syndrome; kls
+kleine–levin syndrome,sleep-wake disorder,kleine–levin syndrome; kleine-levin syndrome; kls; kleine levin syndrome
 insufficient sleep syndrome,sleep-wake disorder,insufficient sleep syndrome
 narcolepsy,sleep-wake disorder,narcolepsy
-sleep-related hypoventilation,sleep-wake disorder,sleep-related hypoventilation
+sleep-related hypoventilation,sleep-wake disorder,sleep-related hypoventilation; sleep related hypoventilation
 restless legs syndrome,sleep-wake disorder,restless legs syndrome; rls
 sleep apnea,sleep-wake disorder,sleep apnea; sleep apnoea
 night terrors (sleep terrors),sleep-wake disorder,night terrors (sleep terrors); night terrors; sleep terrors
 exploding head syndrome,sleep-wake disorder,exploding head syndrome
-other specified sleep-wake disorder,sleep-wake disorder,other specified sleep-wake disorder
-unspecified sleep-wake disorder,sleep-wake disorder,unspecified sleep-wake disorder
+other specified sleep-wake disorder,sleep-wake disorder,other specified sleep-wake disorder; other specified sleep wake disorder
+unspecified sleep-wake disorder,sleep-wake disorder,unspecified sleep-wake disorder; unspecified sleep wake disorder
 neurocognitive disorder,n/a,neurocognitive disorder
 delirium,neurocognitive disorder,delirium
 dementia,neurocognitive disorder,dementia
@@ -98,16 +98,16 @@ major or mild neurocognitive disorder due to huntington's disease,neurocognitive
 major or mild neurocognitive disorder due to another medical condition,neurocognitive disorder,major or mild neurocognitive disorder due to another medical condition
 major or mild neurocognitive disorder due to multiple etiologies,neurocognitive disorder,major or mild neurocognitive disorder due to multiple etiologies; major or mild neurocognitive disorder due to multiple aetiologies
 major or mild neurocognitive disorder due to traumatic brain injury,neurocognitive disorder,major or mild neurocognitive disorder due to traumatic brain injury; major or mild neurocognitive disorder due to tbi
-major or mild neurocognitive disorder due to hiv infection/hand,neurocognitive disorder,major or mild neurocognitive disorder due to hiv infection/hand; major or mild neurocognitive disorder due to hiv infection; hiv-associated neurocognitive disorder; hand
+major or mild neurocognitive disorder due to hiv infection/hand,neurocognitive disorder,major or mild neurocognitive disorder due to hiv infection/hand; major or mild neurocognitive disorder due to hiv infection; hiv-associated neurocognitive disorder; hand; major or mild neurocognitive disorder due to hiv infection hand; hiv associated neurocognitive disorder
 chronic traumatic encephalopathy,neurocognitive disorder,chronic traumatic encephalopathy; cte
 unspecified neurocognitive disorder,neurocognitive disorder,unspecified neurocognitive disorder
 amnesia,neurocognitive disorder,amnesia
 agnosia,neurocognitive disorder,agnosia
-substance-related and addictive disorder,n/a,substance-related and addictive disorder
-substance-induced disorder,substance-related and addictive disorder,substance-induced disorder
-substance-induced psychosis,substance-related and addictive disorder,substance-induced psychosis
-substance-induced delirium,substance-related and addictive disorder,substance-induced delirium
-substance-induced mood disorder,substance-related and addictive disorder,substance-induced mood disorder
+substance-related and addictive disorder,n/a,substance-related and addictive disorder; substance related and addictive disorder
+substance-induced disorder,substance-related and addictive disorder,substance-induced disorder; substance induced disorder
+substance-induced psychosis,substance-related and addictive disorder,substance-induced psychosis; substance induced psychosis
+substance-induced delirium,substance-related and addictive disorder,substance-induced delirium; substance induced delirium
+substance-induced mood disorder,substance-related and addictive disorder,substance-induced mood disorder; substance induced mood disorder
 substance intoxication,substance-related and addictive disorder,substance intoxication
 substance withdrawal,substance-related and addictive disorder,substance withdrawal
 substance dependence,substance-related and addictive disorder,substance dependence
@@ -120,10 +120,10 @@ cannabis dependence,substance-related and addictive disorder,cannabis dependence
 cannabis intoxication,substance-related and addictive disorder,cannabis intoxication
 harmful pattern of use of cannabis,substance-related and addictive disorder,harmful pattern of use of cannabis
 cannabis withdrawal,substance-related and addictive disorder,cannabis withdrawal
-cannabis-induced delirium,substance-related and addictive disorder,cannabis-induced delirium
-cannabis-induced psychosis,substance-related and addictive disorder,cannabis-induced psychosis
-cannabis-induced mood disorder,substance-related and addictive disorder,cannabis-induced mood disorder
-cannabis-induced anxiety,substance-related and addictive disorder,cannabis-induced anxiety
+cannabis-induced delirium,substance-related and addictive disorder,cannabis-induced delirium; cannabis induced delirium
+cannabis-induced psychosis,substance-related and addictive disorder,cannabis-induced psychosis; cannabis induced psychosis
+cannabis-induced mood disorder,substance-related and addictive disorder,cannabis-induced mood disorder; cannabis induced mood disorder
+cannabis-induced anxiety,substance-related and addictive disorder,cannabis-induced anxiety; cannabis induced anxiety
 episode of harmful use of synthetic cannabinoids,substance-related and addictive disorder,episode of harmful use of synthetic cannabinoids
 harmful pattern of use of synthetic cannabinoids,substance-related and addictive disorder,harmful pattern of use of synthetic cannabinoids
 synthetic cannabinoid dependence,substance-related and addictive disorder,synthetic cannabinoid dependence
@@ -173,7 +173,7 @@ amphetamines induced delirium,substance-related and addictive disorder,amphetami
 amphetamines induced psychotic disorder,substance-related and addictive disorder,amphetamines induced psychotic disorder
 amphetamines induced mood disorder,substance-related and addictive disorder,amphetamines induced mood disorder
 amphetamines induced anxiety,substance-related and addictive disorder,amphetamines induced anxiety
-amphetamines induced ocd,substance-related and addictive disorder,amphetamines induced ocd; amphetamine-induced ocd
+amphetamines induced ocd,substance-related and addictive disorder,amphetamines induced ocd; amphetamine-induced ocd; amphetamine induced ocd
 amphetamines induced impulse control disorder,substance-related and addictive disorder,amphetamines induced impulse control disorder
 episode of harmful use of synthetic cathinone,substance-related and addictive disorder,episode of harmful use of synthetic cathinone
 harmful pattern of use of synthetic cathinone,substance-related and addictive disorder,harmful pattern of use of synthetic cathinone
@@ -181,8 +181,8 @@ synthetic cathinone dependence,substance-related and addictive disorder,syntheti
 synthetic cathinone intoxication,substance-related and addictive disorder,synthetic cathinone intoxication
 synthetic cathinone withdrawal,substance-related and addictive disorder,synthetic cathinone withdrawal
 synthetic cathinone induced delirium,substance-related and addictive disorder,synthetic cathinone induced delirium
-synthetic cathinone-induced psychotic disorder,substance-related and addictive disorder,synthetic cathinone-induced psychotic disorder
-synthetic cathinone-induced mood disorder,substance-related and addictive disorder,synthetic cathinone-induced mood disorder
+synthetic cathinone-induced psychotic disorder,substance-related and addictive disorder,synthetic cathinone-induced psychotic disorder; synthetic cathinone induced psychotic disorder
+synthetic cathinone-induced mood disorder,substance-related and addictive disorder,synthetic cathinone-induced mood disorder; synthetic cathinone induced mood disorder
 synthetic cathinone induced anxiety,substance-related and addictive disorder,synthetic cathinone induced anxiety
 synthetic cathinone induced ocd,substance-related and addictive disorder,synthetic cathinone induced ocd; synthetic cathinone-induced ocd
 synthetic cathinone induced impulse control disorder,substance-related and addictive disorder,synthetic cathinone induced impulse control disorder
@@ -191,11 +191,11 @@ harmful pattern of use of caffeine,substance-related and addictive disorder,harm
 caffeine intoxication,substance-related and addictive disorder,caffeine intoxication
 caffeine withdrawal,substance-related and addictive disorder,caffeine withdrawal
 caffeine induced anxiety disorder,substance-related and addictive disorder,caffeine induced anxiety disorder
-caffeine-induced sleep disorder,substance-related and addictive disorder,caffeine-induced sleep disorder
+caffeine-induced sleep disorder,substance-related and addictive disorder,caffeine-induced sleep disorder; caffeine induced sleep disorder
 episode of harmful use of hallucinogens,substance-related and addictive disorder,episode of harmful use of hallucinogens
 harmful pattern of use of hallucinogens,substance-related and addictive disorder,harmful pattern of use of hallucinogens
 hallucinogens dependence,substance-related and addictive disorder,hallucinogens dependence
-hallucinogen-induced delirium,substance-related and addictive disorder,hallucinogen-induced delirium
+hallucinogen-induced delirium,substance-related and addictive disorder,hallucinogen-induced delirium; hallucinogen induced delirium
 hallucinogens induced psychotic disorder,substance-related and addictive disorder,hallucinogens induced psychotic disorder
 hallucinogens induced anxiety disorder,substance-related and addictive disorder,hallucinogens induced anxiety disorder
 hallucinogens induced mood disorder,substance-related and addictive disorder,hallucinogens induced mood disorder
@@ -231,18 +231,18 @@ psychological factors affecting other medical conditions,somatic symptom and rel
 other specified somatic symptom and related disorder,somatic symptom and related disorder,other specified somatic symptom and related disorder
 unspecified somatic symptom and related disorder,somatic symptom and related disorder,unspecified somatic symptom and related disorder
 sexual dysfunction,n/a,sexual dysfunction
-anorgasmia/female orgasmic disorder,sexual dysfunction,anorgasmia/female orgasmic disorder
+anorgasmia/female orgasmic disorder,sexual dysfunction,anorgasmia/female orgasmic disorder; anorgasmia female orgasmic disorder
 delayed ejaculation,sexual dysfunction,delayed ejaculation
 dyspareunia,sexual dysfunction,dyspareunia
-erectile disorder/dysfunction,sexual dysfunction,erectile disorder/dysfunction; erectile disorder; erectile dysfunction; ed
-female sexual interest/arousal disorder,sexual dysfunction,female sexual interest/arousal disorder; fsiad
-genito-pelvic pain disorder (vaginismus),sexual dysfunction,genito-pelvic pain disorder (vaginismus); genito-pelvic pain disorder; vaginismus
+erectile disorder/dysfunction,sexual dysfunction,erectile disorder/dysfunction; erectile disorder; erectile dysfunction; ed; erectile disorder dysfunction
+female sexual interest/arousal disorder,sexual dysfunction,female sexual interest/arousal disorder; fsiad; female sexual interest arousal disorder
+genito-pelvic pain disorder (vaginismus),sexual dysfunction,genito-pelvic pain disorder (vaginismus); genito-pelvic pain disorder; vaginismus; genito pelvic pain disorder
 hypoactive sexual desire disorder,sexual dysfunction,hypoactive sexual desire disorder; hsdd
 male hypoactive sexual desire disorder,sexual dysfunction,male hypoactive sexual desire disorder
 persistent genital arousal disorder,sexual dysfunction,persistent genital arousal disorder; pgad
 premature (early) ejaculation,sexual dysfunction,premature (early) ejaculation; premature ejaculation; early ejaculation
 sexual arousal disorder,sexual dysfunction,sexual arousal disorder
-substance/medication-induced sexual dysfunction,sexual dysfunction,substance/medication-induced sexual dysfunction; substance-induced sexual dysfunction; medication-induced sexual dysfunction
+substance/medication-induced sexual dysfunction,sexual dysfunction,substance/medication-induced sexual dysfunction; substance-induced sexual dysfunction; medication-induced sexual dysfunction; substance/medication induced sexual dysfunction; substance medication-induced sexual dysfunction; substance medication induced sexual dysfunction; substance induced sexual dysfunction; medication induced sexual dysfunction
 other specified sexual dysfunction,sexual dysfunction,other specified sexual dysfunction
 unspecified sexual dysfunction,sexual dysfunction,unspecified sexual dysfunction
 elimination disorder,n/a,elimination disorder
@@ -254,7 +254,7 @@ unspecified elimination disorder,elimination disorder,unspecified elimination di
 feeding and eating disorder,n/a,feeding and eating disorder
 pica,feeding and eating disorder,pica
 rumination syndrome,feeding and eating disorder,rumination syndrome
-avoidant/restrictive food intake disorder,feeding and eating disorder,avoidant/restrictive food intake disorder; arfid
+avoidant/restrictive food intake disorder,feeding and eating disorder,avoidant/restrictive food intake disorder; arfid; avoidant restrictive food intake disorder
 anorexia nervosa,feeding and eating disorder,anorexia nervosa; an
 binge-eating disorder,feeding and eating disorder,binge-eating disorder; binge eating disorder; bed
 bulimia nervosa,feeding and eating disorder,bulimia nervosa; bn
@@ -275,21 +275,21 @@ kleptomania,"disruptive, impulse-control, and conduct disorder",kleptomania
 mythomania,"disruptive, impulse-control, and conduct disorder",mythomania
 "other specified disruptive, impulse-control, and conduct disorders","disruptive, impulse-control, and conduct disorder","other specified disruptive, impulse-control, and conduct disorders"
 "unspecified disruptive, impulse-control, and conduct disorders","disruptive, impulse-control, and conduct disorder","unspecified disruptive, impulse-control, and conduct disorders"
-obsessive-compulsive and related disorder,n/a,obsessive-compulsive and related disorder
-obsessive–compulsive disorder (ocd),obsessive-compulsive and related disorder,obsessive–compulsive disorder (ocd); obsessive–compulsive disorder; obsessive-compulsive disorder; ocd
+obsessive-compulsive and related disorder,n/a,obsessive-compulsive and related disorder; obsessive compulsive and related disorder
+obsessive–compulsive disorder (ocd),obsessive-compulsive and related disorder,obsessive–compulsive disorder (ocd); obsessive–compulsive disorder; obsessive-compulsive disorder; ocd; obsessive compulsive disorder
 body dysmorphic disorder,obsessive-compulsive and related disorder,body dysmorphic disorder; bdd
 body integrity dysphoria,obsessive-compulsive and related disorder,body integrity dysphoria
-trichotillomania (hair-pulling disorder),obsessive-compulsive and related disorder,trichotillomania (hair-pulling disorder); trichotillomania; hair-pulling disorder
-excoriation disorder (skin-picking disorder),obsessive-compulsive and related disorder,excoriation disorder (skin-picking disorder); excoriation disorder; skin-picking disorder; dermatillomania
-body-focused repetitive behavior disorder,obsessive-compulsive and related disorder,body-focused repetitive behavior disorder; body-focused repetitive behaviour disorder; bfrb
+trichotillomania (hair-pulling disorder),obsessive-compulsive and related disorder,trichotillomania (hair-pulling disorder); trichotillomania; hair-pulling disorder; hair pulling disorder
+excoriation disorder (skin-picking disorder),obsessive-compulsive and related disorder,excoriation disorder (skin-picking disorder); excoriation disorder; skin-picking disorder; dermatillomania; skin picking disorder
+body-focused repetitive behavior disorder,obsessive-compulsive and related disorder,body-focused repetitive behavior disorder; body-focused repetitive behaviour disorder; bfrb; body focused repetitive behavior disorder; body focused repetitive behaviour disorder
 olfactory reference syndrome,obsessive-compulsive and related disorder,olfactory reference syndrome
 phantom limb syndrome,obsessive-compulsive and related disorder,phantom limb syndrome
-primarily obsessional obsessive-compulsive disorder,obsessive-compulsive and related disorder,primarily obsessional obsessive-compulsive disorder
+primarily obsessional obsessive-compulsive disorder,obsessive-compulsive and related disorder,primarily obsessional obsessive-compulsive disorder; primarily obsessional obsessive compulsive disorder
 hoarding disorder,obsessive-compulsive and related disorder,hoarding disorder
-obsessive-compulsive and related disorder due to another medical condition,obsessive-compulsive and related disorder,obsessive-compulsive and related disorder due to another medical condition
-substance/medication-induced obsessive-compulsive and related disorder,obsessive-compulsive and related disorder,substance/medication-induced obsessive-compulsive and related disorder; substance-induced obsessive-compulsive and related disorder; medication-induced obsessive-compulsive and related disorder
-other specified obsessive-compulsive and related disorder,obsessive-compulsive and related disorder,other specified obsessive-compulsive and related disorder
-unspecified obsessive-compulsive and related disorder,obsessive-compulsive and related disorder,unspecified obsessive-compulsive and related disorder
+obsessive-compulsive and related disorder due to another medical condition,obsessive-compulsive and related disorder,obsessive-compulsive and related disorder due to another medical condition; obsessive compulsive and related disorder due to another medical condition
+substance/medication-induced obsessive-compulsive and related disorder,obsessive-compulsive and related disorder,substance/medication-induced obsessive-compulsive and related disorder; substance-induced obsessive-compulsive and related disorder; medication-induced obsessive-compulsive and related disorder; substance/medication induced obsessive compulsive and related disorder; substance medication-induced obsessive-compulsive and related disorder; substance medication induced obsessive compulsive and related disorder; substance induced obsessive compulsive and related disorder; medication induced obsessive compulsive and related disorder
+other specified obsessive-compulsive and related disorder,obsessive-compulsive and related disorder,other specified obsessive-compulsive and related disorder; other specified obsessive compulsive and related disorder
+unspecified obsessive-compulsive and related disorder,obsessive-compulsive and related disorder,unspecified obsessive-compulsive and related disorder; unspecified obsessive compulsive and related disorder
 schizophrenia spectrum and other psychotic disorder,n/a,schizophrenia spectrum and other psychotic disorder
 brief psychotic disorder,schizophrenia spectrum and other psychotic disorder,brief psychotic disorder
 delusional disorder,schizophrenia spectrum and other psychotic disorder,delusional disorder
@@ -303,7 +303,7 @@ schizotypal personality disorder,schizophrenia spectrum and other psychotic diso
 shared delusional disorder,schizophrenia spectrum and other psychotic disorder,shared delusional disorder
 postpartum psychosis,schizophrenia spectrum and other psychotic disorder,postpartum psychosis; postnatal psychosis
 psychotic disorder due to another medical condition,schizophrenia spectrum and other psychotic disorder,psychotic disorder due to another medical condition
-substance/medication-induced psychotic disorder,schizophrenia spectrum and other psychotic disorder,substance/medication-induced psychotic disorder; substance-induced psychotic disorder; medication-induced psychotic disorder
+substance/medication-induced psychotic disorder,schizophrenia spectrum and other psychotic disorder,substance/medication-induced psychotic disorder; substance-induced psychotic disorder; medication-induced psychotic disorder; substance/medication induced psychotic disorder; substance medication-induced psychotic disorder; substance medication induced psychotic disorder; substance induced psychotic disorder; medication induced psychotic disorder
 other schizophrenia spectrum and other psychotic disorder,schizophrenia spectrum and other psychotic disorder,other schizophrenia spectrum and other psychotic disorder
 unspecified schizophrenia spectrum and other psychotic disorder,schizophrenia spectrum and other psychotic disorder,unspecified schizophrenia spectrum and other psychotic disorder
 other condition,n/a,other condition
@@ -315,12 +315,12 @@ disinhibition in personality disorder or personality difficulty,other condition,
 anankastia in personality disorder or personality difficulty,other condition,anankastia in personality disorder or personality difficulty
 borderline pattern,other condition,borderline pattern
 gender dysphoria,other condition,gender dysphoria
-medication-induced movement disorders and other adverse effects of medication,other condition,medication-induced movement disorders and other adverse effects of medication
-culture-bound syndrome,other condition,culture-bound syndrome
+medication-induced movement disorders and other adverse effects of medication,other condition,medication-induced movement disorders and other adverse effects of medication; medication induced movement disorders and other adverse effects of medication
+culture-bound syndrome,other condition,culture-bound syndrome; culture bound syndrome
 attenuated psychosis syndrome,other condition,attenuated psychosis syndrome
-depressive episodes with short-duration hypomania,other condition,depressive episodes with short-duration hypomania
+depressive episodes with short-duration hypomania,other condition,depressive episodes with short-duration hypomania; depressive episodes with short duration hypomania
 caffeine use disorder,other condition,caffeine use disorder
 internet gaming disorder,other condition,internet gaming disorder; igd
 neurobehavioral disorder associated with prenatal alcohol exposure,other condition,neurobehavioral disorder associated with prenatal alcohol exposure; neurobehavioural disorder associated with prenatal alcohol exposure; nd-pae
 suicidal behaviour disorder,other condition,suicidal behaviour disorder; suicidal behavior disorder
-nonsuicidal self-injury disorder,other condition,nonsuicidal self-injury disorder; non-suicidal self-injury disorder; nssi
+nonsuicidal self-injury disorder,other condition,nonsuicidal self-injury disorder; non-suicidal self-injury disorder; nssi; nonsuicidal self injury disorder; non suicidal self injury disorder
