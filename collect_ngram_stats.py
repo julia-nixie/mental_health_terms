@@ -47,6 +47,16 @@ def to_query(variant: str) -> str:
     return v
 
 
+def is_acronym(variant: str, all_variants) -> bool:
+    """A short single-word variant of a term that also has a spelled-out variant
+    (e.g. 'sad' for 'social anxiety disorder') is an abbreviation. Those are
+    searched UPPER-CASE and case-sensitively, so 'SAD' does not also count the
+    ordinary word 'sad'. Single-variant terms (e.g. 'pica') are real words."""
+    v = variant.strip()
+    return (" " not in v and len(v) <= 6
+            and any(" " in o.strip() for o in all_variants))
+
+
 def token_count(query: str) -> int:
     return len(query.split())
 
@@ -113,35 +123,49 @@ def main():
     ap.add_argument("--start", type=int, default=1800)
     ap.add_argument("--end", type=int, default=2022)
     ap.add_argument("--smoothing", type=int, default=0)
-    ap.add_argument("--case-sensitive", action="store_true")
+    ap.add_argument("--case-sensitive", action="store_true",
+                    help="match every variant case-sensitively (lower-case)")
+    ap.add_argument("--no-acronym-case", action="store_true",
+                    help="do not search abbreviations upper-case/case-sensitive")
     args = ap.parse_args()
     ci = not args.case_sensitive
 
     terms = list(load_terms(Path(args.input)))
     cache_path = Path(args.cache)
     cache = json.loads(cache_path.read_text()) if cache_path.exists() else {}
-    cache_key = lambda q: f"{args.corpus}|{args.start}|{args.end}|{args.smoothing}|{int(ci)}|{q}"
+    cache_key = lambda q, c: f"{args.corpus}|{args.start}|{args.end}|{args.smoothing}|{int(c)}|{q}"
+
+    def plan(v, variants):
+        """-> (query, case_insensitive) for one variant."""
+        q = to_query(v)
+        if not args.no_acronym_case and is_acronym(v, variants):
+            return q.upper(), False
+        return q, ci
 
     # Collect every distinct query still to fetch; skip those longer than 5 tokens.
-    skipped, todo = set(), []
+    skipped, todo = set(), {True: [], False: []}   # keyed by case_insensitive
     for _, _, variants in terms:
         for v in variants:
-            q = to_query(v)
+            q, c = plan(v, variants)
             if token_count(q) > MAX_NGRAM:
                 skipped.add(v)
-            elif cache_key(q) not in cache and q not in todo:
-                todo.append(q)
+            elif cache_key(q, c) not in cache and q not in todo[c]:
+                todo[c].append(q)
 
-    print(f"{len(todo)} queries to fetch, {len(skipped)} variants skipped (> {MAX_NGRAM} tokens)",
+    n = len(todo[True]) + len(todo[False])
+    print(f"{n} queries to fetch, {len(skipped)} variants skipped (> {MAX_NGRAM} tokens)",
           file=sys.stderr)
-    for i in range(0, len(todo), BATCH):
-        batch = todo[i:i + BATCH]
-        data = fetch_batch(batch, args.corpus, args.start, args.end, args.smoothing, ci)
-        for q, series in match_results(batch, data, ci).items():
-            cache[cache_key(q)] = series  # None => no data in corpus
-        cache_path.write_text(json.dumps(cache))
-        print(f"  fetched {min(i + BATCH, len(todo))}/{len(todo)}", file=sys.stderr)
-        time.sleep(PAUSE)
+    done = 0
+    for c, queries in todo.items():   # case mode is per request, so batch separately
+        for i in range(0, len(queries), BATCH):
+            batch = queries[i:i + BATCH]
+            data = fetch_batch(batch, args.corpus, args.start, args.end, args.smoothing, c)
+            for q, series in match_results(batch, data, c).items():
+                cache[cache_key(q, c)] = series  # None => no data in corpus
+            cache_path.write_text(json.dumps(cache))
+            done += len(batch)
+            print(f"  fetched {done}/{n}", file=sys.stderr)
+            time.sleep(PAUSE)
 
     years = list(range(args.start, args.end + 1))
     with open(args.output, "w", newline="", encoding="utf-8") as f:
@@ -150,7 +174,7 @@ def main():
         for term, category, variants in terms:
             total = [0.0] * len(years)
             for v in variants:
-                series = cache.get(cache_key(to_query(v)))
+                series = cache.get(cache_key(*plan(v, variants)))
                 if series:
                     for k, x in enumerate(series[:len(years)]):
                         total[k] += x
