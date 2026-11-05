@@ -7,7 +7,7 @@ selective mutism,anxiety disorder,selective mutism
 separation anxiety disorder,anxiety disorder,separation anxiety disorder
 specific phobia,anxiety disorder,specific phobia
 social anxiety disorder,anxiety disorder,social anxiety disorder; sad; social phobia
-anxiety due to another medical condition,anxiety disorder,anxiety due to another medical condition
+anxiety due to another medical condition,anxiety disorder,anxiety due to another medical condition; organic anxiety disorder; organic anxiety syndrome
 substance/medication-induced anxiety disorder,anxiety disorder,substance/medication-induced anxiety disorder; substance-induced anxiety disorder; medication-induced anxiety disorder; substance/medication induced anxiety disorder; substance medication-induced anxiety disorder; substance medication induced anxiety disorder; substance induced anxiety disorder; medication induced anxiety disorder
 other specified anxiety disorder,anxiety disorder,other specified anxiety disorder
 unspecified anxiety disorder,anxiety disorder,unspecified anxiety disorder
@@ -34,7 +34,7 @@ bipolar i disorder,bipolar and related disorder,bipolar i disorder
 bipolar ii disorder,bipolar and related disorder,bipolar ii disorder
 bipolar and related disorder due to another medical condition,bipolar and related disorder,bipolar and related disorder due to another medical condition
 substance/medication-induced bipolar and related disorders,bipolar and related disorder,substance/medication-induced bipolar and related disorders; substance-induced bipolar and related disorders; medication-induced bipolar and related disorders; substance/medication induced bipolar and related disorders; substance medication-induced bipolar and related disorders; substance medication induced bipolar and related disorders; substance induced bipolar and related disorders; medication induced bipolar and related disorders
-other specified and related bipolar disorder,bipolar and related disorder,other specified and related bipolar disorder
+other specified and related bipolar disorder,bipolar and related disorder,other specified and related bipolar disorder; other specified bipolar and related disorder; other specified bipolar disorder; bipolar disorder not otherwise specified; bipolar disorder nos
 unspecified bipolar and related disorder,bipolar and related disorder,unspecified bipolar and related disorder
 cyclothymia,bipolar and related disorder,cyclothymia
 trauma- and stressor-related disorder,n/a,trauma- and stressor-related disorder; trauma and stressor related disorder
@@ -88,16 +88,16 @@ unspecified sleep-wake disorder,sleep-wake disorder,unspecified sleep-wake disor
 neurocognitive disorder,n/a,neurocognitive disorder
 delirium,neurocognitive disorder,delirium
 dementia,neurocognitive disorder,dementia
-major or mild neurocognitive disorder due to alzheimer's disease,neurocognitive disorder,major or mild neurocognitive disorder due to alzheimer's disease
-major or mild neurocognitive disorder with lewy bodies,neurocognitive disorder,major or mild neurocognitive disorder with lewy bodies
+major or mild neurocognitive disorder due to alzheimer's disease,neurocognitive disorder,major or mild neurocognitive disorder due to alzheimer's disease; alzheimer's disease dementia; alzheimer's dementia; alzheimer dementia; dementia of the alzheimer type
+major or mild neurocognitive disorder with lewy bodies,neurocognitive disorder,major or mild neurocognitive disorder with lewy bodies; dementia with lewy bodies; lewy body dementia; diffuse lewy body disease
 major or mild vascular neurocognitive disorder,neurocognitive disorder,major or mild vascular neurocognitive disorder
 major or mild frontotemporal neurocognitive disorder,neurocognitive disorder,major or mild frontotemporal neurocognitive disorder
-major or mild neurocognitive disorder due to parkinson's disease,neurocognitive disorder,major or mild neurocognitive disorder due to parkinson's disease
-major or mild neurocognitive disorder due to prion disease,neurocognitive disorder,major or mild neurocognitive disorder due to prion disease
-major or mild neurocognitive disorder due to huntington's disease,neurocognitive disorder,major or mild neurocognitive disorder due to huntington's disease
-major or mild neurocognitive disorder due to another medical condition,neurocognitive disorder,major or mild neurocognitive disorder due to another medical condition
-major or mild neurocognitive disorder due to multiple etiologies,neurocognitive disorder,major or mild neurocognitive disorder due to multiple etiologies; major or mild neurocognitive disorder due to multiple aetiologies
-major or mild neurocognitive disorder due to traumatic brain injury,neurocognitive disorder,major or mild neurocognitive disorder due to traumatic brain injury; major or mild neurocognitive disorder due to tbi
+major or mild neurocognitive disorder due to parkinson's disease,neurocognitive disorder,major or mild neurocognitive disorder due to parkinson's disease; parkinson's disease dementia; parkinson dementia
+major or mild neurocognitive disorder due to prion disease,neurocognitive disorder,major or mild neurocognitive disorder due to prion disease; prion disease; creutzfeldt-jakob disease; cjd; creutzfeldt jakob disease
+major or mild neurocognitive disorder due to huntington's disease,neurocognitive disorder,major or mild neurocognitive disorder due to huntington's disease; huntington's disease dementia; huntington disease dementia
+major or mild neurocognitive disorder due to another medical condition,neurocognitive disorder,major or mild neurocognitive disorder due to another medical condition; secondary dementia; organic brain syndrome
+major or mild neurocognitive disorder due to multiple etiologies,neurocognitive disorder,major or mild neurocognitive disorder due to multiple etiologies; major or mild neurocognitive disorder due to multiple aetiologies; mixed dementia; dementia due to multiple etiologies; dementia due to multiple aetiologies
+major or mild neurocognitive disorder due to traumatic brain injury,neurocognitive disorder,major or mild neurocognitive disorder due to traumatic brain injury; major or mild neurocognitive disorder due to tbi; post-traumatic dementia; posttraumatic dementia; traumatic brain injury dementia; post traumatic dementia
 major or mild neurocognitive disorder due to hiv infection/hand,neurocognitive disorder,major or mild neurocognitive disorder due to hiv infection/hand; major or mild neurocognitive disorder due to hiv infection; hiv-associated neurocognitive disorder; hand; major or mild neurocognitive disorder due to hiv infection hand; hiv associated neurocognitive disorder
 chronic traumatic encephalopathy,neurocognitive disorder,chronic traumatic encephalopathy; cte
 unspecified neurocognitive disorder,neurocognitive disorder,unspecified neurocognitive disorder
@@ -114,113 +114,113 @@ substance dependence,substance-related and addictive disorder,substance dependen
 alcohol use disorder,substance-related and addictive disorder,alcohol use disorder; aud
 alcoholic hallucinosis,substance-related and addictive disorder,alcoholic hallucinosis
 alcohol withdrawal,substance-related and addictive disorder,alcohol withdrawal
-harmful pattern of use of alcohol,substance-related and addictive disorder,harmful pattern of use of alcohol
+harmful pattern of use of alcohol,substance-related and addictive disorder,harmful pattern of use of alcohol; harmful use of alcohol; alcohol abuse; alcohol misuse
 cannabis use disorder,substance-related and addictive disorder,cannabis use disorder
 cannabis dependence,substance-related and addictive disorder,cannabis dependence
 cannabis intoxication,substance-related and addictive disorder,cannabis intoxication
-harmful pattern of use of cannabis,substance-related and addictive disorder,harmful pattern of use of cannabis
+harmful pattern of use of cannabis,substance-related and addictive disorder,harmful pattern of use of cannabis; harmful use of cannabis; cannabis abuse; cannabis misuse
 cannabis withdrawal,substance-related and addictive disorder,cannabis withdrawal
 cannabis-induced delirium,substance-related and addictive disorder,cannabis-induced delirium; cannabis induced delirium
 cannabis-induced psychosis,substance-related and addictive disorder,cannabis-induced psychosis; cannabis induced psychosis
 cannabis-induced mood disorder,substance-related and addictive disorder,cannabis-induced mood disorder; cannabis induced mood disorder
 cannabis-induced anxiety,substance-related and addictive disorder,cannabis-induced anxiety; cannabis induced anxiety
 episode of harmful use of synthetic cannabinoids,substance-related and addictive disorder,episode of harmful use of synthetic cannabinoids
-harmful pattern of use of synthetic cannabinoids,substance-related and addictive disorder,harmful pattern of use of synthetic cannabinoids
-synthetic cannabinoid dependence,substance-related and addictive disorder,synthetic cannabinoid dependence
+harmful pattern of use of synthetic cannabinoids,substance-related and addictive disorder,harmful pattern of use of synthetic cannabinoids; harmful use of synthetic cannabinoids; synthetic cannabinoid abuse; synthetic cannabinoid misuse
+synthetic cannabinoid dependence,substance-related and addictive disorder,synthetic cannabinoid dependence; synthetic cannabinoid addiction; synthetic cannabinoid use disorder
 synthetic cannabinoid intoxication,substance-related and addictive disorder,synthetic cannabinoid intoxication
-synthetic cannabinoids withdrawal,substance-related and addictive disorder,synthetic cannabinoids withdrawal
-synthetic cannabinoids induced delirium,substance-related and addictive disorder,synthetic cannabinoids induced delirium
-synthetic cannabinoids induced psychotic disorder,substance-related and addictive disorder,synthetic cannabinoids induced psychotic disorder
-synthetic cannabinoids induced mood disorder,substance-related and addictive disorder,synthetic cannabinoids induced mood disorder
-synthetic cannabinoids induced anxiety,substance-related and addictive disorder,synthetic cannabinoids induced anxiety
+synthetic cannabinoids withdrawal,substance-related and addictive disorder,synthetic cannabinoids withdrawal; synthetic cannabinoid withdrawal
+synthetic cannabinoids induced delirium,substance-related and addictive disorder,synthetic cannabinoids induced delirium; synthetic cannabinoid-induced delirium; synthetic cannabinoid induced delirium
+synthetic cannabinoids induced psychotic disorder,substance-related and addictive disorder,synthetic cannabinoids induced psychotic disorder; synthetic cannabinoid-induced psychosis; synthetic cannabinoid-induced psychotic disorder; synthetic cannabinoid induced psychosis; synthetic cannabinoid induced psychotic disorder
+synthetic cannabinoids induced mood disorder,substance-related and addictive disorder,synthetic cannabinoids induced mood disorder; synthetic cannabinoid-induced mood disorder; synthetic cannabinoid induced mood disorder
+synthetic cannabinoids induced anxiety,substance-related and addictive disorder,synthetic cannabinoids induced anxiety; synthetic cannabinoid-induced anxiety; synthetic cannabinoid induced anxiety
 episode of harmful use of opioids,substance-related and addictive disorder,episode of harmful use of opioids
-harmful pattern of use of opioids,substance-related and addictive disorder,harmful pattern of use of opioids
+harmful pattern of use of opioids,substance-related and addictive disorder,harmful pattern of use of opioids; harmful use of opioids; opioid abuse; opioid misuse
 opioid dependence,substance-related and addictive disorder,opioid dependence
 opioid intoxication,substance-related and addictive disorder,opioid intoxication
-opioids withdrawal,substance-related and addictive disorder,opioids withdrawal
-opioids induced delirium,substance-related and addictive disorder,opioids induced delirium
-opioids induced psychotic disorder,substance-related and addictive disorder,opioids induced psychotic disorder
-opioids induced mood disorder,substance-related and addictive disorder,opioids induced mood disorder
-opioids induced anxiety,substance-related and addictive disorder,opioids induced anxiety
+opioids withdrawal,substance-related and addictive disorder,opioids withdrawal; opioid withdrawal; opioid withdrawal syndrome
+opioids induced delirium,substance-related and addictive disorder,opioids induced delirium; opioid-induced delirium; opioid induced delirium
+opioids induced psychotic disorder,substance-related and addictive disorder,opioids induced psychotic disorder; opioid-induced psychosis; opioid-induced psychotic disorder; opioid induced psychosis; opioid induced psychotic disorder
+opioids induced mood disorder,substance-related and addictive disorder,opioids induced mood disorder; opioid-induced mood disorder; opioid induced mood disorder
+opioids induced anxiety,substance-related and addictive disorder,opioids induced anxiety; opioid-induced anxiety; opioid induced anxiety
 "episode of harmful use of sedative, hypnotic or anxiolytic",substance-related and addictive disorder,"episode of harmful use of sedative, hypnotic or anxiolytic"
-"harmful pattern of use of sedative, hypnotic or anxiolytic",substance-related and addictive disorder,"harmful pattern of use of sedative, hypnotic or anxiolytic"
-"sedative, hypnotic or anxiolytic dependence",substance-related and addictive disorder,"sedative, hypnotic or anxiolytic dependence"
-"sedative, hypnotic or anxiolytic intoxication",substance-related and addictive disorder,"sedative, hypnotic or anxiolytic intoxication"
-"sedative, hypnotic or anxiolytic withdrawal",substance-related and addictive disorder,"sedative, hypnotic or anxiolytic withdrawal"
-"sedative, hypnotic or anxiolytic induced delirium",substance-related and addictive disorder,"sedative, hypnotic or anxiolytic induced delirium"
-"sedative, hypnotic or anxiolytic induced psychotic disorder",substance-related and addictive disorder,"sedative, hypnotic or anxiolytic induced psychotic disorder"
-"sedative, hypnotic or anxiolytic induced mood disorder",substance-related and addictive disorder,"sedative, hypnotic or anxiolytic induced mood disorder"
-"sedative, hypnotic or anxiolytic induced anxiety",substance-related and addictive disorder,"sedative, hypnotic or anxiolytic induced anxiety"
-"amnestic disorder due to use of sedatives, hypnotics or anxiolytics",substance-related and addictive disorder,"amnestic disorder due to use of sedatives, hypnotics or anxiolytics"
-"dementia due to use of sedatives, hypnotics or anxiolytics",substance-related and addictive disorder,"dementia due to use of sedatives, hypnotics or anxiolytics"
+"harmful pattern of use of sedative, hypnotic or anxiolytic",substance-related and addictive disorder,"harmful pattern of use of sedative, hypnotic or anxiolytic; harmful use of sedatives; benzodiazepine abuse; benzodiazepine misuse; sedative abuse"
+"sedative, hypnotic or anxiolytic dependence",substance-related and addictive disorder,"sedative, hypnotic or anxiolytic dependence; benzodiazepine dependence; sedative dependence; benzodiazepine addiction; sedative hypnotic dependence"
+"sedative, hypnotic or anxiolytic intoxication",substance-related and addictive disorder,"sedative, hypnotic or anxiolytic intoxication; benzodiazepine intoxication; sedative intoxication"
+"sedative, hypnotic or anxiolytic withdrawal",substance-related and addictive disorder,"sedative, hypnotic or anxiolytic withdrawal; benzodiazepine withdrawal; sedative withdrawal; benzodiazepine withdrawal syndrome"
+"sedative, hypnotic or anxiolytic induced delirium",substance-related and addictive disorder,"sedative, hypnotic or anxiolytic induced delirium; benzodiazepine-induced delirium; sedative-induced delirium; benzodiazepine induced delirium; sedative induced delirium"
+"sedative, hypnotic or anxiolytic induced psychotic disorder",substance-related and addictive disorder,"sedative, hypnotic or anxiolytic induced psychotic disorder; benzodiazepine-induced psychosis; sedative-induced psychosis; benzodiazepine induced psychosis; sedative induced psychosis"
+"sedative, hypnotic or anxiolytic induced mood disorder",substance-related and addictive disorder,"sedative, hypnotic or anxiolytic induced mood disorder; benzodiazepine-induced mood disorder; sedative-induced mood disorder; benzodiazepine induced mood disorder; sedative induced mood disorder"
+"sedative, hypnotic or anxiolytic induced anxiety",substance-related and addictive disorder,"sedative, hypnotic or anxiolytic induced anxiety; benzodiazepine-induced anxiety; sedative-induced anxiety; benzodiazepine induced anxiety; sedative induced anxiety"
+"amnestic disorder due to use of sedatives, hypnotics or anxiolytics",substance-related and addictive disorder,"amnestic disorder due to use of sedatives, hypnotics or anxiolytics; benzodiazepine-induced amnesia; sedative-induced amnesia; benzodiazepine induced amnesia; sedative induced amnesia"
+"dementia due to use of sedatives, hypnotics or anxiolytics",substance-related and addictive disorder,"dementia due to use of sedatives, hypnotics or anxiolytics; benzodiazepine-induced dementia; benzodiazepine induced dementia"
 episode of harmful use of cocaine,substance-related and addictive disorder,episode of harmful use of cocaine
-harmful pattern of use of cocaine,substance-related and addictive disorder,harmful pattern of use of cocaine
+harmful pattern of use of cocaine,substance-related and addictive disorder,harmful pattern of use of cocaine; harmful use of cocaine; cocaine abuse; cocaine misuse
 cocaine dependence,substance-related and addictive disorder,cocaine dependence
 cocaine intoxication,substance-related and addictive disorder,cocaine intoxication
 cocaine withdrawal,substance-related and addictive disorder,cocaine withdrawal
-cocaine induced delirium,substance-related and addictive disorder,cocaine induced delirium
-cocaine induced psychotic disorder,substance-related and addictive disorder,cocaine induced psychotic disorder
-cocaine induced mood disorder,substance-related and addictive disorder,cocaine induced mood disorder
-cocaine induced anxiety,substance-related and addictive disorder,cocaine induced anxiety
+cocaine induced delirium,substance-related and addictive disorder,cocaine induced delirium; cocaine-induced delirium
+cocaine induced psychotic disorder,substance-related and addictive disorder,cocaine induced psychotic disorder; cocaine-induced psychosis; cocaine-induced psychotic disorder; cocaine psychosis; cocaine induced psychosis
+cocaine induced mood disorder,substance-related and addictive disorder,cocaine induced mood disorder; cocaine-induced mood disorder
+cocaine induced anxiety,substance-related and addictive disorder,cocaine induced anxiety; cocaine-induced anxiety; cocaine-induced anxiety disorder; cocaine induced anxiety disorder
 cocaine induced ocd,substance-related and addictive disorder,cocaine induced ocd; cocaine-induced ocd
 cocaine induced impulse control disorder,substance-related and addictive disorder,cocaine induced impulse control disorder
 episode of harmful use of amphetamines,substance-related and addictive disorder,episode of harmful use of amphetamines
-harmful pattern of use of amphetamines,substance-related and addictive disorder,harmful pattern of use of amphetamines
-amphetamines dependence,substance-related and addictive disorder,amphetamines dependence
-amphetamines intoxication,substance-related and addictive disorder,amphetamines intoxication
-amphetamines withdrawal,substance-related and addictive disorder,amphetamines withdrawal
-amphetamines induced delirium,substance-related and addictive disorder,amphetamines induced delirium
-amphetamines induced psychotic disorder,substance-related and addictive disorder,amphetamines induced psychotic disorder
-amphetamines induced mood disorder,substance-related and addictive disorder,amphetamines induced mood disorder
-amphetamines induced anxiety,substance-related and addictive disorder,amphetamines induced anxiety
+harmful pattern of use of amphetamines,substance-related and addictive disorder,harmful pattern of use of amphetamines; harmful use of amphetamines; amphetamine abuse; amphetamine misuse
+amphetamines dependence,substance-related and addictive disorder,amphetamines dependence; amphetamine dependence; amphetamine addiction; amphetamine use disorder
+amphetamines intoxication,substance-related and addictive disorder,amphetamines intoxication; amphetamine intoxication
+amphetamines withdrawal,substance-related and addictive disorder,amphetamines withdrawal; amphetamine withdrawal
+amphetamines induced delirium,substance-related and addictive disorder,amphetamines induced delirium; amphetamine-induced delirium; amphetamine induced delirium
+amphetamines induced psychotic disorder,substance-related and addictive disorder,amphetamines induced psychotic disorder; amphetamine-induced psychosis; amphetamine psychosis; amphetamine-induced psychotic disorder; amphetamine induced psychosis; amphetamine induced psychotic disorder
+amphetamines induced mood disorder,substance-related and addictive disorder,amphetamines induced mood disorder; amphetamine-induced mood disorder; amphetamine induced mood disorder
+amphetamines induced anxiety,substance-related and addictive disorder,amphetamines induced anxiety; amphetamine-induced anxiety; amphetamine-induced anxiety disorder; amphetamine induced anxiety; amphetamine induced anxiety disorder
 amphetamines induced ocd,substance-related and addictive disorder,amphetamines induced ocd; amphetamine-induced ocd; amphetamine induced ocd
 amphetamines induced impulse control disorder,substance-related and addictive disorder,amphetamines induced impulse control disorder
 episode of harmful use of synthetic cathinone,substance-related and addictive disorder,episode of harmful use of synthetic cathinone
-harmful pattern of use of synthetic cathinone,substance-related and addictive disorder,harmful pattern of use of synthetic cathinone
-synthetic cathinone dependence,substance-related and addictive disorder,synthetic cathinone dependence
-synthetic cathinone intoxication,substance-related and addictive disorder,synthetic cathinone intoxication
-synthetic cathinone withdrawal,substance-related and addictive disorder,synthetic cathinone withdrawal
-synthetic cathinone induced delirium,substance-related and addictive disorder,synthetic cathinone induced delirium
-synthetic cathinone-induced psychotic disorder,substance-related and addictive disorder,synthetic cathinone-induced psychotic disorder; synthetic cathinone induced psychotic disorder
+harmful pattern of use of synthetic cathinone,substance-related and addictive disorder,harmful pattern of use of synthetic cathinone; harmful use of synthetic cathinones; synthetic cathinone abuse; bath salts abuse
+synthetic cathinone dependence,substance-related and addictive disorder,synthetic cathinone dependence; bath salts dependence; bath salts addiction; synthetic cathinone addiction; synthetic cathinone use disorder
+synthetic cathinone intoxication,substance-related and addictive disorder,synthetic cathinone intoxication; bath salts intoxication
+synthetic cathinone withdrawal,substance-related and addictive disorder,synthetic cathinone withdrawal; bath salts withdrawal
+synthetic cathinone induced delirium,substance-related and addictive disorder,synthetic cathinone induced delirium; bath salts delirium
+synthetic cathinone-induced psychotic disorder,substance-related and addictive disorder,synthetic cathinone-induced psychotic disorder; synthetic cathinone induced psychotic disorder; bath salts psychosis; synthetic cathinone-induced psychosis; synthetic cathinone induced psychosis
 synthetic cathinone-induced mood disorder,substance-related and addictive disorder,synthetic cathinone-induced mood disorder; synthetic cathinone induced mood disorder
 synthetic cathinone induced anxiety,substance-related and addictive disorder,synthetic cathinone induced anxiety
 synthetic cathinone induced ocd,substance-related and addictive disorder,synthetic cathinone induced ocd; synthetic cathinone-induced ocd
 synthetic cathinone induced impulse control disorder,substance-related and addictive disorder,synthetic cathinone induced impulse control disorder
 episode of harmful use of caffeine,substance-related and addictive disorder,episode of harmful use of caffeine
-harmful pattern of use of caffeine,substance-related and addictive disorder,harmful pattern of use of caffeine
+harmful pattern of use of caffeine,substance-related and addictive disorder,harmful pattern of use of caffeine; harmful use of caffeine; caffeine misuse
 caffeine intoxication,substance-related and addictive disorder,caffeine intoxication
 caffeine withdrawal,substance-related and addictive disorder,caffeine withdrawal
-caffeine induced anxiety disorder,substance-related and addictive disorder,caffeine induced anxiety disorder
+caffeine induced anxiety disorder,substance-related and addictive disorder,caffeine induced anxiety disorder; caffeine-induced anxiety disorder; caffeine-induced anxiety; caffeine induced anxiety
 caffeine-induced sleep disorder,substance-related and addictive disorder,caffeine-induced sleep disorder; caffeine induced sleep disorder
 episode of harmful use of hallucinogens,substance-related and addictive disorder,episode of harmful use of hallucinogens
-harmful pattern of use of hallucinogens,substance-related and addictive disorder,harmful pattern of use of hallucinogens
-hallucinogens dependence,substance-related and addictive disorder,hallucinogens dependence
+harmful pattern of use of hallucinogens,substance-related and addictive disorder,harmful pattern of use of hallucinogens; harmful use of hallucinogens; hallucinogen abuse; hallucinogen misuse
+hallucinogens dependence,substance-related and addictive disorder,hallucinogens dependence; hallucinogen dependence; hallucinogen use disorder
 hallucinogen-induced delirium,substance-related and addictive disorder,hallucinogen-induced delirium; hallucinogen induced delirium
-hallucinogens induced psychotic disorder,substance-related and addictive disorder,hallucinogens induced psychotic disorder
-hallucinogens induced anxiety disorder,substance-related and addictive disorder,hallucinogens induced anxiety disorder
-hallucinogens induced mood disorder,substance-related and addictive disorder,hallucinogens induced mood disorder
+hallucinogens induced psychotic disorder,substance-related and addictive disorder,hallucinogens induced psychotic disorder; hallucinogen-induced psychosis; hallucinogen-induced psychotic disorder; hallucinogen psychosis; hallucinogen induced psychosis; hallucinogen induced psychotic disorder
+hallucinogens induced anxiety disorder,substance-related and addictive disorder,hallucinogens induced anxiety disorder; hallucinogen-induced anxiety disorder; hallucinogen-induced anxiety; hallucinogen induced anxiety disorder; hallucinogen induced anxiety
+hallucinogens induced mood disorder,substance-related and addictive disorder,hallucinogens induced mood disorder; hallucinogen-induced mood disorder; hallucinogen induced mood disorder
 hallucinogen persisting perception disorder,substance-related and addictive disorder,hallucinogen persisting perception disorder; hppd
 episode of harmful use of nicotine,substance-related and addictive disorder,episode of harmful use of nicotine
-harmful pattern of use of nicotine,substance-related and addictive disorder,harmful pattern of use of nicotine
+harmful pattern of use of nicotine,substance-related and addictive disorder,harmful pattern of use of nicotine; harmful use of nicotine; nicotine abuse; nicotine misuse
 nicotine intoxication,substance-related and addictive disorder,nicotine intoxication
 nicotine withdrawal,substance-related and addictive disorder,nicotine withdrawal
 nicotine dependence,substance-related and addictive disorder,nicotine dependence
 episode of harmful use of volatile inhalants,substance-related and addictive disorder,episode of harmful use of volatile inhalants
-harmful pattern of use of volatile inhalants,substance-related and addictive disorder,harmful pattern of use of volatile inhalants
-volatile inhalants withdrawal,substance-related and addictive disorder,volatile inhalants withdrawal
-volatile inhalants induced delirium,substance-related and addictive disorder,volatile inhalants induced delirium
-volatile inhalants induced psychotic disorder,substance-related and addictive disorder,volatile inhalants induced psychotic disorder
-volatile inhalants induced mood disorder,substance-related and addictive disorder,volatile inhalants induced mood disorder
-volatile inhalants induced anxiety,substance-related and addictive disorder,volatile inhalants induced anxiety
+harmful pattern of use of volatile inhalants,substance-related and addictive disorder,harmful pattern of use of volatile inhalants; harmful use of inhalants; inhalant abuse; inhalant misuse
+volatile inhalants withdrawal,substance-related and addictive disorder,volatile inhalants withdrawal; inhalant withdrawal; solvent withdrawal
+volatile inhalants induced delirium,substance-related and addictive disorder,volatile inhalants induced delirium; inhalant-induced delirium; inhalant induced delirium
+volatile inhalants induced psychotic disorder,substance-related and addictive disorder,volatile inhalants induced psychotic disorder; inhalant-induced psychosis; inhalant-induced psychotic disorder; inhalant induced psychosis; inhalant induced psychotic disorder
+volatile inhalants induced mood disorder,substance-related and addictive disorder,volatile inhalants induced mood disorder; inhalant-induced mood disorder; inhalant induced mood disorder
+volatile inhalants induced anxiety,substance-related and addictive disorder,volatile inhalants induced anxiety; inhalant-induced anxiety; inhalant-induced anxiety disorder; inhalant induced anxiety; inhalant induced anxiety disorder
 "episode of harmful use of dissociative drugs (ketamine, pcp)",substance-related and addictive disorder,"episode of harmful use of dissociative drugs (ketamine, pcp)"
-"harmful pattern of use of dissociative drugs (ketamine, pcp)",substance-related and addictive disorder,"harmful pattern of use of dissociative drugs (ketamine, pcp)"
-"dissociative drugs (ketamine, pcp) dependence",substance-related and addictive disorder,"dissociative drugs (ketamine, pcp) dependence"
-"dissociative drugs (ketamine, pcp) intoxication",substance-related and addictive disorder,"dissociative drugs (ketamine, pcp) intoxication"
-"dissociative drugs (ketamine, pcp) withdrawal",substance-related and addictive disorder,"dissociative drugs (ketamine, pcp) withdrawal"
-"dissociative drugs (ketamine, pcp) induced delirium",substance-related and addictive disorder,"dissociative drugs (ketamine, pcp) induced delirium"
-"dissociative drugs (ketamine, pcp) induced psychotic disorder",substance-related and addictive disorder,"dissociative drugs (ketamine, pcp) induced psychotic disorder"
-"dissociative drugs (ketamine, pcp) induced mood disorder",substance-related and addictive disorder,"dissociative drugs (ketamine, pcp) induced mood disorder"
-"dissociative drugs (ketamine, pcp) induced anxiety",substance-related and addictive disorder,"dissociative drugs (ketamine, pcp) induced anxiety"
+"harmful pattern of use of dissociative drugs (ketamine, pcp)",substance-related and addictive disorder,"harmful pattern of use of dissociative drugs (ketamine, pcp); harmful use of ketamine; ketamine abuse; ketamine misuse; pcp abuse"
+"dissociative drugs (ketamine, pcp) dependence",substance-related and addictive disorder,"dissociative drugs (ketamine, pcp) dependence; ketamine dependence; ketamine addiction; ketamine use disorder; pcp dependence"
+"dissociative drugs (ketamine, pcp) intoxication",substance-related and addictive disorder,"dissociative drugs (ketamine, pcp) intoxication; ketamine intoxication; pcp intoxication; phencyclidine intoxication"
+"dissociative drugs (ketamine, pcp) withdrawal",substance-related and addictive disorder,"dissociative drugs (ketamine, pcp) withdrawal; ketamine withdrawal"
+"dissociative drugs (ketamine, pcp) induced delirium",substance-related and addictive disorder,"dissociative drugs (ketamine, pcp) induced delirium; ketamine-induced delirium; ketamine induced delirium"
+"dissociative drugs (ketamine, pcp) induced psychotic disorder",substance-related and addictive disorder,"dissociative drugs (ketamine, pcp) induced psychotic disorder; ketamine-induced psychosis; ketamine psychosis; pcp psychosis; phencyclidine psychosis; ketamine induced psychosis"
+"dissociative drugs (ketamine, pcp) induced mood disorder",substance-related and addictive disorder,"dissociative drugs (ketamine, pcp) induced mood disorder; ketamine-induced mood disorder; ketamine induced mood disorder"
+"dissociative drugs (ketamine, pcp) induced anxiety",substance-related and addictive disorder,"dissociative drugs (ketamine, pcp) induced anxiety; ketamine-induced anxiety; ketamine induced anxiety"
 somatic symptom and related disorder,n/a,somatic symptom and related disorder
 illness anxiety disorder (hypochondriasis),somatic symptom and related disorder,illness anxiety disorder (hypochondriasis); illness anxiety disorder; hypochondriasis; iad
 somatic symptom disorder,somatic symptom and related disorder,somatic symptom disorder; ssd
@@ -231,7 +231,7 @@ psychological factors affecting other medical conditions,somatic symptom and rel
 other specified somatic symptom and related disorder,somatic symptom and related disorder,other specified somatic symptom and related disorder
 unspecified somatic symptom and related disorder,somatic symptom and related disorder,unspecified somatic symptom and related disorder
 sexual dysfunction,n/a,sexual dysfunction
-anorgasmia/female orgasmic disorder,sexual dysfunction,anorgasmia/female orgasmic disorder; anorgasmia female orgasmic disorder
+anorgasmia/female orgasmic disorder,sexual dysfunction,anorgasmia/female orgasmic disorder; anorgasmia female orgasmic disorder; female orgasmic disorder; anorgasmia; female anorgasmia; inhibited female orgasm
 delayed ejaculation,sexual dysfunction,delayed ejaculation
 dyspareunia,sexual dysfunction,dyspareunia
 erectile disorder/dysfunction,sexual dysfunction,erectile disorder/dysfunction; erectile disorder; erectile dysfunction; ed; erectile disorder dysfunction
@@ -249,7 +249,7 @@ elimination disorder,n/a,elimination disorder
 enuresis,elimination disorder,enuresis
 nocturnal enuresis,elimination disorder,nocturnal enuresis
 encopresis,elimination disorder,encopresis
-other specified elimination disorders,elimination disorder,other specified elimination disorders
+other specified elimination disorders,elimination disorder,other specified elimination disorders; other specified elimination disorder; elimination disorder not otherwise specified
 unspecified elimination disorder,elimination disorder,unspecified elimination disorder
 feeding and eating disorder,n/a,feeding and eating disorder
 pica,feeding and eating disorder,pica
@@ -265,7 +265,7 @@ atypical anorexia nervosa,feeding and eating disorder,atypical anorexia nervosa
 diabulimia,feeding and eating disorder,diabulimia
 orthorexia nervosa,feeding and eating disorder,orthorexia nervosa
 unspecified feeding or eating disorder,feeding and eating disorder,unspecified feeding or eating disorder
-"disruptive, impulse-control, and conduct disorder",n/a,"disruptive, impulse-control, and conduct disorder"
+"disruptive, impulse-control, and conduct disorder",n/a,"disruptive, impulse-control, and conduct disorder; disruptive behavior disorders; disruptive behaviour disorders; disruptive behavior disorder"
 intermittent explosive disorder,"disruptive, impulse-control, and conduct disorder",intermittent explosive disorder; ied
 oppositional defiant disorder,"disruptive, impulse-control, and conduct disorder",oppositional defiant disorder; odd
 conduct disorder,"disruptive, impulse-control, and conduct disorder",conduct disorder
@@ -275,7 +275,7 @@ kleptomania,"disruptive, impulse-control, and conduct disorder",kleptomania
 mythomania,"disruptive, impulse-control, and conduct disorder",mythomania
 "other specified disruptive, impulse-control, and conduct disorders","disruptive, impulse-control, and conduct disorder","other specified disruptive, impulse-control, and conduct disorders"
 "unspecified disruptive, impulse-control, and conduct disorders","disruptive, impulse-control, and conduct disorder","unspecified disruptive, impulse-control, and conduct disorders"
-obsessive-compulsive and related disorder,n/a,obsessive-compulsive and related disorder; obsessive compulsive and related disorder
+obsessive-compulsive and related disorder,n/a,obsessive-compulsive and related disorder; obsessive compulsive and related disorder; obsessive-compulsive spectrum disorders; obsessive compulsive related disorders; ocd spectrum disorders; obsessive compulsive spectrum disorders
 obsessive–compulsive disorder (ocd),obsessive-compulsive and related disorder,obsessive–compulsive disorder (ocd); obsessive–compulsive disorder; obsessive-compulsive disorder; ocd; obsessive compulsive disorder
 body dysmorphic disorder,obsessive-compulsive and related disorder,body dysmorphic disorder; bdd
 body integrity dysphoria,obsessive-compulsive and related disorder,body integrity dysphoria
@@ -284,9 +284,9 @@ excoriation disorder (skin-picking disorder),obsessive-compulsive and related di
 body-focused repetitive behavior disorder,obsessive-compulsive and related disorder,body-focused repetitive behavior disorder; body-focused repetitive behaviour disorder; bfrb; body focused repetitive behavior disorder; body focused repetitive behaviour disorder
 olfactory reference syndrome,obsessive-compulsive and related disorder,olfactory reference syndrome
 phantom limb syndrome,obsessive-compulsive and related disorder,phantom limb syndrome
-primarily obsessional obsessive-compulsive disorder,obsessive-compulsive and related disorder,primarily obsessional obsessive-compulsive disorder; primarily obsessional obsessive compulsive disorder
+primarily obsessional obsessive-compulsive disorder,obsessive-compulsive and related disorder,primarily obsessional obsessive-compulsive disorder; primarily obsessional obsessive compulsive disorder; pure obsessional ocd; pure o ocd; purely obsessional ocd; primarily obsessional ocd; obsessional ocd
 hoarding disorder,obsessive-compulsive and related disorder,hoarding disorder
-obsessive-compulsive and related disorder due to another medical condition,obsessive-compulsive and related disorder,obsessive-compulsive and related disorder due to another medical condition; obsessive compulsive and related disorder due to another medical condition
+obsessive-compulsive and related disorder due to another medical condition,obsessive-compulsive and related disorder,obsessive-compulsive and related disorder due to another medical condition; obsessive compulsive and related disorder due to another medical condition; secondary obsessive-compulsive disorder; secondary obsessive compulsive disorder
 substance/medication-induced obsessive-compulsive and related disorder,obsessive-compulsive and related disorder,substance/medication-induced obsessive-compulsive and related disorder; substance-induced obsessive-compulsive and related disorder; medication-induced obsessive-compulsive and related disorder; substance/medication induced obsessive compulsive and related disorder; substance medication-induced obsessive-compulsive and related disorder; substance medication induced obsessive compulsive and related disorder; substance induced obsessive compulsive and related disorder; medication induced obsessive compulsive and related disorder
 other specified obsessive-compulsive and related disorder,obsessive-compulsive and related disorder,other specified obsessive-compulsive and related disorder; other specified obsessive compulsive and related disorder
 unspecified obsessive-compulsive and related disorder,obsessive-compulsive and related disorder,unspecified obsessive-compulsive and related disorder; unspecified obsessive compulsive and related disorder
@@ -304,21 +304,21 @@ shared delusional disorder,schizophrenia spectrum and other psychotic disorder,s
 postpartum psychosis,schizophrenia spectrum and other psychotic disorder,postpartum psychosis; postnatal psychosis
 psychotic disorder due to another medical condition,schizophrenia spectrum and other psychotic disorder,psychotic disorder due to another medical condition
 substance/medication-induced psychotic disorder,schizophrenia spectrum and other psychotic disorder,substance/medication-induced psychotic disorder; substance-induced psychotic disorder; medication-induced psychotic disorder; substance/medication induced psychotic disorder; substance medication-induced psychotic disorder; substance medication induced psychotic disorder; substance induced psychotic disorder; medication induced psychotic disorder
-other schizophrenia spectrum and other psychotic disorder,schizophrenia spectrum and other psychotic disorder,other schizophrenia spectrum and other psychotic disorder
+other schizophrenia spectrum and other psychotic disorder,schizophrenia spectrum and other psychotic disorder,other schizophrenia spectrum and other psychotic disorder; other primary psychotic disorder; psychotic disorder not otherwise specified; psychosis not otherwise specified; psychosis nos
 unspecified schizophrenia spectrum and other psychotic disorder,schizophrenia spectrum and other psychotic disorder,unspecified schizophrenia spectrum and other psychotic disorder
 other condition,n/a,other condition
 catatonia,other condition,catatonia
-negative affectivity in personality disorder or personality difficulty,other condition,negative affectivity in personality disorder or personality difficulty
+negative affectivity in personality disorder or personality difficulty,other condition,negative affectivity in personality disorder or personality difficulty; negative affectivity
 detachment in personality disorder or personality difficulty,other condition,detachment in personality disorder or personality difficulty
-dissociality in personality disorder or personality difficulty,other condition,dissociality in personality disorder or personality difficulty
+dissociality in personality disorder or personality difficulty,other condition,dissociality in personality disorder or personality difficulty; dissociality
 disinhibition in personality disorder or personality difficulty,other condition,disinhibition in personality disorder or personality difficulty
-anankastia in personality disorder or personality difficulty,other condition,anankastia in personality disorder or personality difficulty
+anankastia in personality disorder or personality difficulty,other condition,anankastia in personality disorder or personality difficulty; anankastia; anankastic personality
 borderline pattern,other condition,borderline pattern
 gender dysphoria,other condition,gender dysphoria
 medication-induced movement disorders and other adverse effects of medication,other condition,medication-induced movement disorders and other adverse effects of medication; medication induced movement disorders and other adverse effects of medication
 culture-bound syndrome,other condition,culture-bound syndrome; culture bound syndrome
 attenuated psychosis syndrome,other condition,attenuated psychosis syndrome
-depressive episodes with short-duration hypomania,other condition,depressive episodes with short-duration hypomania; depressive episodes with short duration hypomania
+depressive episodes with short-duration hypomania,other condition,depressive episodes with short-duration hypomania; depressive episodes with short duration hypomania; short-duration hypomania; hypomania of short duration; depression with brief hypomania; short duration hypomania
 caffeine use disorder,other condition,caffeine use disorder
 internet gaming disorder,other condition,internet gaming disorder; igd
 neurobehavioral disorder associated with prenatal alcohol exposure,other condition,neurobehavioral disorder associated with prenatal alcohol exposure; neurobehavioural disorder associated with prenatal alcohol exposure; nd-pae
