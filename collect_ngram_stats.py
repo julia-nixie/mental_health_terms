@@ -120,7 +120,10 @@ def load_terms(path: Path):
 
 def fetch_batch(queries, corpus, start, end, smoothing, case_insensitive, retries=5):
     # Commas inside a phrase would split it, so they are stripped here.
-    content = ",".join(q.replace(",", "") for q in queries)
+    # Square brackets make the viewer treat the text literally. Without them
+    # '/' is division, '-' subtraction and '(' ')' grouping, so e.g.
+    # 'attention deficit/hyperactivity disorder' comes back as a ratio.
+    content = ",".join("[" + q.replace(",", "") + "]" for q in queries)
     params = {
         "content": content,
         "year_start": start,
@@ -190,7 +193,7 @@ def main():
     terms = list(load_terms(Path(args.input)))
     cache_path = Path(args.cache)
     cache = json.loads(cache_path.read_text()) if cache_path.exists() else {}
-    cache_key = lambda q, c: f"{args.corpus}|{args.start}|{args.end}|{args.smoothing}|{int(c)}|{q}"
+    cache_key = lambda q, c: f"v2|{args.corpus}|{args.start}|{args.end}|{args.smoothing}|{int(c)}|{q}"
 
     def plan(v, variants):
         """-> (query, case_insensitive) for one variant."""
