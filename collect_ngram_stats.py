@@ -196,6 +196,8 @@ def main():
                          "written WITHOUT those symbols)")
     ap.add_argument("--keep-ambiguous", action="store_true",
                     help="also search abbreviations that are everyday words (ED, AN, SAD, DID, ...)")
+    ap.add_argument("--keep-overlaps", action="store_true",
+                    help="do not subtract occurrences inside longer phrases (double counting)")
     ap.add_argument("--no-truncate", action="store_true",
                     help="drop variants over 5 tokens instead of cutting them to 5")
     args = ap.parse_args()
@@ -307,6 +309,38 @@ def main():
 
     absent = [q for q, c in pairs if resolve(q, c) is None]
 
+    # ---- remove double counting between phrases ---------------------------------
+    # The viewer counts every occurrence of a phrase, including inside longer phrases:
+    # "anxiety disorder" also counts the end of "social anxiety disorder". For each phrase
+    # we subtract the occurrences of the shortest longer phrases that contain it (this covers
+    # phrases of different terms and variants of the same term). Containers of containers are
+    # not subtracted again, since the nearest container already includes them.
+    def toks(q):
+        return q.lower().split()
+
+    def contains(big, small):
+        n = len(small)
+        return len(big) > n and any(big[i:i + n] == small for i in range(len(big) - n + 1))
+
+    raw = {pr: resolve(*pr) for pr in pairs}
+    ptoks = {pr: toks(pr[0]) for pr in pairs}
+    exclusive, reduced = {}, []
+    for a in pairs:
+        if not raw[a]:
+            continue
+        cont = [b for b in pairs if b != a and raw[b] and contains(ptoks[b], ptoks[a])]
+        nearest = [b for b in cont if not any(o != b and contains(ptoks[b], ptoks[o]) for o in cont)]
+        if args.keep_overlaps or not nearest:
+            exclusive[a] = raw[a]
+            continue
+        ex = list(raw[a])
+        for b in nearest:
+            for k, x in enumerate(raw[b][:len(ex)]):
+                ex[k] -= x
+        exclusive[a] = [max(0.0, x) for x in ex]
+        before, after = sum(raw[a]), sum(exclusive[a])
+        reduced.append((before - after, a[0], [b[0] for b in nearest], before, after))
+
     years = list(range(args.start, args.end + 1))
     with open(args.output, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
@@ -315,7 +349,7 @@ def main():
             total = [0.0] * len(years)
             has_data = False   # True if any variant returned data under some spelling
             for q, c in used:
-                series = resolve(q, c)
+                series = exclusive.get((q, c))
                 if series:
                     has_data = True
                     for k, x in enumerate(series[:len(years)]):
@@ -323,6 +357,11 @@ def main():
             for y, x in zip(years, total):
                 w.writerow([term, category, y, f"{x:.6e}", str(has_data).lower()])
 
+    if reduced:
+        print(f"Overlap removed from {len(reduced)} phrases (largest first):", file=sys.stderr)
+        for lost, q, bs, before, after in sorted(reduced, reverse=True)[:25]:
+            print(f"  - {q!r}: {before / max(before, 1e-30):.0%} -> {after / before:.0%} "
+                  f"(inside {', '.join(repr(b) for b in bs[:3])}{'…' if len(bs) > 3 else ''})", file=sys.stderr)
     if absent:
         print(f"No data under any spelling ({len(absent)}):", file=sys.stderr)
         for q in absent:
