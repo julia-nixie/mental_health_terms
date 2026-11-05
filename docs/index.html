@@ -185,6 +185,8 @@ footer a { color: inherit; }
   // ---------- helpers
   function $(id) { return document.getElementById(id); }
   function cap(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+  // a parent term has the same name as its category; label it so the two are never confused
+  function tlabel(t) { return t.name === t.group ? cap(t.name) + ' (term only)' : cap(t.name); }
   function fmtV(v) { return !v ? '0' : v >= 100 ? d3.format(',.0f')(v) : d3.format('.3~r')(v); }
   function peakOf(v, i0) { var bi = i0; for (var i = i0; i < v.length; i++) if (v[i] > v[bi]) bi = i; return { i: bi, val: v[bi] }; }
   function clear(el) { while (el.firstChild) el.removeChild(el.firstChild); }
@@ -229,7 +231,7 @@ footer a { color: inherit; }
   function resolveItem(key) {
     var kind = key.slice(0, 2), name = key.slice(2), x;
     if (kind === 'c:') { x = M.groups.get(name); return x && x.has ? { key: key, type: 'category', name: x.name, group: x.name, v: x.v, label: cap(x.name) + ' (whole category)' } : null; }
-    if (kind === 't:') { x = M.terms.get(name); return x && x.has ? { key: key, type: 'term', name: x.name, group: x.group, v: x.v, label: cap(x.name) } : null; }
+    if (kind === 't:') { x = M.terms.get(name); return x && x.has ? { key: key, type: 'term', name: x.name, group: x.group, v: x.v, label: tlabel(x) } : null; }
     return null;
   }
   function focusPick(it) { return it.type === 'term' ? { category: it.group, term: it.name, cmp: [] } : { category: it.name, term: '', cmp: [] }; }
@@ -257,12 +259,12 @@ footer a { color: inherit; }
       s.cmp.forEach(function (it, k) { out.push({ name: it.label, v: it.v, color: COLORS[k % 8], w: 2, legend: true, pick: focusPick(it) }); });
       return { label: 'Comparison of ' + out.length + ' lines', single: false, lines: out };
     }
-    if (s.term) return { label: cap(s.term.name), single: true, lines: [{ name: cap(s.term.name), v: s.term.v, color: COLORS[0], w: 2, legend: false }] };
+    if (s.term) return { label: tlabel(s.term), single: true, lines: [{ name: tlabel(s.term), v: s.term.v, color: COLORS[0], w: 2, legend: false }] };
     if (s.group) {
-      out.push({ name: cap(s.group.name) + ' (combined)', v: s.group.v, color: COLORS[0], w: 2, legend: true });
+      out.push({ name: cap(s.group.name) + ' (all terms combined)', v: s.group.v, color: COLORS[0], w: 2, legend: true });
       var members = s.group.terms.filter(function (t) { return t.has; }).sort(byPeak(s));
       var top = members.length > 1 ? members.slice(0, 5) : [];
-      for (i = 0; i < top.length; i++) out.push({ name: cap(top[i].name), v: top[i].v, color: COLORS[i + 1], w: 2, legend: true, pick: { term: top[i].name, cmp: [] } });
+      for (i = 0; i < top.length; i++) out.push({ name: tlabel(top[i]), v: top[i].v, color: COLORS[i + 1], w: 2, legend: true, pick: { term: top[i].name, cmp: [] } });
       return { label: cap(s.group.name), single: out.length === 1, lines: out, more: Math.max(0, members.length - top.length) };
     }
     var gs = orderedGroups(s);
@@ -275,8 +277,8 @@ footer a { color: inherit; }
   }
   function target(s) {
     if (s.cmp.length) { var lead = s.cmp.slice().sort(byPeak(s))[0]; return { name: lead.label + ', the highest in your comparison', v: lead.v }; }
-    if (s.term) return { name: cap(s.term.name), v: s.term.v };
-    if (s.group) return { name: cap(s.group.name), v: s.group.v };
+    if (s.term) return { name: tlabel(s.term), v: s.term.v };
+    if (s.group) return { name: cap(s.group.name) + ' (all terms combined)', v: s.group.v };
     var gs = orderedGroups(s);
     return gs.length ? { name: cap(gs[0].name) + ' (largest category)', v: gs[0].v } : null;
   }
@@ -312,7 +314,7 @@ footer a { color: inherit; }
       term.disabled = false;
       term.appendChild(new Option('All terms combined', ''));
       s.group.terms.slice().sort(function (a, b) { return a.name.localeCompare(b.name); }).forEach(function (t) {
-        var o = new Option(cap(t.name) + (t.has ? '' : ' (no data)'), t.name); o.disabled = !t.has; term.appendChild(o);
+        var o = new Option(tlabel(t) + (t.has ? '' : ' (no data)'), t.name); o.disabled = !t.has; term.appendChild(o);
       });
       term.value = s.term ? s.term.name : '';
     }
@@ -328,7 +330,7 @@ footer a { color: inherit; }
     groups.forEach(function (x) {
       var og = document.createElement('optgroup'); og.label = 'Terms in ' + x.name;
       x.terms.filter(function (t) { return t.has; }).sort(function (a, b) { return a.name.localeCompare(b.name); }).forEach(function (t) {
-        var o = new Option(cap(t.name), 't:' + t.name); o.disabled = !!have['t:' + t.name]; og.appendChild(o);
+        var o = new Option(tlabel(t), 't:' + t.name); o.disabled = !!have['t:' + t.name]; og.appendChild(o);
       });
       add.appendChild(og);
     });
@@ -435,7 +437,7 @@ footer a { color: inherit; }
     } else if (s.group) {
       items.push({ name: 'All terms combined', v: s.group.v, active: !s.term, pick: { term: '' } });
       s.group.terms.filter(function (t) { return t.has; }).sort(byPeak(s))
-        .forEach(function (t) { items.push({ name: cap(t.name), v: t.v, active: !!s.term && s.term.name === t.name, pick: { term: t.name } }); });
+        .forEach(function (t) { items.push({ name: tlabel(t), v: t.v, active: !!s.term && s.term.name === t.name, pick: { term: t.name } }); });
     } else {
       orderedGroups(s).forEach(function (g) { items.push({ name: cap(g.name), v: g.v, active: false, pick: { category: g.name, term: '' } }); });
     }
