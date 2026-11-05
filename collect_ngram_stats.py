@@ -76,13 +76,17 @@ def spellings(q: str):
     return out
 
 
+# Short single words that look like abbreviations to the rule below but are ordinary words.
+NOT_ACRONYMS = {"pica", "mania", "jetlag"}
+
+
 def is_acronym(variant: str, all_variants) -> bool:
     """A short single-word variant of a term that also has a spelled-out variant
     (e.g. 'sad' for 'social anxiety disorder') is an abbreviation. Those are
     searched UPPER-CASE and case-sensitively, so 'SAD' does not also count the
     ordinary word 'sad'. Single-variant terms (e.g. 'pica') are real words."""
     v = variant.strip()
-    return (" " not in v and len(v) <= 6
+    return (v.lower() not in NOT_ACRONYMS and " " not in v and len(v) <= 6
             and any(" " in o.strip() for o in all_variants))
 
 
