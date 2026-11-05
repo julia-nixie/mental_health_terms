@@ -6,7 +6,7 @@ column): per year, the term's frequency is the SUM of its variants' frequencies
 (Ngram frequencies are shares of all n-grams of that length, so they add up).
 
 Output: mental_disorders_stats.csv (long format)
-    term, category, year, frequency
+    term, category, year, frequency, has_data   (has_data=false: no variant returned any data)
 plus a per-variant cache (ngram_cache.json) so re-runs only fetch what is missing.
 
 Usage:
@@ -294,16 +294,18 @@ def main():
     years = list(range(args.start, args.end + 1))
     with open(args.output, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
-        w.writerow(["term", "category", "year", "frequency"])
+        w.writerow(["term", "category", "year", "frequency", "has_data"])
         for (term, category, _), used in zip(terms, final):
             total = [0.0] * len(years)
+            has_data = False   # True if any variant returned data under some spelling
             for q, c in used:
                 series = resolve(q, c)
                 if series:
+                    has_data = True
                     for k, x in enumerate(series[:len(years)]):
                         total[k] += x
             for y, x in zip(years, total):
-                w.writerow([term, category, y, f"{x:.6e}"])
+                w.writerow([term, category, y, f"{x:.6e}", str(has_data).lower()])
 
     if absent:
         print(f"No data under any spelling ({len(absent)}):", file=sys.stderr)
