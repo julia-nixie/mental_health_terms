@@ -96,25 +96,45 @@ def is_acronym(variant: str, all_variants) -> bool:
             and any(" " in o.strip() for o in all_variants))
 
 
-def truncate_query(query: str) -> str:
-    """Cut an over-long query to at most MAX_NGRAM tokens.
+EDGE_WORDS = {"of", "the", "to", "and", "or", "in", "with", "a", "an", "by", "for", "on", "at", "from", "due"}
 
-    A trailing parenthetical (an abbreviation or synonym such as '( ptsd )') is
-    dropped first, and the text is cut at the first comma (commas cannot appear
-    inside an Ngram query). The rest is cut to 5 tokens and dangling '-' or '/'
-    are removed. Returns '' if fewer than 2 words are left, because a single
-    common word would not identify the term.
+
+def candidate_windows(query: str):
+    """All 2- to 5-token windows of an over-long query that can be searched on their own.
+
+    Commas and parenthetical groups (an abbreviation, a list of examples) are barriers
+    that no window may cross, and a window never starts or ends on '-' or '/'.
+    Returns lower-case strings; the caller picks the most distinctive one.
     """
-    toks = query.split()
-    if toks and toks[-1] == ")" and "(" in toks:
-        toks = toks[:len(toks) - 1 - toks[::-1].index("(")]
-    if "," in toks:
-        toks = toks[:toks.index(",")]
-    toks = toks[:MAX_NGRAM]
-    while toks and toks[-1] in ("-", "/"):
-        toks.pop()
-    words = [t for t in toks if t not in ("-", "/", "(", ")")]
-    return " ".join(toks) if len(words) >= 2 else ""
+    toks = query.lower().split()
+    segments, cur, depth = [], [], 0
+    for t in toks:
+        if t == "(":
+            depth += 1
+        if depth == 0 and t != ",":
+            cur.append(t)
+        elif depth == 0 or t == ",":
+            if cur:
+                segments.append(cur)
+            cur = []
+        if t == ")" and depth:
+            depth -= 1
+            if depth == 0 and cur:
+                segments.append(cur)
+                cur = []
+    if cur:
+        segments.append(cur)
+    out = []
+    for seg in segments:
+        for n in range(min(MAX_NGRAM, len(seg)), 1, -1):
+            for i in range(len(seg) - n + 1):
+                w = seg[i:i + n]
+                if w[0] in ("-", "/") or w[-1] in ("-", "/"):
+                    continue
+                if len([x for x in w if x not in ("-", "/")]) < 2:
+                    continue
+                out.append(" ".join(w))
+    return list(dict.fromkeys(out))
 
 
 def token_count(query: str) -> int:
@@ -218,23 +238,73 @@ def main():
 
     # ---- Decide which (query, case-mode) pairs make up each term -------------
     # 1. variants of <= 5 tokens are used as they are;
-    # 2. longer ones are cut to 5 tokens, but only if the cut phrase does not
-    #    collide with (a) a full variant of any term, (b) a variant already
-    #    counted for the same term, or (c) the cut phrase of a different term;
-    #    otherwise it is dropped so nothing is counted twice.
+    # 2. longer ones are replaced by a window of at most 5 tokens that is DISJOINT from every other
+    #    term: it occurs in no phrase of any other term (neither as a whole variant nor inside a
+    #    longer one). Among such windows the longest is used, so it stays as close to the full
+    #    phrase as possible (ties: not starting or ending on a function word such as "of" or
+    #    "due", then the rarest words). If a term has no such window the variant is dropped.
     full = {}                                   # lower-case query -> set of term indexes
+    phrases = []                                # (term index, token list) of every variant
     for i, (_, _, variants) in enumerate(terms):
         for v in variants:
             q, _ = plan(v, variants)
             if token_count(q) <= MAX_NGRAM:
                 full.setdefault(q.lower(), set()).add(i)
+            phrases.append((i, to_query(v, args.keep_punctuation).lower().split()))
+    df = {}
+    for _, toks_ in phrases:
+        for t in set(toks_):
+            df[t] = df.get(t, 0) + 1
 
-    cut_owners = {}                             # cut query -> set of term indexes
+    owners_cache = {}
+
+    def owners(window):
+        """Indexes of all terms having a phrase that contains this window."""
+        if window not in owners_cache:
+            w = window.split()
+            n = len(w)
+            owners_cache[window] = {i for i, toks_ in phrases
+                                    if any(toks_[k:k + n] == w for k in range(len(toks_) - n + 1))}
+        return owners_cache[window]
+
+    def rank(window):
+        ws = window.split()
+        edge = 1 if (ws[0] in EDGE_WORDS or ws[-1] in EDGE_WORDS) else 0
+        rare = sum(1.0 / df.get(x, 1) for x in ws if x not in ("-", "/"))
+        return (-len(ws), edge, -rare)
+
+    claimed = {}                                # window -> term index that owns it
+    choice = {}                                 # (term index, variant) -> window or None
+    reason = {}
     for i, (_, _, variants) in enumerate(terms):
         for v in variants:
-            q = to_query(v, args.keep_punctuation)
-            if token_count(q) > MAX_NGRAM and not args.no_truncate:
-                cut_owners.setdefault(truncate_query(q), set()).add(i)
+            q, c = plan(v, variants)
+            if token_count(q) <= MAX_NGRAM or args.no_truncate:
+                continue
+            ranked = sorted(candidate_windows(to_query(v, args.keep_punctuation)), key=rank)
+            pick = None
+            for w in ranked:
+                if owners(w) - {i}:
+                    continue                    # also occurs in another term's phrases
+                if claimed.get(w, i) != i:
+                    continue
+                if w in full:
+                    reason[(i, v)] = f"window '{w}' duplicates a variant of the same term"
+                    continue
+                pick = w
+                break
+            if pick is None and terms[i][1] == "n/a":
+                # A parent term's words always occur inside its children's phrases, so no window can
+                # be disjoint; use the least shared one (the overlap is subtracted afterwards).
+                for w in sorted(ranked, key=lambda w: (len(owners(w) - {i}),) + rank(w)):
+                    if claimed.get(w, i) == i and w not in full and len(w.split()) >= 3:
+                        pick = w
+                        break
+            if pick is not None:
+                claimed[pick] = i
+            elif (i, v) not in reason:
+                reason[(i, v)] = "no distinctive window that no other term uses"
+            choice[(i, v)] = pick
 
     final, truncated, dropped = [], [], []      # final[i] = [(query, ci), ...]
     for i, (_, _, variants) in enumerate(terms):
@@ -252,17 +322,11 @@ def main():
             if args.no_truncate:
                 dropped.append((v, "too long"))
                 continue
-            t = truncate_query(q)
-            if not t:
-                dropped.append((v, "fewer than 2 words left after cutting"))
-            elif full.get(t.lower(), set()) - {i}:
-                dropped.append((v, f"cut form '{t}' is a variant of another term"))
-            elif t.lower() in full:
-                dropped.append((v, f"cut form '{t}' duplicates a variant of the same term"))
-            elif len(cut_owners[t]) > 1:
-                dropped.append((v, f"cut form '{t}' is shared by several terms"))
+            t = choice.get((i, v))
+            if t is None:
+                dropped.append((v, reason.get((i, v), "no usable window")))
             elif (t, ci) in used:
-                dropped.append((v, f"cut form '{t}' duplicates another variant of the same term"))
+                dropped.append((v, f"window '{t}' duplicates another variant of the same term"))
             else:
                 used.append((t, ci))
                 truncated.append((v, t))
@@ -351,7 +415,7 @@ def main():
             for q, c in used:
                 series = exclusive.get((q, c))
                 if series:
-                    has_data = True
+                    has_data = has_data or sum(series) > 0
                     for k, x in enumerate(series[:len(years)]):
                         total[k] += x
             for y, x in zip(years, total):
