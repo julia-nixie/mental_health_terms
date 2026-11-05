@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mental Health Term Trends</title>
+<meta name="description" content="How often mental health terms appear in English-language books, 1800 to 2022, from the Google Books Ngram Viewer. Compare categories and individual terms.">
+<style>
+/* Layout: one column; controls on top, then compare, chart, breakdown. Tokens first. */
+:root {
+  color-scheme: light;
+  --bg: #f4f4f2; --panel: #fcfcfb; --fg: #0b0b0b; --fg2: #52514e; --border: #dcdbd6;
+  --grid: #e9e8e4; --axis: #b9b8b1; --muted: #b9b8b1; --hover: #efeeea; --pop: #ffffff;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300; --s7: #6250d6; --s8: #e34948;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --r: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #121211; --panel: #1a1a19; --fg: #f0efec; --fg2: #c3c2b7; --border: #34332f;
+    --grid: #2a2a27; --axis: #55544f; --muted: #5b5a56; --hover: #242422; --pop: #232321;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300; --s7: #9085e9; --s8: #e66767;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #121211; --panel: #1a1a19; --fg: #f0efec; --fg2: #c3c2b7; --border: #34332f;
+  --grid: #2a2a27; --axis: #55544f; --muted: #5b5a56; --hover: #242422; --pop: #232321;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300; --s7: #9085e9; --s8: #e66767;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.45;
+  padding: 28px max(16px, env(safe-area-inset-right, 0px)) 48px max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 1100px; margin-inline: auto; display: grid; gap: 20px; }
+h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.7rem, 4vw, 2.4rem); margin: 0 0 6px; line-height: 1.12; text-wrap: balance; }
+h2 { font-size: 1.05rem; font-weight: 600; margin: 0; }
+p { margin: 0; }
+.sub { color: var(--fg2); max-width: 70ch; }
+.take { font-size: 1.1rem; line-height: 1.5; max-width: 70ch; min-height: 3em; }
+.take b { font-weight: 600; font-variant-numeric: tabular-nums; }
+.controls, .cmp { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; }
+.field { display: grid; gap: 4px; min-width: 0; flex: 1 1 14rem; max-width: 24rem; }
+.field label, .rangewrap > span { font-size: .8rem; color: var(--fg2); }
+select { width: 100%; font: inherit; color: var(--fg); background: var(--panel); border: 1px solid var(--border); border-radius: var(--r); padding: 8px 10px; }
+select:disabled { opacity: .55; }
+.rangewrap { display: grid; gap: 4px; }
+.ranges { display: flex; border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; background: var(--panel); }
+.range { font: inherit; font-size: .8rem; color: var(--fg2); background: transparent; border: 0; padding: 9px 12px; cursor: pointer; }
+.range + .range { border-left: 1px solid var(--border); }
+.range.on { color: var(--fg); background: var(--hover); font-weight: 600; }
+button:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.card { background: var(--panel); border: 1px solid var(--border); border-radius: var(--r); padding: 18px; display: grid; gap: 8px; min-width: 0; }
+.note { color: var(--fg2); font-size: .8rem; }
+.chart { position: relative; min-height: 250px; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { fill: var(--fg2); font-size: 11px; font-family: var(--sans); font-variant-numeric: tabular-nums; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-size: .8rem; color: var(--fg2); }
+.leg { font: inherit; color: var(--fg); background: transparent; border: 0; padding: 2px 0; display: inline-flex; gap: 6px; align-items: center; cursor: default; text-align: left; }
+.leg[data-pick] { cursor: pointer; }
+.leg[data-pick]:hover span:last-child { text-decoration: underline; }
+.sw { width: 10px; height: 10px; border-radius: 2px; flex: none; }
+.tip { position: absolute; top: 8px; pointer-events: none; background: var(--pop); border: 1px solid var(--border); border-radius: var(--r);
+  box-shadow: 0 4px 16px rgba(0,0,0,.14); padding: 6px 10px; font-size: .8rem; max-width: 20rem; z-index: 2; }
+.tip-year { color: var(--fg2); margin-bottom: 2px; }
+.tip-row { display: flex; gap: 6px; align-items: center; justify-content: space-between; white-space: nowrap; }
+.tip-row > span:nth-child(2) { overflow: hidden; text-overflow: ellipsis; flex: 1; }
+.tip-row > span:last-child { font-variant-numeric: tabular-nums; padding-left: 10px; }
+.head, .row { display: grid; grid-template-columns: minmax(0, 1fr) 96px 7.5rem; gap: 14px; align-items: center; }
+.head { padding: 0 10px 6px; color: var(--fg2); font-size: .8rem; border-bottom: 1px solid var(--border); }
+.head span:last-child, .row .peak { text-align: right; }
+.row { font: inherit; color: var(--fg); background: transparent; border: 0; border-bottom: 1px solid var(--border); padding: 8px 10px; cursor: pointer; text-align: left; width: 100%; }
+.row:hover { background: var(--hover); }
+.row[aria-pressed="true"] { background: var(--hover); font-weight: 600; }
+.row .name { min-width: 0; overflow-wrap: anywhere; }
+.row .peak { font-variant-numeric: tabular-nums; font-size: .8rem; color: var(--fg2); }
+.row svg { width: 96px; height: 26px; display: block; }
+.btn { font: inherit; font-size: .8rem; color: var(--fg); background: var(--panel); border: 1px solid var(--border); border-radius: var(--r); padding: 9px 12px; cursor: pointer; }
+.btn:hover:not(:disabled) { background: var(--hover); }
+.btn:disabled { opacity: .5; cursor: default; }
+.presets { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip, .chipbtn { font-size: .8rem; border: 1px solid var(--border); border-radius: 999px; padding: 3px 10px; }
+.chip { color: var(--fg2); }
+.chipbtn { display: inline-flex; gap: 6px; align-items: center; font-family: inherit; color: var(--fg); background: transparent; cursor: pointer; }
+.chipbtn:hover { background: var(--hover); }
+details summary { cursor: pointer; }
+.method { display: grid; gap: 6px; }
+.method p { max-width: 80ch; }
+footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
+footer a { color: inherit; }
+[hidden] { display: none !important; }
+@media (max-width: 520px) {
+  .head, .row { grid-template-columns: minmax(0, 1fr) 72px 5.5rem; gap: 8px; }
+  .row svg { width: 72px; }
+  .card { padding: 14px; }
+}
+@media (prefers-reduced-motion: no-preference) { .range, .btn, .row { transition: background-color .12s; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Mental health terms in books</h1>
+    <p class="sub">How often <span id="nterms">391</span> mental health terms appear in English-language books published from 1800 to 2022, from the Google Books Ngram Viewer. Pick a category to add up everything in it, then pick a single term to look at it alone, or compare any mix of categories and terms.</p>
+  </header>
+
+  <p class="take" id="take" aria-live="polite"></p>
+
+  <div class="controls">
+    <div class="field"><label for="category">Category</label><select id="category"></select></div>
+    <div class="field"><label for="term">Term</label><select id="term"></select></div>
+    <div class="rangewrap">
+      <span id="range-label">Show from</span>
+      <div class="ranges" role="group" aria-labelledby="range-label">
+        <button type="button" class="range" data-from="1800" aria-pressed="false">1800</button>
+        <button type="button" class="range" data-from="1900" aria-pressed="false">1900</button>
+        <button type="button" class="range" data-from="1950" aria-pressed="false">1950</button>
+        <button type="button" class="range" data-from="1980" aria-pressed="false">1980</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="card" aria-labelledby="compare-h">
+    <h2 id="compare-h">Compare</h2>
+    <p class="note">Draw up to eight lines together: whole categories, single terms, or a term from one category against a term from another. While a comparison is active it replaces the category and term view below.</p>
+    <div class="cmp">
+      <div class="field"><label for="add">Add to comparison</label><select id="add"></select></div>
+      <div class="presets">
+        <button type="button" class="btn preset" data-n="5">Top 5 categories</button>
+        <button type="button" class="btn preset" data-n="8">Top 8 categories</button>
+        <button type="button" class="btn" id="clear" disabled>Clear comparison</button>
+      </div>
+    </div>
+    <p class="note" id="cmp-empty">Nothing added yet. Choose from the list, or start from the biggest categories. Categories are ranked by their peak since the year selected above.</p>
+    <div class="chips" id="chips"></div>
+  </section>
+
+  <section class="card" aria-labelledby="trend-h">
+    <h2 id="trend-h">Frequency over time</h2>
+    <p class="note">Phrases per million phrases of the same length in that year's books. Hover or tap the chart to read a year.</p>
+    <div class="chart" id="chart">Loading…</div>
+  </section>
+
+  <section class="card" aria-labelledby="breakdown-h">
+    <h2 id="breakdown-h">Breakdown</h2>
+    <p class="note">Click a row to focus on it. Each trend line is scaled to its own peak, so compare the peak column across rows.</p>
+    <div>
+      <div class="head"><span>Name</span><span>Trend</span><span>Peak per million</span></div>
+      <div id="rows"></div>
+    </div>
+  </section>
+
+  <section class="card" id="nodata" aria-labelledby="nodata-h" hidden>
+    <details>
+      <summary id="nodata-h">No data found for <b id="nodata-count"></b> terms</summary>
+      <p class="note" style="margin-top:8px">None of these terms, or their spelling variants, appear in the Google Books English corpus. They are left out of the charts and totals above.</p>
+      <div class="chips" id="nodata-chips" style="margin-top:8px"></div>
+    </details>
+  </section>
+
+  <section class="card method" aria-labelledby="method-h">
+    <h2 id="method-h">How to read this</h2>
+    <p class="note">Source: Google Books Ngram Viewer, English corpus, 1800–2022. A value is the share of all phrases of that length in the year's books, shown per million.</p>
+    <p class="note">Each term adds together its spelling variants, for example "attention deficit hyperactivity disorder", "attention-deficit/hyperactivity disorder" and "ADHD", and the plural forms. Abbreviations were matched in capitals only. Abbreviations that are also everyday words or abbreviations (ED, AN, SAD, DID, ODD, BED, HAND, TS, BN) were left out, because they mostly counted something else. Variants longer than five words were shortened to their first five, and shortened forms shared by several terms were left out.</p>
+    <p class="note">A category adds its own term and every term under it. Phrases that contain other phrases are counted for both, so a category total can be somewhat higher than the number of distinct books that mention it. Frequencies show how often words are used in print, not how common a condition is. Some words, such as "mania", also had everyday meanings long before they were diagnoses.</p>
+  </section>
+
+  <footer>
+    Ngram data © Google, licensed CC BY 3.0 (<a href="https://storage.googleapis.com/books/ngrams/books/datasetsv3.html">Google Books Ngram datasets</a>). Term list and collection code: <a href="https://github.com/julia-nixie/mental_health_terms">julia-nixie/mental_health_terms</a>.
+  </footer>
+</div>
+
+<noscript>This page needs JavaScript to draw its charts.</noscript>
+<script src="d3.min.js"></script>
+<script>
+(function () {
+  'use strict';
+  var ALL = '__all', MAXCMP = 8, DEFAULT_CAT = 'anxiety disorder';
+  var M = null;                       // model
+  var state = { category: null, term: '', from: 1900, cmp: [] };
+
+  // ---------- helpers
+  function $(id) { return document.getElementById(id); }
+  function cap(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+  function fmtV(v) { return !v ? '0' : v >= 100 ? d3.format(',.0f')(v) : d3.format('.3~r')(v); }
+  function peakOf(v, i0) { var bi = i0; for (var i = i0; i < v.length; i++) if (v[i] > v[bi]) bi = i; return { i: bi, val: v[bi] }; }
+  function clear(el) { while (el.firstChild) el.removeChild(el.firstChild); }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  var COLORS = ['var(--s1)', 'var(--s2)', 'var(--s3)', 'var(--s4)', 'var(--s5)', 'var(--s6)', 'var(--s7)', 'var(--s8)'];
+
+  // ---------- state <-> URL hash
+  function readHash() {
+    var p = new URLSearchParams(location.hash.replace(/^#/, ''));
+    if (p.get('category')) state.category = p.get('category');
+    if (p.has('term')) state.term = p.get('term') || '';
+    if (p.get('from')) state.from = +p.get('from') || 1900;
+    state.cmp = p.getAll('cmp');
+  }
+  function writeHash() {
+    var p = new URLSearchParams();
+    if (state.category) p.set('category', state.category);
+    if (state.term) p.set('term', state.term);
+    if (state.from !== 1900) p.set('from', String(state.from));
+    state.cmp.forEach(function (k) { p.append('cmp', k); });
+    var h = p.toString();
+    try { history.replaceState(null, '', h ? '#' + h : location.pathname + location.search); } catch (e) { /* file:// */ }
+  }
+  function set(patch) { for (var k in patch) state[k] = patch[k]; writeHash(); render(); }
+
+  // ---------- model
+  function buildModel(data) {
+    var y0 = data.y0, y1 = data.y1, n = y1 - y0 + 1, terms = new Map(), groups = new Map(), i;
+    data.terms.forEach(function (t) {
+      terms.set(t.n, { name: t.n, group: t.c === 'n/a' ? t.n : t.c, has: t.h, v: t.v });
+    });
+    terms.forEach(function (t) {
+      var g = groups.get(t.group);
+      if (!g) { g = { name: t.group, terms: [], v: new Array(n).fill(0) }; groups.set(t.group, g); }
+      g.terms.push(t);
+      for (var k = 0; k < n; k++) g.v[k] += t.v[k];
+    });
+    groups.forEach(function (g) { g.has = g.terms.some(function (t) { return t.has; }); });
+    var years = []; for (i = 0; i < n; i++) years.push(y0 + i);
+    return { terms: terms, groups: groups, years: years, y0: y0, y1: y1, n: n };
+  }
+  function resolveItem(key) {
+    var kind = key.slice(0, 2), name = key.slice(2), x;
+    if (kind === 'c:') { x = M.groups.get(name); return x && x.has ? { key: key, type: 'category', name: x.name, group: x.name, v: x.v, label: cap(x.name) + ' (whole category)' } : null; }
+    if (kind === 't:') { x = M.terms.get(name); return x && x.has ? { key: key, type: 'term', name: x.name, group: x.group, v: x.v, label: cap(x.name) } : null; }
+    return null;
+  }
+  function focusPick(it) { return it.type === 'term' ? { category: it.group, term: it.name, cmp: [] } : { category: it.name, term: '', cmp: [] }; }
+  function sel() {
+    var cat = state.category || (M.groups.has(DEFAULT_CAT) ? DEFAULT_CAT : ALL);
+    if (cat !== ALL && !M.groups.has(cat)) cat = ALL;
+    var group = cat === ALL ? null : M.groups.get(cat), term = null;
+    if (group && state.term) term = group.terms.find(function (t) { return t.name === state.term && t.has; }) || null;
+    var from = Math.max(M.y0, Math.min(+state.from || 1900, M.y1 - 10)), cmp = [];
+    state.cmp.forEach(function (key) {
+      var it = resolveItem(String(key));
+      if (it && !cmp.some(function (x) { return x.key === it.key; })) cmp.push(it);
+    });
+    return { cat: cat, group: group, term: term, from: from, i0: from - M.y0, cmp: cmp.slice(0, MAXCMP) };
+  }
+  function orderedGroups(s) {
+    return Array.from(M.groups.values()).filter(function (g) { return g.has; })
+      .sort(function (a, b) { return peakOf(b.v, s.i0).val - peakOf(a.v, s.i0).val; });
+  }
+  function byPeak(s) { return function (a, b) { return peakOf(b.v, s.i0).val - peakOf(a.v, s.i0).val; }; }
+
+  function lines(s) {
+    var out = [], i;
+    if (s.cmp.length) {
+      s.cmp.forEach(function (it, k) { out.push({ name: it.label, v: it.v, color: COLORS[k % 8], w: 2, legend: true, pick: focusPick(it) }); });
+      return { label: 'Comparison of ' + out.length + ' lines', single: false, lines: out };
+    }
+    if (s.term) return { label: cap(s.term.name), single: true, lines: [{ name: cap(s.term.name), v: s.term.v, color: COLORS[0], w: 2, legend: false }] };
+    if (s.group) {
+      out.push({ name: cap(s.group.name) + ' (combined)', v: s.group.v, color: COLORS[0], w: 2, legend: true });
+      var members = s.group.terms.filter(function (t) { return t.has; }).sort(byPeak(s));
+      var top = members.length > 1 ? members.slice(0, 5) : [];
+      for (i = 0; i < top.length; i++) out.push({ name: cap(top[i].name), v: top[i].v, color: COLORS[i + 1], w: 2, legend: true, pick: { term: top[i].name, cmp: [] } });
+      return { label: cap(s.group.name), single: out.length === 1, lines: out, more: Math.max(0, members.length - top.length) };
+    }
+    var gs = orderedGroups(s);
+    for (i = 0; i < gs.length; i++) {
+      var colored = i < 6;
+      out.push({ name: cap(gs[i].name), v: gs[i].v, color: colored ? COLORS[i] : 'var(--muted)', w: colored ? 2 : 1.25, legend: colored,
+        pick: colored ? { category: gs[i].name, term: '', cmp: [] } : null });
+    }
+    return { label: 'All categories', single: false, lines: out, more: Math.max(0, gs.length - 6), allMode: true };
+  }
+  function target(s) {
+    if (s.cmp.length) { var lead = s.cmp.slice().sort(byPeak(s))[0]; return { name: lead.label + ', the highest in your comparison', v: lead.v }; }
+    if (s.term) return { name: cap(s.term.name), v: s.term.v };
+    if (s.group) return { name: cap(s.group.name), v: s.group.v };
+    var gs = orderedGroups(s);
+    return gs.length ? { name: cap(gs[0].name) + ' (largest category)', v: gs[0].v } : null;
+  }
+  function scopeNoData(s) {
+    return Array.from(M.terms.values()).filter(function (t) { return (!s.group || t.group === s.group.name) && !t.has; })
+      .sort(function (a, b) { return a.name.localeCompare(b.name); });
+  }
+
+  // ---------- draw: headline sentence
+  function drawTake(s) {
+    var t = target(s), box = $('take');
+    clear(box);
+    if (!t) return;
+    var pk = peakOf(t.v, s.i0);
+    function b(x) { var e = el('b', null, x); return e; }
+    box.append(b(t.name), ' peaked in ', b(String(M.years[pk.i])), ' at ', b(fmtV(pk.val)),
+      ' per million phrases, and stood at ', b(fmtV(t.v[M.n - 1])), ' in ', b(String(M.y1)), '.');
+  }
+
+  // ---------- draw: selects, chips, presets
+  function drawSelects(s) {
+    var cat = $('category'), term = $('term'), add = $('add');
+    clear(cat);
+    cat.appendChild(new Option('All categories (compare)', ALL));
+    Array.from(M.groups.values()).filter(function (x) { return x.has; })
+      .sort(function (a, b) { return a.name.localeCompare(b.name); })
+      .forEach(function (x) { cat.appendChild(new Option(cap(x.name), x.name)); });
+    cat.value = s.cat;
+
+    clear(term);
+    if (!s.group) { term.appendChild(new Option('Pick a category first', '')); term.disabled = true; }
+    else {
+      term.disabled = false;
+      term.appendChild(new Option('All terms combined', ''));
+      s.group.terms.slice().sort(function (a, b) { return a.name.localeCompare(b.name); }).forEach(function (t) {
+        var o = new Option(cap(t.name) + (t.has ? '' : ' (no data)'), t.name); o.disabled = !t.has; term.appendChild(o);
+      });
+      term.value = s.term ? s.term.name : '';
+    }
+
+    clear(add);
+    var have = {}, full = s.cmp.length >= MAXCMP;
+    s.cmp.forEach(function (it) { have[it.key] = true; });
+    add.appendChild(new Option(full ? 'Eight lines is the maximum' : 'Choose a category or a term…', ''));
+    var groups = Array.from(M.groups.values()).filter(function (x) { return x.has; }).sort(function (a, b) { return a.name.localeCompare(b.name); });
+    var whole = document.createElement('optgroup'); whole.label = 'Whole categories (all their terms added up)';
+    groups.forEach(function (x) { var o = new Option(cap(x.name), 'c:' + x.name); o.disabled = !!have['c:' + x.name]; whole.appendChild(o); });
+    add.appendChild(whole);
+    groups.forEach(function (x) {
+      var og = document.createElement('optgroup'); og.label = 'Terms in ' + x.name;
+      x.terms.filter(function (t) { return t.has; }).sort(function (a, b) { return a.name.localeCompare(b.name); }).forEach(function (t) {
+        var o = new Option(cap(t.name), 't:' + t.name); o.disabled = !!have['t:' + t.name]; og.appendChild(o);
+      });
+      add.appendChild(og);
+    });
+    add.disabled = full; add.value = '';
+
+    var chips = $('chips'); clear(chips);
+    s.cmp.forEach(function (it, i) {
+      var b = el('button', 'chipbtn'); b.type = 'button'; b.setAttribute('aria-label', 'Remove ' + it.label);
+      var sw = el('span', 'sw'); sw.style.background = COLORS[i % 8];
+      b.append(sw, el('span', null, it.label + ' ×'));
+      b.onclick = function () { set({ cmp: s.cmp.map(function (k) { return k.key; }).filter(function (k) { return k !== it.key; }) }); };
+      chips.appendChild(b);
+    });
+    $('cmp-empty').hidden = s.cmp.length > 0;
+    $('clear').disabled = s.cmp.length === 0;
+    Array.prototype.forEach.call(document.querySelectorAll('.range'), function (b) {
+      var on = +b.dataset.from === s.from; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+
+  // ---------- draw: main chart
+  function drawChart(s) {
+    var host = $('chart'), L = lines(s);
+    clear(host);
+    if (!L.lines.length) return;
+    var W = Math.max(280, host.clientWidth || 600), H = W < 520 ? 250 : 340, mg = { t: 12, r: 14, b: 28, l: 46 };
+    var yrs = M.years.slice(s.i0);
+    var x = d3.scaleLinear([yrs[0], yrs[yrs.length - 1]], [mg.l, W - mg.r]);
+    var ymax = d3.max(L.lines, function (l) { return d3.max(l.v.slice(s.i0)); }) || 1;
+    var y = d3.scaleLinear([0, ymax * 1.06], [H - mg.b, mg.t]).nice(5);
+    var root = d3.select(host);
+    var svg = root.append('svg').attr('viewBox', '0 0 ' + W + ' ' + H).attr('width', '100%').attr('role', 'img')
+      .attr('aria-label', 'Line chart of ' + L.label + ' per million phrases, ' + yrs[0] + ' to ' + yrs[yrs.length - 1]);
+    y.ticks(5).forEach(function (tv) {
+      svg.append('line').attr('x1', mg.l).attr('x2', W - mg.r).attr('y1', y(tv)).attr('y2', y(tv)).style('stroke', 'var(--grid)');
+      svg.append('text').attr('x', mg.l - 8).attr('y', y(tv)).attr('dy', '0.32em').attr('text-anchor', 'end').text(fmtV(tv));
+    });
+    svg.append('line').attr('x1', mg.l).attr('x2', W - mg.r).attr('y1', H - mg.b).attr('y2', H - mg.b).style('stroke', 'var(--axis)');
+    x.ticks(W < 520 ? 5 : 9).forEach(function (tv) {
+      svg.append('text').attr('x', x(tv)).attr('y', H - mg.b + 17).attr('text-anchor', 'middle').text(d3.format('d')(tv));
+    });
+    var line = d3.line().x(function (d, i) { return x(yrs[i]); }).y(function (d) { return y(d); });
+    if (L.single) {
+      var grad = svg.append('defs').append('linearGradient').attr('id', 'fade').attr('x1', 0).attr('x2', 0).attr('y1', 0).attr('y2', 1);
+      [[0, .26], [.25, .16], [.5, .08], [.75, .03], [1, 0]].forEach(function (st) {
+        grad.append('stop').attr('offset', st[0]).attr('style', 'stop-color:' + L.lines[0].color + ';stop-opacity:' + st[1]);
+      });
+      var area = d3.area().x(function (d, i) { return x(yrs[i]); }).y0(y(0)).y1(function (d) { return y(d); });
+      svg.append('path').attr('d', area(L.lines[0].v.slice(s.i0))).style('fill', 'url(#fade)');
+    }
+    L.lines.slice().sort(function (a, b) { return (a.legend ? 1 : 0) - (b.legend ? 1 : 0); }).forEach(function (l) {
+      svg.append('path').attr('d', line(l.v.slice(s.i0))).style('fill', 'none').style('stroke', l.color)
+        .attr('stroke-width', l.w).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round');
+    });
+    var leg = L.lines.filter(function (l) { return l.legend; });
+    if (leg.length) {
+      var lg = el('div', 'legend'); host.appendChild(lg);
+      leg.forEach(function (l) {
+        var b = el('button', 'leg'); b.type = 'button';
+        if (l.pick) { b.setAttribute('data-pick', '1'); b.onclick = function () { set(l.pick); }; }
+        var sw = el('span', 'sw'); sw.style.background = l.color;
+        b.append(sw, el('span', null, l.name)); lg.appendChild(b);
+      });
+      if (L.more) lg.appendChild(el('span', null, L.allMode ? '+ ' + L.more + ' more categories in grey' : '+ ' + L.more + ' more terms not drawn; see the breakdown below'));
+    }
+    var tipLines = L.lines.filter(function (l) { return l.legend || L.single; });
+    var hov = svg.append('g').style('display', 'none');
+    var rule = hov.append('line').attr('y1', mg.t).attr('y2', H - mg.b).style('stroke', 'var(--axis)');
+    var dots = hov.selectAll('circle').data(tipLines).join('circle').attr('r', 3.5).style('fill', function (l) { return l.color; })
+      .style('stroke', 'var(--panel)').attr('stroke-width', 2);
+    var tip = root.append('div').attr('class', 'tip').style('display', 'none');
+    function show(ev) {
+      var px = d3.pointer(ev, svg.node())[0];
+      var yr = Math.max(yrs[0], Math.min(yrs[yrs.length - 1], Math.round(x.invert(px))));
+      var k = s.i0 + (yr - yrs[0]);
+      rule.attr('x1', x(yr)).attr('x2', x(yr));
+      dots.attr('cx', x(yr)).attr('cy', function (l) { return y(l.v[k]); });
+      hov.style('display', null);
+      tip.selectAll('*').remove();
+      tip.append('div').attr('class', 'tip-year').text(String(yr));
+      tipLines.forEach(function (l) {
+        var row = tip.append('div').attr('class', 'tip-row');
+        row.append('span').attr('class', 'sw').style('background', l.color);
+        row.append('span').text(l.name);
+        row.append('span').text(fmtV(l.v[k]));
+      });
+      tip.style('display', 'block');
+      var box = host.getBoundingClientRect(), tw = tip.node().offsetWidth;
+      var left = (x(yr) / W) * box.width + 14;
+      if (left + tw > box.width) left = (x(yr) / W) * box.width - tw - 14;
+      tip.style('left', Math.max(0, left) + 'px');
+    }
+    function hide() { hov.style('display', 'none'); tip.style('display', 'none'); }
+    svg.append('rect').attr('x', mg.l).attr('y', mg.t).attr('width', W - mg.l - mg.r).attr('height', H - mg.t - mg.b)
+      .style('fill', 'transparent').on('pointermove', show).on('pointerdown', show).on('pointerleave', hide);
+  }
+
+  // ---------- draw: breakdown list
+  function drawRows(s) {
+    var host = $('rows'), items = [];
+    clear(host);
+    if (s.cmp.length) {
+      s.cmp.slice().sort(byPeak(s)).forEach(function (it) { items.push({ name: it.label, v: it.v, active: false, pick: focusPick(it) }); });
+    } else if (s.group) {
+      items.push({ name: 'All terms combined', v: s.group.v, active: !s.term, pick: { term: '' } });
+      s.group.terms.filter(function (t) { return t.has; }).sort(byPeak(s))
+        .forEach(function (t) { items.push({ name: cap(t.name), v: t.v, active: !!s.term && s.term.name === t.name, pick: { term: t.name } }); });
+    } else {
+      orderedGroups(s).forEach(function (g) { items.push({ name: cap(g.name), v: g.v, active: false, pick: { category: g.name, term: '' } }); });
+    }
+    items.forEach(function (it) {
+      var pk = peakOf(it.v, s.i0), vals = it.v.slice(s.i0);
+      var row = el('button', 'row'); row.type = 'button'; row.setAttribute('aria-pressed', it.active ? 'true' : 'false');
+      row.onclick = function () { set(it.pick); };
+      row.appendChild(el('span', 'name', it.name));
+      var sx = d3.scaleLinear([0, vals.length - 1], [2, 94]), sy = d3.scaleLinear([0, pk.val || 1], [23, 3]);
+      var svg = d3.select(row).append('svg').attr('viewBox', '0 0 96 26').attr('aria-hidden', 'true');
+      svg.append('path').attr('d', d3.line().x(function (d, i) { return sx(i); }).y(function (d) { return sy(d); })(vals))
+        .style('fill', 'none').style('stroke', 'var(--s1)').attr('stroke-width', 1.5).attr('stroke-linejoin', 'round').attr('stroke-linecap', 'round');
+      row.appendChild(el('span', 'peak', fmtV(pk.val) + ' · ' + M.years[pk.i]));
+      host.appendChild(row);
+    });
+  }
+
+  function drawNoData(s) {
+    var box = $('nodata'), list = scopeNoData(s);
+    box.hidden = s.cmp.length > 0 || list.length === 0;
+    $('nodata-count').textContent = String(list.length);
+    var c = $('nodata-chips'); clear(c);
+    list.forEach(function (t) { c.appendChild(el('span', 'chip', cap(t.name))); });
+  }
+
+  function render() {
+    if (!M) return;
+    var s = sel();
+    drawSelects(s); drawTake(s); drawChart(s); drawRows(s); drawNoData(s);
+  }
+
+  // ---------- events
+  $('category').addEventListener('change', function (e) { set({ category: e.target.value, term: '', cmp: [] }); });
+  $('term').addEventListener('change', function (e) { set({ term: e.target.value, cmp: [] }); });
+  $('add').addEventListener('change', function (e) {
+    if (!e.target.value) return;
+    var keys = sel().cmp.map(function (k) { return k.key; }); keys.push(e.target.value); set({ cmp: keys });
+  });
+  $('clear').addEventListener('click', function () { set({ cmp: [] }); });
+  Array.prototype.forEach.call(document.querySelectorAll('.range'), function (b) { b.addEventListener('click', function () { set({ from: +b.dataset.from }); }); });
+  Array.prototype.forEach.call(document.querySelectorAll('.preset'), function (b) {
+    b.addEventListener('click', function () {
+      set({ cmp: orderedGroups(sel()).slice(0, +b.dataset.n).map(function (x) { return 'c:' + x.name; }) });
+    });
+  });
+  var rt = null, lastW = 0;
+  window.addEventListener('resize', function () {
+    clearTimeout(rt);
+    rt = setTimeout(function () { var w = $('chart').clientWidth; if (w !== lastW) { lastW = w; if (M) drawChart(sel()); } }, 120);
+  });
+  window.addEventListener('hashchange', function () { state = { category: null, term: '', from: 1900, cmp: [] }; readHash(); render(); });
+
+  // ---------- load
+  readHash();
+  fetch('data.json').then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function (data) { M = buildModel(data); $('nterms').textContent = String(M.terms.size); lastW = $('chart').clientWidth; render(); })
+    .catch(function (err) { $('chart').textContent = 'The data could not be loaded (' + err.message + '). Reload the page to try again.'; });
+})();
+</script>
+</body>
+</html>

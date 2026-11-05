@@ -79,6 +79,12 @@ def spellings(q: str):
 # Short single words that look like abbreviations to the rule below but are ordinary words.
 NOT_ACRONYMS = {"pica", "mania", "jetlag"}
 
+# Abbreviations whose capitals are also everyday words or abbreviations ("ED" = "Ed."/edition,
+# "AN", "SAD", "DID", "HAND", ...). They show a large background in books long before the
+# diagnoses existed (mean 1900-1949 comparable to 2000-2022) and swamp the real term, so they
+# are skipped unless --keep-ambiguous is given.
+AMBIGUOUS_ABBREVIATIONS = {"hand", "bed", "an", "ed", "odd", "ts", "sad", "bn", "did"}
+
 
 def is_acronym(variant: str, all_variants) -> bool:
     """A short single-word variant of a term that also has a spelled-out variant
@@ -188,6 +194,8 @@ def main():
                     help="replace hyphens, slashes, parentheses and commas with spaces "
                          "(fits more variants in 5 tokens, but then only matches text "
                          "written WITHOUT those symbols)")
+    ap.add_argument("--keep-ambiguous", action="store_true",
+                    help="also search abbreviations that are everyday words (ED, AN, SAD, DID, ...)")
     ap.add_argument("--no-truncate", action="store_true",
                     help="drop variants over 5 tokens instead of cutting them to 5")
     args = ap.parse_args()
@@ -230,6 +238,10 @@ def main():
     for i, (_, _, variants) in enumerate(terms):
         used = []
         for v in variants:
+            if (not args.keep_ambiguous and not args.no_acronym_case
+                    and v.strip().lower() in AMBIGUOUS_ABBREVIATIONS and is_acronym(v, variants)):
+                dropped.append((v, "abbreviation that is also an everyday word or abbreviation"))
+                continue
             q, c = plan(v, variants)
             if token_count(q) <= MAX_NGRAM:
                 if (q, c) not in used:
