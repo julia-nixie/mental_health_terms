@@ -269,7 +269,7 @@ unspecified feeding or eating disorder,feeding and eating disorder,unspecified f
 intermittent explosive disorder,"disruptive, impulse-control, and conduct disorder",intermittent explosive disorder; ied
 oppositional defiant disorder,"disruptive, impulse-control, and conduct disorder",oppositional defiant disorder; odd
 conduct disorder,"disruptive, impulse-control, and conduct disorder",conduct disorder
-antisocial personality disorder,"disruptive, impulse-control, and conduct disorder",antisocial personality disorder; aspd
+antisocial personality disorder,"disruptive, impulse-control, and conduct disorder",antisocial personality disorder; aspd; antisocial personality; dissocial personality disorder
 pyromania,"disruptive, impulse-control, and conduct disorder",pyromania
 kleptomania,"disruptive, impulse-control, and conduct disorder",kleptomania
 mythomania,"disruptive, impulse-control, and conduct disorder",mythomania
@@ -324,3 +324,7 @@ internet gaming disorder,other condition,internet gaming disorder; igd
 neurobehavioral disorder associated with prenatal alcohol exposure,other condition,neurobehavioral disorder associated with prenatal alcohol exposure; neurobehavioural disorder associated with prenatal alcohol exposure; nd-pae
 suicidal behaviour disorder,other condition,suicidal behaviour disorder; suicidal behavior disorder
 nonsuicidal self-injury disorder,other condition,nonsuicidal self-injury disorder; non-suicidal self-injury disorder; nssi; nonsuicidal self injury disorder; non suicidal self injury disorder
+personality disorder,n/a,personality disorder; personality disorders
+borderline personality disorder,personality disorder,borderline personality disorder; borderline personality disorders; borderline personality; emotionally unstable personality disorder; emotionally unstable personality; bpd
+histrionic personality disorder,personality disorder,histrionic personality disorder; histrionic personality; hysterical personality; hysterical personality disorder
+narcissistic personality disorder,personality disorder,narcissistic personality disorder; narcissistic personality; narcissistic personality disorders
