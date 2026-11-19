@@ -38,18 +38,3 @@ with open(HERE / "corpus_queries.csv", "w", newline="", encoding="utf-8") as f:
     w.writerow(["set", "term", "variant", "query", "case_sensitive"])
     w.writerows(rows)
 print(f"{len(rows)} phrases -> corpus_queries.csv")
-
-# Build the same list into corpus_counts.py so that script needs no second file.
-import base64
-import gzip
-import re
-import textwrap
-
-blob = base64.b64encode(gzip.compress((HERE / "corpus_queries.csv").read_bytes(), 9)).decode()
-wrapped = "\n".join(textwrap.wrap(blob, 100))
-target = HERE / "corpus_counts.py"
-src = target.read_text(encoding="utf-8")
-new = re.sub(r"(# BEGIN EMBEDDED QUERIES\n).*?(# END EMBEDDED QUERIES)",
-             lambda m: m.group(1) + 'EMBEDDED_QUERIES = """\n' + wrapped + '\n"""\n' + m.group(2), src, flags=re.S)
-target.write_text(new, encoding="utf-8")
-print(f"embedded the list in corpus_counts.py ({len(blob) // 1024} KB)")
