@@ -1,0 +1,1574 @@
+set,term,variant,query,case_sensitive
+mental,anxiety disorder,anxiety disorder,anxiety disorder,0
+mental,anxiety disorder,anxiety disorders,anxiety disorders,0
+mental,agoraphobia,agoraphobia,agoraphobia,0
+mental,generalized anxiety disorder,generalized anxiety disorder,generalized anxiety disorder,0
+mental,generalized anxiety disorder,generalised anxiety disorder,generalised anxiety disorder,0
+mental,generalized anxiety disorder,gad,GAD,1
+mental,generalized anxiety disorder,generalized anxiety disorders,generalized anxiety disorders,0
+mental,generalized anxiety disorder,generalised anxiety disorders,generalised anxiety disorders,0
+mental,panic disorder,panic disorder,panic disorder,0
+mental,panic disorder,panic disorders,panic disorders,0
+mental,selective mutism,selective mutism,selective mutism,0
+mental,separation anxiety disorder,separation anxiety disorder,separation anxiety disorder,0
+mental,separation anxiety disorder,separation anxiety disorders,separation anxiety disorders,0
+mental,specific phobia,specific phobia,specific phobia,0
+mental,specific phobia,specific phobias,specific phobias,0
+mental,social anxiety disorder,social anxiety disorder,social anxiety disorder,0
+mental,social anxiety disorder,social phobia,social phobia,0
+mental,social anxiety disorder,social anxiety disorders,social anxiety disorders,0
+mental,social anxiety disorder,social phobias,social phobias,0
+mental,anxiety due to another medical condition,anxiety due to another medical condition,anxiety due to another medical condition,0
+mental,anxiety due to another medical condition,organic anxiety disorder,organic anxiety disorder,0
+mental,anxiety due to another medical condition,organic anxiety syndrome,organic anxiety syndrome,0
+mental,anxiety due to another medical condition,organic anxiety disorders,organic anxiety disorders,0
+mental,anxiety due to another medical condition,organic anxiety syndromes,organic anxiety syndromes,0
+mental,substance/medication-induced anxiety disorder,substance/medication-induced anxiety disorder,substance / medication - induced anxiety disorder,0
+mental,substance/medication-induced anxiety disorder,substance-induced anxiety disorder,substance - induced anxiety disorder,0
+mental,substance/medication-induced anxiety disorder,medication-induced anxiety disorder,medication - induced anxiety disorder,0
+mental,substance/medication-induced anxiety disorder,substance/medication induced anxiety disorder,substance / medication induced anxiety disorder,0
+mental,substance/medication-induced anxiety disorder,substance medication-induced anxiety disorder,substance medication - induced anxiety disorder,0
+mental,substance/medication-induced anxiety disorder,substance medication induced anxiety disorder,substance medication induced anxiety disorder,0
+mental,substance/medication-induced anxiety disorder,substance induced anxiety disorder,substance induced anxiety disorder,0
+mental,substance/medication-induced anxiety disorder,medication induced anxiety disorder,medication induced anxiety disorder,0
+mental,substance/medication-induced anxiety disorder,substance/medication-induced anxiety disorders,substance / medication - induced anxiety disorders,0
+mental,substance/medication-induced anxiety disorder,substance-induced anxiety disorders,substance - induced anxiety disorders,0
+mental,substance/medication-induced anxiety disorder,medication-induced anxiety disorders,medication - induced anxiety disorders,0
+mental,substance/medication-induced anxiety disorder,substance/medication induced anxiety disorders,substance / medication induced anxiety disorders,0
+mental,substance/medication-induced anxiety disorder,substance medication-induced anxiety disorders,substance medication - induced anxiety disorders,0
+mental,substance/medication-induced anxiety disorder,substance medication induced anxiety disorders,substance medication induced anxiety disorders,0
+mental,substance/medication-induced anxiety disorder,substance induced anxiety disorders,substance induced anxiety disorders,0
+mental,substance/medication-induced anxiety disorder,medication induced anxiety disorders,medication induced anxiety disorders,0
+mental,other specified anxiety disorder,other specified anxiety disorder,other specified anxiety disorder,0
+mental,other specified anxiety disorder,other specified anxiety disorders,other specified anxiety disorders,0
+mental,unspecified anxiety disorder,unspecified anxiety disorder,unspecified anxiety disorder,0
+mental,unspecified anxiety disorder,unspecified anxiety disorders,unspecified anxiety disorders,0
+mental,dissociative disorder,dissociative disorder,dissociative disorder,0
+mental,dissociative disorder,dissociative disorders,dissociative disorders,0
+mental,dissociative identity disorder,dissociative identity disorder,dissociative identity disorder,0
+mental,dissociative identity disorder,dissociative identity disorders,dissociative identity disorders,0
+mental,dissociative amnesia,dissociative amnesia,dissociative amnesia,0
+mental,dissociative amnesia,psychogenic amnesia,psychogenic amnesia,0
+mental,depersonalization/derealization disorder,depersonalization/derealization disorder,depersonalization / derealization disorder,0
+mental,depersonalization/derealization disorder,depersonalisation/derealisation disorder,depersonalisation / derealisation disorder,0
+mental,depersonalization/derealization disorder,dpdr,DPDR,1
+mental,depersonalization/derealization disorder,depersonalization derealization disorder,depersonalization derealization disorder,0
+mental,depersonalization/derealization disorder,depersonalisation derealisation disorder,depersonalisation derealisation disorder,0
+mental,depersonalization/derealization disorder,depersonalization/derealization disorders,depersonalization / derealization disorders,0
+mental,depersonalization/derealization disorder,depersonalisation/derealisation disorders,depersonalisation / derealisation disorders,0
+mental,depersonalization/derealization disorder,depersonalization derealization disorders,depersonalization derealization disorders,0
+mental,depersonalization/derealization disorder,depersonalisation derealisation disorders,depersonalisation derealisation disorders,0
+mental,dissociative amnesia with dissociative fugue,dissociative amnesia with dissociative fugue,dissociative amnesia with dissociative fugue,0
+mental,dissociative neurological symptom disorder,dissociative neurological symptom disorder,dissociative neurological symptom disorder,0
+mental,dissociative neurological symptom disorder,dissociative neurological symptom disorders,dissociative neurological symptom disorders,0
+mental,other specified dissociative disorder (osdd),other specified dissociative disorder (osdd),other specified dissociative disorder ( osdd ),0
+mental,other specified dissociative disorder (osdd),other specified dissociative disorder,other specified dissociative disorder,0
+mental,other specified dissociative disorder (osdd),osdd,OSDD,1
+mental,other specified dissociative disorder (osdd),other specified dissociative disorders,other specified dissociative disorders,0
+mental,unspecified dissociative disorder,unspecified dissociative disorder,unspecified dissociative disorder,0
+mental,unspecified dissociative disorder,unspecified dissociative disorders,unspecified dissociative disorders,0
+mental,ganser syndrome,ganser syndrome,ganser syndrome,0
+mental,ganser syndrome,ganser syndromes,ganser syndromes,0
+mental,depressive disorder,depressive disorder,depressive disorder,0
+mental,depressive disorder,depressive disorders,depressive disorders,0
+mental,disruptive mood dysregulation disorder,disruptive mood dysregulation disorder,disruptive mood dysregulation disorder,0
+mental,disruptive mood dysregulation disorder,dmdd,DMDD,1
+mental,disruptive mood dysregulation disorder,disruptive mood dysregulation disorders,disruptive mood dysregulation disorders,0
+mental,major depressive disorder,major depressive disorder,major depressive disorder,0
+mental,major depressive disorder,mdd,MDD,1
+mental,major depressive disorder,major depressive disorders,major depressive disorders,0
+mental,persistent depressive disorder (dysthymia),persistent depressive disorder (dysthymia),persistent depressive disorder ( dysthymia ),0
+mental,persistent depressive disorder (dysthymia),persistent depressive disorder,persistent depressive disorder,0
+mental,persistent depressive disorder (dysthymia),dysthymia,dysthymia,0
+mental,persistent depressive disorder (dysthymia),pdd,PDD,1
+mental,persistent depressive disorder (dysthymia),persistent depressive disorders,persistent depressive disorders,0
+mental,premenstrual dysphoric disorder,premenstrual dysphoric disorder,premenstrual dysphoric disorder,0
+mental,premenstrual dysphoric disorder,pmdd,PMDD,1
+mental,premenstrual dysphoric disorder,premenstrual dysphoric disorders,premenstrual dysphoric disorders,0
+mental,postpartum depression,postpartum depression,postpartum depression,0
+mental,postpartum depression,postnatal depression,postnatal depression,0
+mental,psychotic depression,psychotic depression,psychotic depression,0
+mental,other specified depressive disorder,other specified depressive disorder,other specified depressive disorder,0
+mental,other specified depressive disorder,other specified depressive disorders,other specified depressive disorders,0
+mental,unspecified depressive disorder,unspecified depressive disorder,unspecified depressive disorder,0
+mental,unspecified depressive disorder,unspecified depressive disorders,unspecified depressive disorders,0
+mental,bipolar and related disorder,bipolar and related disorder,bipolar and related disorder,0
+mental,bipolar and related disorder,bipolar disorder,bipolar disorder,0
+mental,bipolar and related disorder,bipolar disorders,bipolar disorders,0
+mental,bipolar and related disorder,bipolar affective disorder,bipolar affective disorder,0
+mental,bipolar and related disorder,bipolar illness,bipolar illness,0
+mental,bipolar and related disorder,bipolar spectrum disorders,bipolar spectrum disorders,0
+mental,bipolar and related disorder,bipolar and related disorders,bipolar and related disorders,0
+mental,bipolar and related disorder,manic depression,manic depression,0
+mental,bipolar and related disorder,manic-depressive illness,manic - depressive illness,0
+mental,bipolar and related disorder,manic-depressive disorder,manic - depressive disorder,0
+mental,bipolar and related disorder,manic-depressive psychosis,manic - depressive psychosis,0
+mental,bipolar and related disorder,manic depressive illness,manic depressive illness,0
+mental,bipolar and related disorder,manic depressive disorder,manic depressive disorder,0
+mental,bipolar and related disorder,manic depressive psychosis,manic depressive psychosis,0
+mental,bipolar and related disorder,bipolar affective disorders,bipolar affective disorders,0
+mental,bipolar and related disorder,manic-depressive disorders,manic - depressive disorders,0
+mental,bipolar and related disorder,manic-depressive psychoses,manic - depressive psychoses,0
+mental,bipolar and related disorder,manic depressive disorders,manic depressive disorders,0
+mental,bipolar and related disorder,manic depressive psychoses,manic depressive psychoses,0
+mental,bipolar i disorder,bipolar i disorder,bipolar i disorder,0
+mental,bipolar i disorder,bipolar i,bipolar i,0
+mental,bipolar i disorder,bipolar type i,bipolar type i,0
+mental,bipolar i disorder,bipolar type 1,bipolar type 1,0
+mental,bipolar i disorder,bipolar 1 disorder,bipolar 1 disorder,0
+mental,bipolar i disorder,bipolar disorder type i,bipolar disorder type i,0
+mental,bipolar i disorder,bipolar i disorders,bipolar i disorders,0
+mental,bipolar i disorder,bipolar 1 disorders,bipolar 1 disorders,0
+mental,bipolar ii disorder,bipolar ii disorder,bipolar ii disorder,0
+mental,bipolar ii disorder,bipolar ii,bipolar ii,0
+mental,bipolar ii disorder,bipolar type ii,bipolar type ii,0
+mental,bipolar ii disorder,bipolar type 2,bipolar type 2,0
+mental,bipolar ii disorder,bipolar 2 disorder,bipolar 2 disorder,0
+mental,bipolar ii disorder,bipolar disorder type ii,bipolar disorder type ii,0
+mental,bipolar ii disorder,bipolar ii disorders,bipolar ii disorders,0
+mental,bipolar ii disorder,bipolar 2 disorders,bipolar 2 disorders,0
+mental,bipolar and related disorder due to another medical condition,bipolar and related disorder due to another medical condition,bipolar and related disorder due to another medical condition,0
+mental,bipolar and related disorder due to another medical condition,secondary mania,secondary mania,0
+mental,bipolar and related disorder due to another medical condition,secondary bipolar disorder,secondary bipolar disorder,0
+mental,bipolar and related disorder due to another medical condition,secondary bipolar disorders,secondary bipolar disorders,0
+mental,substance/medication-induced bipolar and related disorders,substance/medication-induced bipolar and related disorders,substance / medication - induced bipolar and related disorders,0
+mental,substance/medication-induced bipolar and related disorders,substance-induced bipolar and related disorders,substance - induced bipolar and related disorders,0
+mental,substance/medication-induced bipolar and related disorders,medication-induced bipolar and related disorders,medication - induced bipolar and related disorders,0
+mental,substance/medication-induced bipolar and related disorders,substance/medication induced bipolar and related disorders,substance / medication induced bipolar and related disorders,0
+mental,substance/medication-induced bipolar and related disorders,substance medication-induced bipolar and related disorders,substance medication - induced bipolar and related disorders,0
+mental,substance/medication-induced bipolar and related disorders,substance medication induced bipolar and related disorders,substance medication induced bipolar and related disorders,0
+mental,substance/medication-induced bipolar and related disorders,substance induced bipolar and related disorders,substance induced bipolar and related disorders,0
+mental,substance/medication-induced bipolar and related disorders,medication induced bipolar and related disorders,medication induced bipolar and related disorders,0
+mental,substance/medication-induced bipolar and related disorders,substance-induced bipolar disorder,substance - induced bipolar disorder,0
+mental,substance/medication-induced bipolar and related disorders,medication-induced mania,medication - induced mania,0
+mental,substance/medication-induced bipolar and related disorders,drug-induced mania,drug - induced mania,0
+mental,substance/medication-induced bipolar and related disorders,antidepressant-induced mania,antidepressant - induced mania,0
+mental,substance/medication-induced bipolar and related disorders,substance induced bipolar disorder,substance induced bipolar disorder,0
+mental,substance/medication-induced bipolar and related disorders,medication induced mania,medication induced mania,0
+mental,substance/medication-induced bipolar and related disorders,drug induced mania,drug induced mania,0
+mental,substance/medication-induced bipolar and related disorders,antidepressant induced mania,antidepressant induced mania,0
+mental,other specified and related bipolar disorder,other specified and related bipolar disorder,other specified and related bipolar disorder,0
+mental,other specified and related bipolar disorder,other specified bipolar and related disorder,other specified bipolar and related disorder,0
+mental,other specified and related bipolar disorder,other specified bipolar disorder,other specified bipolar disorder,0
+mental,other specified and related bipolar disorder,bipolar disorder not otherwise specified,bipolar disorder not otherwise specified,0
+mental,other specified and related bipolar disorder,bipolar disorder nos,bipolar disorder nos,0
+mental,other specified and related bipolar disorder,other specified and related bipolar disorders,other specified and related bipolar disorders,0
+mental,other specified and related bipolar disorder,other specified bipolar and related disorders,other specified bipolar and related disorders,0
+mental,other specified and related bipolar disorder,other specified bipolar disorders,other specified bipolar disorders,0
+mental,unspecified bipolar and related disorder,unspecified bipolar and related disorder,unspecified bipolar and related disorder,0
+mental,unspecified bipolar and related disorder,unspecified bipolar disorder,unspecified bipolar disorder,0
+mental,unspecified bipolar and related disorder,unspecified bipolar and related disorders,unspecified bipolar and related disorders,0
+mental,unspecified bipolar and related disorder,unspecified bipolar disorders,unspecified bipolar disorders,0
+mental,cyclothymia,cyclothymia,cyclothymia,0
+mental,cyclothymia,cyclothymic disorder,cyclothymic disorder,0
+mental,cyclothymia,cyclothymic disorders,cyclothymic disorders,0
+mental,trauma- and stressor-related disorder,trauma- and stressor-related disorder,trauma - and stressor - related disorder,0
+mental,trauma- and stressor-related disorder,trauma and stressor related disorder,trauma and stressor related disorder,0
+mental,trauma- and stressor-related disorder,trauma- and stressor-related disorders,trauma - and stressor - related disorders,0
+mental,trauma- and stressor-related disorder,trauma and stressor related disorders,trauma and stressor related disorders,0
+mental,reactive attachment disorder,reactive attachment disorder,reactive attachment disorder,0
+mental,reactive attachment disorder,reactive attachment disorders,reactive attachment disorders,0
+mental,disinhibited social engagement disorder,disinhibited social engagement disorder,disinhibited social engagement disorder,0
+mental,disinhibited social engagement disorder,disinhibited social engagement disorders,disinhibited social engagement disorders,0
+mental,post-traumatic stress disorder (ptsd),post-traumatic stress disorder (ptsd),post - traumatic stress disorder ( ptsd ),0
+mental,post-traumatic stress disorder (ptsd),post-traumatic stress disorder,post - traumatic stress disorder,0
+mental,post-traumatic stress disorder (ptsd),posttraumatic stress disorder,posttraumatic stress disorder,0
+mental,post-traumatic stress disorder (ptsd),ptsd,PTSD,1
+mental,post-traumatic stress disorder (ptsd),post traumatic stress disorder,post traumatic stress disorder,0
+mental,post-traumatic stress disorder (ptsd),post-traumatic stress disorders,post - traumatic stress disorders,0
+mental,post-traumatic stress disorder (ptsd),posttraumatic stress disorders,posttraumatic stress disorders,0
+mental,post-traumatic stress disorder (ptsd),post traumatic stress disorders,post traumatic stress disorders,0
+mental,post-traumatic embitterment disorder (pted),post-traumatic embitterment disorder (pted),post - traumatic embitterment disorder ( pted ),0
+mental,post-traumatic embitterment disorder (pted),post-traumatic embitterment disorder,post - traumatic embitterment disorder,0
+mental,post-traumatic embitterment disorder (pted),posttraumatic embitterment disorder,posttraumatic embitterment disorder,0
+mental,post-traumatic embitterment disorder (pted),pted,PTED,1
+mental,post-traumatic embitterment disorder (pted),post traumatic embitterment disorder,post traumatic embitterment disorder,0
+mental,post-traumatic embitterment disorder (pted),post-traumatic embitterment disorders,post - traumatic embitterment disorders,0
+mental,post-traumatic embitterment disorder (pted),posttraumatic embitterment disorders,posttraumatic embitterment disorders,0
+mental,post-traumatic embitterment disorder (pted),post traumatic embitterment disorders,post traumatic embitterment disorders,0
+mental,acute stress disorder,acute stress disorder,acute stress disorder,0
+mental,acute stress disorder,acute stress disorders,acute stress disorders,0
+mental,adjustment disorders,adjustment disorders,adjustment disorders,0
+mental,complex post-traumatic stress disorder (c-ptsd),complex post-traumatic stress disorder (c-ptsd),complex post - traumatic stress disorder ( c - ptsd ),0
+mental,complex post-traumatic stress disorder (c-ptsd),complex post-traumatic stress disorder,complex post - traumatic stress disorder,0
+mental,complex post-traumatic stress disorder (c-ptsd),complex ptsd,complex ptsd,0
+mental,complex post-traumatic stress disorder (c-ptsd),c-ptsd,C - PTSD,1
+mental,complex post-traumatic stress disorder (c-ptsd),cptsd,CPTSD,1
+mental,complex post-traumatic stress disorder (c-ptsd),complex post traumatic stress disorder,complex post traumatic stress disorder,0
+mental,complex post-traumatic stress disorder (c-ptsd),complex post-traumatic stress disorders,complex post - traumatic stress disorders,0
+mental,complex post-traumatic stress disorder (c-ptsd),complex post traumatic stress disorders,complex post traumatic stress disorders,0
+mental,prolonged grief disorder,prolonged grief disorder,prolonged grief disorder,0
+mental,prolonged grief disorder,prolonged grief disorders,prolonged grief disorders,0
+mental,other specified trauma- and stressor-related disorder,other specified trauma- and stressor-related disorder,other specified trauma - and stressor - related disorder,0
+mental,other specified trauma- and stressor-related disorder,other specified trauma and stressor related disorder,other specified trauma and stressor related disorder,0
+mental,other specified trauma- and stressor-related disorder,other specified trauma- and stressor-related disorders,other specified trauma - and stressor - related disorders,0
+mental,other specified trauma- and stressor-related disorder,other specified trauma and stressor related disorders,other specified trauma and stressor related disorders,0
+mental,unspecified trauma- and stressor-related disorder,unspecified trauma- and stressor-related disorder,unspecified trauma - and stressor - related disorder,0
+mental,unspecified trauma- and stressor-related disorder,unspecified trauma and stressor related disorder,unspecified trauma and stressor related disorder,0
+mental,unspecified trauma- and stressor-related disorder,unspecified trauma- and stressor-related disorders,unspecified trauma - and stressor - related disorders,0
+mental,unspecified trauma- and stressor-related disorder,unspecified trauma and stressor related disorders,unspecified trauma and stressor related disorders,0
+mental,neurodevelopmental disorder,neurodevelopmental disorder,neurodevelopmental disorder,0
+mental,neurodevelopmental disorder,neurodevelopmental disorders,neurodevelopmental disorders,0
+mental,intellectual developmental disorder,intellectual developmental disorder,intellectual developmental disorder,0
+mental,intellectual developmental disorder,intellectual disability,intellectual disability,0
+mental,intellectual developmental disorder,intellectual developmental disorders,intellectual developmental disorders,0
+mental,language disorder,language disorder,language disorder,0
+mental,language disorder,language disorders,language disorders,0
+mental,sensory processing disorder,sensory processing disorder,sensory processing disorder,0
+mental,sensory processing disorder,spd,SPD,1
+mental,sensory processing disorder,sensory processing disorders,sensory processing disorders,0
+mental,speech sound disorder,speech sound disorder,speech sound disorder,0
+mental,speech sound disorder,speech sound disorders,speech sound disorders,0
+mental,childhood-onset fluency disorder (stuttering),childhood-onset fluency disorder (stuttering),childhood - onset fluency disorder ( stuttering ),0
+mental,childhood-onset fluency disorder (stuttering),childhood-onset fluency disorder,childhood - onset fluency disorder,0
+mental,childhood-onset fluency disorder (stuttering),stuttering,stuttering,0
+mental,childhood-onset fluency disorder (stuttering),childhood onset fluency disorder,childhood onset fluency disorder,0
+mental,childhood-onset fluency disorder (stuttering),childhood-onset fluency disorders,childhood - onset fluency disorders,0
+mental,childhood-onset fluency disorder (stuttering),childhood onset fluency disorders,childhood onset fluency disorders,0
+mental,aphasia,aphasia,aphasia,0
+mental,social (pragmatic) communication disorder,social (pragmatic) communication disorder,social ( pragmatic ) communication disorder,0
+mental,social (pragmatic) communication disorder,social communication disorder,social communication disorder,0
+mental,social (pragmatic) communication disorder,social pragmatic communication disorder,social pragmatic communication disorder,0
+mental,social (pragmatic) communication disorder,social communication disorders,social communication disorders,0
+mental,social (pragmatic) communication disorder,pragmatic language impairment,pragmatic language impairment,0
+mental,pervasive developmental disorder,pervasive developmental disorder,pervasive developmental disorder,0
+mental,pervasive developmental disorder,pervasive developmental disorders,pervasive developmental disorders,0
+mental,auditory processing disorder,auditory processing disorder,auditory processing disorder,0
+mental,auditory processing disorder,apd,APD,1
+mental,auditory processing disorder,auditory processing disorders,auditory processing disorders,0
+mental,communication disorder,communication disorder,communication disorder,0
+mental,communication disorder,communication disorders,communication disorders,0
+mental,autism spectrum disorder,autism spectrum disorder,autism spectrum disorder,0
+mental,autism spectrum disorder,asd,ASD,1
+mental,autism spectrum disorder,autism spectrum disorders,autism spectrum disorders,0
+mental,attention-deficit/hyperactivity disorder (adhd),attention-deficit/hyperactivity disorder (adhd),attention - deficit / hyperactivity disorder ( adhd ),0
+mental,attention-deficit/hyperactivity disorder (adhd),attention-deficit/hyperactivity disorder,attention - deficit / hyperactivity disorder,0
+mental,attention-deficit/hyperactivity disorder (adhd),attention deficit hyperactivity disorder,attention deficit hyperactivity disorder,0
+mental,attention-deficit/hyperactivity disorder (adhd),adhd,ADHD,1
+mental,attention-deficit/hyperactivity disorder (adhd),attention deficit/hyperactivity disorder,attention deficit / hyperactivity disorder,0
+mental,attention-deficit/hyperactivity disorder (adhd),attention-deficit hyperactivity disorder,attention - deficit hyperactivity disorder,0
+mental,attention-deficit/hyperactivity disorder (adhd),attention-deficit/hyperactivity disorders,attention - deficit / hyperactivity disorders,0
+mental,attention-deficit/hyperactivity disorder (adhd),attention deficit hyperactivity disorders,attention deficit hyperactivity disorders,0
+mental,attention-deficit/hyperactivity disorder (adhd),attention deficit/hyperactivity disorders,attention deficit / hyperactivity disorders,0
+mental,attention-deficit/hyperactivity disorder (adhd),attention-deficit hyperactivity disorders,attention - deficit hyperactivity disorders,0
+mental,developmental coordination disorder (dyspraxia),developmental coordination disorder (dyspraxia),developmental coordination disorder ( dyspraxia ),0
+mental,developmental coordination disorder (dyspraxia),developmental coordination disorder,developmental coordination disorder,0
+mental,developmental coordination disorder (dyspraxia),dyspraxia,dyspraxia,0
+mental,developmental coordination disorder (dyspraxia),dcd,DCD,1
+mental,developmental coordination disorder (dyspraxia),developmental coordination disorders,developmental coordination disorders,0
+mental,stereotypic movement disorder,stereotypic movement disorder,stereotypic movement disorder,0
+mental,stereotypic movement disorder,stereotypic movement disorders,stereotypic movement disorders,0
+mental,tourette syndrome,tourette syndrome,tourette syndrome,0
+mental,tourette syndrome,tourette's syndrome,tourette 's syndrome,0
+mental,tourette syndrome,tourette's,tourette 's,0
+mental,tourette syndrome,tourette syndromes,tourette syndromes,0
+mental,tourette syndrome,tourette's syndromes,tourette 's syndromes,0
+mental,down syndrome,down syndrome,down syndrome,0
+mental,down syndrome,down syndromes,down syndromes,0
+mental,tic disorders,tic disorders,tic disorders,0
+mental,specific learning disorder with impairment in reading (dyslexia),specific learning disorder with impairment in reading (dyslexia),specific learning disorder with impairment in reading ( dyslexia ),0
+mental,specific learning disorder with impairment in reading (dyslexia),specific learning disorder with impairment in reading,specific learning disorder with impairment in reading,0
+mental,specific learning disorder with impairment in reading (dyslexia),dyslexia,dyslexia,0
+mental,specific learning disorder with impairment in mathematics (dyscalculia),specific learning disorder with impairment in mathematics (dyscalculia),specific learning disorder with impairment in mathematics ( dyscalculia ),0
+mental,specific learning disorder with impairment in mathematics (dyscalculia),specific learning disorder with impairment in mathematics,specific learning disorder with impairment in mathematics,0
+mental,specific learning disorder with impairment in mathematics (dyscalculia),dyscalculia,dyscalculia,0
+mental,specific learning disorder with impairment in written expression (dysgraphia),specific learning disorder with impairment in written expression (dysgraphia),specific learning disorder with impairment in written expression ( dysgraphia ),0
+mental,specific learning disorder with impairment in written expression (dysgraphia),specific learning disorder with impairment in written expression,specific learning disorder with impairment in written expression,0
+mental,specific learning disorder with impairment in written expression (dysgraphia),dysgraphia,dysgraphia,0
+mental,"nonverbal learning disorder (nvld, nld)","nonverbal learning disorder (nvld, nld)","nonverbal learning disorder ( nvld , nld )",0
+mental,"nonverbal learning disorder (nvld, nld)",nonverbal learning disorder,nonverbal learning disorder,0
+mental,"nonverbal learning disorder (nvld, nld)",non-verbal learning disorder,non - verbal learning disorder,0
+mental,"nonverbal learning disorder (nvld, nld)",nvld,NVLD,1
+mental,"nonverbal learning disorder (nvld, nld)",nld,NLD,1
+mental,"nonverbal learning disorder (nvld, nld)",non verbal learning disorder,non verbal learning disorder,0
+mental,"nonverbal learning disorder (nvld, nld)",nonverbal learning disorders,nonverbal learning disorders,0
+mental,"nonverbal learning disorder (nvld, nld)",non-verbal learning disorders,non - verbal learning disorders,0
+mental,"nonverbal learning disorder (nvld, nld)",non verbal learning disorders,non verbal learning disorders,0
+mental,other specified neurodevelopmental disorder,other specified neurodevelopmental disorder,other specified neurodevelopmental disorder,0
+mental,other specified neurodevelopmental disorder,other specified neurodevelopmental disorders,other specified neurodevelopmental disorders,0
+mental,unspecified neurodevelopmental disorder,unspecified neurodevelopmental disorder,unspecified neurodevelopmental disorder,0
+mental,unspecified neurodevelopmental disorder,unspecified neurodevelopmental disorders,unspecified neurodevelopmental disorders,0
+mental,sleep-wake disorder,sleep-wake disorder,sleep - wake disorder,0
+mental,sleep-wake disorder,sleep wake disorder,sleep wake disorder,0
+mental,sleep-wake disorder,sleep-wake disorders,sleep - wake disorders,0
+mental,sleep-wake disorder,sleep wake disorders,sleep wake disorders,0
+mental,insomnia,insomnia,insomnia,0
+mental,hypersomnolence,hypersomnolence,hypersomnolence,0
+mental,kleine–levin syndrome,kleine–levin syndrome,kleine–levin syndrome,0
+mental,kleine–levin syndrome,kleine-levin syndrome,kleine - levin syndrome,0
+mental,kleine–levin syndrome,kls,KLS,1
+mental,kleine–levin syndrome,kleine levin syndrome,kleine levin syndrome,0
+mental,kleine–levin syndrome,kleine–levin syndromes,kleine–levin syndromes,0
+mental,kleine–levin syndrome,kleine-levin syndromes,kleine - levin syndromes,0
+mental,kleine–levin syndrome,kleine levin syndromes,kleine levin syndromes,0
+mental,insufficient sleep syndrome,insufficient sleep syndrome,insufficient sleep syndrome,0
+mental,insufficient sleep syndrome,insufficient sleep syndromes,insufficient sleep syndromes,0
+mental,narcolepsy,narcolepsy,narcolepsy,0
+mental,sleep-related hypoventilation,sleep-related hypoventilation,sleep - related hypoventilation,0
+mental,sleep-related hypoventilation,sleep related hypoventilation,sleep related hypoventilation,0
+mental,restless legs syndrome,restless legs syndrome,restless legs syndrome,0
+mental,restless legs syndrome,rls,RLS,1
+mental,restless legs syndrome,restless legs syndromes,restless legs syndromes,0
+mental,sleep apnea,sleep apnea,sleep apnea,0
+mental,sleep apnea,sleep apnoea,sleep apnoea,0
+mental,night terrors (sleep terrors),night terrors (sleep terrors),night terrors ( sleep terrors ),0
+mental,night terrors (sleep terrors),night terrors,night terrors,0
+mental,night terrors (sleep terrors),sleep terrors,sleep terrors,0
+mental,exploding head syndrome,exploding head syndrome,exploding head syndrome,0
+mental,exploding head syndrome,exploding head syndromes,exploding head syndromes,0
+mental,other specified sleep-wake disorder,other specified sleep-wake disorder,other specified sleep - wake disorder,0
+mental,other specified sleep-wake disorder,other specified sleep wake disorder,other specified sleep wake disorder,0
+mental,other specified sleep-wake disorder,other specified sleep-wake disorders,other specified sleep - wake disorders,0
+mental,other specified sleep-wake disorder,other specified sleep wake disorders,other specified sleep wake disorders,0
+mental,unspecified sleep-wake disorder,unspecified sleep-wake disorder,unspecified sleep - wake disorder,0
+mental,unspecified sleep-wake disorder,unspecified sleep wake disorder,unspecified sleep wake disorder,0
+mental,unspecified sleep-wake disorder,unspecified sleep-wake disorders,unspecified sleep - wake disorders,0
+mental,unspecified sleep-wake disorder,unspecified sleep wake disorders,unspecified sleep wake disorders,0
+mental,neurocognitive disorder,neurocognitive disorder,neurocognitive disorder,0
+mental,neurocognitive disorder,neurocognitive disorders,neurocognitive disorders,0
+mental,delirium,delirium,delirium,0
+mental,dementia,dementia,dementia,0
+mental,major or mild neurocognitive disorder due to alzheimer's disease,major or mild neurocognitive disorder due to alzheimer's disease,major or mild neurocognitive disorder due to alzheimer 's disease,0
+mental,major or mild neurocognitive disorder due to alzheimer's disease,alzheimer's disease dementia,alzheimer 's disease dementia,0
+mental,major or mild neurocognitive disorder due to alzheimer's disease,alzheimer's dementia,alzheimer 's dementia,0
+mental,major or mild neurocognitive disorder due to alzheimer's disease,alzheimer dementia,alzheimer dementia,0
+mental,major or mild neurocognitive disorder due to alzheimer's disease,dementia of the alzheimer type,dementia of the alzheimer type,0
+mental,major or mild neurocognitive disorder with lewy bodies,major or mild neurocognitive disorder with lewy bodies,major or mild neurocognitive disorder with lewy bodies,0
+mental,major or mild neurocognitive disorder with lewy bodies,dementia with lewy bodies,dementia with lewy bodies,0
+mental,major or mild neurocognitive disorder with lewy bodies,lewy body dementia,lewy body dementia,0
+mental,major or mild neurocognitive disorder with lewy bodies,diffuse lewy body disease,diffuse lewy body disease,0
+mental,major or mild vascular neurocognitive disorder,major or mild vascular neurocognitive disorder,major or mild vascular neurocognitive disorder,0
+mental,major or mild vascular neurocognitive disorder,major or mild vascular neurocognitive disorders,major or mild vascular neurocognitive disorders,0
+mental,major or mild frontotemporal neurocognitive disorder,major or mild frontotemporal neurocognitive disorder,major or mild frontotemporal neurocognitive disorder,0
+mental,major or mild frontotemporal neurocognitive disorder,major or mild frontotemporal neurocognitive disorders,major or mild frontotemporal neurocognitive disorders,0
+mental,major or mild neurocognitive disorder due to parkinson's disease,major or mild neurocognitive disorder due to parkinson's disease,major or mild neurocognitive disorder due to parkinson 's disease,0
+mental,major or mild neurocognitive disorder due to parkinson's disease,parkinson's disease dementia,parkinson 's disease dementia,0
+mental,major or mild neurocognitive disorder due to parkinson's disease,parkinson dementia,parkinson dementia,0
+mental,major or mild neurocognitive disorder due to prion disease,major or mild neurocognitive disorder due to prion disease,major or mild neurocognitive disorder due to prion disease,0
+mental,major or mild neurocognitive disorder due to prion disease,prion disease,prion disease,0
+mental,major or mild neurocognitive disorder due to prion disease,creutzfeldt-jakob disease,creutzfeldt - jakob disease,0
+mental,major or mild neurocognitive disorder due to prion disease,cjd,CJD,1
+mental,major or mild neurocognitive disorder due to prion disease,creutzfeldt jakob disease,creutzfeldt jakob disease,0
+mental,major or mild neurocognitive disorder due to huntington's disease,major or mild neurocognitive disorder due to huntington's disease,major or mild neurocognitive disorder due to huntington 's disease,0
+mental,major or mild neurocognitive disorder due to huntington's disease,huntington's disease dementia,huntington 's disease dementia,0
+mental,major or mild neurocognitive disorder due to huntington's disease,huntington disease dementia,huntington disease dementia,0
+mental,major or mild neurocognitive disorder due to another medical condition,major or mild neurocognitive disorder due to another medical condition,major or mild neurocognitive disorder due to another medical condition,0
+mental,major or mild neurocognitive disorder due to another medical condition,secondary dementia,secondary dementia,0
+mental,major or mild neurocognitive disorder due to another medical condition,organic brain syndrome,organic brain syndrome,0
+mental,major or mild neurocognitive disorder due to another medical condition,organic brain syndromes,organic brain syndromes,0
+mental,major or mild neurocognitive disorder due to multiple etiologies,major or mild neurocognitive disorder due to multiple etiologies,major or mild neurocognitive disorder due to multiple etiologies,0
+mental,major or mild neurocognitive disorder due to multiple etiologies,major or mild neurocognitive disorder due to multiple aetiologies,major or mild neurocognitive disorder due to multiple aetiologies,0
+mental,major or mild neurocognitive disorder due to multiple etiologies,mixed dementia,mixed dementia,0
+mental,major or mild neurocognitive disorder due to multiple etiologies,dementia due to multiple etiologies,dementia due to multiple etiologies,0
+mental,major or mild neurocognitive disorder due to multiple etiologies,dementia due to multiple aetiologies,dementia due to multiple aetiologies,0
+mental,major or mild neurocognitive disorder due to traumatic brain injury,major or mild neurocognitive disorder due to traumatic brain injury,major or mild neurocognitive disorder due to traumatic brain injury,0
+mental,major or mild neurocognitive disorder due to traumatic brain injury,major or mild neurocognitive disorder due to tbi,major or mild neurocognitive disorder due to tbi,0
+mental,major or mild neurocognitive disorder due to traumatic brain injury,post-traumatic dementia,post - traumatic dementia,0
+mental,major or mild neurocognitive disorder due to traumatic brain injury,posttraumatic dementia,posttraumatic dementia,0
+mental,major or mild neurocognitive disorder due to traumatic brain injury,traumatic brain injury dementia,traumatic brain injury dementia,0
+mental,major or mild neurocognitive disorder due to traumatic brain injury,post traumatic dementia,post traumatic dementia,0
+mental,major or mild neurocognitive disorder due to hiv infection/hand,major or mild neurocognitive disorder due to hiv infection/hand,major or mild neurocognitive disorder due to hiv infection / hand,0
+mental,major or mild neurocognitive disorder due to hiv infection/hand,major or mild neurocognitive disorder due to hiv infection,major or mild neurocognitive disorder due to hiv infection,0
+mental,major or mild neurocognitive disorder due to hiv infection/hand,hiv-associated neurocognitive disorder,hiv - associated neurocognitive disorder,0
+mental,major or mild neurocognitive disorder due to hiv infection/hand,major or mild neurocognitive disorder due to hiv infection hand,major or mild neurocognitive disorder due to hiv infection hand,0
+mental,major or mild neurocognitive disorder due to hiv infection/hand,hiv associated neurocognitive disorder,hiv associated neurocognitive disorder,0
+mental,major or mild neurocognitive disorder due to hiv infection/hand,hiv-associated neurocognitive disorders,hiv - associated neurocognitive disorders,0
+mental,major or mild neurocognitive disorder due to hiv infection/hand,hiv associated neurocognitive disorders,hiv associated neurocognitive disorders,0
+mental,chronic traumatic encephalopathy,chronic traumatic encephalopathy,chronic traumatic encephalopathy,0
+mental,chronic traumatic encephalopathy,cte,CTE,1
+mental,unspecified neurocognitive disorder,unspecified neurocognitive disorder,unspecified neurocognitive disorder,0
+mental,unspecified neurocognitive disorder,unspecified neurocognitive disorders,unspecified neurocognitive disorders,0
+mental,amnesia,amnesia,amnesia,0
+mental,agnosia,agnosia,agnosia,0
+mental,substance-related and addictive disorder,substance-related and addictive disorder,substance - related and addictive disorder,0
+mental,substance-related and addictive disorder,substance related and addictive disorder,substance related and addictive disorder,0
+mental,substance-related and addictive disorder,substance-related and addictive disorders,substance - related and addictive disorders,0
+mental,substance-related and addictive disorder,substance related and addictive disorders,substance related and addictive disorders,0
+mental,substance-induced disorder,substance-induced disorder,substance - induced disorder,0
+mental,substance-induced disorder,substance induced disorder,substance induced disorder,0
+mental,substance-induced disorder,substance-induced disorders,substance - induced disorders,0
+mental,substance-induced disorder,substance induced disorders,substance induced disorders,0
+mental,substance-induced psychosis,substance-induced psychosis,substance - induced psychosis,0
+mental,substance-induced psychosis,substance induced psychosis,substance induced psychosis,0
+mental,substance-induced psychosis,substance-induced psychoses,substance - induced psychoses,0
+mental,substance-induced psychosis,substance induced psychoses,substance induced psychoses,0
+mental,substance-induced delirium,substance-induced delirium,substance - induced delirium,0
+mental,substance-induced delirium,substance induced delirium,substance induced delirium,0
+mental,substance-induced mood disorder,substance-induced mood disorder,substance - induced mood disorder,0
+mental,substance-induced mood disorder,substance induced mood disorder,substance induced mood disorder,0
+mental,substance-induced mood disorder,substance-induced mood disorders,substance - induced mood disorders,0
+mental,substance-induced mood disorder,substance induced mood disorders,substance induced mood disorders,0
+mental,substance intoxication,substance intoxication,substance intoxication,0
+mental,substance withdrawal,substance withdrawal,substance withdrawal,0
+mental,substance dependence,substance dependence,substance dependence,0
+mental,alcohol use disorder,alcohol use disorder,alcohol use disorder,0
+mental,alcohol use disorder,aud,AUD,1
+mental,alcohol use disorder,alcohol use disorders,alcohol use disorders,0
+mental,alcoholic hallucinosis,alcoholic hallucinosis,alcoholic hallucinosis,0
+mental,alcohol withdrawal,alcohol withdrawal,alcohol withdrawal,0
+mental,harmful pattern of use of alcohol,harmful pattern of use of alcohol,harmful pattern of use of alcohol,0
+mental,harmful pattern of use of alcohol,harmful use of alcohol,harmful use of alcohol,0
+mental,harmful pattern of use of alcohol,alcohol abuse,alcohol abuse,0
+mental,harmful pattern of use of alcohol,alcohol misuse,alcohol misuse,0
+mental,cannabis use disorder,cannabis use disorder,cannabis use disorder,0
+mental,cannabis use disorder,cannabis use disorders,cannabis use disorders,0
+mental,cannabis dependence,cannabis dependence,cannabis dependence,0
+mental,cannabis intoxication,cannabis intoxication,cannabis intoxication,0
+mental,harmful pattern of use of cannabis,harmful pattern of use of cannabis,harmful pattern of use of cannabis,0
+mental,harmful pattern of use of cannabis,harmful use of cannabis,harmful use of cannabis,0
+mental,harmful pattern of use of cannabis,cannabis abuse,cannabis abuse,0
+mental,harmful pattern of use of cannabis,cannabis misuse,cannabis misuse,0
+mental,cannabis withdrawal,cannabis withdrawal,cannabis withdrawal,0
+mental,cannabis-induced delirium,cannabis-induced delirium,cannabis - induced delirium,0
+mental,cannabis-induced delirium,cannabis induced delirium,cannabis induced delirium,0
+mental,cannabis-induced psychosis,cannabis-induced psychosis,cannabis - induced psychosis,0
+mental,cannabis-induced psychosis,cannabis induced psychosis,cannabis induced psychosis,0
+mental,cannabis-induced psychosis,cannabis-induced psychotic disorder,cannabis - induced psychotic disorder,0
+mental,cannabis-induced psychosis,cannabis-induced psychoses,cannabis - induced psychoses,0
+mental,cannabis-induced psychosis,cannabis induced psychoses,cannabis induced psychoses,0
+mental,cannabis-induced psychosis,cannabis-induced psychotic disorders,cannabis - induced psychotic disorders,0
+mental,cannabis-induced psychosis,cannabis induced psychotic disorder,cannabis induced psychotic disorder,0
+mental,cannabis-induced psychosis,cannabis induced psychotic disorders,cannabis induced psychotic disorders,0
+mental,cannabis-induced mood disorder,cannabis-induced mood disorder,cannabis - induced mood disorder,0
+mental,cannabis-induced mood disorder,cannabis induced mood disorder,cannabis induced mood disorder,0
+mental,cannabis-induced mood disorder,cannabis-induced mood disorders,cannabis - induced mood disorders,0
+mental,cannabis-induced mood disorder,cannabis induced mood disorders,cannabis induced mood disorders,0
+mental,cannabis-induced anxiety,cannabis-induced anxiety,cannabis - induced anxiety,0
+mental,cannabis-induced anxiety,cannabis induced anxiety,cannabis induced anxiety,0
+mental,episode of harmful use of synthetic cannabinoids,episode of harmful use of synthetic cannabinoids,episode of harmful use of synthetic cannabinoids,0
+mental,harmful pattern of use of synthetic cannabinoids,harmful pattern of use of synthetic cannabinoids,harmful pattern of use of synthetic cannabinoids,0
+mental,harmful pattern of use of synthetic cannabinoids,harmful use of synthetic cannabinoids,harmful use of synthetic cannabinoids,0
+mental,harmful pattern of use of synthetic cannabinoids,synthetic cannabinoid abuse,synthetic cannabinoid abuse,0
+mental,harmful pattern of use of synthetic cannabinoids,synthetic cannabinoid misuse,synthetic cannabinoid misuse,0
+mental,synthetic cannabinoid dependence,synthetic cannabinoid dependence,synthetic cannabinoid dependence,0
+mental,synthetic cannabinoid dependence,synthetic cannabinoid addiction,synthetic cannabinoid addiction,0
+mental,synthetic cannabinoid dependence,synthetic cannabinoid use disorder,synthetic cannabinoid use disorder,0
+mental,synthetic cannabinoid dependence,synthetic cannabinoid addictions,synthetic cannabinoid addictions,0
+mental,synthetic cannabinoid dependence,synthetic cannabinoid use disorders,synthetic cannabinoid use disorders,0
+mental,synthetic cannabinoid intoxication,synthetic cannabinoid intoxication,synthetic cannabinoid intoxication,0
+mental,synthetic cannabinoids withdrawal,synthetic cannabinoids withdrawal,synthetic cannabinoids withdrawal,0
+mental,synthetic cannabinoids withdrawal,synthetic cannabinoid withdrawal,synthetic cannabinoid withdrawal,0
+mental,synthetic cannabinoids induced delirium,synthetic cannabinoids induced delirium,synthetic cannabinoids induced delirium,0
+mental,synthetic cannabinoids induced delirium,synthetic cannabinoid-induced delirium,synthetic cannabinoid - induced delirium,0
+mental,synthetic cannabinoids induced delirium,synthetic cannabinoid induced delirium,synthetic cannabinoid induced delirium,0
+mental,synthetic cannabinoids induced psychotic disorder,synthetic cannabinoids induced psychotic disorder,synthetic cannabinoids induced psychotic disorder,0
+mental,synthetic cannabinoids induced psychotic disorder,synthetic cannabinoid-induced psychosis,synthetic cannabinoid - induced psychosis,0
+mental,synthetic cannabinoids induced psychotic disorder,synthetic cannabinoid-induced psychotic disorder,synthetic cannabinoid - induced psychotic disorder,0
+mental,synthetic cannabinoids induced psychotic disorder,synthetic cannabinoid induced psychosis,synthetic cannabinoid induced psychosis,0
+mental,synthetic cannabinoids induced psychotic disorder,synthetic cannabinoid induced psychotic disorder,synthetic cannabinoid induced psychotic disorder,0
+mental,synthetic cannabinoids induced psychotic disorder,synthetic cannabinoids induced psychotic disorders,synthetic cannabinoids induced psychotic disorders,0
+mental,synthetic cannabinoids induced psychotic disorder,synthetic cannabinoid-induced psychoses,synthetic cannabinoid - induced psychoses,0
+mental,synthetic cannabinoids induced psychotic disorder,synthetic cannabinoid-induced psychotic disorders,synthetic cannabinoid - induced psychotic disorders,0
+mental,synthetic cannabinoids induced psychotic disorder,synthetic cannabinoid induced psychoses,synthetic cannabinoid induced psychoses,0
+mental,synthetic cannabinoids induced psychotic disorder,synthetic cannabinoid induced psychotic disorders,synthetic cannabinoid induced psychotic disorders,0
+mental,synthetic cannabinoids induced mood disorder,synthetic cannabinoids induced mood disorder,synthetic cannabinoids induced mood disorder,0
+mental,synthetic cannabinoids induced mood disorder,synthetic cannabinoid-induced mood disorder,synthetic cannabinoid - induced mood disorder,0
+mental,synthetic cannabinoids induced mood disorder,synthetic cannabinoid induced mood disorder,synthetic cannabinoid induced mood disorder,0
+mental,synthetic cannabinoids induced mood disorder,synthetic cannabinoids induced mood disorders,synthetic cannabinoids induced mood disorders,0
+mental,synthetic cannabinoids induced mood disorder,synthetic cannabinoid-induced mood disorders,synthetic cannabinoid - induced mood disorders,0
+mental,synthetic cannabinoids induced mood disorder,synthetic cannabinoid induced mood disorders,synthetic cannabinoid induced mood disorders,0
+mental,synthetic cannabinoids induced anxiety,synthetic cannabinoids induced anxiety,synthetic cannabinoids induced anxiety,0
+mental,synthetic cannabinoids induced anxiety,synthetic cannabinoid-induced anxiety,synthetic cannabinoid - induced anxiety,0
+mental,synthetic cannabinoids induced anxiety,synthetic cannabinoid induced anxiety,synthetic cannabinoid induced anxiety,0
+mental,episode of harmful use of opioids,episode of harmful use of opioids,episode of harmful use of opioids,0
+mental,harmful pattern of use of opioids,harmful pattern of use of opioids,harmful pattern of use of opioids,0
+mental,harmful pattern of use of opioids,harmful use of opioids,harmful use of opioids,0
+mental,harmful pattern of use of opioids,opioid abuse,opioid abuse,0
+mental,harmful pattern of use of opioids,opioid misuse,opioid misuse,0
+mental,opioid dependence,opioid dependence,opioid dependence,0
+mental,opioid intoxication,opioid intoxication,opioid intoxication,0
+mental,opioids withdrawal,opioids withdrawal,opioids withdrawal,0
+mental,opioids withdrawal,opioid withdrawal,opioid withdrawal,0
+mental,opioids withdrawal,opioid withdrawal syndrome,opioid withdrawal syndrome,0
+mental,opioids withdrawal,opioid withdrawal syndromes,opioid withdrawal syndromes,0
+mental,opioids induced delirium,opioids induced delirium,opioids induced delirium,0
+mental,opioids induced delirium,opioid-induced delirium,opioid - induced delirium,0
+mental,opioids induced delirium,opioid induced delirium,opioid induced delirium,0
+mental,opioids induced psychotic disorder,opioids induced psychotic disorder,opioids induced psychotic disorder,0
+mental,opioids induced psychotic disorder,opioid-induced psychosis,opioid - induced psychosis,0
+mental,opioids induced psychotic disorder,opioid-induced psychotic disorder,opioid - induced psychotic disorder,0
+mental,opioids induced psychotic disorder,opioid induced psychosis,opioid induced psychosis,0
+mental,opioids induced psychotic disorder,opioid induced psychotic disorder,opioid induced psychotic disorder,0
+mental,opioids induced psychotic disorder,opioids induced psychotic disorders,opioids induced psychotic disorders,0
+mental,opioids induced psychotic disorder,opioid-induced psychoses,opioid - induced psychoses,0
+mental,opioids induced psychotic disorder,opioid-induced psychotic disorders,opioid - induced psychotic disorders,0
+mental,opioids induced psychotic disorder,opioid induced psychoses,opioid induced psychoses,0
+mental,opioids induced psychotic disorder,opioid induced psychotic disorders,opioid induced psychotic disorders,0
+mental,opioids induced mood disorder,opioids induced mood disorder,opioids induced mood disorder,0
+mental,opioids induced mood disorder,opioid-induced mood disorder,opioid - induced mood disorder,0
+mental,opioids induced mood disorder,opioid induced mood disorder,opioid induced mood disorder,0
+mental,opioids induced mood disorder,opioids induced mood disorders,opioids induced mood disorders,0
+mental,opioids induced mood disorder,opioid-induced mood disorders,opioid - induced mood disorders,0
+mental,opioids induced mood disorder,opioid induced mood disorders,opioid induced mood disorders,0
+mental,opioids induced anxiety,opioids induced anxiety,opioids induced anxiety,0
+mental,opioids induced anxiety,opioid-induced anxiety,opioid - induced anxiety,0
+mental,opioids induced anxiety,opioid induced anxiety,opioid induced anxiety,0
+mental,"episode of harmful use of sedative, hypnotic or anxiolytic","episode of harmful use of sedative, hypnotic or anxiolytic","episode of harmful use of sedative , hypnotic or anxiolytic",0
+mental,"harmful pattern of use of sedative, hypnotic or anxiolytic","harmful pattern of use of sedative, hypnotic or anxiolytic","harmful pattern of use of sedative , hypnotic or anxiolytic",0
+mental,"harmful pattern of use of sedative, hypnotic or anxiolytic",harmful use of sedatives,harmful use of sedatives,0
+mental,"harmful pattern of use of sedative, hypnotic or anxiolytic",benzodiazepine abuse,benzodiazepine abuse,0
+mental,"harmful pattern of use of sedative, hypnotic or anxiolytic",benzodiazepine misuse,benzodiazepine misuse,0
+mental,"harmful pattern of use of sedative, hypnotic or anxiolytic",sedative abuse,sedative abuse,0
+mental,"sedative, hypnotic or anxiolytic dependence","sedative, hypnotic or anxiolytic dependence","sedative , hypnotic or anxiolytic dependence",0
+mental,"sedative, hypnotic or anxiolytic dependence",benzodiazepine dependence,benzodiazepine dependence,0
+mental,"sedative, hypnotic or anxiolytic dependence",sedative dependence,sedative dependence,0
+mental,"sedative, hypnotic or anxiolytic dependence",benzodiazepine addiction,benzodiazepine addiction,0
+mental,"sedative, hypnotic or anxiolytic dependence",sedative hypnotic dependence,sedative hypnotic dependence,0
+mental,"sedative, hypnotic or anxiolytic dependence",benzodiazepine addictions,benzodiazepine addictions,0
+mental,"sedative, hypnotic or anxiolytic intoxication","sedative, hypnotic or anxiolytic intoxication","sedative , hypnotic or anxiolytic intoxication",0
+mental,"sedative, hypnotic or anxiolytic intoxication",benzodiazepine intoxication,benzodiazepine intoxication,0
+mental,"sedative, hypnotic or anxiolytic intoxication",sedative intoxication,sedative intoxication,0
+mental,"sedative, hypnotic or anxiolytic withdrawal","sedative, hypnotic or anxiolytic withdrawal","sedative , hypnotic or anxiolytic withdrawal",0
+mental,"sedative, hypnotic or anxiolytic withdrawal",benzodiazepine withdrawal,benzodiazepine withdrawal,0
+mental,"sedative, hypnotic or anxiolytic withdrawal",sedative withdrawal,sedative withdrawal,0
+mental,"sedative, hypnotic or anxiolytic withdrawal",benzodiazepine withdrawal syndrome,benzodiazepine withdrawal syndrome,0
+mental,"sedative, hypnotic or anxiolytic withdrawal",benzodiazepine withdrawal syndromes,benzodiazepine withdrawal syndromes,0
+mental,"sedative, hypnotic or anxiolytic induced delirium","sedative, hypnotic or anxiolytic induced delirium","sedative , hypnotic or anxiolytic induced delirium",0
+mental,"sedative, hypnotic or anxiolytic induced delirium",benzodiazepine-induced delirium,benzodiazepine - induced delirium,0
+mental,"sedative, hypnotic or anxiolytic induced delirium",sedative-induced delirium,sedative - induced delirium,0
+mental,"sedative, hypnotic or anxiolytic induced delirium",benzodiazepine induced delirium,benzodiazepine induced delirium,0
+mental,"sedative, hypnotic or anxiolytic induced delirium",sedative induced delirium,sedative induced delirium,0
+mental,"sedative, hypnotic or anxiolytic induced psychotic disorder","sedative, hypnotic or anxiolytic induced psychotic disorder","sedative , hypnotic or anxiolytic induced psychotic disorder",0
+mental,"sedative, hypnotic or anxiolytic induced psychotic disorder",benzodiazepine-induced psychosis,benzodiazepine - induced psychosis,0
+mental,"sedative, hypnotic or anxiolytic induced psychotic disorder",sedative-induced psychosis,sedative - induced psychosis,0
+mental,"sedative, hypnotic or anxiolytic induced psychotic disorder",benzodiazepine induced psychosis,benzodiazepine induced psychosis,0
+mental,"sedative, hypnotic or anxiolytic induced psychotic disorder",sedative induced psychosis,sedative induced psychosis,0
+mental,"sedative, hypnotic or anxiolytic induced psychotic disorder",benzodiazepine-induced psychoses,benzodiazepine - induced psychoses,0
+mental,"sedative, hypnotic or anxiolytic induced psychotic disorder",sedative-induced psychoses,sedative - induced psychoses,0
+mental,"sedative, hypnotic or anxiolytic induced psychotic disorder",benzodiazepine induced psychoses,benzodiazepine induced psychoses,0
+mental,"sedative, hypnotic or anxiolytic induced psychotic disorder",sedative induced psychoses,sedative induced psychoses,0
+mental,"sedative, hypnotic or anxiolytic induced mood disorder","sedative, hypnotic or anxiolytic induced mood disorder","sedative , hypnotic or anxiolytic induced mood disorder",0
+mental,"sedative, hypnotic or anxiolytic induced mood disorder",benzodiazepine-induced mood disorder,benzodiazepine - induced mood disorder,0
+mental,"sedative, hypnotic or anxiolytic induced mood disorder",sedative-induced mood disorder,sedative - induced mood disorder,0
+mental,"sedative, hypnotic or anxiolytic induced mood disorder",benzodiazepine induced mood disorder,benzodiazepine induced mood disorder,0
+mental,"sedative, hypnotic or anxiolytic induced mood disorder",sedative induced mood disorder,sedative induced mood disorder,0
+mental,"sedative, hypnotic or anxiolytic induced mood disorder",benzodiazepine-induced mood disorders,benzodiazepine - induced mood disorders,0
+mental,"sedative, hypnotic or anxiolytic induced mood disorder",sedative-induced mood disorders,sedative - induced mood disorders,0
+mental,"sedative, hypnotic or anxiolytic induced mood disorder",benzodiazepine induced mood disorders,benzodiazepine induced mood disorders,0
+mental,"sedative, hypnotic or anxiolytic induced mood disorder",sedative induced mood disorders,sedative induced mood disorders,0
+mental,"sedative, hypnotic or anxiolytic induced anxiety","sedative, hypnotic or anxiolytic induced anxiety","sedative , hypnotic or anxiolytic induced anxiety",0
+mental,"sedative, hypnotic or anxiolytic induced anxiety",benzodiazepine-induced anxiety,benzodiazepine - induced anxiety,0
+mental,"sedative, hypnotic or anxiolytic induced anxiety",sedative-induced anxiety,sedative - induced anxiety,0
+mental,"sedative, hypnotic or anxiolytic induced anxiety",benzodiazepine induced anxiety,benzodiazepine induced anxiety,0
+mental,"sedative, hypnotic or anxiolytic induced anxiety",sedative induced anxiety,sedative induced anxiety,0
+mental,"amnestic disorder due to use of sedatives, hypnotics or anxiolytics","amnestic disorder due to use of sedatives, hypnotics or anxiolytics","amnestic disorder due to use of sedatives , hypnotics or anxiolytics",0
+mental,"amnestic disorder due to use of sedatives, hypnotics or anxiolytics",benzodiazepine-induced amnesia,benzodiazepine - induced amnesia,0
+mental,"amnestic disorder due to use of sedatives, hypnotics or anxiolytics",sedative-induced amnesia,sedative - induced amnesia,0
+mental,"amnestic disorder due to use of sedatives, hypnotics or anxiolytics",benzodiazepine induced amnesia,benzodiazepine induced amnesia,0
+mental,"amnestic disorder due to use of sedatives, hypnotics or anxiolytics",sedative induced amnesia,sedative induced amnesia,0
+mental,"dementia due to use of sedatives, hypnotics or anxiolytics","dementia due to use of sedatives, hypnotics or anxiolytics","dementia due to use of sedatives , hypnotics or anxiolytics",0
+mental,"dementia due to use of sedatives, hypnotics or anxiolytics",benzodiazepine-induced dementia,benzodiazepine - induced dementia,0
+mental,"dementia due to use of sedatives, hypnotics or anxiolytics",benzodiazepine induced dementia,benzodiazepine induced dementia,0
+mental,episode of harmful use of cocaine,episode of harmful use of cocaine,episode of harmful use of cocaine,0
+mental,harmful pattern of use of cocaine,harmful pattern of use of cocaine,harmful pattern of use of cocaine,0
+mental,harmful pattern of use of cocaine,harmful use of cocaine,harmful use of cocaine,0
+mental,harmful pattern of use of cocaine,cocaine abuse,cocaine abuse,0
+mental,harmful pattern of use of cocaine,cocaine misuse,cocaine misuse,0
+mental,cocaine dependence,cocaine dependence,cocaine dependence,0
+mental,cocaine intoxication,cocaine intoxication,cocaine intoxication,0
+mental,cocaine withdrawal,cocaine withdrawal,cocaine withdrawal,0
+mental,cocaine induced delirium,cocaine induced delirium,cocaine induced delirium,0
+mental,cocaine induced delirium,cocaine-induced delirium,cocaine - induced delirium,0
+mental,cocaine induced psychotic disorder,cocaine induced psychotic disorder,cocaine induced psychotic disorder,0
+mental,cocaine induced psychotic disorder,cocaine-induced psychosis,cocaine - induced psychosis,0
+mental,cocaine induced psychotic disorder,cocaine-induced psychotic disorder,cocaine - induced psychotic disorder,0
+mental,cocaine induced psychotic disorder,cocaine psychosis,cocaine psychosis,0
+mental,cocaine induced psychotic disorder,cocaine induced psychosis,cocaine induced psychosis,0
+mental,cocaine induced psychotic disorder,cocaine induced psychotic disorders,cocaine induced psychotic disorders,0
+mental,cocaine induced psychotic disorder,cocaine-induced psychoses,cocaine - induced psychoses,0
+mental,cocaine induced psychotic disorder,cocaine-induced psychotic disorders,cocaine - induced psychotic disorders,0
+mental,cocaine induced psychotic disorder,cocaine psychoses,cocaine psychoses,0
+mental,cocaine induced psychotic disorder,cocaine induced psychoses,cocaine induced psychoses,0
+mental,cocaine induced mood disorder,cocaine induced mood disorder,cocaine induced mood disorder,0
+mental,cocaine induced mood disorder,cocaine-induced mood disorder,cocaine - induced mood disorder,0
+mental,cocaine induced mood disorder,cocaine induced mood disorders,cocaine induced mood disorders,0
+mental,cocaine induced mood disorder,cocaine-induced mood disorders,cocaine - induced mood disorders,0
+mental,cocaine induced anxiety,cocaine induced anxiety,cocaine induced anxiety,0
+mental,cocaine induced anxiety,cocaine-induced anxiety,cocaine - induced anxiety,0
+mental,cocaine induced anxiety,cocaine-induced anxiety disorder,cocaine - induced anxiety disorder,0
+mental,cocaine induced anxiety,cocaine induced anxiety disorder,cocaine induced anxiety disorder,0
+mental,cocaine induced anxiety,cocaine-induced anxiety disorders,cocaine - induced anxiety disorders,0
+mental,cocaine induced anxiety,cocaine induced anxiety disorders,cocaine induced anxiety disorders,0
+mental,cocaine induced ocd,cocaine induced ocd,cocaine induced ocd,0
+mental,cocaine induced ocd,cocaine-induced ocd,cocaine - induced ocd,0
+mental,cocaine induced impulse control disorder,cocaine induced impulse control disorder,cocaine induced impulse control disorder,0
+mental,cocaine induced impulse control disorder,cocaine induced impulse control disorders,cocaine induced impulse control disorders,0
+mental,episode of harmful use of amphetamines,episode of harmful use of amphetamines,episode of harmful use of amphetamines,0
+mental,harmful pattern of use of amphetamines,harmful pattern of use of amphetamines,harmful pattern of use of amphetamines,0
+mental,harmful pattern of use of amphetamines,harmful use of amphetamines,harmful use of amphetamines,0
+mental,harmful pattern of use of amphetamines,amphetamine abuse,amphetamine abuse,0
+mental,harmful pattern of use of amphetamines,amphetamine misuse,amphetamine misuse,0
+mental,amphetamines dependence,amphetamines dependence,amphetamines dependence,0
+mental,amphetamines dependence,amphetamine dependence,amphetamine dependence,0
+mental,amphetamines dependence,amphetamine addiction,amphetamine addiction,0
+mental,amphetamines dependence,amphetamine use disorder,amphetamine use disorder,0
+mental,amphetamines dependence,amphetamine addictions,amphetamine addictions,0
+mental,amphetamines dependence,amphetamine use disorders,amphetamine use disorders,0
+mental,amphetamines intoxication,amphetamines intoxication,amphetamines intoxication,0
+mental,amphetamines intoxication,amphetamine intoxication,amphetamine intoxication,0
+mental,amphetamines withdrawal,amphetamines withdrawal,amphetamines withdrawal,0
+mental,amphetamines withdrawal,amphetamine withdrawal,amphetamine withdrawal,0
+mental,amphetamines induced delirium,amphetamines induced delirium,amphetamines induced delirium,0
+mental,amphetamines induced delirium,amphetamine-induced delirium,amphetamine - induced delirium,0
+mental,amphetamines induced delirium,amphetamine induced delirium,amphetamine induced delirium,0
+mental,amphetamines induced psychotic disorder,amphetamines induced psychotic disorder,amphetamines induced psychotic disorder,0
+mental,amphetamines induced psychotic disorder,amphetamine-induced psychosis,amphetamine - induced psychosis,0
+mental,amphetamines induced psychotic disorder,amphetamine psychosis,amphetamine psychosis,0
+mental,amphetamines induced psychotic disorder,amphetamine-induced psychotic disorder,amphetamine - induced psychotic disorder,0
+mental,amphetamines induced psychotic disorder,amphetamine induced psychosis,amphetamine induced psychosis,0
+mental,amphetamines induced psychotic disorder,amphetamine induced psychotic disorder,amphetamine induced psychotic disorder,0
+mental,amphetamines induced psychotic disorder,amphetamines induced psychotic disorders,amphetamines induced psychotic disorders,0
+mental,amphetamines induced psychotic disorder,amphetamine-induced psychoses,amphetamine - induced psychoses,0
+mental,amphetamines induced psychotic disorder,amphetamine psychoses,amphetamine psychoses,0
+mental,amphetamines induced psychotic disorder,amphetamine-induced psychotic disorders,amphetamine - induced psychotic disorders,0
+mental,amphetamines induced psychotic disorder,amphetamine induced psychoses,amphetamine induced psychoses,0
+mental,amphetamines induced psychotic disorder,amphetamine induced psychotic disorders,amphetamine induced psychotic disorders,0
+mental,amphetamines induced mood disorder,amphetamines induced mood disorder,amphetamines induced mood disorder,0
+mental,amphetamines induced mood disorder,amphetamine-induced mood disorder,amphetamine - induced mood disorder,0
+mental,amphetamines induced mood disorder,amphetamine induced mood disorder,amphetamine induced mood disorder,0
+mental,amphetamines induced mood disorder,amphetamines induced mood disorders,amphetamines induced mood disorders,0
+mental,amphetamines induced mood disorder,amphetamine-induced mood disorders,amphetamine - induced mood disorders,0
+mental,amphetamines induced mood disorder,amphetamine induced mood disorders,amphetamine induced mood disorders,0
+mental,amphetamines induced anxiety,amphetamines induced anxiety,amphetamines induced anxiety,0
+mental,amphetamines induced anxiety,amphetamine-induced anxiety,amphetamine - induced anxiety,0
+mental,amphetamines induced anxiety,amphetamine-induced anxiety disorder,amphetamine - induced anxiety disorder,0
+mental,amphetamines induced anxiety,amphetamine induced anxiety,amphetamine induced anxiety,0
+mental,amphetamines induced anxiety,amphetamine induced anxiety disorder,amphetamine induced anxiety disorder,0
+mental,amphetamines induced anxiety,amphetamine-induced anxiety disorders,amphetamine - induced anxiety disorders,0
+mental,amphetamines induced anxiety,amphetamine induced anxiety disorders,amphetamine induced anxiety disorders,0
+mental,amphetamines induced ocd,amphetamines induced ocd,amphetamines induced ocd,0
+mental,amphetamines induced ocd,amphetamine-induced ocd,amphetamine - induced ocd,0
+mental,amphetamines induced ocd,amphetamine induced ocd,amphetamine induced ocd,0
+mental,amphetamines induced impulse control disorder,amphetamines induced impulse control disorder,amphetamines induced impulse control disorder,0
+mental,amphetamines induced impulse control disorder,amphetamines induced impulse control disorders,amphetamines induced impulse control disorders,0
+mental,episode of harmful use of synthetic cathinone,episode of harmful use of synthetic cathinone,episode of harmful use of synthetic cathinone,0
+mental,harmful pattern of use of synthetic cathinone,harmful pattern of use of synthetic cathinone,harmful pattern of use of synthetic cathinone,0
+mental,harmful pattern of use of synthetic cathinone,harmful use of synthetic cathinones,harmful use of synthetic cathinones,0
+mental,harmful pattern of use of synthetic cathinone,synthetic cathinone abuse,synthetic cathinone abuse,0
+mental,harmful pattern of use of synthetic cathinone,bath salts abuse,bath salts abuse,0
+mental,synthetic cathinone dependence,synthetic cathinone dependence,synthetic cathinone dependence,0
+mental,synthetic cathinone dependence,bath salts dependence,bath salts dependence,0
+mental,synthetic cathinone dependence,bath salts addiction,bath salts addiction,0
+mental,synthetic cathinone dependence,synthetic cathinone addiction,synthetic cathinone addiction,0
+mental,synthetic cathinone dependence,synthetic cathinone use disorder,synthetic cathinone use disorder,0
+mental,synthetic cathinone dependence,bath salts addictions,bath salts addictions,0
+mental,synthetic cathinone dependence,synthetic cathinone addictions,synthetic cathinone addictions,0
+mental,synthetic cathinone dependence,synthetic cathinone use disorders,synthetic cathinone use disorders,0
+mental,synthetic cathinone intoxication,synthetic cathinone intoxication,synthetic cathinone intoxication,0
+mental,synthetic cathinone intoxication,bath salts intoxication,bath salts intoxication,0
+mental,synthetic cathinone withdrawal,synthetic cathinone withdrawal,synthetic cathinone withdrawal,0
+mental,synthetic cathinone withdrawal,bath salts withdrawal,bath salts withdrawal,0
+mental,synthetic cathinone induced delirium,synthetic cathinone induced delirium,synthetic cathinone induced delirium,0
+mental,synthetic cathinone induced delirium,bath salts delirium,bath salts delirium,0
+mental,synthetic cathinone-induced psychotic disorder,synthetic cathinone-induced psychotic disorder,synthetic cathinone - induced psychotic disorder,0
+mental,synthetic cathinone-induced psychotic disorder,synthetic cathinone induced psychotic disorder,synthetic cathinone induced psychotic disorder,0
+mental,synthetic cathinone-induced psychotic disorder,bath salts psychosis,bath salts psychosis,0
+mental,synthetic cathinone-induced psychotic disorder,synthetic cathinone-induced psychosis,synthetic cathinone - induced psychosis,0
+mental,synthetic cathinone-induced psychotic disorder,synthetic cathinone induced psychosis,synthetic cathinone induced psychosis,0
+mental,synthetic cathinone-induced psychotic disorder,synthetic cathinone-induced psychotic disorders,synthetic cathinone - induced psychotic disorders,0
+mental,synthetic cathinone-induced psychotic disorder,synthetic cathinone induced psychotic disorders,synthetic cathinone induced psychotic disorders,0
+mental,synthetic cathinone-induced psychotic disorder,bath salts psychoses,bath salts psychoses,0
+mental,synthetic cathinone-induced psychotic disorder,synthetic cathinone-induced psychoses,synthetic cathinone - induced psychoses,0
+mental,synthetic cathinone-induced psychotic disorder,synthetic cathinone induced psychoses,synthetic cathinone induced psychoses,0
+mental,synthetic cathinone-induced mood disorder,synthetic cathinone-induced mood disorder,synthetic cathinone - induced mood disorder,0
+mental,synthetic cathinone-induced mood disorder,synthetic cathinone induced mood disorder,synthetic cathinone induced mood disorder,0
+mental,synthetic cathinone-induced mood disorder,synthetic cathinone-induced mood disorders,synthetic cathinone - induced mood disorders,0
+mental,synthetic cathinone-induced mood disorder,synthetic cathinone induced mood disorders,synthetic cathinone induced mood disorders,0
+mental,synthetic cathinone induced anxiety,synthetic cathinone induced anxiety,synthetic cathinone induced anxiety,0
+mental,synthetic cathinone induced ocd,synthetic cathinone induced ocd,synthetic cathinone induced ocd,0
+mental,synthetic cathinone induced ocd,synthetic cathinone-induced ocd,synthetic cathinone - induced ocd,0
+mental,synthetic cathinone induced impulse control disorder,synthetic cathinone induced impulse control disorder,synthetic cathinone induced impulse control disorder,0
+mental,synthetic cathinone induced impulse control disorder,synthetic cathinone induced impulse control disorders,synthetic cathinone induced impulse control disorders,0
+mental,episode of harmful use of caffeine,episode of harmful use of caffeine,episode of harmful use of caffeine,0
+mental,harmful pattern of use of caffeine,harmful pattern of use of caffeine,harmful pattern of use of caffeine,0
+mental,harmful pattern of use of caffeine,harmful use of caffeine,harmful use of caffeine,0
+mental,harmful pattern of use of caffeine,caffeine misuse,caffeine misuse,0
+mental,caffeine intoxication,caffeine intoxication,caffeine intoxication,0
+mental,caffeine withdrawal,caffeine withdrawal,caffeine withdrawal,0
+mental,caffeine induced anxiety disorder,caffeine induced anxiety disorder,caffeine induced anxiety disorder,0
+mental,caffeine induced anxiety disorder,caffeine-induced anxiety disorder,caffeine - induced anxiety disorder,0
+mental,caffeine induced anxiety disorder,caffeine-induced anxiety,caffeine - induced anxiety,0
+mental,caffeine induced anxiety disorder,caffeine induced anxiety,caffeine induced anxiety,0
+mental,caffeine induced anxiety disorder,caffeine induced anxiety disorders,caffeine induced anxiety disorders,0
+mental,caffeine induced anxiety disorder,caffeine-induced anxiety disorders,caffeine - induced anxiety disorders,0
+mental,caffeine-induced sleep disorder,caffeine-induced sleep disorder,caffeine - induced sleep disorder,0
+mental,caffeine-induced sleep disorder,caffeine induced sleep disorder,caffeine induced sleep disorder,0
+mental,caffeine-induced sleep disorder,caffeine-induced sleep disorders,caffeine - induced sleep disorders,0
+mental,caffeine-induced sleep disorder,caffeine induced sleep disorders,caffeine induced sleep disorders,0
+mental,episode of harmful use of hallucinogens,episode of harmful use of hallucinogens,episode of harmful use of hallucinogens,0
+mental,harmful pattern of use of hallucinogens,harmful pattern of use of hallucinogens,harmful pattern of use of hallucinogens,0
+mental,harmful pattern of use of hallucinogens,harmful use of hallucinogens,harmful use of hallucinogens,0
+mental,harmful pattern of use of hallucinogens,hallucinogen abuse,hallucinogen abuse,0
+mental,harmful pattern of use of hallucinogens,hallucinogen misuse,hallucinogen misuse,0
+mental,hallucinogens dependence,hallucinogens dependence,hallucinogens dependence,0
+mental,hallucinogens dependence,hallucinogen dependence,hallucinogen dependence,0
+mental,hallucinogens dependence,hallucinogen use disorder,hallucinogen use disorder,0
+mental,hallucinogens dependence,hallucinogen use disorders,hallucinogen use disorders,0
+mental,hallucinogen-induced delirium,hallucinogen-induced delirium,hallucinogen - induced delirium,0
+mental,hallucinogen-induced delirium,hallucinogen induced delirium,hallucinogen induced delirium,0
+mental,hallucinogens induced psychotic disorder,hallucinogens induced psychotic disorder,hallucinogens induced psychotic disorder,0
+mental,hallucinogens induced psychotic disorder,hallucinogen-induced psychosis,hallucinogen - induced psychosis,0
+mental,hallucinogens induced psychotic disorder,hallucinogen-induced psychotic disorder,hallucinogen - induced psychotic disorder,0
+mental,hallucinogens induced psychotic disorder,hallucinogen psychosis,hallucinogen psychosis,0
+mental,hallucinogens induced psychotic disorder,hallucinogen induced psychosis,hallucinogen induced psychosis,0
+mental,hallucinogens induced psychotic disorder,hallucinogen induced psychotic disorder,hallucinogen induced psychotic disorder,0
+mental,hallucinogens induced psychotic disorder,hallucinogens induced psychotic disorders,hallucinogens induced psychotic disorders,0
+mental,hallucinogens induced psychotic disorder,hallucinogen-induced psychoses,hallucinogen - induced psychoses,0
+mental,hallucinogens induced psychotic disorder,hallucinogen-induced psychotic disorders,hallucinogen - induced psychotic disorders,0
+mental,hallucinogens induced psychotic disorder,hallucinogen psychoses,hallucinogen psychoses,0
+mental,hallucinogens induced psychotic disorder,hallucinogen induced psychoses,hallucinogen induced psychoses,0
+mental,hallucinogens induced psychotic disorder,hallucinogen induced psychotic disorders,hallucinogen induced psychotic disorders,0
+mental,hallucinogens induced anxiety disorder,hallucinogens induced anxiety disorder,hallucinogens induced anxiety disorder,0
+mental,hallucinogens induced anxiety disorder,hallucinogen-induced anxiety disorder,hallucinogen - induced anxiety disorder,0
+mental,hallucinogens induced anxiety disorder,hallucinogen-induced anxiety,hallucinogen - induced anxiety,0
+mental,hallucinogens induced anxiety disorder,hallucinogen induced anxiety disorder,hallucinogen induced anxiety disorder,0
+mental,hallucinogens induced anxiety disorder,hallucinogen induced anxiety,hallucinogen induced anxiety,0
+mental,hallucinogens induced anxiety disorder,hallucinogens induced anxiety disorders,hallucinogens induced anxiety disorders,0
+mental,hallucinogens induced anxiety disorder,hallucinogen-induced anxiety disorders,hallucinogen - induced anxiety disorders,0
+mental,hallucinogens induced anxiety disorder,hallucinogen induced anxiety disorders,hallucinogen induced anxiety disorders,0
+mental,hallucinogens induced mood disorder,hallucinogens induced mood disorder,hallucinogens induced mood disorder,0
+mental,hallucinogens induced mood disorder,hallucinogen-induced mood disorder,hallucinogen - induced mood disorder,0
+mental,hallucinogens induced mood disorder,hallucinogen induced mood disorder,hallucinogen induced mood disorder,0
+mental,hallucinogens induced mood disorder,hallucinogens induced mood disorders,hallucinogens induced mood disorders,0
+mental,hallucinogens induced mood disorder,hallucinogen-induced mood disorders,hallucinogen - induced mood disorders,0
+mental,hallucinogens induced mood disorder,hallucinogen induced mood disorders,hallucinogen induced mood disorders,0
+mental,hallucinogen persisting perception disorder,hallucinogen persisting perception disorder,hallucinogen persisting perception disorder,0
+mental,hallucinogen persisting perception disorder,hppd,HPPD,1
+mental,hallucinogen persisting perception disorder,hallucinogen persisting perception disorders,hallucinogen persisting perception disorders,0
+mental,episode of harmful use of nicotine,episode of harmful use of nicotine,episode of harmful use of nicotine,0
+mental,harmful pattern of use of nicotine,harmful pattern of use of nicotine,harmful pattern of use of nicotine,0
+mental,harmful pattern of use of nicotine,harmful use of nicotine,harmful use of nicotine,0
+mental,harmful pattern of use of nicotine,nicotine abuse,nicotine abuse,0
+mental,harmful pattern of use of nicotine,nicotine misuse,nicotine misuse,0
+mental,nicotine intoxication,nicotine intoxication,nicotine intoxication,0
+mental,nicotine withdrawal,nicotine withdrawal,nicotine withdrawal,0
+mental,nicotine dependence,nicotine dependence,nicotine dependence,0
+mental,episode of harmful use of volatile inhalants,episode of harmful use of volatile inhalants,episode of harmful use of volatile inhalants,0
+mental,harmful pattern of use of volatile inhalants,harmful pattern of use of volatile inhalants,harmful pattern of use of volatile inhalants,0
+mental,harmful pattern of use of volatile inhalants,harmful use of inhalants,harmful use of inhalants,0
+mental,harmful pattern of use of volatile inhalants,inhalant abuse,inhalant abuse,0
+mental,harmful pattern of use of volatile inhalants,inhalant misuse,inhalant misuse,0
+mental,volatile inhalants withdrawal,volatile inhalants withdrawal,volatile inhalants withdrawal,0
+mental,volatile inhalants withdrawal,inhalant withdrawal,inhalant withdrawal,0
+mental,volatile inhalants withdrawal,solvent withdrawal,solvent withdrawal,0
+mental,volatile inhalants induced delirium,volatile inhalants induced delirium,volatile inhalants induced delirium,0
+mental,volatile inhalants induced delirium,inhalant-induced delirium,inhalant - induced delirium,0
+mental,volatile inhalants induced delirium,inhalant induced delirium,inhalant induced delirium,0
+mental,volatile inhalants induced psychotic disorder,volatile inhalants induced psychotic disorder,volatile inhalants induced psychotic disorder,0
+mental,volatile inhalants induced psychotic disorder,inhalant-induced psychosis,inhalant - induced psychosis,0
+mental,volatile inhalants induced psychotic disorder,inhalant-induced psychotic disorder,inhalant - induced psychotic disorder,0
+mental,volatile inhalants induced psychotic disorder,inhalant induced psychosis,inhalant induced psychosis,0
+mental,volatile inhalants induced psychotic disorder,inhalant induced psychotic disorder,inhalant induced psychotic disorder,0
+mental,volatile inhalants induced psychotic disorder,volatile inhalants induced psychotic disorders,volatile inhalants induced psychotic disorders,0
+mental,volatile inhalants induced psychotic disorder,inhalant-induced psychoses,inhalant - induced psychoses,0
+mental,volatile inhalants induced psychotic disorder,inhalant-induced psychotic disorders,inhalant - induced psychotic disorders,0
+mental,volatile inhalants induced psychotic disorder,inhalant induced psychoses,inhalant induced psychoses,0
+mental,volatile inhalants induced psychotic disorder,inhalant induced psychotic disorders,inhalant induced psychotic disorders,0
+mental,volatile inhalants induced mood disorder,volatile inhalants induced mood disorder,volatile inhalants induced mood disorder,0
+mental,volatile inhalants induced mood disorder,inhalant-induced mood disorder,inhalant - induced mood disorder,0
+mental,volatile inhalants induced mood disorder,inhalant induced mood disorder,inhalant induced mood disorder,0
+mental,volatile inhalants induced mood disorder,volatile inhalants induced mood disorders,volatile inhalants induced mood disorders,0
+mental,volatile inhalants induced mood disorder,inhalant-induced mood disorders,inhalant - induced mood disorders,0
+mental,volatile inhalants induced mood disorder,inhalant induced mood disorders,inhalant induced mood disorders,0
+mental,volatile inhalants induced anxiety,volatile inhalants induced anxiety,volatile inhalants induced anxiety,0
+mental,volatile inhalants induced anxiety,inhalant-induced anxiety,inhalant - induced anxiety,0
+mental,volatile inhalants induced anxiety,inhalant-induced anxiety disorder,inhalant - induced anxiety disorder,0
+mental,volatile inhalants induced anxiety,inhalant induced anxiety,inhalant induced anxiety,0
+mental,volatile inhalants induced anxiety,inhalant induced anxiety disorder,inhalant induced anxiety disorder,0
+mental,volatile inhalants induced anxiety,inhalant-induced anxiety disorders,inhalant - induced anxiety disorders,0
+mental,volatile inhalants induced anxiety,inhalant induced anxiety disorders,inhalant induced anxiety disorders,0
+mental,"episode of harmful use of dissociative drugs (ketamine, pcp)","episode of harmful use of dissociative drugs (ketamine, pcp)","episode of harmful use of dissociative drugs ( ketamine , pcp )",0
+mental,"harmful pattern of use of dissociative drugs (ketamine, pcp)","harmful pattern of use of dissociative drugs (ketamine, pcp)","harmful pattern of use of dissociative drugs ( ketamine , pcp )",0
+mental,"harmful pattern of use of dissociative drugs (ketamine, pcp)",harmful use of ketamine,harmful use of ketamine,0
+mental,"harmful pattern of use of dissociative drugs (ketamine, pcp)",ketamine abuse,ketamine abuse,0
+mental,"harmful pattern of use of dissociative drugs (ketamine, pcp)",ketamine misuse,ketamine misuse,0
+mental,"harmful pattern of use of dissociative drugs (ketamine, pcp)",pcp abuse,pcp abuse,0
+mental,"dissociative drugs (ketamine, pcp) dependence","dissociative drugs (ketamine, pcp) dependence","dissociative drugs ( ketamine , pcp ) dependence",0
+mental,"dissociative drugs (ketamine, pcp) dependence",ketamine dependence,ketamine dependence,0
+mental,"dissociative drugs (ketamine, pcp) dependence",ketamine addiction,ketamine addiction,0
+mental,"dissociative drugs (ketamine, pcp) dependence",ketamine use disorder,ketamine use disorder,0
+mental,"dissociative drugs (ketamine, pcp) dependence",pcp dependence,pcp dependence,0
+mental,"dissociative drugs (ketamine, pcp) dependence",ketamine addictions,ketamine addictions,0
+mental,"dissociative drugs (ketamine, pcp) dependence",ketamine use disorders,ketamine use disorders,0
+mental,"dissociative drugs (ketamine, pcp) intoxication","dissociative drugs (ketamine, pcp) intoxication","dissociative drugs ( ketamine , pcp ) intoxication",0
+mental,"dissociative drugs (ketamine, pcp) intoxication",ketamine intoxication,ketamine intoxication,0
+mental,"dissociative drugs (ketamine, pcp) intoxication",pcp intoxication,pcp intoxication,0
+mental,"dissociative drugs (ketamine, pcp) intoxication",phencyclidine intoxication,phencyclidine intoxication,0
+mental,"dissociative drugs (ketamine, pcp) withdrawal","dissociative drugs (ketamine, pcp) withdrawal","dissociative drugs ( ketamine , pcp ) withdrawal",0
+mental,"dissociative drugs (ketamine, pcp) withdrawal",ketamine withdrawal,ketamine withdrawal,0
+mental,"dissociative drugs (ketamine, pcp) induced delirium","dissociative drugs (ketamine, pcp) induced delirium","dissociative drugs ( ketamine , pcp ) induced delirium",0
+mental,"dissociative drugs (ketamine, pcp) induced delirium",ketamine-induced delirium,ketamine - induced delirium,0
+mental,"dissociative drugs (ketamine, pcp) induced delirium",ketamine induced delirium,ketamine induced delirium,0
+mental,"dissociative drugs (ketamine, pcp) induced psychotic disorder","dissociative drugs (ketamine, pcp) induced psychotic disorder","dissociative drugs ( ketamine , pcp ) induced psychotic disorder",0
+mental,"dissociative drugs (ketamine, pcp) induced psychotic disorder",ketamine-induced psychosis,ketamine - induced psychosis,0
+mental,"dissociative drugs (ketamine, pcp) induced psychotic disorder",ketamine psychosis,ketamine psychosis,0
+mental,"dissociative drugs (ketamine, pcp) induced psychotic disorder",pcp psychosis,pcp psychosis,0
+mental,"dissociative drugs (ketamine, pcp) induced psychotic disorder",phencyclidine psychosis,phencyclidine psychosis,0
+mental,"dissociative drugs (ketamine, pcp) induced psychotic disorder",ketamine induced psychosis,ketamine induced psychosis,0
+mental,"dissociative drugs (ketamine, pcp) induced psychotic disorder",ketamine-induced psychoses,ketamine - induced psychoses,0
+mental,"dissociative drugs (ketamine, pcp) induced psychotic disorder",ketamine psychoses,ketamine psychoses,0
+mental,"dissociative drugs (ketamine, pcp) induced psychotic disorder",pcp psychoses,pcp psychoses,0
+mental,"dissociative drugs (ketamine, pcp) induced psychotic disorder",phencyclidine psychoses,phencyclidine psychoses,0
+mental,"dissociative drugs (ketamine, pcp) induced psychotic disorder",ketamine induced psychoses,ketamine induced psychoses,0
+mental,"dissociative drugs (ketamine, pcp) induced mood disorder","dissociative drugs (ketamine, pcp) induced mood disorder","dissociative drugs ( ketamine , pcp ) induced mood disorder",0
+mental,"dissociative drugs (ketamine, pcp) induced mood disorder",ketamine-induced mood disorder,ketamine - induced mood disorder,0
+mental,"dissociative drugs (ketamine, pcp) induced mood disorder",ketamine induced mood disorder,ketamine induced mood disorder,0
+mental,"dissociative drugs (ketamine, pcp) induced mood disorder",ketamine-induced mood disorders,ketamine - induced mood disorders,0
+mental,"dissociative drugs (ketamine, pcp) induced mood disorder",ketamine induced mood disorders,ketamine induced mood disorders,0
+mental,"dissociative drugs (ketamine, pcp) induced anxiety","dissociative drugs (ketamine, pcp) induced anxiety","dissociative drugs ( ketamine , pcp ) induced anxiety",0
+mental,"dissociative drugs (ketamine, pcp) induced anxiety",ketamine-induced anxiety,ketamine - induced anxiety,0
+mental,"dissociative drugs (ketamine, pcp) induced anxiety",ketamine induced anxiety,ketamine induced anxiety,0
+mental,somatic symptom and related disorder,somatic symptom and related disorder,somatic symptom and related disorder,0
+mental,somatic symptom and related disorder,somatic symptom and related disorders,somatic symptom and related disorders,0
+mental,illness anxiety disorder (hypochondriasis),illness anxiety disorder (hypochondriasis),illness anxiety disorder ( hypochondriasis ),0
+mental,illness anxiety disorder (hypochondriasis),illness anxiety disorder,illness anxiety disorder,0
+mental,illness anxiety disorder (hypochondriasis),hypochondriasis,hypochondriasis,0
+mental,illness anxiety disorder (hypochondriasis),iad,IAD,1
+mental,illness anxiety disorder (hypochondriasis),illness anxiety disorders,illness anxiety disorders,0
+mental,somatic symptom disorder,somatic symptom disorder,somatic symptom disorder,0
+mental,somatic symptom disorder,ssd,SSD,1
+mental,somatic symptom disorder,somatic symptom disorders,somatic symptom disorders,0
+mental,functional neurological symptom disorder (conversion disorder),functional neurological symptom disorder (conversion disorder),functional neurological symptom disorder ( conversion disorder ),0
+mental,functional neurological symptom disorder (conversion disorder),functional neurological symptom disorder,functional neurological symptom disorder,0
+mental,functional neurological symptom disorder (conversion disorder),conversion disorder,conversion disorder,0
+mental,functional neurological symptom disorder (conversion disorder),fnd,FND,1
+mental,functional neurological symptom disorder (conversion disorder),functional neurological symptom disorders,functional neurological symptom disorders,0
+mental,functional neurological symptom disorder (conversion disorder),conversion disorders,conversion disorders,0
+mental,factitious disorder imposed on self (munchausen syndrome),factitious disorder imposed on self (munchausen syndrome),factitious disorder imposed on self ( munchausen syndrome ),0
+mental,factitious disorder imposed on self (munchausen syndrome),factitious disorder imposed on self,factitious disorder imposed on self,0
+mental,factitious disorder imposed on self (munchausen syndrome),munchausen syndrome,munchausen syndrome,0
+mental,factitious disorder imposed on self (munchausen syndrome),munchausen syndromes,munchausen syndromes,0
+mental,factitious disorder imposed on another (munchausen by proxy),factitious disorder imposed on another (munchausen by proxy),factitious disorder imposed on another ( munchausen by proxy ),0
+mental,factitious disorder imposed on another (munchausen by proxy),factitious disorder imposed on another,factitious disorder imposed on another,0
+mental,factitious disorder imposed on another (munchausen by proxy),munchausen by proxy,munchausen by proxy,0
+mental,psychological factors affecting other medical conditions,psychological factors affecting other medical conditions,psychological factors affecting other medical conditions,0
+mental,other specified somatic symptom and related disorder,other specified somatic symptom and related disorder,other specified somatic symptom and related disorder,0
+mental,other specified somatic symptom and related disorder,other specified somatic symptom and related disorders,other specified somatic symptom and related disorders,0
+mental,unspecified somatic symptom and related disorder,unspecified somatic symptom and related disorder,unspecified somatic symptom and related disorder,0
+mental,unspecified somatic symptom and related disorder,unspecified somatic symptom and related disorders,unspecified somatic symptom and related disorders,0
+mental,sexual dysfunction,sexual dysfunction,sexual dysfunction,0
+mental,sexual dysfunction,sexual dysfunctions,sexual dysfunctions,0
+mental,anorgasmia/female orgasmic disorder,anorgasmia/female orgasmic disorder,anorgasmia / female orgasmic disorder,0
+mental,anorgasmia/female orgasmic disorder,anorgasmia female orgasmic disorder,anorgasmia female orgasmic disorder,0
+mental,anorgasmia/female orgasmic disorder,female orgasmic disorder,female orgasmic disorder,0
+mental,anorgasmia/female orgasmic disorder,anorgasmia,anorgasmia,0
+mental,anorgasmia/female orgasmic disorder,female anorgasmia,female anorgasmia,0
+mental,anorgasmia/female orgasmic disorder,inhibited female orgasm,inhibited female orgasm,0
+mental,anorgasmia/female orgasmic disorder,anorgasmia/female orgasmic disorders,anorgasmia / female orgasmic disorders,0
+mental,anorgasmia/female orgasmic disorder,anorgasmia female orgasmic disorders,anorgasmia female orgasmic disorders,0
+mental,anorgasmia/female orgasmic disorder,female orgasmic disorders,female orgasmic disorders,0
+mental,delayed ejaculation,delayed ejaculation,delayed ejaculation,0
+mental,dyspareunia,dyspareunia,dyspareunia,0
+mental,erectile disorder/dysfunction,erectile disorder/dysfunction,erectile disorder / dysfunction,0
+mental,erectile disorder/dysfunction,erectile disorder,erectile disorder,0
+mental,erectile disorder/dysfunction,erectile dysfunction,erectile dysfunction,0
+mental,erectile disorder/dysfunction,erectile disorder dysfunction,erectile disorder dysfunction,0
+mental,erectile disorder/dysfunction,erectile disorders,erectile disorders,0
+mental,erectile disorder/dysfunction,erectile dysfunctions,erectile dysfunctions,0
+mental,erectile disorder/dysfunction,erectile disorder dysfunctions,erectile disorder dysfunctions,0
+mental,female sexual interest/arousal disorder,female sexual interest/arousal disorder,female sexual interest / arousal disorder,0
+mental,female sexual interest/arousal disorder,fsiad,FSIAD,1
+mental,female sexual interest/arousal disorder,female sexual interest arousal disorder,female sexual interest arousal disorder,0
+mental,female sexual interest/arousal disorder,female sexual interest/arousal disorders,female sexual interest / arousal disorders,0
+mental,female sexual interest/arousal disorder,female sexual interest arousal disorders,female sexual interest arousal disorders,0
+mental,genito-pelvic pain disorder (vaginismus),genito-pelvic pain disorder (vaginismus),genito - pelvic pain disorder ( vaginismus ),0
+mental,genito-pelvic pain disorder (vaginismus),genito-pelvic pain disorder,genito - pelvic pain disorder,0
+mental,genito-pelvic pain disorder (vaginismus),vaginismus,vaginismus,0
+mental,genito-pelvic pain disorder (vaginismus),genito pelvic pain disorder,genito pelvic pain disorder,0
+mental,genito-pelvic pain disorder (vaginismus),genito-pelvic pain disorders,genito - pelvic pain disorders,0
+mental,genito-pelvic pain disorder (vaginismus),genito pelvic pain disorders,genito pelvic pain disorders,0
+mental,hypoactive sexual desire disorder,hypoactive sexual desire disorder,hypoactive sexual desire disorder,0
+mental,hypoactive sexual desire disorder,hsdd,HSDD,1
+mental,hypoactive sexual desire disorder,hypoactive sexual desire disorders,hypoactive sexual desire disorders,0
+mental,male hypoactive sexual desire disorder,male hypoactive sexual desire disorder,male hypoactive sexual desire disorder,0
+mental,male hypoactive sexual desire disorder,male hypoactive sexual desire disorders,male hypoactive sexual desire disorders,0
+mental,persistent genital arousal disorder,persistent genital arousal disorder,persistent genital arousal disorder,0
+mental,persistent genital arousal disorder,pgad,PGAD,1
+mental,persistent genital arousal disorder,persistent genital arousal disorders,persistent genital arousal disorders,0
+mental,premature (early) ejaculation,premature (early) ejaculation,premature ( early ) ejaculation,0
+mental,premature (early) ejaculation,premature ejaculation,premature ejaculation,0
+mental,premature (early) ejaculation,early ejaculation,early ejaculation,0
+mental,sexual arousal disorder,sexual arousal disorder,sexual arousal disorder,0
+mental,sexual arousal disorder,sexual arousal disorders,sexual arousal disorders,0
+mental,substance/medication-induced sexual dysfunction,substance/medication-induced sexual dysfunction,substance / medication - induced sexual dysfunction,0
+mental,substance/medication-induced sexual dysfunction,substance-induced sexual dysfunction,substance - induced sexual dysfunction,0
+mental,substance/medication-induced sexual dysfunction,medication-induced sexual dysfunction,medication - induced sexual dysfunction,0
+mental,substance/medication-induced sexual dysfunction,substance/medication induced sexual dysfunction,substance / medication induced sexual dysfunction,0
+mental,substance/medication-induced sexual dysfunction,substance medication-induced sexual dysfunction,substance medication - induced sexual dysfunction,0
+mental,substance/medication-induced sexual dysfunction,substance medication induced sexual dysfunction,substance medication induced sexual dysfunction,0
+mental,substance/medication-induced sexual dysfunction,substance induced sexual dysfunction,substance induced sexual dysfunction,0
+mental,substance/medication-induced sexual dysfunction,medication induced sexual dysfunction,medication induced sexual dysfunction,0
+mental,substance/medication-induced sexual dysfunction,substance/medication-induced sexual dysfunctions,substance / medication - induced sexual dysfunctions,0
+mental,substance/medication-induced sexual dysfunction,substance-induced sexual dysfunctions,substance - induced sexual dysfunctions,0
+mental,substance/medication-induced sexual dysfunction,medication-induced sexual dysfunctions,medication - induced sexual dysfunctions,0
+mental,substance/medication-induced sexual dysfunction,substance/medication induced sexual dysfunctions,substance / medication induced sexual dysfunctions,0
+mental,substance/medication-induced sexual dysfunction,substance medication-induced sexual dysfunctions,substance medication - induced sexual dysfunctions,0
+mental,substance/medication-induced sexual dysfunction,substance medication induced sexual dysfunctions,substance medication induced sexual dysfunctions,0
+mental,substance/medication-induced sexual dysfunction,substance induced sexual dysfunctions,substance induced sexual dysfunctions,0
+mental,substance/medication-induced sexual dysfunction,medication induced sexual dysfunctions,medication induced sexual dysfunctions,0
+mental,other specified sexual dysfunction,other specified sexual dysfunction,other specified sexual dysfunction,0
+mental,other specified sexual dysfunction,other specified sexual dysfunctions,other specified sexual dysfunctions,0
+mental,unspecified sexual dysfunction,unspecified sexual dysfunction,unspecified sexual dysfunction,0
+mental,unspecified sexual dysfunction,unspecified sexual dysfunctions,unspecified sexual dysfunctions,0
+mental,elimination disorder,elimination disorder,elimination disorder,0
+mental,elimination disorder,elimination disorders,elimination disorders,0
+mental,enuresis,enuresis,enuresis,0
+mental,nocturnal enuresis,nocturnal enuresis,nocturnal enuresis,0
+mental,encopresis,encopresis,encopresis,0
+mental,other specified elimination disorders,other specified elimination disorders,other specified elimination disorders,0
+mental,other specified elimination disorders,other specified elimination disorder,other specified elimination disorder,0
+mental,other specified elimination disorders,elimination disorder not otherwise specified,elimination disorder not otherwise specified,0
+mental,unspecified elimination disorder,unspecified elimination disorder,unspecified elimination disorder,0
+mental,unspecified elimination disorder,unspecified elimination disorders,unspecified elimination disorders,0
+mental,feeding and eating disorder,feeding and eating disorder,feeding and eating disorder,0
+mental,feeding and eating disorder,feeding and eating disorders,feeding and eating disorders,0
+mental,pica,pica,pica,0
+mental,rumination syndrome,rumination syndrome,rumination syndrome,0
+mental,rumination syndrome,rumination syndromes,rumination syndromes,0
+mental,avoidant/restrictive food intake disorder,avoidant/restrictive food intake disorder,avoidant / restrictive food intake disorder,0
+mental,avoidant/restrictive food intake disorder,arfid,ARFID,1
+mental,avoidant/restrictive food intake disorder,avoidant restrictive food intake disorder,avoidant restrictive food intake disorder,0
+mental,avoidant/restrictive food intake disorder,avoidant/restrictive food intake disorders,avoidant / restrictive food intake disorders,0
+mental,avoidant/restrictive food intake disorder,avoidant restrictive food intake disorders,avoidant restrictive food intake disorders,0
+mental,anorexia nervosa,anorexia nervosa,anorexia nervosa,0
+mental,binge-eating disorder,binge-eating disorder,binge - eating disorder,0
+mental,binge-eating disorder,binge eating disorder,binge eating disorder,0
+mental,binge-eating disorder,binge-eating disorders,binge - eating disorders,0
+mental,binge-eating disorder,binge eating disorders,binge eating disorders,0
+mental,bulimia nervosa,bulimia nervosa,bulimia nervosa,0
+mental,other specified feeding or eating disorder (osfed),other specified feeding or eating disorder (osfed),other specified feeding or eating disorder ( osfed ),0
+mental,other specified feeding or eating disorder (osfed),other specified feeding or eating disorder,other specified feeding or eating disorder,0
+mental,other specified feeding or eating disorder (osfed),osfed,OSFED,1
+mental,other specified feeding or eating disorder (osfed),other specified feeding or eating disorders,other specified feeding or eating disorders,0
+mental,purging disorder,purging disorder,purging disorder,0
+mental,purging disorder,purging disorders,purging disorders,0
+mental,night eating syndrome,night eating syndrome,night eating syndrome,0
+mental,night eating syndrome,night eating syndromes,night eating syndromes,0
+mental,atypical anorexia nervosa,atypical anorexia nervosa,atypical anorexia nervosa,0
+mental,diabulimia,diabulimia,diabulimia,0
+mental,orthorexia nervosa,orthorexia nervosa,orthorexia nervosa,0
+mental,unspecified feeding or eating disorder,unspecified feeding or eating disorder,unspecified feeding or eating disorder,0
+mental,unspecified feeding or eating disorder,unspecified feeding or eating disorders,unspecified feeding or eating disorders,0
+mental,"disruptive, impulse-control, and conduct disorder","disruptive, impulse-control, and conduct disorder","disruptive , impulse - control , and conduct disorder",0
+mental,"disruptive, impulse-control, and conduct disorder",disruptive behavior disorders,disruptive behavior disorders,0
+mental,"disruptive, impulse-control, and conduct disorder",disruptive behaviour disorders,disruptive behaviour disorders,0
+mental,"disruptive, impulse-control, and conduct disorder",disruptive behavior disorder,disruptive behavior disorder,0
+mental,intermittent explosive disorder,intermittent explosive disorder,intermittent explosive disorder,0
+mental,intermittent explosive disorder,ied,IED,1
+mental,intermittent explosive disorder,intermittent explosive disorders,intermittent explosive disorders,0
+mental,oppositional defiant disorder,oppositional defiant disorder,oppositional defiant disorder,0
+mental,oppositional defiant disorder,oppositional defiant disorders,oppositional defiant disorders,0
+mental,conduct disorder,conduct disorder,conduct disorder,0
+mental,conduct disorder,conduct disorders,conduct disorders,0
+mental,antisocial personality disorder,antisocial personality disorder,antisocial personality disorder,0
+mental,antisocial personality disorder,aspd,ASPD,1
+mental,antisocial personality disorder,antisocial personality,antisocial personality,0
+mental,antisocial personality disorder,dissocial personality disorder,dissocial personality disorder,0
+mental,antisocial personality disorder,antisocial personality disorders,antisocial personality disorders,0
+mental,antisocial personality disorder,antisocial personalities,antisocial personalities,0
+mental,antisocial personality disorder,dissocial personality disorders,dissocial personality disorders,0
+mental,pyromania,pyromania,pyromania,0
+mental,kleptomania,kleptomania,kleptomania,0
+mental,mythomania,mythomania,mythomania,0
+mental,"other specified disruptive, impulse-control, and conduct disorders","other specified disruptive, impulse-control, and conduct disorders","other specified disruptive , impulse - control , and conduct disorders",0
+mental,"unspecified disruptive, impulse-control, and conduct disorders","unspecified disruptive, impulse-control, and conduct disorders","unspecified disruptive , impulse - control , and conduct disorders",0
+mental,obsessive-compulsive and related disorder,obsessive-compulsive and related disorder,obsessive - compulsive and related disorder,0
+mental,obsessive-compulsive and related disorder,obsessive compulsive and related disorder,obsessive compulsive and related disorder,0
+mental,obsessive-compulsive and related disorder,obsessive-compulsive spectrum disorders,obsessive - compulsive spectrum disorders,0
+mental,obsessive-compulsive and related disorder,obsessive compulsive related disorders,obsessive compulsive related disorders,0
+mental,obsessive-compulsive and related disorder,ocd spectrum disorders,ocd spectrum disorders,0
+mental,obsessive-compulsive and related disorder,obsessive compulsive spectrum disorders,obsessive compulsive spectrum disorders,0
+mental,obsessive-compulsive and related disorder,obsessive-compulsive and related disorders,obsessive - compulsive and related disorders,0
+mental,obsessive-compulsive and related disorder,obsessive compulsive and related disorders,obsessive compulsive and related disorders,0
+mental,obsessive–compulsive disorder (ocd),obsessive–compulsive disorder (ocd),obsessive–compulsive disorder ( ocd ),0
+mental,obsessive–compulsive disorder (ocd),obsessive–compulsive disorder,obsessive–compulsive disorder,0
+mental,obsessive–compulsive disorder (ocd),obsessive-compulsive disorder,obsessive - compulsive disorder,0
+mental,obsessive–compulsive disorder (ocd),ocd,OCD,1
+mental,obsessive–compulsive disorder (ocd),obsessive compulsive disorder,obsessive compulsive disorder,0
+mental,obsessive–compulsive disorder (ocd),obsessive–compulsive disorders,obsessive–compulsive disorders,0
+mental,obsessive–compulsive disorder (ocd),obsessive-compulsive disorders,obsessive - compulsive disorders,0
+mental,obsessive–compulsive disorder (ocd),obsessive compulsive disorders,obsessive compulsive disorders,0
+mental,body dysmorphic disorder,body dysmorphic disorder,body dysmorphic disorder,0
+mental,body dysmorphic disorder,bdd,BDD,1
+mental,body dysmorphic disorder,body dysmorphic disorders,body dysmorphic disorders,0
+mental,body integrity dysphoria,body integrity dysphoria,body integrity dysphoria,0
+mental,trichotillomania (hair-pulling disorder),trichotillomania (hair-pulling disorder),trichotillomania ( hair - pulling disorder ),0
+mental,trichotillomania (hair-pulling disorder),trichotillomania,trichotillomania,0
+mental,trichotillomania (hair-pulling disorder),hair-pulling disorder,hair - pulling disorder,0
+mental,trichotillomania (hair-pulling disorder),hair pulling disorder,hair pulling disorder,0
+mental,trichotillomania (hair-pulling disorder),hair-pulling disorders,hair - pulling disorders,0
+mental,trichotillomania (hair-pulling disorder),hair pulling disorders,hair pulling disorders,0
+mental,excoriation disorder (skin-picking disorder),excoriation disorder (skin-picking disorder),excoriation disorder ( skin - picking disorder ),0
+mental,excoriation disorder (skin-picking disorder),excoriation disorder,excoriation disorder,0
+mental,excoriation disorder (skin-picking disorder),skin-picking disorder,skin - picking disorder,0
+mental,excoriation disorder (skin-picking disorder),dermatillomania,dermatillomania,0
+mental,excoriation disorder (skin-picking disorder),skin picking disorder,skin picking disorder,0
+mental,excoriation disorder (skin-picking disorder),excoriation disorders,excoriation disorders,0
+mental,excoriation disorder (skin-picking disorder),skin-picking disorders,skin - picking disorders,0
+mental,excoriation disorder (skin-picking disorder),skin picking disorders,skin picking disorders,0
+mental,body-focused repetitive behavior disorder,body-focused repetitive behavior disorder,body - focused repetitive behavior disorder,0
+mental,body-focused repetitive behavior disorder,body-focused repetitive behaviour disorder,body - focused repetitive behaviour disorder,0
+mental,body-focused repetitive behavior disorder,bfrb,BFRB,1
+mental,body-focused repetitive behavior disorder,body focused repetitive behavior disorder,body focused repetitive behavior disorder,0
+mental,body-focused repetitive behavior disorder,body focused repetitive behaviour disorder,body focused repetitive behaviour disorder,0
+mental,body-focused repetitive behavior disorder,body-focused repetitive behavior disorders,body - focused repetitive behavior disorders,0
+mental,body-focused repetitive behavior disorder,body-focused repetitive behaviour disorders,body - focused repetitive behaviour disorders,0
+mental,body-focused repetitive behavior disorder,body focused repetitive behavior disorders,body focused repetitive behavior disorders,0
+mental,body-focused repetitive behavior disorder,body focused repetitive behaviour disorders,body focused repetitive behaviour disorders,0
+mental,olfactory reference syndrome,olfactory reference syndrome,olfactory reference syndrome,0
+mental,olfactory reference syndrome,olfactory reference syndromes,olfactory reference syndromes,0
+mental,phantom limb syndrome,phantom limb syndrome,phantom limb syndrome,0
+mental,phantom limb syndrome,phantom limb syndromes,phantom limb syndromes,0
+mental,primarily obsessional obsessive-compulsive disorder,primarily obsessional obsessive-compulsive disorder,primarily obsessional obsessive - compulsive disorder,0
+mental,primarily obsessional obsessive-compulsive disorder,primarily obsessional obsessive compulsive disorder,primarily obsessional obsessive compulsive disorder,0
+mental,primarily obsessional obsessive-compulsive disorder,pure obsessional ocd,pure obsessional ocd,0
+mental,primarily obsessional obsessive-compulsive disorder,pure o ocd,pure o ocd,0
+mental,primarily obsessional obsessive-compulsive disorder,purely obsessional ocd,purely obsessional ocd,0
+mental,primarily obsessional obsessive-compulsive disorder,primarily obsessional ocd,primarily obsessional ocd,0
+mental,primarily obsessional obsessive-compulsive disorder,obsessional ocd,obsessional ocd,0
+mental,primarily obsessional obsessive-compulsive disorder,primarily obsessional obsessive-compulsive disorders,primarily obsessional obsessive - compulsive disorders,0
+mental,primarily obsessional obsessive-compulsive disorder,primarily obsessional obsessive compulsive disorders,primarily obsessional obsessive compulsive disorders,0
+mental,hoarding disorder,hoarding disorder,hoarding disorder,0
+mental,hoarding disorder,hoarding disorders,hoarding disorders,0
+mental,obsessive-compulsive and related disorder due to another medical condition,obsessive-compulsive and related disorder due to another medical condition,obsessive - compulsive and related disorder due to another medical condition,0
+mental,obsessive-compulsive and related disorder due to another medical condition,obsessive compulsive and related disorder due to another medical condition,obsessive compulsive and related disorder due to another medical condition,0
+mental,obsessive-compulsive and related disorder due to another medical condition,secondary obsessive-compulsive disorder,secondary obsessive - compulsive disorder,0
+mental,obsessive-compulsive and related disorder due to another medical condition,secondary obsessive compulsive disorder,secondary obsessive compulsive disorder,0
+mental,obsessive-compulsive and related disorder due to another medical condition,secondary obsessive-compulsive disorders,secondary obsessive - compulsive disorders,0
+mental,obsessive-compulsive and related disorder due to another medical condition,secondary obsessive compulsive disorders,secondary obsessive compulsive disorders,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,substance/medication-induced obsessive-compulsive and related disorder,substance / medication - induced obsessive - compulsive and related disorder,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,substance-induced obsessive-compulsive and related disorder,substance - induced obsessive - compulsive and related disorder,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,medication-induced obsessive-compulsive and related disorder,medication - induced obsessive - compulsive and related disorder,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,substance/medication induced obsessive compulsive and related disorder,substance / medication induced obsessive compulsive and related disorder,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,substance medication-induced obsessive-compulsive and related disorder,substance medication - induced obsessive - compulsive and related disorder,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,substance medication induced obsessive compulsive and related disorder,substance medication induced obsessive compulsive and related disorder,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,substance induced obsessive compulsive and related disorder,substance induced obsessive compulsive and related disorder,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,medication induced obsessive compulsive and related disorder,medication induced obsessive compulsive and related disorder,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,substance/medication-induced obsessive-compulsive and related disorders,substance / medication - induced obsessive - compulsive and related disorders,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,substance-induced obsessive-compulsive and related disorders,substance - induced obsessive - compulsive and related disorders,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,medication-induced obsessive-compulsive and related disorders,medication - induced obsessive - compulsive and related disorders,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,substance/medication induced obsessive compulsive and related disorders,substance / medication induced obsessive compulsive and related disorders,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,substance medication-induced obsessive-compulsive and related disorders,substance medication - induced obsessive - compulsive and related disorders,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,substance medication induced obsessive compulsive and related disorders,substance medication induced obsessive compulsive and related disorders,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,substance induced obsessive compulsive and related disorders,substance induced obsessive compulsive and related disorders,0
+mental,substance/medication-induced obsessive-compulsive and related disorder,medication induced obsessive compulsive and related disorders,medication induced obsessive compulsive and related disorders,0
+mental,other specified obsessive-compulsive and related disorder,other specified obsessive-compulsive and related disorder,other specified obsessive - compulsive and related disorder,0
+mental,other specified obsessive-compulsive and related disorder,other specified obsessive compulsive and related disorder,other specified obsessive compulsive and related disorder,0
+mental,other specified obsessive-compulsive and related disorder,other specified obsessive-compulsive and related disorders,other specified obsessive - compulsive and related disorders,0
+mental,other specified obsessive-compulsive and related disorder,other specified obsessive compulsive and related disorders,other specified obsessive compulsive and related disorders,0
+mental,unspecified obsessive-compulsive and related disorder,unspecified obsessive-compulsive and related disorder,unspecified obsessive - compulsive and related disorder,0
+mental,unspecified obsessive-compulsive and related disorder,unspecified obsessive compulsive and related disorder,unspecified obsessive compulsive and related disorder,0
+mental,unspecified obsessive-compulsive and related disorder,unspecified obsessive-compulsive and related disorders,unspecified obsessive - compulsive and related disorders,0
+mental,unspecified obsessive-compulsive and related disorder,unspecified obsessive compulsive and related disorders,unspecified obsessive compulsive and related disorders,0
+mental,schizophrenia spectrum and other psychotic disorder,schizophrenia spectrum and other psychotic disorder,schizophrenia spectrum and other psychotic disorder,0
+mental,schizophrenia spectrum and other psychotic disorder,schizophrenia spectrum and other psychotic disorders,schizophrenia spectrum and other psychotic disorders,0
+mental,brief psychotic disorder,brief psychotic disorder,brief psychotic disorder,0
+mental,brief psychotic disorder,brief psychotic disorders,brief psychotic disorders,0
+mental,delusional disorder,delusional disorder,delusional disorder,0
+mental,delusional disorder,delusional disorders,delusional disorders,0
+mental,delusional misidentification syndrome,delusional misidentification syndrome,delusional misidentification syndrome,0
+mental,delusional misidentification syndrome,delusional misidentification syndromes,delusional misidentification syndromes,0
+mental,paraphrenia,paraphrenia,paraphrenia,0
+mental,psychosis,psychosis,psychosis,0
+mental,schizophrenia,schizophrenia,schizophrenia,0
+mental,schizoaffective disorder,schizoaffective disorder,schizoaffective disorder,0
+mental,schizoaffective disorder,schizoaffective disorders,schizoaffective disorders,0
+mental,schizophreniform disorder,schizophreniform disorder,schizophreniform disorder,0
+mental,schizophreniform disorder,schizophreniform disorders,schizophreniform disorders,0
+mental,schizotypal personality disorder,schizotypal personality disorder,schizotypal personality disorder,0
+mental,schizotypal personality disorder,schizotypal personality disorders,schizotypal personality disorders,0
+mental,shared delusional disorder,shared delusional disorder,shared delusional disorder,0
+mental,shared delusional disorder,shared delusional disorders,shared delusional disorders,0
+mental,postpartum psychosis,postpartum psychosis,postpartum psychosis,0
+mental,postpartum psychosis,postnatal psychosis,postnatal psychosis,0
+mental,postpartum psychosis,postpartum psychoses,postpartum psychoses,0
+mental,postpartum psychosis,postnatal psychoses,postnatal psychoses,0
+mental,psychotic disorder due to another medical condition,psychotic disorder due to another medical condition,psychotic disorder due to another medical condition,0
+mental,substance/medication-induced psychotic disorder,substance/medication-induced psychotic disorder,substance / medication - induced psychotic disorder,0
+mental,substance/medication-induced psychotic disorder,substance-induced psychotic disorder,substance - induced psychotic disorder,0
+mental,substance/medication-induced psychotic disorder,medication-induced psychotic disorder,medication - induced psychotic disorder,0
+mental,substance/medication-induced psychotic disorder,substance/medication induced psychotic disorder,substance / medication induced psychotic disorder,0
+mental,substance/medication-induced psychotic disorder,substance medication-induced psychotic disorder,substance medication - induced psychotic disorder,0
+mental,substance/medication-induced psychotic disorder,substance medication induced psychotic disorder,substance medication induced psychotic disorder,0
+mental,substance/medication-induced psychotic disorder,substance induced psychotic disorder,substance induced psychotic disorder,0
+mental,substance/medication-induced psychotic disorder,medication induced psychotic disorder,medication induced psychotic disorder,0
+mental,substance/medication-induced psychotic disorder,substance/medication-induced psychotic disorders,substance / medication - induced psychotic disorders,0
+mental,substance/medication-induced psychotic disorder,substance-induced psychotic disorders,substance - induced psychotic disorders,0
+mental,substance/medication-induced psychotic disorder,medication-induced psychotic disorders,medication - induced psychotic disorders,0
+mental,substance/medication-induced psychotic disorder,substance/medication induced psychotic disorders,substance / medication induced psychotic disorders,0
+mental,substance/medication-induced psychotic disorder,substance medication-induced psychotic disorders,substance medication - induced psychotic disorders,0
+mental,substance/medication-induced psychotic disorder,substance medication induced psychotic disorders,substance medication induced psychotic disorders,0
+mental,substance/medication-induced psychotic disorder,substance induced psychotic disorders,substance induced psychotic disorders,0
+mental,substance/medication-induced psychotic disorder,medication induced psychotic disorders,medication induced psychotic disorders,0
+mental,other schizophrenia spectrum and other psychotic disorder,other schizophrenia spectrum and other psychotic disorder,other schizophrenia spectrum and other psychotic disorder,0
+mental,other schizophrenia spectrum and other psychotic disorder,other primary psychotic disorder,other primary psychotic disorder,0
+mental,other schizophrenia spectrum and other psychotic disorder,psychotic disorder not otherwise specified,psychotic disorder not otherwise specified,0
+mental,other schizophrenia spectrum and other psychotic disorder,psychosis not otherwise specified,psychosis not otherwise specified,0
+mental,other schizophrenia spectrum and other psychotic disorder,psychosis nos,psychosis nos,0
+mental,other schizophrenia spectrum and other psychotic disorder,other schizophrenia spectrum and other psychotic disorders,other schizophrenia spectrum and other psychotic disorders,0
+mental,other schizophrenia spectrum and other psychotic disorder,other primary psychotic disorders,other primary psychotic disorders,0
+mental,unspecified schizophrenia spectrum and other psychotic disorder,unspecified schizophrenia spectrum and other psychotic disorder,unspecified schizophrenia spectrum and other psychotic disorder,0
+mental,unspecified schizophrenia spectrum and other psychotic disorder,unspecified schizophrenia spectrum and other psychotic disorders,unspecified schizophrenia spectrum and other psychotic disorders,0
+mental,other condition,other condition,other condition,0
+mental,catatonia,catatonia,catatonia,0
+mental,negative affectivity in personality disorder or personality difficulty,negative affectivity in personality disorder or personality difficulty,negative affectivity in personality disorder or personality difficulty,0
+mental,negative affectivity in personality disorder or personality difficulty,negative affectivity,negative affectivity,0
+mental,negative affectivity in personality disorder or personality difficulty,negative affectivity in personality disorder or personality difficulties,negative affectivity in personality disorder or personality difficulties,0
+mental,detachment in personality disorder or personality difficulty,detachment in personality disorder or personality difficulty,detachment in personality disorder or personality difficulty,0
+mental,detachment in personality disorder or personality difficulty,detachment in personality disorder or personality difficulties,detachment in personality disorder or personality difficulties,0
+mental,dissociality in personality disorder or personality difficulty,dissociality in personality disorder or personality difficulty,dissociality in personality disorder or personality difficulty,0
+mental,dissociality in personality disorder or personality difficulty,dissociality,dissociality,0
+mental,dissociality in personality disorder or personality difficulty,dissociality in personality disorder or personality difficulties,dissociality in personality disorder or personality difficulties,0
+mental,disinhibition in personality disorder or personality difficulty,disinhibition in personality disorder or personality difficulty,disinhibition in personality disorder or personality difficulty,0
+mental,disinhibition in personality disorder or personality difficulty,disinhibition in personality disorder or personality difficulties,disinhibition in personality disorder or personality difficulties,0
+mental,anankastia in personality disorder or personality difficulty,anankastia in personality disorder or personality difficulty,anankastia in personality disorder or personality difficulty,0
+mental,anankastia in personality disorder or personality difficulty,anankastia,anankastia,0
+mental,anankastia in personality disorder or personality difficulty,anankastic personality,anankastic personality,0
+mental,anankastia in personality disorder or personality difficulty,anankastia in personality disorder or personality difficulties,anankastia in personality disorder or personality difficulties,0
+mental,anankastia in personality disorder or personality difficulty,anankastic personalities,anankastic personalities,0
+mental,borderline pattern,borderline pattern,borderline pattern,0
+mental,gender dysphoria,gender dysphoria,gender dysphoria,0
+mental,medication-induced movement disorders and other adverse effects of medication,medication-induced movement disorders and other adverse effects of medication,medication - induced movement disorders and other adverse effects of medication,0
+mental,medication-induced movement disorders and other adverse effects of medication,medication induced movement disorders and other adverse effects of medication,medication induced movement disorders and other adverse effects of medication,0
+mental,culture-bound syndrome,culture-bound syndrome,culture - bound syndrome,0
+mental,culture-bound syndrome,culture bound syndrome,culture bound syndrome,0
+mental,culture-bound syndrome,culture-bound syndromes,culture - bound syndromes,0
+mental,culture-bound syndrome,culture bound syndromes,culture bound syndromes,0
+mental,attenuated psychosis syndrome,attenuated psychosis syndrome,attenuated psychosis syndrome,0
+mental,attenuated psychosis syndrome,attenuated psychosis syndromes,attenuated psychosis syndromes,0
+mental,depressive episodes with short-duration hypomania,depressive episodes with short-duration hypomania,depressive episodes with short - duration hypomania,0
+mental,depressive episodes with short-duration hypomania,depressive episodes with short duration hypomania,depressive episodes with short duration hypomania,0
+mental,depressive episodes with short-duration hypomania,short-duration hypomania,short - duration hypomania,0
+mental,depressive episodes with short-duration hypomania,hypomania of short duration,hypomania of short duration,0
+mental,depressive episodes with short-duration hypomania,depression with brief hypomania,depression with brief hypomania,0
+mental,depressive episodes with short-duration hypomania,short duration hypomania,short duration hypomania,0
+mental,caffeine use disorder,caffeine use disorder,caffeine use disorder,0
+mental,caffeine use disorder,caffeine use disorders,caffeine use disorders,0
+mental,internet gaming disorder,internet gaming disorder,internet gaming disorder,0
+mental,internet gaming disorder,igd,IGD,1
+mental,internet gaming disorder,internet gaming disorders,internet gaming disorders,0
+mental,neurobehavioral disorder associated with prenatal alcohol exposure,neurobehavioral disorder associated with prenatal alcohol exposure,neurobehavioral disorder associated with prenatal alcohol exposure,0
+mental,neurobehavioral disorder associated with prenatal alcohol exposure,neurobehavioural disorder associated with prenatal alcohol exposure,neurobehavioural disorder associated with prenatal alcohol exposure,0
+mental,neurobehavioral disorder associated with prenatal alcohol exposure,nd-pae,ND - PAE,1
+mental,suicidal behaviour disorder,suicidal behaviour disorder,suicidal behaviour disorder,0
+mental,suicidal behaviour disorder,suicidal behavior disorder,suicidal behavior disorder,0
+mental,suicidal behaviour disorder,suicidal behaviour disorders,suicidal behaviour disorders,0
+mental,suicidal behaviour disorder,suicidal behavior disorders,suicidal behavior disorders,0
+mental,nonsuicidal self-injury disorder,nonsuicidal self-injury disorder,nonsuicidal self - injury disorder,0
+mental,nonsuicidal self-injury disorder,non-suicidal self-injury disorder,non - suicidal self - injury disorder,0
+mental,nonsuicidal self-injury disorder,nssi,NSSI,1
+mental,nonsuicidal self-injury disorder,nonsuicidal self injury disorder,nonsuicidal self injury disorder,0
+mental,nonsuicidal self-injury disorder,non suicidal self injury disorder,non suicidal self injury disorder,0
+mental,nonsuicidal self-injury disorder,nonsuicidal self-injury disorders,nonsuicidal self - injury disorders,0
+mental,nonsuicidal self-injury disorder,non-suicidal self-injury disorders,non - suicidal self - injury disorders,0
+mental,nonsuicidal self-injury disorder,nonsuicidal self injury disorders,nonsuicidal self injury disorders,0
+mental,nonsuicidal self-injury disorder,non suicidal self injury disorders,non suicidal self injury disorders,0
+mental,personality disorder,personality disorder,personality disorder,0
+mental,personality disorder,personality disorders,personality disorders,0
+mental,borderline personality disorder,borderline personality disorder,borderline personality disorder,0
+mental,borderline personality disorder,borderline personality disorders,borderline personality disorders,0
+mental,borderline personality disorder,borderline personality,borderline personality,0
+mental,borderline personality disorder,emotionally unstable personality disorder,emotionally unstable personality disorder,0
+mental,borderline personality disorder,emotionally unstable personality,emotionally unstable personality,0
+mental,borderline personality disorder,bpd,BPD,1
+mental,borderline personality disorder,borderline personalities,borderline personalities,0
+mental,borderline personality disorder,emotionally unstable personality disorders,emotionally unstable personality disorders,0
+mental,borderline personality disorder,emotionally unstable personalities,emotionally unstable personalities,0
+mental,histrionic personality disorder,histrionic personality disorder,histrionic personality disorder,0
+mental,histrionic personality disorder,histrionic personality,histrionic personality,0
+mental,histrionic personality disorder,hysterical personality,hysterical personality,0
+mental,histrionic personality disorder,hysterical personality disorder,hysterical personality disorder,0
+mental,histrionic personality disorder,histrionic personality disorders,histrionic personality disorders,0
+mental,histrionic personality disorder,histrionic personalities,histrionic personalities,0
+mental,histrionic personality disorder,hysterical personalities,hysterical personalities,0
+mental,histrionic personality disorder,hysterical personality disorders,hysterical personality disorders,0
+mental,narcissistic personality disorder,narcissistic personality disorder,narcissistic personality disorder,0
+mental,narcissistic personality disorder,narcissistic personality,narcissistic personality,0
+mental,narcissistic personality disorder,narcissistic personality disorders,narcissistic personality disorders,0
+mental,narcissistic personality disorder,narcissistic personalities,narcissistic personalities,0
+mental,recurrent brief depression,recurrent brief depression,recurrent brief depression,0
+mental,recurrent brief depression,recurrent brief depressive disorder,recurrent brief depressive disorder,0
+mental,recurrent brief depression,recurrent brief depressive disorders,recurrent brief depressive disorders,0
+mental,unspecified mood disorder,unspecified mood disorder,unspecified mood disorder,0
+mental,unspecified mood disorder,mood disorder not otherwise specified,mood disorder not otherwise specified,0
+mental,unspecified mood disorder,mood disorder nos,mood disorder nos,0
+mental,unspecified mood disorder,unspecified mood disorders,unspecified mood disorders,0
+mental,hypomania,hypomania,hypomania,0
+mental,hypomania,hypomanic episode,hypomanic episode,0
+mental,hypomania,hypomanic episodes,hypomanic episodes,0
+mental,mania,mania,mania,0
+mental,mania,manic episode,manic episode,0
+mental,mania,manic phase,manic phase,0
+mental,mania,manic episodes,manic episodes,0
+mental,mixed affective state,mixed affective state,mixed affective state,0
+mental,mixed affective state,mixed episode,mixed episode,0
+mental,mixed affective state,mixed episodes,mixed episodes,0
+mental,idiopathic hypersomnia,idiopathic hypersomnia,idiopathic hypersomnia,0
+mental,idiopathic hypersomnia,idiopathic hypersomnolence,idiopathic hypersomnolence,0
+mental,cataplexy,cataplexy,cataplexy,0
+mental,nightmare disorder,nightmare disorder,nightmare disorder,0
+mental,nightmare disorder,dream anxiety disorder,dream anxiety disorder,0
+mental,nightmare disorder,nightmare disorders,nightmare disorders,0
+mental,nightmare disorder,dream anxiety disorders,dream anxiety disorders,0
+mental,sleepwalking,sleepwalking,sleepwalking,0
+mental,sleepwalking,somnambulism,somnambulism,0
+mental,sleepwalking,sleep walking,sleep walking,0
+mental,non-rapid eye movement sleep arousal disorders,nrem sleep arousal disorders,nrem sleep arousal disorders,0
+mental,non-rapid eye movement sleep arousal disorders,disorders of arousal,disorders of arousal,0
+mental,non-rapid eye movement sleep arousal disorders,nrem parasomnias,nrem parasomnias,0
+mental,non-rapid eye movement sleep arousal disorders,disorders of arousals,disorders of arousals,0
+mental,rapid eye movement sleep behavior disorder,rem sleep behavior disorder,rem sleep behavior disorder,0
+mental,rapid eye movement sleep behavior disorder,rem sleep behaviour disorder,rem sleep behaviour disorder,0
+mental,rapid eye movement sleep behavior disorder,rem behavior disorder,rem behavior disorder,0
+mental,rapid eye movement sleep behavior disorder,rbd,RBD,1
+mental,rapid eye movement sleep behavior disorder,rem sleep behavior disorders,rem sleep behavior disorders,0
+mental,rapid eye movement sleep behavior disorder,rem sleep behaviour disorders,rem sleep behaviour disorders,0
+mental,rapid eye movement sleep behavior disorder,rem behavior disorders,rem behavior disorders,0
+mental,confusional arousals,confusional arousal,confusional arousal,0
+mental,confusional arousals,confusional arousals,confusional arousals,0
+mental,hypnagogic hallucinations,hypnagogic hallucination,hypnagogic hallucination,0
+mental,hypnagogic hallucinations,hypnagogic hallucinations,hypnagogic hallucinations,0
+mental,hypnopompic hallucinations,hypnopompic hallucination,hypnopompic hallucination,0
+mental,hypnopompic hallucinations,hypnopompic hallucinations,hypnopompic hallucinations,0
+mental,sleep-related hallucination,sleep-related hallucination,sleep - related hallucination,0
+mental,sleep-related hallucination,sleep-related hallucinations,sleep - related hallucinations,0
+mental,sleep-related hallucination,sleep related hallucination,sleep related hallucination,0
+mental,sleep-related hallucination,sleep related hallucinations,sleep related hallucinations,0
+mental,circadian rhythm sleep disorder,circadian rhythm sleep disorder,circadian rhythm sleep disorder,0
+mental,circadian rhythm sleep disorder,circadian rhythm disorder,circadian rhythm disorder,0
+mental,circadian rhythm sleep disorder,circadian rhythm sleep-wake disorder,circadian rhythm sleep - wake disorder,0
+mental,circadian rhythm sleep disorder,circadian rhythm sleep disorders,circadian rhythm sleep disorders,0
+mental,circadian rhythm sleep disorder,circadian rhythm disorders,circadian rhythm disorders,0
+mental,circadian rhythm sleep disorder,circadian rhythm sleep-wake disorders,circadian rhythm sleep - wake disorders,0
+mental,circadian rhythm sleep disorder,circadian rhythm sleep wake disorder,circadian rhythm sleep wake disorder,0
+mental,circadian rhythm sleep disorder,circadian rhythm sleep wake disorders,circadian rhythm sleep wake disorders,0
+mental,delayed sleep phase disorder,delayed sleep phase disorder,delayed sleep phase disorder,0
+mental,delayed sleep phase disorder,delayed sleep phase syndrome,delayed sleep phase syndrome,0
+mental,delayed sleep phase disorder,delayed sleep-wake phase disorder,delayed sleep - wake phase disorder,0
+mental,delayed sleep phase disorder,dspd,DSPD,1
+mental,delayed sleep phase disorder,dsps,DSPS,1
+mental,delayed sleep phase disorder,delayed sleep phase disorders,delayed sleep phase disorders,0
+mental,delayed sleep phase disorder,delayed sleep phase syndromes,delayed sleep phase syndromes,0
+mental,delayed sleep phase disorder,delayed sleep-wake phase disorders,delayed sleep - wake phase disorders,0
+mental,delayed sleep phase disorder,delayed sleep wake phase disorder,delayed sleep wake phase disorder,0
+mental,delayed sleep phase disorder,delayed sleep wake phase disorders,delayed sleep wake phase disorders,0
+mental,advanced sleep phase disorder,advanced sleep phase disorder,advanced sleep phase disorder,0
+mental,advanced sleep phase disorder,advanced sleep phase syndrome,advanced sleep phase syndrome,0
+mental,advanced sleep phase disorder,advanced sleep phase disorders,advanced sleep phase disorders,0
+mental,advanced sleep phase disorder,advanced sleep phase syndromes,advanced sleep phase syndromes,0
+mental,irregular sleep-wake rhythm,irregular sleep-wake rhythm,irregular sleep - wake rhythm,0
+mental,irregular sleep-wake rhythm,irregular sleep-wake rhythm disorder,irregular sleep - wake rhythm disorder,0
+mental,irregular sleep-wake rhythm,irregular sleep-wake rhythm disorders,irregular sleep - wake rhythm disorders,0
+mental,irregular sleep-wake rhythm,irregular sleep wake rhythm,irregular sleep wake rhythm,0
+mental,irregular sleep-wake rhythm,irregular sleep wake rhythm disorder,irregular sleep wake rhythm disorder,0
+mental,irregular sleep-wake rhythm,irregular sleep wake rhythm disorders,irregular sleep wake rhythm disorders,0
+mental,non-24-hour sleep-wake disorder,non-24-hour sleep-wake disorder,non - 24 - hour sleep - wake disorder,0
+mental,non-24-hour sleep-wake disorder,free-running disorder,free - running disorder,0
+mental,non-24-hour sleep-wake disorder,non-24-hour sleep-wake disorders,non - 24 - hour sleep - wake disorders,0
+mental,non-24-hour sleep-wake disorder,free-running disorders,free - running disorders,0
+mental,non-24-hour sleep-wake disorder,non 24 hour sleep wake disorder,non 24 hour sleep wake disorder,0
+mental,non-24-hour sleep-wake disorder,free running disorder,free running disorder,0
+mental,non-24-hour sleep-wake disorder,non 24 hour sleep wake disorders,non 24 hour sleep wake disorders,0
+mental,non-24-hour sleep-wake disorder,free running disorders,free running disorders,0
+mental,shift work sleep disorder,shift work sleep disorder,shift work sleep disorder,0
+mental,shift work sleep disorder,shift work disorder,shift work disorder,0
+mental,shift work sleep disorder,shift-work sleep disorder,shift - work sleep disorder,0
+mental,shift work sleep disorder,shift work sleep disorders,shift work sleep disorders,0
+mental,shift work sleep disorder,shift work disorders,shift work disorders,0
+mental,shift work sleep disorder,shift-work sleep disorders,shift - work sleep disorders,0
+mental,jet lag,jet lag,jet lag,0
+mental,jet lag,jetlag,jetlag,0
+mental,jet lag,jet lag disorder,jet lag disorder,0
+mental,jet lag,jet lag disorders,jet lag disorders,0
+mental,gambling disorder,gambling disorder,gambling disorder,0
+mental,gambling disorder,pathological gambling,pathological gambling,0
+mental,gambling disorder,compulsive gambling,compulsive gambling,0
+mental,gambling disorder,problem gambling,problem gambling,0
+mental,gambling disorder,gambling addiction,gambling addiction,0
+mental,gambling disorder,gambling disorders,gambling disorders,0
+mental,gambling disorder,gambling addictions,gambling addictions,0
+mental,video game addiction,video game addiction,video game addiction,0
+mental,video game addiction,video-game addiction,video - game addiction,0
+mental,video game addiction,gaming addiction,gaming addiction,0
+mental,video game addiction,gaming disorder,gaming disorder,0
+mental,video game addiction,video game addictions,video game addictions,0
+mental,video game addiction,video-game addictions,video - game addictions,0
+mental,video game addiction,gaming addictions,gaming addictions,0
+mental,video game addiction,gaming disorders,gaming disorders,0
+mental,internet addiction disorder,internet addiction disorder,internet addiction disorder,0
+mental,internet addiction disorder,internet addiction,internet addiction,0
+mental,internet addiction disorder,problematic internet use,problematic internet use,0
+mental,internet addiction disorder,internet addiction disorders,internet addiction disorders,0
+mental,internet addiction disorder,internet addictions,internet addictions,0
+mental,sexual addiction,sexual addiction,sexual addiction,0
+mental,sexual addiction,sex addiction,sex addiction,0
+mental,sexual addiction,sexual addictions,sexual addictions,0
+mental,sexual addiction,sex addictions,sex addictions,0
+mental,food addiction,food addiction,food addiction,0
+mental,food addiction,food addictions,food addictions,0
+mental,exercise addiction,exercise addiction,exercise addiction,0
+mental,exercise addiction,compulsive exercise,compulsive exercise,0
+mental,exercise addiction,exercise dependence,exercise dependence,0
+mental,exercise addiction,exercise addictions,exercise addictions,0
+mental,social media addiction,social media addiction,social media addiction,0
+mental,social media addiction,addiction to social media,addiction to social media,0
+mental,social media addiction,problematic social media use,problematic social media use,0
+mental,social media addiction,social media addictions,social media addictions,0
+mental,pornography addiction,pornography addiction,pornography addiction,0
+mental,pornography addiction,porn addiction,porn addiction,0
+mental,pornography addiction,pornography addictions,pornography addictions,0
+mental,pornography addiction,porn addictions,porn addictions,0
+mental,shopping addiction,shopping addiction,shopping addiction,0
+mental,shopping addiction,compulsive buying,compulsive buying,0
+mental,shopping addiction,compulsive shopping,compulsive shopping,0
+mental,shopping addiction,oniomania,oniomania,0
+mental,shopping addiction,shopping addictions,shopping addictions,0
+mental,addictive personality,addictive personality,addictive personality,0
+mental,addictive personality,addictive personalities,addictive personalities,0
+mental,paraphilic disorder,paraphilic disorder,paraphilic disorder,0
+mental,paraphilic disorder,paraphilia,paraphilia,0
+mental,paraphilic disorder,paraphilic disorders,paraphilic disorders,0
+mental,voyeurism,voyeurism,voyeurism,0
+mental,voyeurism,voyeuristic disorder,voyeuristic disorder,0
+mental,voyeurism,voyeuristic disorders,voyeuristic disorders,0
+mental,exhibitionistic disorder,exhibitionistic disorder,exhibitionistic disorder,0
+mental,exhibitionistic disorder,exhibitionism,exhibitionism,0
+mental,exhibitionistic disorder,exhibitionistic disorders,exhibitionistic disorders,0
+mental,frotteuristic disorder,frotteuristic disorder,frotteuristic disorder,0
+mental,frotteuristic disorder,frotteurism,frotteurism,0
+mental,frotteuristic disorder,frotteuristic disorders,frotteuristic disorders,0
+mental,pedophilia,pedophilia,pedophilia,0
+mental,pedophilia,paedophilia,paedophilia,0
+mental,pedophilia,pedophilic disorder,pedophilic disorder,0
+mental,pedophilia,pedophilic disorders,pedophilic disorders,0
+mental,compulsive sexual behaviour,compulsive sexual behaviour disorder,compulsive sexual behaviour disorder,0
+mental,compulsive sexual behaviour,compulsive sexual behavior disorder,compulsive sexual behavior disorder,0
+mental,compulsive sexual behaviour,compulsive sexual behaviour,compulsive sexual behaviour,0
+mental,compulsive sexual behaviour,compulsive sexual behavior,compulsive sexual behavior,0
+mental,compulsive sexual behaviour,hypersexual disorder,hypersexual disorder,0
+mental,compulsive sexual behaviour,compulsive sexual behaviour disorders,compulsive sexual behaviour disorders,0
+mental,compulsive sexual behaviour,compulsive sexual behavior disorders,compulsive sexual behavior disorders,0
+mental,compulsive sexual behaviour,hypersexual disorders,hypersexual disorders,0
+mental,erotic target location error,erotic target location error,erotic target location error,0
+mental,sexual masochism,sexual masochism,sexual masochism,0
+mental,sexual masochism,sexual masochism disorder,sexual masochism disorder,0
+mental,sexual masochism,sexual masochism disorders,sexual masochism disorders,0
+mental,sexual sadism,sexual sadism,sexual sadism,0
+mental,sexual sadism,sexual sadism disorder,sexual sadism disorder,0
+mental,sexual sadism,sexual sadism disorders,sexual sadism disorders,0
+mental,fetishistic disorder,fetishistic disorder,fetishistic disorder,0
+mental,fetishistic disorder,fetishism,fetishism,0
+mental,fetishistic disorder,fetishistic disorders,fetishistic disorders,0
+mental,transvestic disorder,transvestic disorder,transvestic disorder,0
+mental,transvestic disorder,transvestic fetishism,transvestic fetishism,0
+mental,transvestic disorder,transvestism,transvestism,0
+mental,transvestic disorder,transvestic disorders,transvestic disorders,0
+mental,other specified paraphilic disorder,other specified paraphilic disorder,other specified paraphilic disorder,0
+mental,other specified paraphilic disorder,other specified paraphilic disorders,other specified paraphilic disorders,0
+mental,paranoid personality disorder,paranoid personality disorder,paranoid personality disorder,0
+mental,paranoid personality disorder,paranoid personality,paranoid personality,0
+mental,paranoid personality disorder,paranoid personality disorders,paranoid personality disorders,0
+mental,paranoid personality disorder,paranoid personalities,paranoid personalities,0
+mental,schizoid personality disorder,schizoid personality disorder,schizoid personality disorder,0
+mental,schizoid personality disorder,schizoid personality,schizoid personality,0
+mental,schizoid personality disorder,schizoid personality disorders,schizoid personality disorders,0
+mental,schizoid personality disorder,schizoid personalities,schizoid personalities,0
+mental,avoidant personality disorder,avoidant personality disorder,avoidant personality disorder,0
+mental,avoidant personality disorder,avoidant personality,avoidant personality,0
+mental,avoidant personality disorder,avpd,AVPD,1
+mental,avoidant personality disorder,avoidant personality disorders,avoidant personality disorders,0
+mental,avoidant personality disorder,avoidant personalities,avoidant personalities,0
+mental,dependent personality disorder,dependent personality disorder,dependent personality disorder,0
+mental,dependent personality disorder,dependent personality,dependent personality,0
+mental,dependent personality disorder,dependent personality disorders,dependent personality disorders,0
+mental,dependent personality disorder,dependent personalities,dependent personalities,0
+mental,obsessive-compulsive personality disorder,obsessive-compulsive personality disorder,obsessive - compulsive personality disorder,0
+mental,obsessive-compulsive personality disorder,anankastic personality disorder,anankastic personality disorder,0
+mental,obsessive-compulsive personality disorder,ocpd,OCPD,1
+mental,obsessive-compulsive personality disorder,obsessive-compulsive personality disorders,obsessive - compulsive personality disorders,0
+mental,obsessive-compulsive personality disorder,anankastic personality disorders,anankastic personality disorders,0
+mental,obsessive-compulsive personality disorder,obsessive compulsive personality disorder,obsessive compulsive personality disorder,0
+mental,obsessive-compulsive personality disorder,obsessive compulsive personality disorders,obsessive compulsive personality disorders,0
+mental,other specified personality disorder,other specified personality disorder,other specified personality disorder,0
+mental,other specified personality disorder,other specified personality disorders,other specified personality disorders,0
+mental,unspecified personality disorder,unspecified personality disorder,unspecified personality disorder,0
+mental,unspecified personality disorder,personality disorder not otherwise specified,personality disorder not otherwise specified,0
+mental,unspecified personality disorder,personality disorder nos,personality disorder nos,0
+mental,unspecified personality disorder,unspecified personality disorders,unspecified personality disorders,0
+mental,personality change due to another medical condition,personality change due to another medical condition,personality change due to another medical condition,0
+mental,personality change due to another medical condition,organic personality disorder,organic personality disorder,0
+mental,personality change due to another medical condition,organic personality syndrome,organic personality syndrome,0
+mental,personality change due to another medical condition,organic personality disorders,organic personality disorders,0
+mental,personality change due to another medical condition,organic personality syndromes,organic personality syndromes,0
+mental,mild personality disorder,mild personality disorder,mild personality disorder,0
+mental,mild personality disorder,mild personality disorders,mild personality disorders,0
+mental,moderate personality disorder,moderate personality disorder,moderate personality disorder,0
+mental,moderate personality disorder,moderate personality disorders,moderate personality disorders,0
+mental,severe personality disorder,severe personality disorder,severe personality disorder,0
+mental,severe personality disorder,severe personality disorders,severe personality disorders,0
+mental,"personality disorder, severity unspecified",personality disorder severity unspecified,personality disorder severity unspecified,0
+mental,depressive personality disorder,depressive personality disorder,depressive personality disorder,0
+mental,depressive personality disorder,depressive personality,depressive personality,0
+mental,depressive personality disorder,depressive personality disorders,depressive personality disorders,0
+mental,depressive personality disorder,depressive personalities,depressive personalities,0
+mental,haltlose personality disorder,haltlose personality disorder,haltlose personality disorder,0
+mental,haltlose personality disorder,haltlose personality,haltlose personality,0
+mental,haltlose personality disorder,haltlose personality disorders,haltlose personality disorders,0
+mental,haltlose personality disorder,haltlose personalities,haltlose personalities,0
+mental,immature personality disorder,immature personality disorder,immature personality disorder,0
+mental,immature personality disorder,immature personality,immature personality,0
+mental,immature personality disorder,immature personality disorders,immature personality disorders,0
+mental,immature personality disorder,immature personalities,immature personalities,0
+mental,passive-aggressive personality disorder,passive-aggressive personality disorder,passive - aggressive personality disorder,0
+mental,passive-aggressive personality disorder,passive-aggressive personality,passive - aggressive personality,0
+mental,passive-aggressive personality disorder,passive-aggressive personality disorders,passive - aggressive personality disorders,0
+mental,passive-aggressive personality disorder,passive-aggressive personalities,passive - aggressive personalities,0
+mental,passive-aggressive personality disorder,passive aggressive personality disorder,passive aggressive personality disorder,0
+mental,passive-aggressive personality disorder,passive aggressive personality,passive aggressive personality,0
+mental,passive-aggressive personality disorder,passive aggressive personality disorders,passive aggressive personality disorders,0
+mental,passive-aggressive personality disorder,passive aggressive personalities,passive aggressive personalities,0
+mental,sadistic personality disorder,sadistic personality disorder,sadistic personality disorder,0
+mental,sadistic personality disorder,sadistic personality,sadistic personality,0
+mental,sadistic personality disorder,sadistic personality disorders,sadistic personality disorders,0
+mental,sadistic personality disorder,sadistic personalities,sadistic personalities,0
+mental,self-defeating personality disorder,self-defeating personality disorder,self - defeating personality disorder,0
+mental,self-defeating personality disorder,masochistic personality disorder,masochistic personality disorder,0
+mental,self-defeating personality disorder,self-defeating personality,self - defeating personality,0
+mental,self-defeating personality disorder,self-defeating personality disorders,self - defeating personality disorders,0
+mental,self-defeating personality disorder,masochistic personality disorders,masochistic personality disorders,0
+mental,self-defeating personality disorder,self-defeating personalities,self - defeating personalities,0
+mental,self-defeating personality disorder,self defeating personality disorder,self defeating personality disorder,0
+mental,self-defeating personality disorder,self defeating personality,self defeating personality,0
+mental,self-defeating personality disorder,self defeating personality disorders,self defeating personality disorders,0
+mental,self-defeating personality disorder,self defeating personalities,self defeating personalities,0
+autism,autism/autistic,autism,autism,0
+autism,autism/autistic,autisms,autisms,0
+autism,autism/autistic,autistic,autistic,0
+autism,autism/autistic,autistics,autistics,0
+autism,autism/autistic,autist,autist,0
+autism,autism/autistic,autists,autists,0
+autism,autism/autistic,autistically,autistically,0
+autism,asperger,asperger,asperger,0
+autism,asperger,aspergers,aspergers,0
+autism,spectrum disorder,autism spectrum,autism spectrum,0
+autism,spectrum disorder,autistic spectrum,autistic spectrum,0
+autism,spectrum disorder,on the spectrum,on the spectrum,0
+autism,intellectual disability,idiot,idiot,0
+autism,intellectual disability,imbecile,imbecile,0
+autism,intellectual disability,moron,moron,0
+autism,intellectual disability,feeble-minded,feeble - minded,0
+autism,intellectual disability,feebleminded,feebleminded,0
+autism,intellectual disability,feeble minded,feeble minded,0
+autism,intellectual disability,mental defective,mental defective,0
+autism,intellectual disability,idiocy,idiocy,0
+autism,intellectual disability,imbecility,imbecility,0
+autism,intellectual disability,feeble-mindedness,feeble - mindedness,0
+autism,intellectual disability,feeble mindedness,feeble mindedness,0
+autism,intellectual disability,feeblemindedness,feeblemindedness,0
+autism,intellectual disability,mentally defective,mentally defective,0
+autism,intellectual disability,retard,retard,0
+autism,intellectual disability,retarded,retarded,0
+autism,intellectual disability,mental retardation,mental retardation,0
+autism,intellectual disability,subnormal,subnormal,0
+autism,intellectual disability,backward child,backward child,0
+autism,intellectual disability,backward children,backward children,0
+autism,intellectual disability,backward pupils,backward pupils,0
+autism,intellectual disability,backward pupil,backward pupil,0
+autism,intellectual disability,mentally backward,mentally backward,0
+autism,intellectual disability,backward boy,backward boy,0
+autism,intellectual disability,backward boys,backward boys,0
+autism,intellectual disability,mental handicap,mental handicap,0
+autism,intellectual disability,mentally handicapped,mentally handicapped,0
+autism,intellectual disability,intellectual disability,intellectual disability,0
+autism,intellectual disability,intellectually disabled,intellectually disabled,0
+autism,intellectual disability,idiots,idiots,0
+autism,intellectual disability,imbeciles,imbeciles,0
+autism,intellectual disability,morons,morons,0
+autism,intellectual disability,mental defectives,mental defectives,0
+autism,intellectual disability,retards,retards,0
+autism,intellectual disability,mental handicaps,mental handicaps,0
+autism,intellectual disability,intellectual disabilities,intellectual disabilities,0
+autism,intellectual disability,mentally defectives,mentally defectives,0
+autism,dementia,dementia praecox,dementia praecox,0
+autism,dementia,dementia infantilis,dementia infantilis,0
+autism,dementia,heller's syndrome,heller 's syndrome,0
+autism,dementia,heller syndrome,heller syndrome,0
+autism,dementia,childhood disintegrative disorder,childhood disintegrative disorder,0
+autism,dementia,heller's syndromes,heller 's syndromes,0
+autism,dementia,childhood disintegrative disorders,childhood disintegrative disorders,0
+autism,dementia,heller syndromes,heller syndromes,0
+autism,schizoid psychopathy in children,schizoid psychopathy in children,schizoid psychopathy in children,0
+autism,early infantile autism,early infantile autism,early infantile autism,0
+autism,early infantile autism,kanner's syndrome,kanner 's syndrome,0
+autism,early infantile autism,kanner syndrome,kanner syndrome,0
+autism,early infantile autism,kanner's syndromes,kanner 's syndromes,0
+autism,early infantile autism,kanner syndromes,kanner syndromes,0
+autism,autistic psychopathy,autistic psychopathy,autistic psychopathy,0
+autism,childhood schizophrenia,childhood schizophrenia,childhood schizophrenia,0
+autism,childhood schizophrenia,schizophrenic reaction childhood type,schizophrenic reaction childhood type,0
+autism,childhood schizophrenia,schizophrenia childhood type,schizophrenia childhood type,0
+autism,symbiotic infantile psychosis,symbiotic infantile psychosis,symbiotic infantile psychosis,0
+autism,symbiotic infantile psychosis,infantile psychosis,infantile psychosis,0
+autism,symbiotic infantile psychosis,childhood psychosis,childhood psychosis,0
+autism,symbiotic infantile psychosis,symbiotic infantile psychoses,symbiotic infantile psychoses,0
+autism,symbiotic infantile psychosis,infantile psychoses,infantile psychoses,0
+autism,symbiotic infantile psychosis,childhood psychoses,childhood psychoses,0
+autism,minimal brain dysfunction,minimal brain dysfunction,minimal brain dysfunction,0
+autism,minimal brain dysfunction,minimal brain damage,minimal brain damage,0
+autism,minimal brain dysfunction,minimal cerebral dysfunction,minimal cerebral dysfunction,0
+autism,minimal brain dysfunction,minimal brain dysfunctions,minimal brain dysfunctions,0
+autism,minimal brain dysfunction,minimal cerebral dysfunctions,minimal cerebral dysfunctions,0
+autism,infantile autism,infantile autism,infantile autism,0
+autism,infantile autism,childhood onset pdd,childhood onset pdd,0
+autism,infantile autism,atypical pdd,atypical pdd,0
+autism,infantile autism,childhood onset pervasive developmental disorder,childhood onset pervasive developmental disorder,0
+autism,infantile autism,atypical pervasive developmental disorder,atypical pervasive developmental disorder,0
+autism,infantile autism,childhood onset pervasive developmental disorders,childhood onset pervasive developmental disorders,0
+autism,infantile autism,atypical pervasive developmental disorders,atypical pervasive developmental disorders,0
+autism,autistic disorder,autistic disorder,autistic disorder,0
+autism,autistic disorder,pervasive developmental disorder,pervasive developmental disorder,0
+autism,autistic disorder,autistic disorders,autistic disorders,0
+autism,autistic disorder,pervasive developmental disorders,pervasive developmental disorders,0
+autism,rett's disorder,rett syndrome,rett syndrome,0
+autism,rett's disorder,rett's syndrome,rett 's syndrome,0
+autism,rett's disorder,retts syndrome,retts syndrome,0
+autism,rett's disorder,rett disorder,rett disorder,0
+autism,rett's disorder,rett's disorder,rett 's disorder,0
+autism,rett's disorder,retts disorder,retts disorder,0
+autism,rett's disorder,rett disease,rett disease,0
+autism,rett's disorder,rett's disease,rett 's disease,0
+autism,rett's disorder,retts disease,retts disease,0
+autism,rett's disorder,rett syndromes,rett syndromes,0
+autism,rett's disorder,rett's syndromes,rett 's syndromes,0
+autism,rett's disorder,retts syndromes,retts syndromes,0
+autism,rett's disorder,rett disorders,rett disorders,0
+autism,rett's disorder,rett's disorders,rett 's disorders,0
+autism,rett's disorder,retts disorders,retts disorders,0
+autism,rett's disorder,rett diseases,rett diseases,0
+autism,rett's disorder,rett's diseases,rett 's diseases,0
+autism,rett's disorder,retts diseases,retts diseases,0
+autism,atypical autism,atypical autism,atypical autism,0
+autism,atypical autism,childhood autism,childhood autism,0
+autism,semantic-pragmatic disorder,semantic-pragmatic disorder,semantic - pragmatic disorder,0
+autism,semantic-pragmatic disorder,semantic-pragmatic disorders,semantic - pragmatic disorders,0
+autism,semantic-pragmatic disorder,semantic pragmatic disorder,semantic pragmatic disorder,0
+autism,semantic-pragmatic disorder,semantic pragmatic disorders,semantic pragmatic disorders,0
+autism,multiple complex developmental disorder,multiple complex developmental disorder,multiple complex developmental disorder,0
+autism,multiple complex developmental disorder,multiplex developmental disorder,multiplex developmental disorder,0
+autism,multiple complex developmental disorder,borderline syndrome of childhood,borderline syndrome of childhood,0
+autism,multiple complex developmental disorder,childhood borderline syndrome,childhood borderline syndrome,0
+autism,multiple complex developmental disorder,borderline pathology of childhood,borderline pathology of childhood,0
+autism,multiple complex developmental disorder,multidimensionally impaired,multidimensionally impaired,0
+autism,multiple complex developmental disorder,multiple complex developmental disorders,multiple complex developmental disorders,0
+autism,multiple complex developmental disorder,multiplex developmental disorders,multiplex developmental disorders,0
+autism,multiple complex developmental disorder,childhood borderline syndromes,childhood borderline syndromes,0
+autism,developmental disability,developmental disability,developmental disability,0
+autism,developmental disability,learning disability,learning disability,0
+autism,developmental disability,developmentally disabled,developmentally disabled,0
+autism,developmental disability,special needs,special needs,0
+autism,developmental disability,developmental disabilities,developmental disabilities,0
+autism,developmental disability,learning disabilities,learning disabilities,0
+autism,refrigerator mother,refrigerator mother,refrigerator mother,0
+autism,refrigerator mother,emotional deprivation,emotional deprivation,0
+autism,refrigerator mother,parental coldness,parental coldness,0
+autism,refrigerator mother,refrigerator mothers,refrigerator mothers,0
