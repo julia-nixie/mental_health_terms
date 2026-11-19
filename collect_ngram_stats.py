@@ -92,7 +92,7 @@ def is_acronym(variant: str, all_variants) -> bool:
     searched UPPER-CASE and case-sensitively, so 'SAD' does not also count the
     ordinary word 'sad'. Single-variant terms (e.g. 'pica') are real words."""
     v = variant.strip()
-    return (v.lower() not in NOT_ACRONYMS and " " not in v and len(v) <= 6
+    return (v.lower() not in NOT_ACRONYMS and " " not in v and len(v) <= 6 and "'" not in v
             and any(" " in o.strip() for o in all_variants))
 
 

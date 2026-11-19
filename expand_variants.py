@@ -16,7 +16,7 @@ import sys
 PLURALS = {"disorder": "disorders", "syndrome": "syndromes", "disability": "disabilities",
            "defective": "defectives", "handicap": "handicaps", "mother": "mothers",
            "condition": "conditions", "psychosis": "psychoses", "episode": "episodes",
-           "attack": "attacks", "phobia": "phobias", "dysfunction": "dysfunctions"}
+           "attack": "attacks", "disease": "diseases", "phobia": "phobias", "dysfunction": "dysfunctions"}
 
 
 def norm(v):

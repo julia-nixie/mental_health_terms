@@ -1,9 +1,9 @@
 term,category,variants
 autism/autistic,n/a,autism; autisms; autistic; autistics; autist; autists; autistically
 asperger,n/a,asperger; aspergers
-spectrum disorder,n/a,autism spectrum; autistic spectrum; asd; asc; on the spectrum
+spectrum disorder,n/a,autism spectrum; autistic spectrum; on the spectrum
 idiocy,n/a,idiocy; imbecility; moron; feeble-mindedness; feeble mindedness; feeblemindedness; mental defective; mentally deficient; mental defectives
-dementia,n/a,dementia praecox; dementia infantilis; heller's syndrome; childhood disintegrative disorder; cdd; heller's syndromes; childhood disintegrative disorders
+dementia,n/a,dementia praecox; dementia infantilis; heller's syndrome; childhood disintegrative disorder; heller's syndromes; childhood disintegrative disorders
 schizoid psychopathy in children,n/a,schizoid psychopathy in children
 early infantile autism,n/a,early infantile autism; kanner's syndrome; kanner's syndromes
 autistic psychopathy,n/a,autistic psychopathy
@@ -11,10 +11,10 @@ childhood schizophrenia,n/a,childhood schizophrenia; schizophrenic reaction chil
 symbiotic infantile psychosis,n/a,symbiotic infantile psychosis; infantile psychosis; childhood psychosis; symbiotic infantile psychoses; infantile psychoses; childhood psychoses
 minimal brain dysfunction,n/a,minimal brain dysfunction; retarded; subnormal; mentally handicapped; minimal brain dysfunctions
 infantile autism,n/a,infantile autism; childhood onset pdd; atypical pdd; childhood onset pervasive developmental disorder; atypical pervasive developmental disorder; childhood onset pervasive developmental disorders; atypical pervasive developmental disorders
-autistic disorder,n/a,autistic disorder; pervasive developmental disorder; pdd-nos; pdd nos; autistic disorders; pervasive developmental disorders
-rett's disorder,n/a,rett; retts; rett disorder; rett's disorder; retts disorder; rett syndrome; rett's syndrome; retts syndrome; rett disorders; rett's disorders; retts disorders; rett syndromes; rett's syndromes; retts syndromes
+autistic disorder,n/a,autistic disorder; pervasive developmental disorder; autistic disorders; pervasive developmental disorders
+rett's disorder,n/a,rett's; rett syndrome; rett disorder; rett disease; retts syndrome; retts disorder; retts disease; rett syndromes; rett disorders; rett diseases; retts syndromes; retts disorders; retts diseases
 atypical autism,n/a,atypical autism; childhood autism
-semantic-pragmatic disorder,n/a,semantic-pragmatic disorder; semantic-pragmatic disorders; semantic pragmatic disorder
-multiple complex developmental disorder,n/a,multiple complex developmental disorder; multiplex developmental disorder; mdd; mcdd; borderline syndrome of childhood; childhood borderline syndrome; borderline pathology of childhood; bpc; multidimensionally impaired; mdi; multiple complex developmental disorders; multiplex developmental disorders; childhood borderline syndromes
+semantic-pragmatic disorder,n/a,semantic-pragmatic disorder; semantic-pragmatic disorders; semantic pragmatic disorder; semantic pragmatic disorders
+multiple complex developmental disorder,n/a,multiple complex developmental disorder; multiplex developmental disorder; borderline syndrome of childhood; childhood borderline syndrome; borderline pathology of childhood; multidimensionally impaired; multiple complex developmental disorders; multiplex developmental disorders; childhood borderline syndromes
 mental retardation,n/a,mental retardation; intellectual disability; mental handicap; learning disability; developmentally disabled; special needs; intellectual disabilities; mental handicaps; learning disabilities
 refrigerator mother,n/a,refrigerator mother; emotional deprivation; parental coldness; refrigerator mothers
