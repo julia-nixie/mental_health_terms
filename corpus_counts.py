@@ -10,8 +10,11 @@ Step 1 - look at the file and check the columns it guesses:
 
 Step 2 - count (override the guesses with --text-cols and --year-col if needed):
     python3 corpus_counts.py --input /path/to/psyc_journals.csv --out psyc
-    -> psyc_counts.csv  (query, case_sensitive, year, count)
-       psyc_totals.csv  (year, documents, tokens, words)
+    -> psyc_counts.csv         (query, case_sensitive, year, count)
+       psyc_totals.csv         (year, documents, tokens, words)
+       psyc_group_counts.csv   (group, query, case_sensitive, year, count)   per journal
+       psyc_group_totals.csv   (group, year, documents, tokens, words)
+    The most frequent journals are kept (--top-groups, default 60); the rest are pooled as "(other)".
 
 Phrases are matched on tokens, the way the Ngram Viewer tokenizes: lower-cased, words and each
 punctuation mark separate ("rett's" -> rett 's, "feeble-minded" -> feeble - minded). Phrases marked
@@ -23,13 +26,14 @@ import json
 import re
 import sys
 import time
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 TOKEN_RE = re.compile(r"'s|\w+|[^\w\s]")
 APOS_RE = re.compile(r"(?<=\w)['’]s\b")
 YEAR_RE = re.compile(r"\b(1[5-9]\d\d|20\d\d)\b")
 TEXT_GUESS = ("title", "abstract", "text", "body", "fulltext", "full_text", "content", "article", "summary")
+GROUP_GUESS = ("journal_title", "journal", "journal_name", "journaltitle", "source", "publication", "venue")
 YEAR_GUESS = ("year", "pubyear", "pub_year", "publication_year", "publicationyear", "date", "pub_date", "published")
 
 
@@ -96,6 +100,9 @@ def main():
     ap.add_argument("--encoding", default="utf-8")
     ap.add_argument("--text-cols", help="comma-separated text columns (default: guessed)")
     ap.add_argument("--year-col", help="column holding the year or a date (default: guessed)")
+    ap.add_argument("--group-col", help="column to split by, e.g. the journal (default: guessed)")
+    ap.add_argument("--top-groups", type=int, default=60, help="keep this many most frequent groups; pool the rest")
+    ap.add_argument("--no-groups", action="store_true", help="do not split by journal")
     ap.add_argument("--out", default="corpus", help="output prefix")
     ap.add_argument("--peek", action="store_true", help="show the columns and first records, then stop")
     ap.add_argument("--limit", type=int, default=0, help="stop after this many records (for a test run)")
@@ -105,10 +112,12 @@ def main():
     header = [h.strip().strip('"') for h in next(gen)]
     text_cols = pick(header, args.text_cols, TEXT_GUESS, "text")
     year_col = pick(header, args.year_col, YEAR_GUESS, "year")
+    group_col = [] if args.no_groups else pick(header, args.group_col, GROUP_GUESS, "group")[:1]
     if args.peek:
         print("columns:", header)
         print("text columns that would be used:", text_cols or "NONE FOUND - pass --text-cols")
         print("year column that would be used:", year_col[:1] or "NONE FOUND - pass --year-col")
+        print("column used to split by journal:", group_col or "none (pass --group-col to split)")
         for n, rec in enumerate(gen):
             print(f"\nrecord {n + 1}:")
             for h, v in zip(header, rec):
@@ -120,6 +129,17 @@ def main():
         sys.exit("Could not guess the columns; run with --peek, then pass --text-cols and --year-col.")
     ti = [header.index(c) for c in text_cols]
     yi = header.index(year_col[0])
+    gi = header.index(group_col[0]) if group_col else None
+    keep = set()
+    if gi is not None:  # first pass (cheap): which groups are the most frequent
+        dc = Counter()
+        pre = records(args.input, args.sep, args.encoding)
+        next(pre)
+        for rec in pre:
+            if len(rec) > gi:
+                dc[rec[gi].strip()] += 1
+        keep = {g for g, _ in dc.most_common(args.top_groups)}
+        print(f"{len(dc):,} distinct values in {group_col[0]!r}; keeping the {len(keep)} most frequent", file=sys.stderr)
 
     # ---- the phrases
     ci_phr, cs_phr = {}, {}  # first token -> list of token tuples
@@ -139,6 +159,8 @@ def main():
 
     counts = defaultdict(int)      # (phrase string, case_sensitive, year) -> n
     docs, tokens, words = defaultdict(int), defaultdict(int), defaultdict(int)
+    gcounts = defaultdict(int)    # (group, phrase string, case_sensitive, year) -> n
+    gdocs, gtokens, gwords = defaultdict(int), defaultdict(int), defaultdict(int)
     t0, n, nodate = time.time(), 0, 0
     for rec in gen:
         if len(rec) <= max(ti + [yi]):
@@ -151,20 +173,32 @@ def main():
         text = APOS_RE.sub(" 's", " ".join(rec[i] for i in ti))
         toks = TOKEN_RE.findall(text)
         low = [t.lower() for t in toks]
+        nwords = sum(1 for t in toks if t[0].isalnum() or t[0] == "_")
         docs[year] += 1
         tokens[year] += len(toks)
-        words[year] += sum(1 for t in toks if t[0].isalnum() or t[0] == "_")
+        words[year] += nwords
+        group = None
+        if gi is not None:
+            group = rec[gi].strip()
+            group = group if group in keep else "(other)"
+            gdocs[(group, year)] += 1
+            gtokens[(group, year)] += len(toks)
+            gwords[(group, year)] += nwords
         for i in [i for i, t in enumerate(low) if t in ci_first]:
             for phrase in ci_lists[low[i]]:
                 k = len(phrase)
                 if tuple(low[i:i + k]) == phrase:
                     counts[(" ".join(phrase), 0, year)] += 1
+                    if group is not None:
+                        gcounts[(group, " ".join(phrase), 0, year)] += 1
         if cs_first:
             for i in [i for i, t in enumerate(toks) if t in cs_first]:
                 for phrase in cs_lists[toks[i]]:
                     k = len(phrase)
                     if tuple(toks[i:i + k]) == phrase:
                         counts[(" ".join(phrase), 1, year)] += 1
+                        if group is not None:
+                            gcounts[(group, " ".join(phrase), 1, year)] += 1
         n += 1
         if n % 50000 == 0:
             print(f"  {n:,} records, {time.time() - t0:,.0f}s", file=sys.stderr)
@@ -181,8 +215,19 @@ def main():
         w.writerow(["year", "documents", "tokens", "words"])
         for y in sorted(docs):
             w.writerow([y, docs[y], tokens[y], words[y]])
+    if gi is not None:
+        with open(args.out + "_group_counts.csv", "w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f)
+            w.writerow(["group", "query", "case_sensitive", "year", "count"])
+            for (g, q, cs, y), c in sorted(gcounts.items()):
+                w.writerow([g, q, cs, y, c])
+        with open(args.out + "_group_totals.csv", "w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f)
+            w.writerow(["group", "year", "documents", "tokens", "words"])
+            for (g, y) in sorted(gdocs):
+                w.writerow([g, y, gdocs[(g, y)], gtokens[(g, y)], gwords[(g, y)]])
     with open(args.out + "_meta.json", "w") as f:
-        json.dump({"records": n, "without_year": nodate, "text_columns": text_cols, "year_column": year_col[0],
+        json.dump({"records": n, "without_year": nodate, "text_columns": text_cols, "year_column": year_col[0], "group_column": group_col[0] if group_col else None,
                    "seconds": round(time.time() - t0)}, f)
     print(f"done: {n:,} records ({nodate:,} without a year) in {time.time() - t0:,.0f}s -> "
           f"{args.out}_counts.csv, {args.out}_totals.csv", file=sys.stderr)
