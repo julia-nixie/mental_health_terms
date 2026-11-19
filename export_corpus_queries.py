@@ -6,8 +6,11 @@ are used (no 5-token windows). Phrases are tokenized the way the Ngram Viewer do
 ("rett's" -> "rett 's", "feeble-minded" -> "feeble - minded"). Abbreviations that the Ngram runs
 search in capitals only are marked case_sensitive.
 
-Usage: python3 export_corpus_queries.py            (writes corpus_queries.csv)
+Usage: python3 export_corpus_queries.py                    (autism terms only, the default)
+       python3 export_corpus_queries.py --sets mental,autism   (both lists)
+Writes corpus_queries.csv.
 """
+import argparse
 import csv
 import importlib.util
 from pathlib import Path
@@ -22,8 +25,14 @@ SETS = [  # (set name, terms file, search abbreviations in capitals?)
     ("autism", HERE / "autism_terms.csv", False),
 ]
 
+ap = argparse.ArgumentParser()
+ap.add_argument("--sets", default="autism", help="comma-separated: mental, autism (default: autism)")
+chosen = {x.strip() for x in ap.parse_args().sets.split(",")}
+
 rows = []
 for name, path, acronyms in SETS:
+    if name not in chosen:
+        continue
     for term, _category, variants in collector.load_terms(path):
         for v in variants:
             lower = v.strip().lower()
