@@ -77,7 +77,7 @@ def spellings(q: str):
 
 
 # Short single words that look like abbreviations to the rule below but are ordinary words.
-NOT_ACRONYMS = {"pica", "mania", "jetlag"}
+NOT_ACRONYMS = {"pica", "mania", "jetlag", "rett", "retts", "moron", "morons"}
 
 # Abbreviations whose capitals are also everyday words or abbreviations ("ED" = "Ed."/edition,
 # "AN", "SAD", "DID", "HAND", ...). They show a large background in books long before the
@@ -218,6 +218,8 @@ def main():
                     help="also search abbreviations that are everyday words (ED, AN, SAD, DID, ...)")
     ap.add_argument("--keep-overlaps", action="store_true",
                     help="do not subtract occurrences inside longer phrases (double counting)")
+    ap.add_argument("--variants-output", default=None,
+                    help="also write each searched phrase's own yearly values (term, query, year, frequency)")
     ap.add_argument("--no-truncate", action="store_true",
                     help="drop variants over 5 tokens instead of cutting them to 5")
     args = ap.parse_args()
@@ -421,6 +423,17 @@ def main():
             for y, x in zip(years, total):
                 w.writerow([term, category, y, f"{x:.6e}", str(has_data).lower()])
 
+    if args.variants_output:
+        with open(args.variants_output, "w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f)
+            w.writerow(["term", "query", "year", "frequency"])
+            for (term, _, _), used in zip(terms, final):
+                for q, c in used:
+                    series = exclusive.get((q, c))
+                    if series:
+                        shown = q if c else q  # abbreviations are searched in capitals
+                        for y, x in zip(years, series):
+                            w.writerow([term, shown, y, f"{x:.6e}"])
     if reduced:
         print(f"Overlap removed from {len(reduced)} phrases (largest first):", file=sys.stderr)
         for lost, q, bs, before, after in sorted(reduced, reverse=True)[:25]:
