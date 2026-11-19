@@ -5,10 +5,14 @@ Runs on your own machine over the whole file without loading it into memory (sta
 Python 3.8+). Records are separated by line breaks; fields by a separator string (default "|||||");
 a record whose text contains line breaks is stitched back together using the number of fields.
 
-Step 1 - look at the file and check the columns it guesses:
+Columns (no guessing): the text is in "abstract", the year in "publication_year", the journal in
+"journal_title". Use --text-cols (comma-separated, e.g. abstract,title), --year-col and --group-col
+to read other columns; the script stops and lists the columns if one is missing.
+
+Step 1 - look at the file and the first records:
     python3 corpus_counts.py --input /path/to/psyc_journals.csv --peek
 
-Step 2 - count (override the guesses with --text-cols and --year-col if needed):
+Step 2 - count:
     python3 corpus_counts.py --input /path/to/psyc_journals.csv --out psyc
     -> psyc_counts.csv         (query, case_sensitive, year, count)
        psyc_totals.csv         (year, documents, tokens, words)
@@ -32,9 +36,7 @@ from pathlib import Path
 TOKEN_RE = re.compile(r"'s|\w+|[^\w\s]")
 APOS_RE = re.compile(r"(?<=\w)['’]s\b")
 YEAR_RE = re.compile(r"\b(1[5-9]\d\d|20\d\d)\b")
-TEXT_GUESS = ("title", "abstract", "text", "body", "fulltext", "full_text", "content", "article", "summary")
-GROUP_GUESS = ("journal_title", "journal", "journal_name", "journaltitle", "source", "publication", "venue")
-YEAR_GUESS = ("year", "pubyear", "pub_year", "publication_year", "publicationyear", "date", "pub_date", "published")
+
 
 
 def records(path, sep, encoding):
@@ -80,16 +82,12 @@ def _split(text, sep, ncols):
     return fields
 
 
-def pick(columns, wanted, guesses, what):
-    if wanted:
-        names = [c.strip() for c in wanted.split(",")]
-        for n in names:
-            if n not in columns:
-                sys.exit(f"{what} column {n!r} not found. Columns are: {columns}")
-        return names
-    low = {c.lower().strip(): c for c in columns}
-    found = [low[g] for g in guesses if g in low]
-    return found
+def pick(columns, wanted, what):
+    names = [c.strip() for c in wanted.split(",") if c.strip()]
+    missing = [n for n in names if n not in columns]
+    if missing:
+        sys.exit(f"{what} column {missing[0]!r} not found. The columns are: {columns}")
+    return names
 
 
 def main():
@@ -98,9 +96,9 @@ def main():
     ap.add_argument("--queries", default=str(Path(__file__).resolve().parent / "corpus_queries.csv"))
     ap.add_argument("--sep", default="|||||")
     ap.add_argument("--encoding", default="utf-8")
-    ap.add_argument("--text-cols", help="comma-separated text columns (default: guessed)")
-    ap.add_argument("--year-col", help="column holding the year or a date (default: guessed)")
-    ap.add_argument("--group-col", help="column to split by, e.g. the journal (default: guessed)")
+    ap.add_argument("--text-cols", default="abstract", help="comma-separated text columns (default: abstract)")
+    ap.add_argument("--year-col", default="publication_year", help="column holding the year or a date")
+    ap.add_argument("--group-col", default="journal_title", help="column to split by, i.e. the journal")
     ap.add_argument("--top-groups", type=int, default=60, help="keep this many most frequent groups; pool the rest")
     ap.add_argument("--no-groups", action="store_true", help="do not split by journal")
     ap.add_argument("--out", default="corpus", help="output prefix")
@@ -110,14 +108,12 @@ def main():
 
     gen = records(args.input, args.sep, args.encoding)
     header = [h.strip().strip('"') for h in next(gen)]
-    text_cols = pick(header, args.text_cols, TEXT_GUESS, "text")
-    year_col = pick(header, args.year_col, YEAR_GUESS, "year")
-    group_col = [] if args.no_groups else pick(header, args.group_col, GROUP_GUESS, "group")[:1]
+    text_cols = pick(header, args.text_cols, "text")
+    year_col = pick(header, args.year_col, "year")
+    group_col = [] if args.no_groups else pick(header, args.group_col, "journal")[:1]
     if args.peek:
         print("columns:", header)
-        print("text columns that would be used:", text_cols or "NONE FOUND - pass --text-cols")
-        print("year column that would be used:", year_col[:1] or "NONE FOUND - pass --year-col")
-        print("column used to split by journal:", group_col or "none (pass --group-col to split)")
+        print("text columns:", text_cols, "| year column:", year_col[0], "| journal column:", group_col[0] if group_col else "none")
         for n, rec in enumerate(gen):
             print(f"\nrecord {n + 1}:")
             for h, v in zip(header, rec):
@@ -125,8 +121,6 @@ def main():
             if n == 2:
                 break
         return
-    if not text_cols or not year_col:
-        sys.exit("Could not guess the columns; run with --peek, then pass --text-cols and --year-col.")
     ti = [header.index(c) for c in text_cols]
     yi = header.index(year_col[0])
     gi = header.index(group_col[0]) if group_col else None
