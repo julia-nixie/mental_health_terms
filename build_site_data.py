@@ -32,7 +32,7 @@ if args.variants:
     series, order, years = {}, [], set()
     with open(args.variants, newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):
-            key = (r["term"], r["query"])
+            key = (r["term"], r["variant"])
             if key not in series:
                 series[key] = {}
                 order.append(key)
@@ -41,8 +41,8 @@ if args.variants:
             series[key][y] = float(r["frequency"]) * 1e6
     y0, y1 = min(years), max(years)
 
-    def label(q):  # show the phrase as written, not as the viewer tokenizes it
-        return q.replace(" - ", "-").replace(" 's", "'s").replace(" / ", "/")
+    def label(q):  # the variant name as written in the terms file
+        return q
 
     # era tags: the terms CSV's "eras" column is "era: variant, variant | era2: ..."
     era_of = {}

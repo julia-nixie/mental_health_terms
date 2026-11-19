@@ -137,6 +137,26 @@ def candidate_windows(query: str):
     return list(dict.fromkeys(out))
 
 
+PLURAL_WORDS = {
+    "disorders": "disorder", "syndromes": "syndrome", "disabilities": "disability", "defectives": "defective",
+    "handicaps": "handicap", "mothers": "mother", "conditions": "condition", "psychoses": "psychosis",
+    "episodes": "episode", "attacks": "attack", "phobias": "phobia", "dysfunctions": "dysfunction",
+    "diseases": "disease", "idiots": "idiot", "imbeciles": "imbecile", "morons": "moron", "retards": "retard",
+    "children": "child", "pupils": "pupil", "boys": "boy", "autisms": "autism", "autistics": "autistic",
+    "autists": "autist",
+}
+
+
+def merge_key(variant: str) -> str:
+    """Spellings of one phrase share a key: plural vs singular last word, and hyphen/space/apostrophe
+    differences ("learning disabilities" = "learning disability", "feeble-minded" = "feeble minded").
+    Used to show and count them as one entry."""
+    words = variant.lower().split()
+    if words:
+        words[-1] = PLURAL_WORDS.get(words[-1], words[-1])
+    return re.sub(r"[^a-z0-9]", "", "".join(words))
+
+
 def token_count(query: str) -> int:
     return len(query.split())
 
@@ -309,8 +329,9 @@ def main():
             choice[(i, v)] = pick
 
     final, truncated, dropped = [], [], []      # final[i] = [(query, ci), ...]
+    final_src = []                              # final_src[i][(query, ci)] = the CSV variant it came from
     for i, (_, _, variants) in enumerate(terms):
-        used = []
+        used, src = [], {}
         for v in variants:
             if (not args.keep_ambiguous and not args.no_acronym_case
                     and v.strip().lower() in AMBIGUOUS_ABBREVIATIONS and is_acronym(v, variants)):
@@ -320,6 +341,7 @@ def main():
             if token_count(q) <= MAX_NGRAM:
                 if (q, c) not in used:
                     used.append((q, c))
+                    src[(q, c)] = v
                 continue
             if args.no_truncate:
                 dropped.append((v, "too long"))
@@ -331,8 +353,10 @@ def main():
                 dropped.append((v, f"window '{t}' duplicates another variant of the same term"))
             else:
                 used.append((t, ci))
+                src[(t, ci)] = v
                 truncated.append((v, t))
         final.append(used)
+        final_src.append(src)
 
     pairs = []                                  # every (query, case_insensitive) in use
     for used in final:
@@ -424,16 +448,31 @@ def main():
                 w.writerow([term, category, y, f"{x:.6e}", str(has_data).lower()])
 
     if args.variants_output:
+        # Plural and spelling forms of one phrase are written as ONE variant (summed); its name is
+        # the first form listed in the terms file.
         with open(args.variants_output, "w", newline="", encoding="utf-8") as f:
             w = csv.writer(f)
-            w.writerow(["term", "query", "year", "frequency"])
-            for (term, _, _), used in zip(terms, final):
-                for q, c in used:
-                    series = exclusive.get((q, c))
-                    if series:
-                        shown = q if c else q  # abbreviations are searched in capitals
-                        for y, x in zip(years, series):
-                            w.writerow([term, shown, y, f"{x:.6e}"])
+            w.writerow(["term", "variant", "year", "frequency"])
+            for (term, _, variants), used, src in zip(terms, final, final_src):
+                name_of, rank_of = {}, {}
+                for n, v in enumerate(variants):
+                    last = v.lower().split()[-1] if v.split() else ""
+                    rank = (last in PLURAL_WORDS, n)        # a singular form names the entry
+                    k = merge_key(v)
+                    if k not in rank_of or rank < rank_of[k]:
+                        rank_of[k], name_of[k] = rank, v.strip()
+                merged = {}
+                for pr in used:
+                    series = exclusive.get(pr)
+                    if not series:
+                        continue
+                    label = name_of[merge_key(src[pr])]
+                    acc = merged.setdefault(label, [0.0] * len(years))
+                    for k, x in enumerate(series[:len(years)]):
+                        acc[k] += x
+                for label, acc in merged.items():
+                    for y, x in zip(years, acc):
+                        w.writerow([term, label, y, f"{x:.6e}"])
     if reduced:
         print(f"Overlap removed from {len(reduced)} phrases (largest first):", file=sys.stderr)
         for lost, q, bs, before, after in sorted(reduced, reverse=True)[:25]:
