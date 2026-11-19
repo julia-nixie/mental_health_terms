@@ -93,4 +93,15 @@ else:
         out["terms"].append({"n": t["n"], "c": t["c"], "h": t["h"], "v": [sig(v) for v in vals]})
 DST.parent.mkdir(parents=True, exist_ok=True)
 DST.write_text(json.dumps(out, separators=(",", ":")), encoding="utf-8")
+# Cache-bust: the page fetches data.json?v=<hash of its content>, so a browser or CDN can never
+# serve an old data file with a new page.
+import hashlib
+import re
+page = DST.parent / "index.html"
+if page.exists():
+    version = hashlib.md5(DST.read_bytes()).hexdigest()[:10]
+    html = page.read_text(encoding="utf-8")
+    html2, n = re.subn(r"fetch\('data\.json[^']*'\)", f"fetch('data.json?v={version}')", html)
+    if n and html2 != html:
+        page.write_text(html2, encoding="utf-8")
 print(f"{len(out['terms'])} entries, {y0}-{y1}, {DST.stat().st_size / 1024:.0f} KB -> {DST}")
