@@ -19,12 +19,17 @@ PLURALS = {"disorder": "disorders", "syndrome": "syndromes", "disability": "disa
            "attack": "attacks", "disease": "diseases", "phobia": "phobias", "dysfunction": "dysfunctions"}
 
 
+SINGLE_PLURALS = {"idiot": "idiots", "imbecile": "imbeciles", "moron": "morons", "retard": "retards"}
+
+
 def norm(v):
     return re.sub(r"\s+", " ", v.strip().lower())
 
 
 def alternatives(v):
     out = []
+    if v.strip().lower() in SINGLE_PLURALS:
+        return [SINGLE_PLURALS[v.strip().lower()]]
     if "(" in v or "," in v or " " not in v.strip():
         return out
     words = v.split(" ")
@@ -49,6 +54,7 @@ def main(path):
     rows = list(csv.reader(raw.splitlines()))
     hdr, rows = rows[0], rows[1:]
     vi = hdr.index("variants")
+    ei = hdr.index("eras") if "eras" in hdr else None
     owner = {}
     for r in rows:
         for v in r[vi].split(";"):
@@ -69,6 +75,16 @@ def main(path):
         if new:
             r[vi] = "; ".join(vs + new)
             added += len(new)
+        if ei is not None and r[ei]:
+            # "era: v1, v2 | era2: v3" - generated forms inherit the era of the variant they come from
+            eras = [(e.split(":", 1)[0].strip(), [x.strip() for x in e.split(":", 1)[1].split(",") if x.strip()])
+                    for e in r[ei].split("|")]
+            for name, members in eras:
+                for m in list(members):
+                    for a in alternatives(m):
+                        if a not in members:
+                            members.append(a)
+            r[ei] = " | ".join(f"{n}: {', '.join(m)}" for n, m in eras)
     with open(path, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f, lineterminator=eol)
         w.writerow(hdr)

@@ -75,6 +75,8 @@ button:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px
 .row:hover { background: var(--hover); }
 .row[aria-pressed="true"] { background: var(--hover); font-weight: 600; }
 .row .name { min-width: 0; overflow-wrap: anywhere; }
+.row.era .name { font-weight: 600; }
+.row.indent .name { padding-left: 18px; }
 .row .peak { font-variant-numeric: tabular-nums; font-size: .8rem; color: var(--fg2); }
 .row svg { width: 96px; height: 26px; display: block; }
 .btn { font: inherit; font-size: .8rem; color: var(--fg); background: var(--panel); border: 1px solid var(--border); border-radius: var(--r); padding: 9px 12px; cursor: pointer; }
@@ -215,7 +217,7 @@ footer a { color: inherit; }
   function buildModel(data) {
     var y0 = data.y0, y1 = data.y1, n = y1 - y0 + 1, terms = new Map(), groups = new Map(), i;
     data.terms.forEach(function (t) {
-      terms.set(t.n, { name: t.n, group: t.c === 'n/a' ? t.n : t.c, has: t.h, v: t.v });
+      terms.set(t.n, { name: t.n, group: t.c === 'n/a' ? t.n : t.c, has: t.h, v: t.v, e: t.e || null });
     });
     terms.forEach(function (t) {
       var g = groups.get(t.group);
@@ -223,7 +225,17 @@ footer a { color: inherit; }
       g.terms.push(t);
       for (var k = 0; k < n; k++) g.v[k] += t.v[k];
     });
-    groups.forEach(function (g) { g.has = g.terms.some(function (t) { return t.has; }); });
+    groups.forEach(function (g) {
+      g.has = g.terms.some(function (t) { return t.has; });
+      var map = {}; g.eras = [];
+      g.terms.forEach(function (t) {
+        if (!t.e) return;
+        if (!map[t.e]) { map[t.e] = { name: t.e, group: g.name, terms: [], v: new Array(n).fill(0) }; g.eras.push(map[t.e]); }
+        map[t.e].terms.push(t);
+        for (var k = 0; k < n; k++) map[t.e].v[k] += t.v[k];
+      });
+      g.eras.forEach(function (e) { e.has = e.terms.some(function (t) { return t.has; }); });
+    });
     var years = []; for (i = 0; i < n; i++) years.push(y0 + i);
     return { terms: terms, groups: groups, years: years, y0: y0, y1: y1, n: n };
   }
@@ -231,20 +243,28 @@ footer a { color: inherit; }
     var kind = key.slice(0, 2), name = key.slice(2), x;
     if (kind === 'c:') { x = M.groups.get(name); return x && x.has ? { key: key, type: 'category', name: x.name, group: x.name, v: x.v, label: cap(x.name) + ' (whole group)' } : null; }
     if (kind === 't:') { x = M.terms.get(name); return x && x.has ? { key: key, type: 'term', name: x.name, group: x.group, v: x.v, label: tlabel(x) } : null; }
+    if (kind === 'e:') {
+      var bar = name.indexOf('|'), g = M.groups.get(name.slice(0, bar));
+      var era = g && g.eras.find(function (e) { return e.name === name.slice(bar + 1); });
+      return era && era.has ? { key: key, type: 'era', name: era.name, group: g.name, v: era.v, label: cap(g.name) + ', ' + era.name } : null;
+    }
     return null;
   }
-  function focusPick(it) { return it.type === 'term' ? { category: it.group, term: it.name, cmp: [] } : { category: it.name, term: '', cmp: [] }; }
+  function focusPick(it) { if (it.type === 'era') return { category: it.group, term: 'era:' + it.name, cmp: [] }; return it.type === 'term' ? { category: it.group, term: it.name, cmp: [] } : { category: it.name, term: '', cmp: [] }; }
   function sel() {
     var cat = state.category || (M.groups.has(DEFAULT_CAT) ? DEFAULT_CAT : ALL);
     if (cat !== ALL && !M.groups.has(cat)) cat = ALL;
-    var group = cat === ALL ? null : M.groups.get(cat), term = null;
-    if (group && state.term) term = group.terms.find(function (t) { return t.name === state.term && t.has; }) || null;
+    var group = cat === ALL ? null : M.groups.get(cat), term = null, era = null;
+    if (group && state.term) {
+      if (state.term.indexOf('era:') === 0) era = group.eras.find(function (e) { return 'era:' + e.name === state.term && e.has; }) || null;
+      else term = group.terms.find(function (t) { return t.name === state.term && t.has; }) || null;
+    }
     var from = Math.max(M.y0, Math.min(+state.from || 1900, M.y1 - 10)), cmp = [];
     state.cmp.forEach(function (key) {
       var it = resolveItem(String(key));
       if (it && !cmp.some(function (x) { return x.key === it.key; })) cmp.push(it);
     });
-    return { cat: cat, group: group, term: term, from: from, i0: from - M.y0, cmp: cmp.slice(0, MAXCMP) };
+    return { cat: cat, group: group, term: term, era: era, from: from, i0: from - M.y0, cmp: cmp.slice(0, MAXCMP) };
   }
   function orderedGroups(s) {
     return Array.from(M.groups.values()).filter(function (g) { return g.has; })
@@ -259,8 +279,20 @@ footer a { color: inherit; }
       return { label: 'Comparison of ' + out.length + ' lines', single: false, lines: out };
     }
     if (s.term) return { label: tlabel(s.term), single: true, lines: [{ name: tlabel(s.term), v: s.term.v, color: COLORS[0], w: 2, legend: false }] };
+    if (s.era) {
+      out.push({ name: cap(s.era.name) + ' (all variants)', v: s.era.v, color: COLORS[0], w: 2, legend: true });
+      var em = s.era.terms.filter(function (t) { return t.has; }).sort(byPeak(s)), etop = em.length > 1 ? em.slice(0, 5) : [];
+      for (i = 0; i < etop.length; i++) out.push({ name: tlabel(etop[i]), v: etop[i].v, color: COLORS[i + 1], w: 2, legend: true, pick: { term: etop[i].name, cmp: [] } });
+      return { label: cap(s.era.name), single: out.length === 1, lines: out, more: Math.max(0, em.length - etop.length) };
+    }
     if (s.group) {
       out.push({ name: cap(s.group.name) + ' (all variants combined)', v: s.group.v, color: COLORS[0], w: 2, legend: true });
+      if (s.group.eras.length) {
+        s.group.eras.filter(function (e) { return e.has; }).forEach(function (e, k) {
+          out.push({ name: cap(e.name), v: e.v, color: COLORS[k + 1], w: 2, legend: true, pick: { term: 'era:' + e.name, cmp: [] } });
+        });
+        return { label: cap(s.group.name), single: false, lines: out, more: 0 };
+      }
       var members = s.group.terms.filter(function (t) { return t.has; }).sort(byPeak(s));
       var top = members.length > 1 ? members.slice(0, 5) : [];
       for (i = 0; i < top.length; i++) out.push({ name: tlabel(top[i]), v: top[i].v, color: COLORS[i + 1], w: 2, legend: true, pick: { term: top[i].name, cmp: [] } });
@@ -277,6 +309,7 @@ footer a { color: inherit; }
   function target(s) {
     if (s.cmp.length) { var lead = s.cmp.slice().sort(byPeak(s))[0]; return { name: lead.label + ', the highest in your comparison', v: lead.v }; }
     if (s.term) return { name: tlabel(s.term), v: s.term.v };
+    if (s.era) return { name: cap(s.era.name) + ' (all variants)', v: s.era.v };
     if (s.group) return { name: cap(s.group.name) + ' (all variants combined)', v: s.group.v };
     var gs = orderedGroups(s);
     return gs.length ? { name: cap(gs[0].name) + ' (largest group)', v: gs[0].v } : null;
@@ -312,10 +345,21 @@ footer a { color: inherit; }
     else {
       term.disabled = false;
       term.appendChild(new Option('All variants combined', ''));
-      s.group.terms.slice().sort(function (a, b) { return a.name.localeCompare(b.name); }).forEach(function (t) {
-        var o = new Option(tlabel(t) + (t.has ? '' : ' (no data)'), t.name); o.disabled = !t.has; term.appendChild(o);
-      });
-      term.value = s.term ? s.term.name : '';
+      if (s.group.eras.length) {
+        s.group.eras.forEach(function (e) {
+          var og = document.createElement('optgroup'); og.label = cap(e.name);
+          var all = new Option('All ' + e.name + ' variants', 'era:' + e.name); all.disabled = !e.has; og.appendChild(all);
+          e.terms.slice().sort(function (a, b) { return a.name.localeCompare(b.name); }).forEach(function (t) {
+            var o = new Option(tlabel(t) + (t.has ? '' : ' (no data)'), t.name); o.disabled = !t.has; og.appendChild(o);
+          });
+          term.appendChild(og);
+        });
+      } else {
+        s.group.terms.slice().sort(function (a, b) { return a.name.localeCompare(b.name); }).forEach(function (t) {
+          var o = new Option(tlabel(t) + (t.has ? '' : ' (no data)'), t.name); o.disabled = !t.has; term.appendChild(o);
+        });
+      }
+      term.value = s.era ? 'era:' + s.era.name : (s.term ? s.term.name : '');
     }
 
     clear(add);
@@ -332,6 +376,13 @@ footer a { color: inherit; }
         var o = new Option(tlabel(t), 't:' + t.name); o.disabled = !!have['t:' + t.name]; og.appendChild(o);
       });
       add.appendChild(og);
+      if (x.eras.length) {
+        var oe = document.createElement('optgroup'); oe.label = 'Eras in ' + x.name;
+        x.eras.filter(function (e) { return e.has; }).forEach(function (e) {
+          var o = new Option(cap(e.name), 'e:' + x.name + '|' + e.name); o.disabled = !!have['e:' + x.name + '|' + e.name]; oe.appendChild(o);
+        });
+        add.appendChild(oe);
+      }
     });
     add.disabled = full; add.value = '';
 
@@ -433,6 +484,18 @@ footer a { color: inherit; }
     clear(host);
     if (s.cmp.length) {
       s.cmp.slice().sort(byPeak(s)).forEach(function (it) { items.push({ name: it.label, v: it.v, active: false, pick: focusPick(it) }); });
+    } else if (s.era) {
+      items.push({ name: 'All variants combined', v: s.group.v, active: false, pick: { term: '' } });
+      items.push({ name: cap(s.era.name) + ' (all variants)', v: s.era.v, active: true, pick: { term: 'era:' + s.era.name }, era: true });
+      s.era.terms.filter(function (t) { return t.has; }).sort(byPeak(s))
+        .forEach(function (t) { items.push({ name: tlabel(t), v: t.v, active: false, pick: { term: t.name }, indent: true }); });
+    } else if (s.group && s.group.eras.length) {
+      items.push({ name: 'All variants combined', v: s.group.v, active: !s.term, pick: { term: '' } });
+      s.group.eras.filter(function (e) { return e.has; }).forEach(function (e) {
+        items.push({ name: cap(e.name), v: e.v, active: false, pick: { term: 'era:' + e.name }, era: true });
+        e.terms.filter(function (t) { return t.has; }).sort(byPeak(s))
+          .forEach(function (t) { items.push({ name: tlabel(t), v: t.v, active: !!s.term && s.term.name === t.name, pick: { term: t.name }, indent: true }); });
+      });
     } else if (s.group) {
       items.push({ name: 'All variants combined', v: s.group.v, active: !s.term, pick: { term: '' } });
       s.group.terms.filter(function (t) { return t.has; }).sort(byPeak(s))
@@ -442,7 +505,7 @@ footer a { color: inherit; }
     }
     items.forEach(function (it) {
       var pk = peakOf(it.v, s.i0), vals = it.v.slice(s.i0);
-      var row = el('button', 'row'); row.type = 'button'; row.setAttribute('aria-pressed', it.active ? 'true' : 'false');
+      var row = el('button', 'row' + (it.era ? ' era' : '') + (it.indent ? ' indent' : '')); row.type = 'button'; row.setAttribute('aria-pressed', it.active ? 'true' : 'false');
       row.onclick = function () { set(it.pick); };
       row.appendChild(el('span', 'name', it.name));
       var sx = d3.scaleLinear([0, vals.length - 1], [2, 94]), sy = d3.scaleLinear([0, pk.val || 1], [23, 3]);

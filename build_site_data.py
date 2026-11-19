@@ -44,6 +44,17 @@ if args.variants:
     def label(q):  # show the phrase as written, not as the viewer tokenizes it
         return q.replace(" - ", "-").replace(" 's", "'s").replace(" / ", "/")
 
+    # era tags: the terms CSV's "eras" column is "era: variant, variant | era2: ..."
+    era_of = {}
+    if args.terms:
+        with open(args.terms, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                for chunk in (r.get("eras") or "").split("|"):
+                    if ":" in chunk:
+                        era, members = chunk.split(":", 1)
+                        for m in members.split(","):
+                            era_of[(r["term"], m.strip().lower())] = era.strip()
+
     out, seen, groups = {"y0": y0, "y1": y1, "terms": []}, set(), []
     for term, q in order:
         vals = [float(f"{series[(term, q)].get(y, 0.0):.4g}") for y in range(y0, y1 + 1)]
@@ -53,7 +64,11 @@ if args.variants:
         seen.add(name)
         if term not in groups:
             groups.append(term)
-        out["terms"].append({"n": name, "c": term, "h": any(v > 0 for v in vals), "v": [sig(v) for v in vals]})
+        entry = {"n": name, "c": term, "h": any(v > 0 for v in vals), "v": [sig(v) for v in vals]}
+        era = era_of.get((term, label(q).lower()))
+        if era:
+            entry["e"] = era
+        out["terms"].append(entry)
     if args.terms:  # groups whose phrases returned no data at all
         with open(args.terms, newline="", encoding="utf-8") as f:
             for r in csv.DictReader(f):

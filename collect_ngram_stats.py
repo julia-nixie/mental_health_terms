@@ -77,7 +77,7 @@ def spellings(q: str):
 
 
 # Short single words that look like abbreviations to the rule below but are ordinary words.
-NOT_ACRONYMS = {"pica", "mania", "jetlag", "rett", "retts", "moron", "morons"}
+NOT_ACRONYMS = {"pica", "mania", "jetlag", "rett", "retts", "moron", "morons", "idiot", "idiocy", "retard", "autist", "autism"}
 
 # Abbreviations whose capitals are also everyday words or abbreviations ("ED" = "Ed."/edition,
 # "AN", "SAD", "DID", "HAND", ...). They show a large background in books long before the
