@@ -1,0 +1,1692 @@
+term,year,count,tokens,per_million
+autism/autistic,1930,0,243,0
+autism/autistic,1931,0,375,0
+autism/autistic,1932,0,297,0
+autism/autistic,1933,0,696,0
+autism/autistic,1934,0,152,0
+autism/autistic,1936,0,1995,0
+autism/autistic,1937,0,3215,0
+autism/autistic,1938,0,1553,0
+autism/autistic,1939,0,2023,0
+autism/autistic,1940,0,4221,0
+autism/autistic,1941,0,4791,0
+autism/autistic,1942,0,5326,0
+autism/autistic,1943,0,5409,0
+autism/autistic,1944,0,4592,0
+autism/autistic,1945,0,6598,0
+autism/autistic,1946,0,5608,0
+autism/autistic,1947,0,4634,0
+autism/autistic,1948,0,1879,0
+autism/autistic,1949,0,3687,0
+autism/autistic,1950,0,4791,0
+autism/autistic,1951,0,4088,0
+autism/autistic,1952,0,4505,0
+autism/autistic,1953,0,7652,0
+autism/autistic,1954,0,7632,0
+autism/autistic,1955,1,8347,119.804
+autism/autistic,1956,0,15992,0
+autism/autistic,1957,0,16302,0
+autism/autistic,1958,0,17398,0
+autism/autistic,1959,0,17792,0
+autism/autistic,1960,0,26822,0
+autism/autistic,1961,0,28953,0
+autism/autistic,1962,0,46772,0
+autism/autistic,1963,1,98023,10.2017
+autism/autistic,1964,15,124573,120.411
+autism/autistic,1965,3,158515,18.9257
+autism/autistic,1966,7,163014,42.9411
+autism/autistic,1967,23,181818,126.5
+autism/autistic,1968,7,240826,29.0666
+autism/autistic,1969,7,246398,28.4093
+autism/autistic,1970,4,301152,13.2823
+autism/autistic,1971,4,362066,11.0477
+autism/autistic,1972,11,375755,29.2744
+autism/autistic,1973,29,464603,62.4189
+autism/autistic,1974,16,508894,31.4407
+autism/autistic,1975,14,593764,23.5784
+autism/autistic,1976,37,697285,53.063
+autism/autistic,1977,65,747617,86.9429
+autism/autistic,1978,47,821080,57.2417
+autism/autistic,1979,101,870008,116.091
+autism/autistic,1980,91,941018,96.7038
+autism/autistic,1981,118,1000795,117.906
+autism/autistic,1982,86,1065079,80.7452
+autism/autistic,1983,146,1117904,130.602
+autism/autistic,1984,136,1194434,113.861
+autism/autistic,1985,99,1208583,81.9141
+autism/autistic,1986,152,1322299,114.951
+autism/autistic,1987,186,1376184,135.156
+autism/autistic,1988,248,1491988,166.221
+autism/autistic,1989,302,1709852,176.623
+autism/autistic,1990,214,1746859,122.506
+autism/autistic,1991,245,1784949,137.259
+autism/autistic,1992,274,1881940,145.594
+autism/autistic,1993,290,2014149,143.981
+autism/autistic,1994,306,2184113,140.103
+autism/autistic,1995,329,2335559,140.866
+autism/autistic,1996,295,2570582,114.76
+autism/autistic,1997,365,2719594,134.211
+autism/autistic,1998,467,2619046,178.309
+autism/autistic,1999,463,2665813,173.681
+autism/autistic,2000,490,2947954,166.217
+autism/autistic,2001,533,3078300,173.148
+autism/autistic,2002,532,3209984,165.733
+autism/autistic,2003,555,3441450,161.269
+autism/autistic,2004,646,3811438,169.49
+autism/autistic,2005,610,3937799,154.909
+autism/autistic,2006,836,4551841,183.662
+autism/autistic,2007,981,5040147,194.637
+autism/autistic,2008,1282,5354558,239.422
+autism/autistic,2009,1039,5772434,179.993
+autism/autistic,2010,925,6247201,148.066
+autism/autistic,2011,1098,6978923,157.331
+autism/autistic,2012,1298,7465391,173.869
+autism/autistic,2013,1454,8491754,171.225
+autism/autistic,2014,1324,9069941,145.977
+autism/autistic,2015,1170,9508602,123.046
+autism/autistic,2016,1181,11371740,103.854
+autism/autistic,2017,989,7147196,138.376
+autism/autistic,2018,1008,7064318,142.689
+autism/autistic,2019,35,91041,384.442
+asperger,1930,0,243,0
+asperger,1931,0,375,0
+asperger,1932,0,297,0
+asperger,1933,0,696,0
+asperger,1934,0,152,0
+asperger,1936,0,1995,0
+asperger,1937,0,3215,0
+asperger,1938,0,1553,0
+asperger,1939,0,2023,0
+asperger,1940,0,4221,0
+asperger,1941,0,4791,0
+asperger,1942,0,5326,0
+asperger,1943,0,5409,0
+asperger,1944,0,4592,0
+asperger,1945,0,6598,0
+asperger,1946,0,5608,0
+asperger,1947,0,4634,0
+asperger,1948,0,1879,0
+asperger,1949,0,3687,0
+asperger,1950,0,4791,0
+asperger,1951,0,4088,0
+asperger,1952,0,4505,0
+asperger,1953,0,7652,0
+asperger,1954,0,7632,0
+asperger,1955,0,8347,0
+asperger,1956,0,15992,0
+asperger,1957,0,16302,0
+asperger,1958,0,17398,0
+asperger,1959,0,17792,0
+asperger,1960,0,26822,0
+asperger,1961,0,28953,0
+asperger,1962,0,46772,0
+asperger,1963,0,98023,0
+asperger,1964,0,124573,0
+asperger,1965,0,158515,0
+asperger,1966,0,163014,0
+asperger,1967,0,181818,0
+asperger,1968,0,240826,0
+asperger,1969,0,246398,0
+asperger,1970,0,301152,0
+asperger,1971,0,362066,0
+asperger,1972,0,375755,0
+asperger,1973,0,464603,0
+asperger,1974,0,508894,0
+asperger,1975,0,593764,0
+asperger,1976,0,697285,0
+asperger,1977,0,747617,0
+asperger,1978,0,821080,0
+asperger,1979,1,870008,1.14941
+asperger,1980,0,941018,0
+asperger,1981,1,1000795,0.999206
+asperger,1982,0,1065079,0
+asperger,1983,0,1117904,0
+asperger,1984,0,1194434,0
+asperger,1985,5,1208583,4.13708
+asperger,1986,1,1322299,0.756259
+asperger,1987,0,1376184,0
+asperger,1988,6,1491988,4.02148
+asperger,1989,5,1709852,2.92423
+asperger,1990,4,1746859,2.28982
+asperger,1991,3,1784949,1.68072
+asperger,1992,7,1881940,3.71957
+asperger,1993,10,2014149,4.96488
+asperger,1994,14,2184113,6.40992
+asperger,1995,8,2335559,3.4253
+asperger,1996,19,2570582,7.39132
+asperger,1997,28,2719594,10.2957
+asperger,1998,20,2619046,7.63637
+asperger,1999,50,2665813,18.756
+asperger,2000,53,2947954,17.9786
+asperger,2001,68,3078300,22.0901
+asperger,2002,41,3209984,12.7726
+asperger,2003,55,3441450,15.9816
+asperger,2004,89,3811438,23.3508
+asperger,2005,77,3937799,19.5541
+asperger,2006,119,4551841,26.1433
+asperger,2007,92,5040147,18.2534
+asperger,2008,134,5354558,25.0254
+asperger,2009,102,5772434,17.6702
+asperger,2010,99,6247201,15.8471
+asperger,2011,108,6978923,15.4752
+asperger,2012,124,7465391,16.61
+asperger,2013,124,8491754,14.6024
+asperger,2014,71,9069941,7.82806
+asperger,2015,66,9508602,6.94108
+asperger,2016,51,11371740,4.4848
+asperger,2017,22,7147196,3.07813
+asperger,2018,14,7064318,1.98179
+asperger,2019,0,91041,0
+spectrum disorder,1930,0,243,0
+spectrum disorder,1931,0,375,0
+spectrum disorder,1932,0,297,0
+spectrum disorder,1933,0,696,0
+spectrum disorder,1934,0,152,0
+spectrum disorder,1936,0,1995,0
+spectrum disorder,1937,0,3215,0
+spectrum disorder,1938,0,1553,0
+spectrum disorder,1939,0,2023,0
+spectrum disorder,1940,0,4221,0
+spectrum disorder,1941,0,4791,0
+spectrum disorder,1942,0,5326,0
+spectrum disorder,1943,0,5409,0
+spectrum disorder,1944,0,4592,0
+spectrum disorder,1945,0,6598,0
+spectrum disorder,1946,0,5608,0
+spectrum disorder,1947,0,4634,0
+spectrum disorder,1948,0,1879,0
+spectrum disorder,1949,0,3687,0
+spectrum disorder,1950,0,4791,0
+spectrum disorder,1951,0,4088,0
+spectrum disorder,1952,0,4505,0
+spectrum disorder,1953,0,7652,0
+spectrum disorder,1954,0,7632,0
+spectrum disorder,1955,0,8347,0
+spectrum disorder,1956,0,15992,0
+spectrum disorder,1957,0,16302,0
+spectrum disorder,1958,0,17398,0
+spectrum disorder,1959,0,17792,0
+spectrum disorder,1960,0,26822,0
+spectrum disorder,1961,0,28953,0
+spectrum disorder,1962,0,46772,0
+spectrum disorder,1963,0,98023,0
+spectrum disorder,1964,0,124573,0
+spectrum disorder,1965,0,158515,0
+spectrum disorder,1966,0,163014,0
+spectrum disorder,1967,0,181818,0
+spectrum disorder,1968,0,240826,0
+spectrum disorder,1969,0,246398,0
+spectrum disorder,1970,0,301152,0
+spectrum disorder,1971,0,362066,0
+spectrum disorder,1972,0,375755,0
+spectrum disorder,1973,0,464603,0
+spectrum disorder,1974,0,508894,0
+spectrum disorder,1975,0,593764,0
+spectrum disorder,1976,0,697285,0
+spectrum disorder,1977,0,747617,0
+spectrum disorder,1978,0,821080,0
+spectrum disorder,1979,0,870008,0
+spectrum disorder,1980,0,941018,0
+spectrum disorder,1981,0,1000795,0
+spectrum disorder,1982,0,1065079,0
+spectrum disorder,1983,0,1117904,0
+spectrum disorder,1984,0,1194434,0
+spectrum disorder,1985,1,1208583,0.827415
+spectrum disorder,1986,0,1322299,0
+spectrum disorder,1987,0,1376184,0
+spectrum disorder,1988,1,1491988,0.670247
+spectrum disorder,1989,0,1709852,0
+spectrum disorder,1990,0,1746859,0
+spectrum disorder,1991,1,1784949,0.56024
+spectrum disorder,1992,2,1881940,1.06273
+spectrum disorder,1993,0,2014149,0
+spectrum disorder,1994,2,2184113,0.915704
+spectrum disorder,1995,3,2335559,1.28449
+spectrum disorder,1996,6,2570582,2.3341
+spectrum disorder,1997,3,2719594,1.10311
+spectrum disorder,1998,6,2619046,2.29091
+spectrum disorder,1999,38,2665813,14.2546
+spectrum disorder,2000,28,2947954,9.49811
+spectrum disorder,2001,23,3078300,7.47166
+spectrum disorder,2002,50,3209984,15.5764
+spectrum disorder,2003,51,3441450,14.8193
+spectrum disorder,2004,87,3811438,22.826
+spectrum disorder,2005,116,3937799,29.4581
+spectrum disorder,2006,169,4551841,37.1278
+spectrum disorder,2007,238,5040147,47.2208
+spectrum disorder,2008,294,5354558,54.9065
+spectrum disorder,2009,346,5772434,59.9401
+spectrum disorder,2010,415,6247201,66.4297
+spectrum disorder,2011,536,6978923,76.8027
+spectrum disorder,2012,688,7465391,92.1586
+spectrum disorder,2013,829,8491754,97.6241
+spectrum disorder,2014,1149,9069941,126.682
+spectrum disorder,2015,1155,9508602,121.469
+spectrum disorder,2016,1716,11371740,150.9
+spectrum disorder,2017,1294,7147196,181.05
+spectrum disorder,2018,977,7064318,138.301
+spectrum disorder,2019,12,91041,131.809
+intellectual disability,1930,0,243,0
+intellectual disability,1931,0,375,0
+intellectual disability,1932,0,297,0
+intellectual disability,1933,0,696,0
+intellectual disability,1934,0,152,0
+intellectual disability,1936,0,1995,0
+intellectual disability,1937,0,3215,0
+intellectual disability,1938,0,1553,0
+intellectual disability,1939,0,2023,0
+intellectual disability,1940,0,4221,0
+intellectual disability,1941,0,4791,0
+intellectual disability,1942,0,5326,0
+intellectual disability,1943,2,5409,369.754
+intellectual disability,1944,0,4592,0
+intellectual disability,1945,0,6598,0
+intellectual disability,1946,1,5608,178.317
+intellectual disability,1947,0,4634,0
+intellectual disability,1948,0,1879,0
+intellectual disability,1949,0,3687,0
+intellectual disability,1950,0,4791,0
+intellectual disability,1951,0,4088,0
+intellectual disability,1952,0,4505,0
+intellectual disability,1953,0,7652,0
+intellectual disability,1954,0,7632,0
+intellectual disability,1955,1,8347,119.804
+intellectual disability,1956,3,15992,187.594
+intellectual disability,1957,1,16302,61.3422
+intellectual disability,1958,13,17398,747.212
+intellectual disability,1959,2,17792,112.41
+intellectual disability,1960,9,26822,335.545
+intellectual disability,1961,9,28953,310.849
+intellectual disability,1962,4,46772,85.5213
+intellectual disability,1963,18,98023,183.63
+intellectual disability,1964,18,124573,144.494
+intellectual disability,1965,47,158515,296.502
+intellectual disability,1966,38,163014,233.109
+intellectual disability,1967,43,181818,236.5
+intellectual disability,1968,60,240826,249.143
+intellectual disability,1969,58,246398,235.392
+intellectual disability,1970,50,301152,166.029
+intellectual disability,1971,99,362066,273.431
+intellectual disability,1972,80,375755,212.905
+intellectual disability,1973,105,464603,225.999
+intellectual disability,1974,82,508894,161.134
+intellectual disability,1975,106,593764,178.522
+intellectual disability,1976,128,697285,183.569
+intellectual disability,1977,167,747617,223.376
+intellectual disability,1978,189,821080,230.185
+intellectual disability,1979,165,870008,189.653
+intellectual disability,1980,209,941018,222.1
+intellectual disability,1981,195,1000795,194.845
+intellectual disability,1982,169,1065079,158.674
+intellectual disability,1983,196,1117904,175.328
+intellectual disability,1984,174,1194434,145.676
+intellectual disability,1985,168,1208583,139.006
+intellectual disability,1986,197,1322299,148.983
+intellectual disability,1987,259,1376184,188.202
+intellectual disability,1988,270,1491988,180.967
+intellectual disability,1989,279,1709852,163.172
+intellectual disability,1990,202,1746859,115.636
+intellectual disability,1991,204,1784949,114.289
+intellectual disability,1992,191,1881940,101.491
+intellectual disability,1993,239,2014149,118.661
+intellectual disability,1994,284,2184113,130.03
+intellectual disability,1995,243,2335559,104.044
+intellectual disability,1996,245,2570582,95.3092
+intellectual disability,1997,283,2719594,104.06
+intellectual disability,1998,252,2619046,96.2182
+intellectual disability,1999,259,2665813,97.1561
+intellectual disability,2000,245,2947954,83.1085
+intellectual disability,2001,211,3078300,68.5443
+intellectual disability,2002,273,3209984,85.0472
+intellectual disability,2003,298,3441450,86.5914
+intellectual disability,2004,353,3811438,92.616
+intellectual disability,2005,299,3937799,75.9307
+intellectual disability,2006,292,4551841,64.1499
+intellectual disability,2007,362,5040147,71.8233
+intellectual disability,2008,458,5354558,85.5346
+intellectual disability,2009,541,5772434,93.7213
+intellectual disability,2010,521,6247201,83.3973
+intellectual disability,2011,611,6978923,87.5493
+intellectual disability,2012,508,7465391,68.0473
+intellectual disability,2013,746,8491754,87.8499
+intellectual disability,2014,603,9069941,66.4833
+intellectual disability,2015,529,9508602,55.6338
+intellectual disability,2016,847,11371740,74.4829
+intellectual disability,2017,681,7147196,95.2821
+intellectual disability,2018,532,7064318,75.308
+intellectual disability,2019,5,91041,54.9203
+dementia,1930,0,243,0
+dementia,1931,0,375,0
+dementia,1932,0,297,0
+dementia,1933,0,696,0
+dementia,1934,0,152,0
+dementia,1936,0,1995,0
+dementia,1937,0,3215,0
+dementia,1938,0,1553,0
+dementia,1939,0,2023,0
+dementia,1940,0,4221,0
+dementia,1941,0,4791,0
+dementia,1942,0,5326,0
+dementia,1943,2,5409,369.754
+dementia,1944,0,4592,0
+dementia,1945,0,6598,0
+dementia,1946,0,5608,0
+dementia,1947,0,4634,0
+dementia,1948,0,1879,0
+dementia,1949,0,3687,0
+dementia,1950,0,4791,0
+dementia,1951,0,4088,0
+dementia,1952,0,4505,0
+dementia,1953,0,7652,0
+dementia,1954,0,7632,0
+dementia,1955,0,8347,0
+dementia,1956,0,15992,0
+dementia,1957,0,16302,0
+dementia,1958,0,17398,0
+dementia,1959,0,17792,0
+dementia,1960,0,26822,0
+dementia,1961,0,28953,0
+dementia,1962,0,46772,0
+dementia,1963,0,98023,0
+dementia,1964,0,124573,0
+dementia,1965,0,158515,0
+dementia,1966,0,163014,0
+dementia,1967,0,181818,0
+dementia,1968,0,240826,0
+dementia,1969,0,246398,0
+dementia,1970,0,301152,0
+dementia,1971,0,362066,0
+dementia,1972,0,375755,0
+dementia,1973,0,464603,0
+dementia,1974,0,508894,0
+dementia,1975,0,593764,0
+dementia,1976,0,697285,0
+dementia,1977,0,747617,0
+dementia,1978,0,821080,0
+dementia,1979,0,870008,0
+dementia,1980,0,941018,0
+dementia,1981,0,1000795,0
+dementia,1982,0,1065079,0
+dementia,1983,1,1117904,0.894531
+dementia,1984,0,1194434,0
+dementia,1985,0,1208583,0
+dementia,1986,0,1322299,0
+dementia,1987,0,1376184,0
+dementia,1988,0,1491988,0
+dementia,1989,1,1709852,0.584846
+dementia,1990,1,1746859,0.572456
+dementia,1991,1,1784949,0.56024
+dementia,1992,3,1881940,1.5941
+dementia,1993,2,2014149,0.992975
+dementia,1994,0,2184113,0
+dementia,1995,2,2335559,0.856326
+dementia,1996,5,2570582,1.94508
+dementia,1997,1,2719594,0.367702
+dementia,1998,1,2619046,0.381818
+dementia,1999,1,2665813,0.37512
+dementia,2000,5,2947954,1.69609
+dementia,2001,2,3078300,0.649709
+dementia,2002,3,3209984,0.934584
+dementia,2003,2,3441450,0.58115
+dementia,2004,2,3811438,0.524736
+dementia,2005,1,3937799,0.253949
+dementia,2006,1,4551841,0.219691
+dementia,2007,2,5040147,0.396814
+dementia,2008,2,5354558,0.373514
+dementia,2009,1,5772434,0.173237
+dementia,2010,2,6247201,0.320143
+dementia,2011,1,6978923,0.143289
+dementia,2012,6,7465391,0.803709
+dementia,2013,11,8491754,1.29537
+dementia,2014,1,9069941,0.110254
+dementia,2015,0,9508602,0
+dementia,2016,3,11371740,0.263812
+dementia,2017,0,7147196,0
+dementia,2018,0,7064318,0
+dementia,2019,0,91041,0
+schizoid psychopathy in children,1930,0,243,0
+schizoid psychopathy in children,1931,0,375,0
+schizoid psychopathy in children,1932,0,297,0
+schizoid psychopathy in children,1933,0,696,0
+schizoid psychopathy in children,1934,0,152,0
+schizoid psychopathy in children,1936,0,1995,0
+schizoid psychopathy in children,1937,0,3215,0
+schizoid psychopathy in children,1938,0,1553,0
+schizoid psychopathy in children,1939,0,2023,0
+schizoid psychopathy in children,1940,0,4221,0
+schizoid psychopathy in children,1941,0,4791,0
+schizoid psychopathy in children,1942,0,5326,0
+schizoid psychopathy in children,1943,0,5409,0
+schizoid psychopathy in children,1944,0,4592,0
+schizoid psychopathy in children,1945,0,6598,0
+schizoid psychopathy in children,1946,0,5608,0
+schizoid psychopathy in children,1947,0,4634,0
+schizoid psychopathy in children,1948,0,1879,0
+schizoid psychopathy in children,1949,0,3687,0
+schizoid psychopathy in children,1950,0,4791,0
+schizoid psychopathy in children,1951,0,4088,0
+schizoid psychopathy in children,1952,0,4505,0
+schizoid psychopathy in children,1953,0,7652,0
+schizoid psychopathy in children,1954,0,7632,0
+schizoid psychopathy in children,1955,0,8347,0
+schizoid psychopathy in children,1956,0,15992,0
+schizoid psychopathy in children,1957,0,16302,0
+schizoid psychopathy in children,1958,0,17398,0
+schizoid psychopathy in children,1959,0,17792,0
+schizoid psychopathy in children,1960,0,26822,0
+schizoid psychopathy in children,1961,0,28953,0
+schizoid psychopathy in children,1962,0,46772,0
+schizoid psychopathy in children,1963,0,98023,0
+schizoid psychopathy in children,1964,0,124573,0
+schizoid psychopathy in children,1965,0,158515,0
+schizoid psychopathy in children,1966,0,163014,0
+schizoid psychopathy in children,1967,0,181818,0
+schizoid psychopathy in children,1968,0,240826,0
+schizoid psychopathy in children,1969,0,246398,0
+schizoid psychopathy in children,1970,0,301152,0
+schizoid psychopathy in children,1971,0,362066,0
+schizoid psychopathy in children,1972,0,375755,0
+schizoid psychopathy in children,1973,0,464603,0
+schizoid psychopathy in children,1974,0,508894,0
+schizoid psychopathy in children,1975,0,593764,0
+schizoid psychopathy in children,1976,0,697285,0
+schizoid psychopathy in children,1977,0,747617,0
+schizoid psychopathy in children,1978,0,821080,0
+schizoid psychopathy in children,1979,0,870008,0
+schizoid psychopathy in children,1980,0,941018,0
+schizoid psychopathy in children,1981,0,1000795,0
+schizoid psychopathy in children,1982,0,1065079,0
+schizoid psychopathy in children,1983,0,1117904,0
+schizoid psychopathy in children,1984,0,1194434,0
+schizoid psychopathy in children,1985,0,1208583,0
+schizoid psychopathy in children,1986,0,1322299,0
+schizoid psychopathy in children,1987,0,1376184,0
+schizoid psychopathy in children,1988,0,1491988,0
+schizoid psychopathy in children,1989,0,1709852,0
+schizoid psychopathy in children,1990,0,1746859,0
+schizoid psychopathy in children,1991,0,1784949,0
+schizoid psychopathy in children,1992,0,1881940,0
+schizoid psychopathy in children,1993,0,2014149,0
+schizoid psychopathy in children,1994,0,2184113,0
+schizoid psychopathy in children,1995,0,2335559,0
+schizoid psychopathy in children,1996,0,2570582,0
+schizoid psychopathy in children,1997,0,2719594,0
+schizoid psychopathy in children,1998,0,2619046,0
+schizoid psychopathy in children,1999,0,2665813,0
+schizoid psychopathy in children,2000,0,2947954,0
+schizoid psychopathy in children,2001,0,3078300,0
+schizoid psychopathy in children,2002,0,3209984,0
+schizoid psychopathy in children,2003,0,3441450,0
+schizoid psychopathy in children,2004,0,3811438,0
+schizoid psychopathy in children,2005,0,3937799,0
+schizoid psychopathy in children,2006,0,4551841,0
+schizoid psychopathy in children,2007,0,5040147,0
+schizoid psychopathy in children,2008,0,5354558,0
+schizoid psychopathy in children,2009,0,5772434,0
+schizoid psychopathy in children,2010,0,6247201,0
+schizoid psychopathy in children,2011,0,6978923,0
+schizoid psychopathy in children,2012,0,7465391,0
+schizoid psychopathy in children,2013,0,8491754,0
+schizoid psychopathy in children,2014,0,9069941,0
+schizoid psychopathy in children,2015,0,9508602,0
+schizoid psychopathy in children,2016,0,11371740,0
+schizoid psychopathy in children,2017,0,7147196,0
+schizoid psychopathy in children,2018,0,7064318,0
+schizoid psychopathy in children,2019,0,91041,0
+early infantile autism,1930,0,243,0
+early infantile autism,1931,0,375,0
+early infantile autism,1932,0,297,0
+early infantile autism,1933,0,696,0
+early infantile autism,1934,0,152,0
+early infantile autism,1936,0,1995,0
+early infantile autism,1937,0,3215,0
+early infantile autism,1938,0,1553,0
+early infantile autism,1939,0,2023,0
+early infantile autism,1940,0,4221,0
+early infantile autism,1941,0,4791,0
+early infantile autism,1942,0,5326,0
+early infantile autism,1943,0,5409,0
+early infantile autism,1944,0,4592,0
+early infantile autism,1945,0,6598,0
+early infantile autism,1946,0,5608,0
+early infantile autism,1947,0,4634,0
+early infantile autism,1948,0,1879,0
+early infantile autism,1949,0,3687,0
+early infantile autism,1950,0,4791,0
+early infantile autism,1951,0,4088,0
+early infantile autism,1952,0,4505,0
+early infantile autism,1953,0,7652,0
+early infantile autism,1954,0,7632,0
+early infantile autism,1955,0,8347,0
+early infantile autism,1956,0,15992,0
+early infantile autism,1957,0,16302,0
+early infantile autism,1958,0,17398,0
+early infantile autism,1959,0,17792,0
+early infantile autism,1960,0,26822,0
+early infantile autism,1961,0,28953,0
+early infantile autism,1962,0,46772,0
+early infantile autism,1963,0,98023,0
+early infantile autism,1964,0,124573,0
+early infantile autism,1965,0,158515,0
+early infantile autism,1966,0,163014,0
+early infantile autism,1967,0,181818,0
+early infantile autism,1968,0,240826,0
+early infantile autism,1969,0,246398,0
+early infantile autism,1970,0,301152,0
+early infantile autism,1971,0,362066,0
+early infantile autism,1972,0,375755,0
+early infantile autism,1973,0,464603,0
+early infantile autism,1974,0,508894,0
+early infantile autism,1975,0,593764,0
+early infantile autism,1976,2,697285,2.86827
+early infantile autism,1977,1,747617,1.33758
+early infantile autism,1978,0,821080,0
+early infantile autism,1979,0,870008,0
+early infantile autism,1980,0,941018,0
+early infantile autism,1981,2,1000795,1.99841
+early infantile autism,1982,0,1065079,0
+early infantile autism,1983,2,1117904,1.78906
+early infantile autism,1984,2,1194434,1.67443
+early infantile autism,1985,0,1208583,0
+early infantile autism,1986,1,1322299,0.756259
+early infantile autism,1987,0,1376184,0
+early infantile autism,1988,0,1491988,0
+early infantile autism,1989,0,1709852,0
+early infantile autism,1990,3,1746859,1.71737
+early infantile autism,1991,0,1784949,0
+early infantile autism,1992,0,1881940,0
+early infantile autism,1993,0,2014149,0
+early infantile autism,1994,0,2184113,0
+early infantile autism,1995,1,2335559,0.428163
+early infantile autism,1996,0,2570582,0
+early infantile autism,1997,0,2719594,0
+early infantile autism,1998,0,2619046,0
+early infantile autism,1999,1,2665813,0.37512
+early infantile autism,2000,1,2947954,0.339218
+early infantile autism,2001,2,3078300,0.649709
+early infantile autism,2002,4,3209984,1.24611
+early infantile autism,2003,0,3441450,0
+early infantile autism,2004,0,3811438,0
+early infantile autism,2005,0,3937799,0
+early infantile autism,2006,0,4551841,0
+early infantile autism,2007,0,5040147,0
+early infantile autism,2008,0,5354558,0
+early infantile autism,2009,0,5772434,0
+early infantile autism,2010,0,6247201,0
+early infantile autism,2011,0,6978923,0
+early infantile autism,2012,0,7465391,0
+early infantile autism,2013,0,8491754,0
+early infantile autism,2014,2,9069941,0.220509
+early infantile autism,2015,0,9508602,0
+early infantile autism,2016,0,11371740,0
+early infantile autism,2017,0,7147196,0
+early infantile autism,2018,0,7064318,0
+early infantile autism,2019,0,91041,0
+autistic psychopathy,1930,0,243,0
+autistic psychopathy,1931,0,375,0
+autistic psychopathy,1932,0,297,0
+autistic psychopathy,1933,0,696,0
+autistic psychopathy,1934,0,152,0
+autistic psychopathy,1936,0,1995,0
+autistic psychopathy,1937,0,3215,0
+autistic psychopathy,1938,0,1553,0
+autistic psychopathy,1939,0,2023,0
+autistic psychopathy,1940,0,4221,0
+autistic psychopathy,1941,0,4791,0
+autistic psychopathy,1942,0,5326,0
+autistic psychopathy,1943,0,5409,0
+autistic psychopathy,1944,0,4592,0
+autistic psychopathy,1945,0,6598,0
+autistic psychopathy,1946,0,5608,0
+autistic psychopathy,1947,0,4634,0
+autistic psychopathy,1948,0,1879,0
+autistic psychopathy,1949,0,3687,0
+autistic psychopathy,1950,0,4791,0
+autistic psychopathy,1951,0,4088,0
+autistic psychopathy,1952,0,4505,0
+autistic psychopathy,1953,0,7652,0
+autistic psychopathy,1954,0,7632,0
+autistic psychopathy,1955,0,8347,0
+autistic psychopathy,1956,0,15992,0
+autistic psychopathy,1957,0,16302,0
+autistic psychopathy,1958,0,17398,0
+autistic psychopathy,1959,0,17792,0
+autistic psychopathy,1960,0,26822,0
+autistic psychopathy,1961,0,28953,0
+autistic psychopathy,1962,0,46772,0
+autistic psychopathy,1963,0,98023,0
+autistic psychopathy,1964,0,124573,0
+autistic psychopathy,1965,0,158515,0
+autistic psychopathy,1966,0,163014,0
+autistic psychopathy,1967,0,181818,0
+autistic psychopathy,1968,0,240826,0
+autistic psychopathy,1969,0,246398,0
+autistic psychopathy,1970,0,301152,0
+autistic psychopathy,1971,0,362066,0
+autistic psychopathy,1972,0,375755,0
+autistic psychopathy,1973,0,464603,0
+autistic psychopathy,1974,0,508894,0
+autistic psychopathy,1975,0,593764,0
+autistic psychopathy,1976,0,697285,0
+autistic psychopathy,1977,0,747617,0
+autistic psychopathy,1978,0,821080,0
+autistic psychopathy,1979,0,870008,0
+autistic psychopathy,1980,0,941018,0
+autistic psychopathy,1981,0,1000795,0
+autistic psychopathy,1982,0,1065079,0
+autistic psychopathy,1983,0,1117904,0
+autistic psychopathy,1984,0,1194434,0
+autistic psychopathy,1985,0,1208583,0
+autistic psychopathy,1986,0,1322299,0
+autistic psychopathy,1987,0,1376184,0
+autistic psychopathy,1988,0,1491988,0
+autistic psychopathy,1989,0,1709852,0
+autistic psychopathy,1990,0,1746859,0
+autistic psychopathy,1991,0,1784949,0
+autistic psychopathy,1992,0,1881940,0
+autistic psychopathy,1993,0,2014149,0
+autistic psychopathy,1994,0,2184113,0
+autistic psychopathy,1995,0,2335559,0
+autistic psychopathy,1996,0,2570582,0
+autistic psychopathy,1997,0,2719594,0
+autistic psychopathy,1998,0,2619046,0
+autistic psychopathy,1999,0,2665813,0
+autistic psychopathy,2000,0,2947954,0
+autistic psychopathy,2001,0,3078300,0
+autistic psychopathy,2002,0,3209984,0
+autistic psychopathy,2003,0,3441450,0
+autistic psychopathy,2004,0,3811438,0
+autistic psychopathy,2005,2,3937799,0.507898
+autistic psychopathy,2006,0,4551841,0
+autistic psychopathy,2007,0,5040147,0
+autistic psychopathy,2008,0,5354558,0
+autistic psychopathy,2009,0,5772434,0
+autistic psychopathy,2010,2,6247201,0.320143
+autistic psychopathy,2011,0,6978923,0
+autistic psychopathy,2012,0,7465391,0
+autistic psychopathy,2013,0,8491754,0
+autistic psychopathy,2014,0,9069941,0
+autistic psychopathy,2015,0,9508602,0
+autistic psychopathy,2016,0,11371740,0
+autistic psychopathy,2017,0,7147196,0
+autistic psychopathy,2018,0,7064318,0
+autistic psychopathy,2019,0,91041,0
+childhood schizophrenia,1930,0,243,0
+childhood schizophrenia,1931,0,375,0
+childhood schizophrenia,1932,0,297,0
+childhood schizophrenia,1933,0,696,0
+childhood schizophrenia,1934,0,152,0
+childhood schizophrenia,1936,0,1995,0
+childhood schizophrenia,1937,0,3215,0
+childhood schizophrenia,1938,0,1553,0
+childhood schizophrenia,1939,0,2023,0
+childhood schizophrenia,1940,0,4221,0
+childhood schizophrenia,1941,0,4791,0
+childhood schizophrenia,1942,0,5326,0
+childhood schizophrenia,1943,0,5409,0
+childhood schizophrenia,1944,0,4592,0
+childhood schizophrenia,1945,0,6598,0
+childhood schizophrenia,1946,0,5608,0
+childhood schizophrenia,1947,0,4634,0
+childhood schizophrenia,1948,0,1879,0
+childhood schizophrenia,1949,0,3687,0
+childhood schizophrenia,1950,0,4791,0
+childhood schizophrenia,1951,0,4088,0
+childhood schizophrenia,1952,0,4505,0
+childhood schizophrenia,1953,0,7652,0
+childhood schizophrenia,1954,0,7632,0
+childhood schizophrenia,1955,0,8347,0
+childhood schizophrenia,1956,0,15992,0
+childhood schizophrenia,1957,0,16302,0
+childhood schizophrenia,1958,0,17398,0
+childhood schizophrenia,1959,0,17792,0
+childhood schizophrenia,1960,0,26822,0
+childhood schizophrenia,1961,0,28953,0
+childhood schizophrenia,1962,0,46772,0
+childhood schizophrenia,1963,0,98023,0
+childhood schizophrenia,1964,0,124573,0
+childhood schizophrenia,1965,0,158515,0
+childhood schizophrenia,1966,0,163014,0
+childhood schizophrenia,1967,0,181818,0
+childhood schizophrenia,1968,0,240826,0
+childhood schizophrenia,1969,0,246398,0
+childhood schizophrenia,1970,1,301152,3.32058
+childhood schizophrenia,1971,0,362066,0
+childhood schizophrenia,1972,0,375755,0
+childhood schizophrenia,1973,0,464603,0
+childhood schizophrenia,1974,0,508894,0
+childhood schizophrenia,1975,0,593764,0
+childhood schizophrenia,1976,0,697285,0
+childhood schizophrenia,1977,2,747617,2.67517
+childhood schizophrenia,1978,2,821080,2.43582
+childhood schizophrenia,1979,2,870008,2.29883
+childhood schizophrenia,1980,0,941018,0
+childhood schizophrenia,1981,0,1000795,0
+childhood schizophrenia,1982,3,1065079,2.81669
+childhood schizophrenia,1983,0,1117904,0
+childhood schizophrenia,1984,1,1194434,0.837217
+childhood schizophrenia,1985,0,1208583,0
+childhood schizophrenia,1986,0,1322299,0
+childhood schizophrenia,1987,1,1376184,0.726647
+childhood schizophrenia,1988,1,1491988,0.670247
+childhood schizophrenia,1989,1,1709852,0.584846
+childhood schizophrenia,1990,0,1746859,0
+childhood schizophrenia,1991,1,1784949,0.56024
+childhood schizophrenia,1992,0,1881940,0
+childhood schizophrenia,1993,1,2014149,0.496488
+childhood schizophrenia,1994,2,2184113,0.915704
+childhood schizophrenia,1995,0,2335559,0
+childhood schizophrenia,1996,0,2570582,0
+childhood schizophrenia,1997,0,2719594,0
+childhood schizophrenia,1998,0,2619046,0
+childhood schizophrenia,1999,0,2665813,0
+childhood schizophrenia,2000,0,2947954,0
+childhood schizophrenia,2001,1,3078300,0.324855
+childhood schizophrenia,2002,0,3209984,0
+childhood schizophrenia,2003,0,3441450,0
+childhood schizophrenia,2004,0,3811438,0
+childhood schizophrenia,2005,0,3937799,0
+childhood schizophrenia,2006,1,4551841,0.219691
+childhood schizophrenia,2007,0,5040147,0
+childhood schizophrenia,2008,1,5354558,0.186757
+childhood schizophrenia,2009,0,5772434,0
+childhood schizophrenia,2010,0,6247201,0
+childhood schizophrenia,2011,0,6978923,0
+childhood schizophrenia,2012,0,7465391,0
+childhood schizophrenia,2013,0,8491754,0
+childhood schizophrenia,2014,0,9069941,0
+childhood schizophrenia,2015,0,9508602,0
+childhood schizophrenia,2016,0,11371740,0
+childhood schizophrenia,2017,1,7147196,0.139915
+childhood schizophrenia,2018,0,7064318,0
+childhood schizophrenia,2019,0,91041,0
+symbiotic infantile psychosis,1930,0,243,0
+symbiotic infantile psychosis,1931,0,375,0
+symbiotic infantile psychosis,1932,0,297,0
+symbiotic infantile psychosis,1933,0,696,0
+symbiotic infantile psychosis,1934,0,152,0
+symbiotic infantile psychosis,1936,0,1995,0
+symbiotic infantile psychosis,1937,0,3215,0
+symbiotic infantile psychosis,1938,0,1553,0
+symbiotic infantile psychosis,1939,0,2023,0
+symbiotic infantile psychosis,1940,0,4221,0
+symbiotic infantile psychosis,1941,0,4791,0
+symbiotic infantile psychosis,1942,0,5326,0
+symbiotic infantile psychosis,1943,0,5409,0
+symbiotic infantile psychosis,1944,0,4592,0
+symbiotic infantile psychosis,1945,0,6598,0
+symbiotic infantile psychosis,1946,0,5608,0
+symbiotic infantile psychosis,1947,0,4634,0
+symbiotic infantile psychosis,1948,0,1879,0
+symbiotic infantile psychosis,1949,0,3687,0
+symbiotic infantile psychosis,1950,0,4791,0
+symbiotic infantile psychosis,1951,0,4088,0
+symbiotic infantile psychosis,1952,0,4505,0
+symbiotic infantile psychosis,1953,0,7652,0
+symbiotic infantile psychosis,1954,0,7632,0
+symbiotic infantile psychosis,1955,0,8347,0
+symbiotic infantile psychosis,1956,0,15992,0
+symbiotic infantile psychosis,1957,0,16302,0
+symbiotic infantile psychosis,1958,0,17398,0
+symbiotic infantile psychosis,1959,0,17792,0
+symbiotic infantile psychosis,1960,0,26822,0
+symbiotic infantile psychosis,1961,0,28953,0
+symbiotic infantile psychosis,1962,0,46772,0
+symbiotic infantile psychosis,1963,0,98023,0
+symbiotic infantile psychosis,1964,0,124573,0
+symbiotic infantile psychosis,1965,0,158515,0
+symbiotic infantile psychosis,1966,1,163014,6.13444
+symbiotic infantile psychosis,1967,0,181818,0
+symbiotic infantile psychosis,1968,0,240826,0
+symbiotic infantile psychosis,1969,0,246398,0
+symbiotic infantile psychosis,1970,0,301152,0
+symbiotic infantile psychosis,1971,1,362066,2.76193
+symbiotic infantile psychosis,1972,1,375755,2.66131
+symbiotic infantile psychosis,1973,0,464603,0
+symbiotic infantile psychosis,1974,1,508894,1.96505
+symbiotic infantile psychosis,1975,3,593764,5.05251
+symbiotic infantile psychosis,1976,0,697285,0
+symbiotic infantile psychosis,1977,2,747617,2.67517
+symbiotic infantile psychosis,1978,0,821080,0
+symbiotic infantile psychosis,1979,3,870008,3.44824
+symbiotic infantile psychosis,1980,3,941018,3.18804
+symbiotic infantile psychosis,1981,0,1000795,0
+symbiotic infantile psychosis,1982,1,1065079,0.938897
+symbiotic infantile psychosis,1983,3,1117904,2.68359
+symbiotic infantile psychosis,1984,5,1194434,4.18608
+symbiotic infantile psychosis,1985,0,1208583,0
+symbiotic infantile psychosis,1986,3,1322299,2.26878
+symbiotic infantile psychosis,1987,2,1376184,1.45329
+symbiotic infantile psychosis,1988,1,1491988,0.670247
+symbiotic infantile psychosis,1989,0,1709852,0
+symbiotic infantile psychosis,1990,3,1746859,1.71737
+symbiotic infantile psychosis,1991,1,1784949,0.56024
+symbiotic infantile psychosis,1992,0,1881940,0
+symbiotic infantile psychosis,1993,1,2014149,0.496488
+symbiotic infantile psychosis,1994,2,2184113,0.915704
+symbiotic infantile psychosis,1995,0,2335559,0
+symbiotic infantile psychosis,1996,0,2570582,0
+symbiotic infantile psychosis,1997,0,2719594,0
+symbiotic infantile psychosis,1998,0,2619046,0
+symbiotic infantile psychosis,1999,1,2665813,0.37512
+symbiotic infantile psychosis,2000,0,2947954,0
+symbiotic infantile psychosis,2001,0,3078300,0
+symbiotic infantile psychosis,2002,1,3209984,0.311528
+symbiotic infantile psychosis,2003,0,3441450,0
+symbiotic infantile psychosis,2004,0,3811438,0
+symbiotic infantile psychosis,2005,0,3937799,0
+symbiotic infantile psychosis,2006,0,4551841,0
+symbiotic infantile psychosis,2007,0,5040147,0
+symbiotic infantile psychosis,2008,0,5354558,0
+symbiotic infantile psychosis,2009,1,5772434,0.173237
+symbiotic infantile psychosis,2010,0,6247201,0
+symbiotic infantile psychosis,2011,1,6978923,0.143289
+symbiotic infantile psychosis,2012,0,7465391,0
+symbiotic infantile psychosis,2013,0,8491754,0
+symbiotic infantile psychosis,2014,0,9069941,0
+symbiotic infantile psychosis,2015,0,9508602,0
+symbiotic infantile psychosis,2016,0,11371740,0
+symbiotic infantile psychosis,2017,0,7147196,0
+symbiotic infantile psychosis,2018,0,7064318,0
+symbiotic infantile psychosis,2019,0,91041,0
+minimal brain dysfunction,1930,0,243,0
+minimal brain dysfunction,1931,0,375,0
+minimal brain dysfunction,1932,0,297,0
+minimal brain dysfunction,1933,0,696,0
+minimal brain dysfunction,1934,0,152,0
+minimal brain dysfunction,1936,0,1995,0
+minimal brain dysfunction,1937,0,3215,0
+minimal brain dysfunction,1938,0,1553,0
+minimal brain dysfunction,1939,0,2023,0
+minimal brain dysfunction,1940,0,4221,0
+minimal brain dysfunction,1941,0,4791,0
+minimal brain dysfunction,1942,0,5326,0
+minimal brain dysfunction,1943,0,5409,0
+minimal brain dysfunction,1944,0,4592,0
+minimal brain dysfunction,1945,0,6598,0
+minimal brain dysfunction,1946,0,5608,0
+minimal brain dysfunction,1947,0,4634,0
+minimal brain dysfunction,1948,0,1879,0
+minimal brain dysfunction,1949,0,3687,0
+minimal brain dysfunction,1950,0,4791,0
+minimal brain dysfunction,1951,0,4088,0
+minimal brain dysfunction,1952,0,4505,0
+minimal brain dysfunction,1953,0,7652,0
+minimal brain dysfunction,1954,0,7632,0
+minimal brain dysfunction,1955,0,8347,0
+minimal brain dysfunction,1956,0,15992,0
+minimal brain dysfunction,1957,0,16302,0
+minimal brain dysfunction,1958,0,17398,0
+minimal brain dysfunction,1959,0,17792,0
+minimal brain dysfunction,1960,0,26822,0
+minimal brain dysfunction,1961,0,28953,0
+minimal brain dysfunction,1962,0,46772,0
+minimal brain dysfunction,1963,0,98023,0
+minimal brain dysfunction,1964,0,124573,0
+minimal brain dysfunction,1965,0,158515,0
+minimal brain dysfunction,1966,0,163014,0
+minimal brain dysfunction,1967,1,181818,5.50001
+minimal brain dysfunction,1968,2,240826,8.30475
+minimal brain dysfunction,1969,0,246398,0
+minimal brain dysfunction,1970,1,301152,3.32058
+minimal brain dysfunction,1971,1,362066,2.76193
+minimal brain dysfunction,1972,2,375755,5.32262
+minimal brain dysfunction,1973,1,464603,2.15238
+minimal brain dysfunction,1974,8,508894,15.7204
+minimal brain dysfunction,1975,3,593764,5.05251
+minimal brain dysfunction,1976,8,697285,11.4731
+minimal brain dysfunction,1977,3,747617,4.01275
+minimal brain dysfunction,1978,6,821080,7.30745
+minimal brain dysfunction,1979,4,870008,4.59766
+minimal brain dysfunction,1980,2,941018,2.12536
+minimal brain dysfunction,1981,1,1000795,0.999206
+minimal brain dysfunction,1982,4,1065079,3.75559
+minimal brain dysfunction,1983,3,1117904,2.68359
+minimal brain dysfunction,1984,1,1194434,0.837217
+minimal brain dysfunction,1985,0,1208583,0
+minimal brain dysfunction,1986,0,1322299,0
+minimal brain dysfunction,1987,0,1376184,0
+minimal brain dysfunction,1988,0,1491988,0
+minimal brain dysfunction,1989,1,1709852,0.584846
+minimal brain dysfunction,1990,2,1746859,1.14491
+minimal brain dysfunction,1991,5,1784949,2.8012
+minimal brain dysfunction,1992,3,1881940,1.5941
+minimal brain dysfunction,1993,0,2014149,0
+minimal brain dysfunction,1994,0,2184113,0
+minimal brain dysfunction,1995,0,2335559,0
+minimal brain dysfunction,1996,0,2570582,0
+minimal brain dysfunction,1997,1,2719594,0.367702
+minimal brain dysfunction,1998,0,2619046,0
+minimal brain dysfunction,1999,0,2665813,0
+minimal brain dysfunction,2000,0,2947954,0
+minimal brain dysfunction,2001,0,3078300,0
+minimal brain dysfunction,2002,0,3209984,0
+minimal brain dysfunction,2003,0,3441450,0
+minimal brain dysfunction,2004,1,3811438,0.262368
+minimal brain dysfunction,2005,0,3937799,0
+minimal brain dysfunction,2006,0,4551841,0
+minimal brain dysfunction,2007,0,5040147,0
+minimal brain dysfunction,2008,1,5354558,0.186757
+minimal brain dysfunction,2009,0,5772434,0
+minimal brain dysfunction,2010,1,6247201,0.160072
+minimal brain dysfunction,2011,1,6978923,0.143289
+minimal brain dysfunction,2012,0,7465391,0
+minimal brain dysfunction,2013,0,8491754,0
+minimal brain dysfunction,2014,0,9069941,0
+minimal brain dysfunction,2015,0,9508602,0
+minimal brain dysfunction,2016,0,11371740,0
+minimal brain dysfunction,2017,0,7147196,0
+minimal brain dysfunction,2018,0,7064318,0
+minimal brain dysfunction,2019,0,91041,0
+infantile autism,1930,0,243,0
+infantile autism,1931,0,375,0
+infantile autism,1932,0,297,0
+infantile autism,1933,0,696,0
+infantile autism,1934,0,152,0
+infantile autism,1936,0,1995,0
+infantile autism,1937,0,3215,0
+infantile autism,1938,0,1553,0
+infantile autism,1939,0,2023,0
+infantile autism,1940,0,4221,0
+infantile autism,1941,0,4791,0
+infantile autism,1942,0,5326,0
+infantile autism,1943,0,5409,0
+infantile autism,1944,0,4592,0
+infantile autism,1945,0,6598,0
+infantile autism,1946,0,5608,0
+infantile autism,1947,0,4634,0
+infantile autism,1948,0,1879,0
+infantile autism,1949,0,3687,0
+infantile autism,1950,0,4791,0
+infantile autism,1951,0,4088,0
+infantile autism,1952,0,4505,0
+infantile autism,1953,0,7652,0
+infantile autism,1954,0,7632,0
+infantile autism,1955,0,8347,0
+infantile autism,1956,0,15992,0
+infantile autism,1957,0,16302,0
+infantile autism,1958,0,17398,0
+infantile autism,1959,0,17792,0
+infantile autism,1960,0,26822,0
+infantile autism,1961,0,28953,0
+infantile autism,1962,0,46772,0
+infantile autism,1963,0,98023,0
+infantile autism,1964,0,124573,0
+infantile autism,1965,0,158515,0
+infantile autism,1966,0,163014,0
+infantile autism,1967,0,181818,0
+infantile autism,1968,0,240826,0
+infantile autism,1969,0,246398,0
+infantile autism,1970,1,301152,3.32058
+infantile autism,1971,0,362066,0
+infantile autism,1972,0,375755,0
+infantile autism,1973,0,464603,0
+infantile autism,1974,0,508894,0
+infantile autism,1975,0,593764,0
+infantile autism,1976,1,697285,1.43413
+infantile autism,1977,3,747617,4.01275
+infantile autism,1978,0,821080,0
+infantile autism,1979,4,870008,4.59766
+infantile autism,1980,4,941018,4.25072
+infantile autism,1981,2,1000795,1.99841
+infantile autism,1982,4,1065079,3.75559
+infantile autism,1983,3,1117904,2.68359
+infantile autism,1984,9,1194434,7.53495
+infantile autism,1985,3,1208583,2.48225
+infantile autism,1986,6,1322299,4.53755
+infantile autism,1987,7,1376184,5.08653
+infantile autism,1988,12,1491988,8.04296
+infantile autism,1989,15,1709852,8.77269
+infantile autism,1990,7,1746859,4.00719
+infantile autism,1991,3,1784949,1.68072
+infantile autism,1992,4,1881940,2.12547
+infantile autism,1993,6,2014149,2.97893
+infantile autism,1994,5,2184113,2.28926
+infantile autism,1995,1,2335559,0.428163
+infantile autism,1996,2,2570582,0.778034
+infantile autism,1997,5,2719594,1.83851
+infantile autism,1998,3,2619046,1.14546
+infantile autism,1999,7,2665813,2.62584
+infantile autism,2000,4,2947954,1.35687
+infantile autism,2001,3,3078300,0.974564
+infantile autism,2002,5,3209984,1.55764
+infantile autism,2003,1,3441450,0.290575
+infantile autism,2004,1,3811438,0.262368
+infantile autism,2005,1,3937799,0.253949
+infantile autism,2006,0,4551841,0
+infantile autism,2007,1,5040147,0.198407
+infantile autism,2008,1,5354558,0.186757
+infantile autism,2009,0,5772434,0
+infantile autism,2010,1,6247201,0.160072
+infantile autism,2011,2,6978923,0.286577
+infantile autism,2012,2,7465391,0.267903
+infantile autism,2013,0,8491754,0
+infantile autism,2014,0,9069941,0
+infantile autism,2015,1,9508602,0.105168
+infantile autism,2016,3,11371740,0.263812
+infantile autism,2017,0,7147196,0
+infantile autism,2018,0,7064318,0
+infantile autism,2019,0,91041,0
+autistic disorder,1930,0,243,0
+autistic disorder,1931,0,375,0
+autistic disorder,1932,0,297,0
+autistic disorder,1933,0,696,0
+autistic disorder,1934,0,152,0
+autistic disorder,1936,0,1995,0
+autistic disorder,1937,0,3215,0
+autistic disorder,1938,0,1553,0
+autistic disorder,1939,0,2023,0
+autistic disorder,1940,0,4221,0
+autistic disorder,1941,0,4791,0
+autistic disorder,1942,0,5326,0
+autistic disorder,1943,0,5409,0
+autistic disorder,1944,0,4592,0
+autistic disorder,1945,0,6598,0
+autistic disorder,1946,0,5608,0
+autistic disorder,1947,0,4634,0
+autistic disorder,1948,0,1879,0
+autistic disorder,1949,0,3687,0
+autistic disorder,1950,0,4791,0
+autistic disorder,1951,0,4088,0
+autistic disorder,1952,0,4505,0
+autistic disorder,1953,0,7652,0
+autistic disorder,1954,0,7632,0
+autistic disorder,1955,0,8347,0
+autistic disorder,1956,0,15992,0
+autistic disorder,1957,0,16302,0
+autistic disorder,1958,0,17398,0
+autistic disorder,1959,0,17792,0
+autistic disorder,1960,0,26822,0
+autistic disorder,1961,0,28953,0
+autistic disorder,1962,0,46772,0
+autistic disorder,1963,0,98023,0
+autistic disorder,1964,0,124573,0
+autistic disorder,1965,0,158515,0
+autistic disorder,1966,0,163014,0
+autistic disorder,1967,0,181818,0
+autistic disorder,1968,0,240826,0
+autistic disorder,1969,0,246398,0
+autistic disorder,1970,0,301152,0
+autistic disorder,1971,0,362066,0
+autistic disorder,1972,0,375755,0
+autistic disorder,1973,0,464603,0
+autistic disorder,1974,0,508894,0
+autistic disorder,1975,0,593764,0
+autistic disorder,1976,0,697285,0
+autistic disorder,1977,0,747617,0
+autistic disorder,1978,0,821080,0
+autistic disorder,1979,0,870008,0
+autistic disorder,1980,0,941018,0
+autistic disorder,1981,0,1000795,0
+autistic disorder,1982,7,1065079,6.57228
+autistic disorder,1983,0,1117904,0
+autistic disorder,1984,2,1194434,1.67443
+autistic disorder,1985,6,1208583,4.96449
+autistic disorder,1986,3,1322299,2.26878
+autistic disorder,1987,2,1376184,1.45329
+autistic disorder,1988,5,1491988,3.35123
+autistic disorder,1989,10,1709852,5.84846
+autistic disorder,1990,16,1746859,9.1593
+autistic disorder,1991,11,1784949,6.16264
+autistic disorder,1992,24,1881940,12.7528
+autistic disorder,1993,26,2014149,12.9087
+autistic disorder,1994,16,2184113,7.32563
+autistic disorder,1995,34,2335559,14.5575
+autistic disorder,1996,24,2570582,9.33641
+autistic disorder,1997,42,2719594,15.4435
+autistic disorder,1998,55,2619046,21
+autistic disorder,1999,51,2665813,19.1311
+autistic disorder,2000,50,2947954,16.9609
+autistic disorder,2001,36,3078300,11.6948
+autistic disorder,2002,39,3209984,12.1496
+autistic disorder,2003,31,3441450,9.00783
+autistic disorder,2004,70,3811438,18.3658
+autistic disorder,2005,61,3937799,15.4909
+autistic disorder,2006,66,4551841,14.4996
+autistic disorder,2007,70,5040147,13.8885
+autistic disorder,2008,78,5354558,14.567
+autistic disorder,2009,76,5772434,13.166
+autistic disorder,2010,81,6247201,12.9658
+autistic disorder,2011,61,6978923,8.7406
+autistic disorder,2012,97,7465391,12.9933
+autistic disorder,2013,74,8491754,8.71434
+autistic disorder,2014,80,9069941,8.82034
+autistic disorder,2015,56,9508602,5.8894
+autistic disorder,2016,33,11371740,2.90193
+autistic disorder,2017,12,7147196,1.67898
+autistic disorder,2018,11,7064318,1.55712
+autistic disorder,2019,0,91041,0
+rett's disorder,1930,0,243,0
+rett's disorder,1931,0,375,0
+rett's disorder,1932,0,297,0
+rett's disorder,1933,0,696,0
+rett's disorder,1934,0,152,0
+rett's disorder,1936,0,1995,0
+rett's disorder,1937,0,3215,0
+rett's disorder,1938,0,1553,0
+rett's disorder,1939,0,2023,0
+rett's disorder,1940,0,4221,0
+rett's disorder,1941,0,4791,0
+rett's disorder,1942,0,5326,0
+rett's disorder,1943,0,5409,0
+rett's disorder,1944,0,4592,0
+rett's disorder,1945,0,6598,0
+rett's disorder,1946,0,5608,0
+rett's disorder,1947,0,4634,0
+rett's disorder,1948,0,1879,0
+rett's disorder,1949,0,3687,0
+rett's disorder,1950,0,4791,0
+rett's disorder,1951,0,4088,0
+rett's disorder,1952,0,4505,0
+rett's disorder,1953,0,7652,0
+rett's disorder,1954,0,7632,0
+rett's disorder,1955,0,8347,0
+rett's disorder,1956,0,15992,0
+rett's disorder,1957,0,16302,0
+rett's disorder,1958,0,17398,0
+rett's disorder,1959,0,17792,0
+rett's disorder,1960,0,26822,0
+rett's disorder,1961,0,28953,0
+rett's disorder,1962,0,46772,0
+rett's disorder,1963,0,98023,0
+rett's disorder,1964,0,124573,0
+rett's disorder,1965,0,158515,0
+rett's disorder,1966,0,163014,0
+rett's disorder,1967,0,181818,0
+rett's disorder,1968,0,240826,0
+rett's disorder,1969,0,246398,0
+rett's disorder,1970,0,301152,0
+rett's disorder,1971,0,362066,0
+rett's disorder,1972,0,375755,0
+rett's disorder,1973,0,464603,0
+rett's disorder,1974,0,508894,0
+rett's disorder,1975,0,593764,0
+rett's disorder,1976,0,697285,0
+rett's disorder,1977,0,747617,0
+rett's disorder,1978,0,821080,0
+rett's disorder,1979,0,870008,0
+rett's disorder,1980,0,941018,0
+rett's disorder,1981,0,1000795,0
+rett's disorder,1982,0,1065079,0
+rett's disorder,1983,0,1117904,0
+rett's disorder,1984,0,1194434,0
+rett's disorder,1985,1,1208583,0.827415
+rett's disorder,1986,0,1322299,0
+rett's disorder,1987,0,1376184,0
+rett's disorder,1988,2,1491988,1.34049
+rett's disorder,1989,2,1709852,1.16969
+rett's disorder,1990,4,1746859,2.28982
+rett's disorder,1991,3,1784949,1.68072
+rett's disorder,1992,5,1881940,2.65683
+rett's disorder,1993,3,2014149,1.48946
+rett's disorder,1994,2,2184113,0.915704
+rett's disorder,1995,0,2335559,0
+rett's disorder,1996,8,2570582,3.11214
+rett's disorder,1997,29,2719594,10.6634
+rett's disorder,1998,6,2619046,2.29091
+rett's disorder,1999,3,2665813,1.12536
+rett's disorder,2000,3,2947954,1.01765
+rett's disorder,2001,6,3078300,1.94913
+rett's disorder,2002,12,3209984,3.73834
+rett's disorder,2003,7,3441450,2.03403
+rett's disorder,2004,3,3811438,0.787104
+rett's disorder,2005,3,3937799,0.761847
+rett's disorder,2006,3,4551841,0.659074
+rett's disorder,2007,1,5040147,0.198407
+rett's disorder,2008,3,5354558,0.56027
+rett's disorder,2009,11,5772434,1.90561
+rett's disorder,2010,11,6247201,1.76079
+rett's disorder,2011,20,6978923,2.86577
+rett's disorder,2012,10,7465391,1.33951
+rett's disorder,2013,13,8491754,1.5309
+rett's disorder,2014,14,9069941,1.54356
+rett's disorder,2015,14,9508602,1.47235
+rett's disorder,2016,9,11371740,0.791436
+rett's disorder,2017,8,7147196,1.11932
+rett's disorder,2018,13,7064318,1.84023
+rett's disorder,2019,0,91041,0
+atypical autism,1930,0,243,0
+atypical autism,1931,0,375,0
+atypical autism,1932,0,297,0
+atypical autism,1933,0,696,0
+atypical autism,1934,0,152,0
+atypical autism,1936,0,1995,0
+atypical autism,1937,0,3215,0
+atypical autism,1938,0,1553,0
+atypical autism,1939,0,2023,0
+atypical autism,1940,0,4221,0
+atypical autism,1941,0,4791,0
+atypical autism,1942,0,5326,0
+atypical autism,1943,0,5409,0
+atypical autism,1944,0,4592,0
+atypical autism,1945,0,6598,0
+atypical autism,1946,0,5608,0
+atypical autism,1947,0,4634,0
+atypical autism,1948,0,1879,0
+atypical autism,1949,0,3687,0
+atypical autism,1950,0,4791,0
+atypical autism,1951,0,4088,0
+atypical autism,1952,0,4505,0
+atypical autism,1953,0,7652,0
+atypical autism,1954,0,7632,0
+atypical autism,1955,0,8347,0
+atypical autism,1956,0,15992,0
+atypical autism,1957,0,16302,0
+atypical autism,1958,0,17398,0
+atypical autism,1959,0,17792,0
+atypical autism,1960,0,26822,0
+atypical autism,1961,0,28953,0
+atypical autism,1962,0,46772,0
+atypical autism,1963,0,98023,0
+atypical autism,1964,0,124573,0
+atypical autism,1965,0,158515,0
+atypical autism,1966,0,163014,0
+atypical autism,1967,0,181818,0
+atypical autism,1968,0,240826,0
+atypical autism,1969,0,246398,0
+atypical autism,1970,0,301152,0
+atypical autism,1971,0,362066,0
+atypical autism,1972,0,375755,0
+atypical autism,1973,0,464603,0
+atypical autism,1974,0,508894,0
+atypical autism,1975,0,593764,0
+atypical autism,1976,0,697285,0
+atypical autism,1977,4,747617,5.35033
+atypical autism,1978,0,821080,0
+atypical autism,1979,2,870008,2.29883
+atypical autism,1980,1,941018,1.06268
+atypical autism,1981,4,1000795,3.99682
+atypical autism,1982,5,1065079,4.69449
+atypical autism,1983,1,1117904,0.894531
+atypical autism,1984,1,1194434,0.837217
+atypical autism,1985,0,1208583,0
+atypical autism,1986,1,1322299,0.756259
+atypical autism,1987,1,1376184,0.726647
+atypical autism,1988,6,1491988,4.02148
+atypical autism,1989,2,1709852,1.16969
+atypical autism,1990,2,1746859,1.14491
+atypical autism,1991,1,1784949,0.56024
+atypical autism,1992,5,1881940,2.65683
+atypical autism,1993,3,2014149,1.48946
+atypical autism,1994,4,2184113,1.83141
+atypical autism,1995,2,2335559,0.856326
+atypical autism,1996,3,2570582,1.16705
+atypical autism,1997,2,2719594,0.735404
+atypical autism,1998,12,2619046,4.58182
+atypical autism,1999,10,2665813,3.7512
+atypical autism,2000,8,2947954,2.71375
+atypical autism,2001,8,3078300,2.59884
+atypical autism,2002,6,3209984,1.86917
+atypical autism,2003,5,3441450,1.45288
+atypical autism,2004,9,3811438,2.36131
+atypical autism,2005,3,3937799,0.761847
+atypical autism,2006,6,4551841,1.31815
+atypical autism,2007,14,5040147,2.7777
+atypical autism,2008,6,5354558,1.12054
+atypical autism,2009,6,5772434,1.03942
+atypical autism,2010,18,6247201,2.88129
+atypical autism,2011,9,6978923,1.2896
+atypical autism,2012,9,7465391,1.20556
+atypical autism,2013,23,8491754,2.70851
+atypical autism,2014,22,9069941,2.42559
+atypical autism,2015,11,9508602,1.15685
+atypical autism,2016,13,11371740,1.14318
+atypical autism,2017,18,7147196,2.51847
+atypical autism,2018,10,7064318,1.41556
+atypical autism,2019,0,91041,0
+semantic-pragmatic disorder,1930,0,243,0
+semantic-pragmatic disorder,1931,0,375,0
+semantic-pragmatic disorder,1932,0,297,0
+semantic-pragmatic disorder,1933,0,696,0
+semantic-pragmatic disorder,1934,0,152,0
+semantic-pragmatic disorder,1936,0,1995,0
+semantic-pragmatic disorder,1937,0,3215,0
+semantic-pragmatic disorder,1938,0,1553,0
+semantic-pragmatic disorder,1939,0,2023,0
+semantic-pragmatic disorder,1940,0,4221,0
+semantic-pragmatic disorder,1941,0,4791,0
+semantic-pragmatic disorder,1942,0,5326,0
+semantic-pragmatic disorder,1943,0,5409,0
+semantic-pragmatic disorder,1944,0,4592,0
+semantic-pragmatic disorder,1945,0,6598,0
+semantic-pragmatic disorder,1946,0,5608,0
+semantic-pragmatic disorder,1947,0,4634,0
+semantic-pragmatic disorder,1948,0,1879,0
+semantic-pragmatic disorder,1949,0,3687,0
+semantic-pragmatic disorder,1950,0,4791,0
+semantic-pragmatic disorder,1951,0,4088,0
+semantic-pragmatic disorder,1952,0,4505,0
+semantic-pragmatic disorder,1953,0,7652,0
+semantic-pragmatic disorder,1954,0,7632,0
+semantic-pragmatic disorder,1955,0,8347,0
+semantic-pragmatic disorder,1956,0,15992,0
+semantic-pragmatic disorder,1957,0,16302,0
+semantic-pragmatic disorder,1958,0,17398,0
+semantic-pragmatic disorder,1959,0,17792,0
+semantic-pragmatic disorder,1960,0,26822,0
+semantic-pragmatic disorder,1961,0,28953,0
+semantic-pragmatic disorder,1962,0,46772,0
+semantic-pragmatic disorder,1963,0,98023,0
+semantic-pragmatic disorder,1964,0,124573,0
+semantic-pragmatic disorder,1965,0,158515,0
+semantic-pragmatic disorder,1966,0,163014,0
+semantic-pragmatic disorder,1967,0,181818,0
+semantic-pragmatic disorder,1968,0,240826,0
+semantic-pragmatic disorder,1969,0,246398,0
+semantic-pragmatic disorder,1970,0,301152,0
+semantic-pragmatic disorder,1971,0,362066,0
+semantic-pragmatic disorder,1972,0,375755,0
+semantic-pragmatic disorder,1973,0,464603,0
+semantic-pragmatic disorder,1974,0,508894,0
+semantic-pragmatic disorder,1975,0,593764,0
+semantic-pragmatic disorder,1976,0,697285,0
+semantic-pragmatic disorder,1977,0,747617,0
+semantic-pragmatic disorder,1978,0,821080,0
+semantic-pragmatic disorder,1979,0,870008,0
+semantic-pragmatic disorder,1980,0,941018,0
+semantic-pragmatic disorder,1981,0,1000795,0
+semantic-pragmatic disorder,1982,0,1065079,0
+semantic-pragmatic disorder,1983,0,1117904,0
+semantic-pragmatic disorder,1984,0,1194434,0
+semantic-pragmatic disorder,1985,0,1208583,0
+semantic-pragmatic disorder,1986,0,1322299,0
+semantic-pragmatic disorder,1987,0,1376184,0
+semantic-pragmatic disorder,1988,0,1491988,0
+semantic-pragmatic disorder,1989,0,1709852,0
+semantic-pragmatic disorder,1990,0,1746859,0
+semantic-pragmatic disorder,1991,0,1784949,0
+semantic-pragmatic disorder,1992,0,1881940,0
+semantic-pragmatic disorder,1993,0,2014149,0
+semantic-pragmatic disorder,1994,2,2184113,0.915704
+semantic-pragmatic disorder,1995,0,2335559,0
+semantic-pragmatic disorder,1996,0,2570582,0
+semantic-pragmatic disorder,1997,0,2719594,0
+semantic-pragmatic disorder,1998,3,2619046,1.14546
+semantic-pragmatic disorder,1999,1,2665813,0.37512
+semantic-pragmatic disorder,2000,0,2947954,0
+semantic-pragmatic disorder,2001,1,3078300,0.324855
+semantic-pragmatic disorder,2002,1,3209984,0.311528
+semantic-pragmatic disorder,2003,0,3441450,0
+semantic-pragmatic disorder,2004,0,3811438,0
+semantic-pragmatic disorder,2005,0,3937799,0
+semantic-pragmatic disorder,2006,0,4551841,0
+semantic-pragmatic disorder,2007,0,5040147,0
+semantic-pragmatic disorder,2008,0,5354558,0
+semantic-pragmatic disorder,2009,0,5772434,0
+semantic-pragmatic disorder,2010,0,6247201,0
+semantic-pragmatic disorder,2011,0,6978923,0
+semantic-pragmatic disorder,2012,0,7465391,0
+semantic-pragmatic disorder,2013,0,8491754,0
+semantic-pragmatic disorder,2014,0,9069941,0
+semantic-pragmatic disorder,2015,0,9508602,0
+semantic-pragmatic disorder,2016,0,11371740,0
+semantic-pragmatic disorder,2017,0,7147196,0
+semantic-pragmatic disorder,2018,0,7064318,0
+semantic-pragmatic disorder,2019,0,91041,0
+multiple complex developmental disorder,1930,0,243,0
+multiple complex developmental disorder,1931,0,375,0
+multiple complex developmental disorder,1932,0,297,0
+multiple complex developmental disorder,1933,0,696,0
+multiple complex developmental disorder,1934,0,152,0
+multiple complex developmental disorder,1936,0,1995,0
+multiple complex developmental disorder,1937,0,3215,0
+multiple complex developmental disorder,1938,0,1553,0
+multiple complex developmental disorder,1939,0,2023,0
+multiple complex developmental disorder,1940,0,4221,0
+multiple complex developmental disorder,1941,0,4791,0
+multiple complex developmental disorder,1942,0,5326,0
+multiple complex developmental disorder,1943,0,5409,0
+multiple complex developmental disorder,1944,0,4592,0
+multiple complex developmental disorder,1945,0,6598,0
+multiple complex developmental disorder,1946,0,5608,0
+multiple complex developmental disorder,1947,0,4634,0
+multiple complex developmental disorder,1948,0,1879,0
+multiple complex developmental disorder,1949,0,3687,0
+multiple complex developmental disorder,1950,0,4791,0
+multiple complex developmental disorder,1951,0,4088,0
+multiple complex developmental disorder,1952,0,4505,0
+multiple complex developmental disorder,1953,0,7652,0
+multiple complex developmental disorder,1954,0,7632,0
+multiple complex developmental disorder,1955,0,8347,0
+multiple complex developmental disorder,1956,0,15992,0
+multiple complex developmental disorder,1957,0,16302,0
+multiple complex developmental disorder,1958,0,17398,0
+multiple complex developmental disorder,1959,0,17792,0
+multiple complex developmental disorder,1960,0,26822,0
+multiple complex developmental disorder,1961,0,28953,0
+multiple complex developmental disorder,1962,0,46772,0
+multiple complex developmental disorder,1963,0,98023,0
+multiple complex developmental disorder,1964,0,124573,0
+multiple complex developmental disorder,1965,0,158515,0
+multiple complex developmental disorder,1966,0,163014,0
+multiple complex developmental disorder,1967,0,181818,0
+multiple complex developmental disorder,1968,0,240826,0
+multiple complex developmental disorder,1969,0,246398,0
+multiple complex developmental disorder,1970,0,301152,0
+multiple complex developmental disorder,1971,0,362066,0
+multiple complex developmental disorder,1972,0,375755,0
+multiple complex developmental disorder,1973,0,464603,0
+multiple complex developmental disorder,1974,0,508894,0
+multiple complex developmental disorder,1975,0,593764,0
+multiple complex developmental disorder,1976,0,697285,0
+multiple complex developmental disorder,1977,0,747617,0
+multiple complex developmental disorder,1978,0,821080,0
+multiple complex developmental disorder,1979,0,870008,0
+multiple complex developmental disorder,1980,0,941018,0
+multiple complex developmental disorder,1981,0,1000795,0
+multiple complex developmental disorder,1982,0,1065079,0
+multiple complex developmental disorder,1983,0,1117904,0
+multiple complex developmental disorder,1984,0,1194434,0
+multiple complex developmental disorder,1985,0,1208583,0
+multiple complex developmental disorder,1986,0,1322299,0
+multiple complex developmental disorder,1987,0,1376184,0
+multiple complex developmental disorder,1988,0,1491988,0
+multiple complex developmental disorder,1989,0,1709852,0
+multiple complex developmental disorder,1990,0,1746859,0
+multiple complex developmental disorder,1991,0,1784949,0
+multiple complex developmental disorder,1992,0,1881940,0
+multiple complex developmental disorder,1993,2,2014149,0.992975
+multiple complex developmental disorder,1994,1,2184113,0.457852
+multiple complex developmental disorder,1995,1,2335559,0.428163
+multiple complex developmental disorder,1996,0,2570582,0
+multiple complex developmental disorder,1997,0,2719594,0
+multiple complex developmental disorder,1998,8,2619046,3.05455
+multiple complex developmental disorder,1999,0,2665813,0
+multiple complex developmental disorder,2000,0,2947954,0
+multiple complex developmental disorder,2001,4,3078300,1.29942
+multiple complex developmental disorder,2002,0,3209984,0
+multiple complex developmental disorder,2003,0,3441450,0
+multiple complex developmental disorder,2004,0,3811438,0
+multiple complex developmental disorder,2005,1,3937799,0.253949
+multiple complex developmental disorder,2006,0,4551841,0
+multiple complex developmental disorder,2007,2,5040147,0.396814
+multiple complex developmental disorder,2008,2,5354558,0.373514
+multiple complex developmental disorder,2009,0,5772434,0
+multiple complex developmental disorder,2010,0,6247201,0
+multiple complex developmental disorder,2011,0,6978923,0
+multiple complex developmental disorder,2012,1,7465391,0.133951
+multiple complex developmental disorder,2013,0,8491754,0
+multiple complex developmental disorder,2014,0,9069941,0
+multiple complex developmental disorder,2015,0,9508602,0
+multiple complex developmental disorder,2016,0,11371740,0
+multiple complex developmental disorder,2017,0,7147196,0
+multiple complex developmental disorder,2018,0,7064318,0
+multiple complex developmental disorder,2019,0,91041,0
+developmental disability,1930,0,243,0
+developmental disability,1931,0,375,0
+developmental disability,1932,0,297,0
+developmental disability,1933,0,696,0
+developmental disability,1934,0,152,0
+developmental disability,1936,0,1995,0
+developmental disability,1937,0,3215,0
+developmental disability,1938,0,1553,0
+developmental disability,1939,0,2023,0
+developmental disability,1940,0,4221,0
+developmental disability,1941,0,4791,0
+developmental disability,1942,0,5326,0
+developmental disability,1943,0,5409,0
+developmental disability,1944,0,4592,0
+developmental disability,1945,0,6598,0
+developmental disability,1946,0,5608,0
+developmental disability,1947,0,4634,0
+developmental disability,1948,0,1879,0
+developmental disability,1949,0,3687,0
+developmental disability,1950,0,4791,0
+developmental disability,1951,0,4088,0
+developmental disability,1952,0,4505,0
+developmental disability,1953,0,7652,0
+developmental disability,1954,0,7632,0
+developmental disability,1955,0,8347,0
+developmental disability,1956,0,15992,0
+developmental disability,1957,0,16302,0
+developmental disability,1958,0,17398,0
+developmental disability,1959,0,17792,0
+developmental disability,1960,0,26822,0
+developmental disability,1961,0,28953,0
+developmental disability,1962,1,46772,21.3803
+developmental disability,1963,0,98023,0
+developmental disability,1964,2,124573,16.0548
+developmental disability,1965,2,158515,12.6171
+developmental disability,1966,1,163014,6.13444
+developmental disability,1967,0,181818,0
+developmental disability,1968,3,240826,12.4571
+developmental disability,1969,2,246398,8.11695
+developmental disability,1970,4,301152,13.2823
+developmental disability,1971,8,362066,22.0954
+developmental disability,1972,8,375755,21.2905
+developmental disability,1973,11,464603,23.6761
+developmental disability,1974,14,508894,27.5106
+developmental disability,1975,12,593764,20.21
+developmental disability,1976,22,697285,31.5509
+developmental disability,1977,19,747617,25.4141
+developmental disability,1978,26,821080,31.6656
+developmental disability,1979,42,870008,48.2754
+developmental disability,1980,38,941018,40.3818
+developmental disability,1981,31,1000795,30.9754
+developmental disability,1982,59,1065079,55.395
+developmental disability,1983,64,1117904,57.25
+developmental disability,1984,68,1194434,56.9307
+developmental disability,1985,41,1208583,33.924
+developmental disability,1986,55,1322299,41.5942
+developmental disability,1987,71,1376184,51.5919
+developmental disability,1988,86,1491988,57.6412
+developmental disability,1989,127,1709852,74.2754
+developmental disability,1990,95,1746859,54.3833
+developmental disability,1991,151,1784949,84.5963
+developmental disability,1992,141,1881940,74.9227
+developmental disability,1993,164,2014149,81.424
+developmental disability,1994,178,2184113,81.4976
+developmental disability,1995,171,2335559,73.2159
+developmental disability,1996,215,2570582,83.6386
+developmental disability,1997,153,2719594,56.2584
+developmental disability,1998,189,2619046,72.1637
+developmental disability,1999,266,2665813,99.7819
+developmental disability,2000,196,2947954,66.4868
+developmental disability,2001,253,3078300,82.1882
+developmental disability,2002,263,3209984,81.9319
+developmental disability,2003,299,3441450,86.882
+developmental disability,2004,271,3811438,71.1018
+developmental disability,2005,276,3937799,70.0899
+developmental disability,2006,320,4551841,70.3012
+developmental disability,2007,409,5040147,81.1484
+developmental disability,2008,273,5354558,50.9846
+developmental disability,2009,343,5772434,59.4203
+developmental disability,2010,309,6247201,49.4622
+developmental disability,2011,369,6978923,52.8735
+developmental disability,2012,370,7465391,49.562
+developmental disability,2013,440,8491754,51.815
+developmental disability,2014,408,9069941,44.9838
+developmental disability,2015,394,9508602,41.4362
+developmental disability,2016,453,11371740,39.8356
+developmental disability,2017,386,7147196,54.0072
+developmental disability,2018,362,7064318,51.2434
+developmental disability,2019,0,91041,0
+refrigerator mother,1930,0,243,0
+refrigerator mother,1931,0,375,0
+refrigerator mother,1932,0,297,0
+refrigerator mother,1933,0,696,0
+refrigerator mother,1934,0,152,0
+refrigerator mother,1936,0,1995,0
+refrigerator mother,1937,0,3215,0
+refrigerator mother,1938,0,1553,0
+refrigerator mother,1939,0,2023,0
+refrigerator mother,1940,0,4221,0
+refrigerator mother,1941,0,4791,0
+refrigerator mother,1942,0,5326,0
+refrigerator mother,1943,0,5409,0
+refrigerator mother,1944,0,4592,0
+refrigerator mother,1945,0,6598,0
+refrigerator mother,1946,0,5608,0
+refrigerator mother,1947,0,4634,0
+refrigerator mother,1948,0,1879,0
+refrigerator mother,1949,0,3687,0
+refrigerator mother,1950,0,4791,0
+refrigerator mother,1951,0,4088,0
+refrigerator mother,1952,0,4505,0
+refrigerator mother,1953,0,7652,0
+refrigerator mother,1954,0,7632,0
+refrigerator mother,1955,0,8347,0
+refrigerator mother,1956,0,15992,0
+refrigerator mother,1957,0,16302,0
+refrigerator mother,1958,0,17398,0
+refrigerator mother,1959,0,17792,0
+refrigerator mother,1960,0,26822,0
+refrigerator mother,1961,0,28953,0
+refrigerator mother,1962,0,46772,0
+refrigerator mother,1963,0,98023,0
+refrigerator mother,1964,0,124573,0
+refrigerator mother,1965,0,158515,0
+refrigerator mother,1966,1,163014,6.13444
+refrigerator mother,1967,0,181818,0
+refrigerator mother,1968,0,240826,0
+refrigerator mother,1969,0,246398,0
+refrigerator mother,1970,0,301152,0
+refrigerator mother,1971,1,362066,2.76193
+refrigerator mother,1972,1,375755,2.66131
+refrigerator mother,1973,0,464603,0
+refrigerator mother,1974,0,508894,0
+refrigerator mother,1975,1,593764,1.68417
+refrigerator mother,1976,0,697285,0
+refrigerator mother,1977,0,747617,0
+refrigerator mother,1978,0,821080,0
+refrigerator mother,1979,2,870008,2.29883
+refrigerator mother,1980,1,941018,1.06268
+refrigerator mother,1981,1,1000795,0.999206
+refrigerator mother,1982,0,1065079,0
+refrigerator mother,1983,0,1117904,0
+refrigerator mother,1984,1,1194434,0.837217
+refrigerator mother,1985,3,1208583,2.48225
+refrigerator mother,1986,0,1322299,0
+refrigerator mother,1987,0,1376184,0
+refrigerator mother,1988,1,1491988,0.670247
+refrigerator mother,1989,1,1709852,0.584846
+refrigerator mother,1990,1,1746859,0.572456
+refrigerator mother,1991,0,1784949,0
+refrigerator mother,1992,1,1881940,0.531367
+refrigerator mother,1993,1,2014149,0.496488
+refrigerator mother,1994,4,2184113,1.83141
+refrigerator mother,1995,1,2335559,0.428163
+refrigerator mother,1996,0,2570582,0
+refrigerator mother,1997,2,2719594,0.735404
+refrigerator mother,1998,0,2619046,0
+refrigerator mother,1999,0,2665813,0
+refrigerator mother,2000,0,2947954,0
+refrigerator mother,2001,0,3078300,0
+refrigerator mother,2002,0,3209984,0
+refrigerator mother,2003,1,3441450,0.290575
+refrigerator mother,2004,1,3811438,0.262368
+refrigerator mother,2005,2,3937799,0.507898
+refrigerator mother,2006,4,4551841,0.878765
+refrigerator mother,2007,1,5040147,0.198407
+refrigerator mother,2008,2,5354558,0.373514
+refrigerator mother,2009,0,5772434,0
+refrigerator mother,2010,2,6247201,0.320143
+refrigerator mother,2011,6,6978923,0.859732
+refrigerator mother,2012,5,7465391,0.669757
+refrigerator mother,2013,0,8491754,0
+refrigerator mother,2014,0,9069941,0
+refrigerator mother,2015,5,9508602,0.52584
+refrigerator mother,2016,5,11371740,0.439686
+refrigerator mother,2017,7,7147196,0.979405
+refrigerator mother,2018,0,7064318,0
+refrigerator mother,2019,0,91041,0

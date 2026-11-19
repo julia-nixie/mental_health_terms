@@ -34,7 +34,8 @@ def alternatives(v):
         return out
     words = v.split(" ")
     last = words[-1].lower()
-    if last in PLURALS:
+    if last in PLURALS and not (len(words) > 1 and words[-2].lower().endswith("ly")):
+        # no plural after an adverb: "mentally defective" is an adjective phrase
         out.append(" ".join(words[:-1] + [PLURALS[last]]))
     for hyphen, slash in ((True, False), (False, True), (True, True)):
         x = v

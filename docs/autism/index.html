@@ -48,9 +48,9 @@ select { width: 100%; font: inherit; color: var(--fg); background: var(--panel);
 select:disabled { opacity: .55; }
 .rangewrap { display: grid; gap: 4px; }
 .ranges { display: flex; border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; background: var(--panel); }
-.range { font: inherit; font-size: .8rem; color: var(--fg2); background: transparent; border: 0; padding: 9px 12px; cursor: pointer; }
-.range + .range { border-left: 1px solid var(--border); }
-.range.on { color: var(--fg); background: var(--hover); font-weight: 600; }
+.range, .crng { font: inherit; font-size: .8rem; color: var(--fg2); background: transparent; border: 0; padding: 9px 12px; cursor: pointer; }
+.range + .range, .crng + .crng { border-left: 1px solid var(--border); }
+.range.on, .crng.on { color: var(--fg); background: var(--hover); font-weight: 600; }
 button:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
 .card { background: var(--panel); border: 1px solid var(--border); border-radius: var(--r); padding: 18px; display: grid; gap: 8px; min-width: 0; }
 .note { color: var(--fg2); font-size: .8rem; }
@@ -93,13 +93,21 @@ details summary { cursor: pointer; }
 .method p { max-width: 80ch; }
 footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
 footer a { color: inherit; }
+.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); }
+.tab { font: inherit; color: var(--fg2); background: transparent; border: 0; border-bottom: 2px solid transparent; padding: 10px 14px; cursor: pointer; margin-bottom: -1px; }
+.tab.on { color: var(--fg); border-bottom-color: var(--fg); font-weight: 600; }
+.tab:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+#view-ngram, #view-corpus { display: grid; gap: 20px; }
+.head.chead, .row.crow { grid-template-columns: minmax(0, 1fr) 96px 7.5rem 7.5rem; }
+.chead span:nth-child(3), .chead span:nth-child(4) { text-align: right; }
 [hidden] { display: none !important; }
 @media (max-width: 520px) {
+  .head.chead, .row.crow { grid-template-columns: minmax(0, 1fr) 72px 4.6rem 4.6rem; }
   .head, .row { grid-template-columns: minmax(0, 1fr) 72px 5.5rem; gap: 8px; }
   .row svg { width: 72px; }
   .card { padding: 14px; }
 }
-@media (prefers-reduced-motion: no-preference) { .range, .btn, .row { transition: background-color .12s; } }
+@media (prefers-reduced-motion: no-preference) { .range, .crng, .btn, .row { transition: background-color .12s; } }
 </style>
 </head>
 <body>
@@ -109,6 +117,12 @@ footer a { color: inherit; }
     <p class="sub">How often the terms used for autism and related conditions, past and present, appear in English-language books published from 1800 to 2022, from the Google Books Ngram Viewer. Pick a group to add up its variants, then pick a single variant to look at it alone, or compare any mix of groups and variants.</p>
   </header>
 
+  <div class="tabs" role="tablist" aria-label="Data source">
+    <button type="button" class="tab on" id="tab-ngram" role="tab" aria-selected="true">Google Books</button>
+    <button type="button" class="tab" id="tab-corpus" role="tab" aria-selected="false">Corpus vs Google</button>
+  </div>
+
+  <div id="view-ngram">
   <p class="take" id="take" aria-live="polite"></p>
 
   <div class="controls">
@@ -170,6 +184,56 @@ footer a { color: inherit; }
     <p class="note">Frequencies show how often words are used in print, not how common a condition is. Some words, such as "retarded" and "dementia", were in everyday use long before and after they were used as diagnoses.</p>
   </section>
 
+  </div>
+
+  <div id="view-corpus" hidden>
+    <p class="sub" id="c-sub"></p>
+    <p class="take" id="c-take" aria-live="polite"></p>
+
+    <div class="controls">
+      <div class="field"><label for="c-group">Group</label><select id="c-group"></select></div>
+      <div class="field"><label for="c-variant">Variant</label><select id="c-variant"></select></div>
+      <div class="field"><label for="c-journal">Journal</label><select id="c-journal"></select></div>
+      <div class="rangewrap">
+        <span id="c-from-l">Show from</span>
+        <div class="ranges" role="group" aria-labelledby="c-from-l">
+          <button type="button" class="crng cfrom" data-cfrom="1930" aria-pressed="false">1930</button>
+          <button type="button" class="crng cfrom" data-cfrom="1960" aria-pressed="false">1960</button>
+          <button type="button" class="crng cfrom" data-cfrom="1980" aria-pressed="false">1980</button>
+        </div>
+      </div>
+      <div class="rangewrap">
+        <span id="c-scale-l">Scale</span>
+        <div class="ranges" role="group" aria-labelledby="c-scale-l">
+          <button type="button" class="crng cscale" data-cscale="peak" aria-pressed="false">Own peak</button>
+          <button type="button" class="crng cscale" data-cscale="pm" aria-pressed="false">Per million</button>
+        </div>
+      </div>
+      <div class="rangewrap">
+        <span id="c-smooth-l">Smoothing</span>
+        <div class="ranges" role="group" aria-labelledby="c-smooth-l">
+          <button type="button" class="crng csmooth" data-csmooth="1" aria-pressed="false">Yearly</button>
+          <button type="button" class="crng csmooth" data-csmooth="5" aria-pressed="false">5 years</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="card" aria-labelledby="c-trend-h">
+      <h2 id="c-trend-h">Corpus and Google Books</h2>
+      <p class="note">Phrases per million words in each source. Hover or tap the chart to read a year.</p>
+      <div class="chart" id="c-chart">Loading…</div>
+    </section>
+
+    <section class="card" aria-labelledby="c-breakdown-h">
+      <h2 id="c-breakdown-h">Breakdown</h2>
+      <p class="note">Click a row to focus on it. Each trend line is scaled to its own peak.</p>
+      <div>
+        <div class="head chead"><span>Name</span><span>Corpus trend</span><span>Corpus peak</span><span>Google peak</span></div>
+        <div id="c-rows"></div>
+      </div>
+    </section>
+  </div>
+
   <footer>
     Ngram data © Google, licensed CC BY 3.0 (<a href="https://storage.googleapis.com/books/ngrams/books/datasetsv3.html">Google Books Ngram datasets</a>). Term list and collection code: <a href="https://github.com/julia-nixie/mental_health_terms">julia-nixie/mental_health_terms</a>.
   </footer>
@@ -203,7 +267,8 @@ footer a { color: inherit; }
     state.cmp = p.getAll('cmp');
   }
   function writeHash() {
-    var p = new URLSearchParams();
+    var p = new URLSearchParams(location.hash.replace(/^#/, ''));
+    ['category', 'term', 'from', 'cmp'].forEach(function (k) { p.delete(k); });
     if (state.category) p.set('category', state.category);
     if (state.term) p.set('term', state.term);
     if (state.from !== 1900) p.set('from', String(state.from));
@@ -553,10 +618,339 @@ footer a { color: inherit; }
   window.addEventListener('hashchange', function () { state = { category: null, term: '', from: 1900, cmp: [] }; readHash(); render(); });
 
   // ---------- load
+  window.AUT = { $: $, cap: cap, fmtV: fmtV, el: el, clear: clear, COLORS: COLORS, onReady: null, get M() { return M; } };
   readHash();
-  fetch('data.json?v=3d2f2b2908').then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then(function (data) { M = buildModel(data); lastW = $('chart').clientWidth; render(); })
+  fetch('data.json?v=38b12401ce').then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function (data) { M = buildModel(data); lastW = $('chart').clientWidth; render(); if (window.AUT.onReady) window.AUT.onReady(); })
     .catch(function (err) { $('chart').textContent = 'The data could not be loaded (' + err.message + '). Reload the page to try again.'; });
+})();
+</script>
+<script>
+(function () {
+  'use strict';
+  var A = window.AUT;
+  if (!A) return;
+  var $ = A.$, cap = A.cap, fmtV = A.fmtV, el = A.el, clear = A.clear, COLORS = A.COLORS;
+  var GOOGLE = COLORS[0], CORP = COLORS[1];
+  var MIN_TOK = 100000, MIN_TOK_J = 20000;       // a year needs this many words before a rate is drawn
+  var C = null, loading = null, active = false;
+  var cs = { group: 'autism/autistic', term: '', journal: '', from: 1960, scale: 'peak', smooth: 1 };
+
+  // ---------- URL state (own keys; the other tab's keys are kept)
+  var KEYS = ['tab', 'cg', 'cv', 'cj', 'cf', 'cs', 'cm'];
+  function readHash() {
+    var p = new URLSearchParams(location.hash.replace(/^#/, ''));
+    active = p.get('tab') === 'corpus';
+    if (p.get('cg')) cs.group = p.get('cg');
+    cs.term = p.get('cv') || '';
+    cs.journal = p.get('cj') || '';
+    if (p.get('cf')) cs.from = +p.get('cf') || 1960;
+    if (p.get('cs')) cs.scale = p.get('cs') === 'pm' ? 'pm' : 'peak';
+    if (p.get('cm')) cs.smooth = +p.get('cm') === 5 ? 5 : 1;
+  }
+  function writeHash() {
+    var p = new URLSearchParams(location.hash.replace(/^#/, ''));
+    KEYS.forEach(function (k) { p.delete(k); });
+    if (active) {
+      p.set('tab', 'corpus');
+      p.set('cg', cs.group);
+      if (cs.term) p.set('cv', cs.term);
+      if (cs.journal) p.set('cj', cs.journal);
+      if (cs.from !== 1960) p.set('cf', String(cs.from));
+      if (cs.scale !== 'peak') p.set('cs', cs.scale);
+      if (cs.smooth !== 1) p.set('cm', String(cs.smooth));
+    }
+    var h = p.toString();
+    try { history.replaceState(null, '', h ? '#' + h : location.pathname + location.search); } catch (e) { /* file:// */ }
+  }
+  function set(patch) { for (var k in patch) cs[k] = patch[k]; writeHash(); render(); }
+
+  // ---------- tabs
+  function showTab(corpus) {
+    active = corpus;
+    $('view-ngram').hidden = corpus;
+    $('view-corpus').hidden = !corpus;
+    $('tab-ngram').classList.toggle('on', !corpus); $('tab-ngram').setAttribute('aria-selected', corpus ? 'false' : 'true');
+    $('tab-corpus').classList.toggle('on', corpus); $('tab-corpus').setAttribute('aria-selected', corpus ? 'true' : 'false');
+    writeHash();
+    if (corpus) ensureCorpus().then(render);
+  }
+  $('tab-ngram').addEventListener('click', function () { showTab(false); });
+  $('tab-corpus').addEventListener('click', function () { showTab(true); });
+
+  // ---------- data
+  function ensureCorpus() {
+    if (C) return Promise.resolve();
+    if (!loading) {
+      loading = fetch('corpus.json?v=cfbbe9dd8d').then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        .then(function (d) { C = build(d); })
+        .catch(function (err) { loading = null; $('c-chart').textContent = 'The corpus data could not be loaded (' + err.message + '). Reload the page to try again.'; });
+    }
+    return loading;
+  }
+  function build(d) {
+    var n = d.y1 - d.y0 + 1, groups = new Map(), jmap = {}, i;
+    d.variants.forEach(function (v, idx) {
+      v.idx = idx;
+      var g = groups.get(v.g);
+      if (!g) { g = { name: v.g, variants: [], eras: [] }; groups.set(v.g, g); }
+      g.variants.push(v);
+      if (v.e) {
+        var e = g.eras.find(function (x) { return x.name === v.e; });
+        if (!e) { e = { name: v.e, variants: [] }; g.eras.push(e); }
+        e.variants.push(v);
+      }
+    });
+    d.journals.forEach(function (j) {
+      var t = 0; for (i = 1; i < j.tok.length; i += 2) t += j.tok[i];
+      j.total = t; jmap[j.n] = j;
+    });
+    d.n = n; d.groups = groups; d.jmap = jmap;
+    return d;
+  }
+
+  // ---------- selection
+  function pickSel() {
+    var g = C.groups.get(cs.group) || C.groups.values().next().value;
+    var s = { g: g, vs: g.variants, label: cap(g.name) + ' (all variants)', era: null, v: null, google: null };
+    var gg = A.M.groups.get(g.name);
+    s.google = gg ? gg.v : null;
+    if (cs.term.indexOf('era:') === 0) {
+      var era = g.eras.find(function (e) { return 'era:' + e.name === cs.term; });
+      if (era) {
+        s.era = era; s.vs = era.variants; s.label = cap(era.name) + ' (all variants)';
+        var ge = gg && gg.eras.find(function (e) { return e.name === era.name; });
+        s.google = ge ? ge.v : null;
+      }
+    } else if (cs.term) {
+      var v = g.variants.find(function (x) { return x.n === cs.term; });
+      if (v) { s.v = v; s.vs = [v]; s.label = cap(v.n); var gt = A.M.terms.get(v.n); s.google = gt ? gt.v : null; }
+    }
+    return s;
+  }
+  function counts(vs) {
+    var n = C.n, out = new Array(n).fill(0), tok = C.tokens, i, k;
+    if (cs.journal && C.jmap[cs.journal]) {
+      var J = C.jmap[cs.journal]; tok = new Array(n).fill(0);
+      for (k = 0; k < J.tok.length; k += 2) tok[J.tok[k]] = J.tok[k + 1];
+      vs.forEach(function (v) { var f = J.c[String(v.idx)]; if (f) for (k = 0; k < f.length; k += 2) out[f[k]] += f[k + 1]; });
+    } else vs.forEach(function (v) { for (i = 0; i < n; i++) out[i] += v.c[i]; });
+    return { c: out, t: tok };
+  }
+  // corpus rate per million words for each year (null where the pooled window has too few words)
+  function corpusRate(ct) {
+    var n = C.n, h = (cs.smooth - 1) / 2, min = cs.journal ? MIN_TOK_J : MIN_TOK, out = new Array(n), i, k;
+    for (i = 0; i < n; i++) {
+      var c = 0, t = 0;
+      for (k = Math.max(0, i - h); k <= Math.min(n - 1, i + h); k++) { c += ct.c[k]; t += ct.t[k]; }
+      out[i] = t >= min ? c / t * 1e6 : null;
+    }
+    return out;
+  }
+  function googleRate(v) {
+    var n = C.n, h = (cs.smooth - 1) / 2, M = A.M, out = new Array(n), i, k;
+    for (i = 0; i < n; i++) {
+      if (!v) { out[i] = null; continue; }
+      var sum = 0, m = 0, yr = C.y0 + i;
+      for (k = -h; k <= h; k++) { var gi = yr + k - M.y0; if (gi >= 0 && gi < v.length) { sum += v[gi]; m++; } }
+      out[i] = m ? sum / m : null;
+    }
+    return out;
+  }
+  function peak(arr, from) {
+    var bi = -1;
+    for (var i = from; i < arr.length; i++) if (arr[i] != null && (bi < 0 || arr[i] > arr[bi])) bi = i;
+    return bi < 0 ? null : { i: bi, val: arr[bi] };
+  }
+  function rates(vs, google) {
+    return { corpus: corpusRate(counts(vs)), google: googleRate(google) };
+  }
+
+  // ---------- drawing
+  function drawTake(s, r, f0) {
+    var box = $('c-take'); clear(box);
+    var pc = peak(r.corpus, f0), pg = peak(r.google, f0);
+    function b(x) { return el('b', null, x); }
+    if (!pc || pc.val === 0) {
+      box.append(b(s.label), ' has no hits in the corpus' + (cs.journal ? ' journal' : '') + ' for these years.');
+      return;
+    }
+    box.append(b(s.label), ' peaks in ', b(String(C.y0 + pc.i)), ' in the corpus at ', b(fmtV(pc.val)), ' per million words');
+    if (pg) box.append(' and in ', b(String(C.y0 + pg.i)), ' in Google Books at ', b(fmtV(pg.val)), ' per million');
+    box.append('.');
+  }
+
+  function drawSelects(s) {
+    var gs = $('c-group'), vs = $('c-variant'), js = $('c-journal'), i;
+    clear(gs);
+    Array.from(C.groups.values()).sort(function (a, b) { return a.name.localeCompare(b.name); })
+      .forEach(function (g) { gs.appendChild(new Option(cap(g.name), g.name)); });
+    gs.value = s.g.name;
+
+    clear(vs);
+    vs.appendChild(new Option('All variants combined', ''));
+    function opt(v) { return new Option(cap(v.n), v.n); }
+    if (s.g.eras.length) {
+      s.g.eras.forEach(function (e) {
+        var og = document.createElement('optgroup'); og.label = cap(e.name);
+        og.appendChild(new Option('All ' + e.name + ' variants', 'era:' + e.name));
+        e.variants.forEach(function (v) { og.appendChild(opt(v)); });
+        vs.appendChild(og);
+      });
+    } else s.g.variants.slice().sort(function (a, b) { return a.n.localeCompare(b.n); }).forEach(function (v) { vs.appendChild(opt(v)); });
+    vs.value = s.era ? 'era:' + s.era.name : (s.v ? s.v.n : '');
+
+    clear(js);
+    js.appendChild(new Option('All journals (' + d3.format(',')(C.meta.records) + ' abstracts)', ''));
+    function jopt(j) { return new Option(j.n + ' · ' + d3.format('.2s')(j.total).replace('G', 'B') + ' words', j.n); }
+    var og1 = document.createElement('optgroup'); og1.label = 'Largest journals';
+    C.journals.slice(0, 30).forEach(function (j) { og1.appendChild(jopt(j)); });
+    var og2 = document.createElement('optgroup'); og2.label = 'All ' + C.journals.length + ' journals, A to Z';
+    C.journals.slice().sort(function (a, b) { return a.n.localeCompare(b.n); }).forEach(function (j) { og2.appendChild(jopt(j)); });
+    js.appendChild(og1); js.appendChild(og2);
+    js.value = cs.journal;
+
+    Array.prototype.forEach.call(document.querySelectorAll('.cfrom'), function (b) {
+      var on = +b.dataset.cfrom === cs.from; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.cscale'), function (b) {
+      var on = b.dataset.cscale === cs.scale; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.csmooth'), function (b) {
+      var on = +b.dataset.csmooth === cs.smooth; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+
+  function drawChart(s, r, f0) {
+    var host = $('c-chart'); clear(host);
+    var W = Math.max(280, host.clientWidth || 600), H = W < 520 ? 250 : 340, mg = { t: 12, r: 14, b: 28, l: 46 };
+    var yrs = []; for (var i = f0; i < C.n; i++) yrs.push(C.y0 + i);
+    var pc = peak(r.corpus, f0), pg = peak(r.google, f0);
+    var scaled = cs.scale === 'peak';
+    var norm = function (arr, pk) { return arr.map(function (x) { return x == null ? null : (scaled ? (pk && pk.val ? x / pk.val : 0) : x); }); };
+    var lc = norm(r.corpus, pc).slice(f0), lg = norm(r.google, pg).slice(f0);
+    var ymax = scaled ? 1 : (d3.max(lc.concat(lg), function (x) { return x == null ? 0 : x; }) || 1);
+    var x = d3.scaleLinear([yrs[0], yrs[yrs.length - 1]], [mg.l, W - mg.r]);
+    var y = d3.scaleLinear([0, ymax * 1.06], [H - mg.b, mg.t]);
+    if (!scaled) y.nice(5);
+    var root = d3.select(host);
+    var svg = root.append('svg').attr('viewBox', '0 0 ' + W + ' ' + H).attr('width', '100%').attr('role', 'img')
+      .attr('aria-label', 'Line chart comparing ' + s.label + ' in the corpus and in Google Books, ' + yrs[0] + ' to ' + yrs[yrs.length - 1]);
+    y.ticks(5).forEach(function (tv) {
+      svg.append('line').attr('x1', mg.l).attr('x2', W - mg.r).attr('y1', y(tv)).attr('y2', y(tv)).style('stroke', 'var(--grid)');
+      svg.append('text').attr('x', mg.l - 8).attr('y', y(tv)).attr('dy', '0.32em').attr('text-anchor', 'end').text(scaled ? d3.format('.0%')(tv) : fmtV(tv));
+    });
+    svg.append('line').attr('x1', mg.l).attr('x2', W - mg.r).attr('y1', H - mg.b).attr('y2', H - mg.b).style('stroke', 'var(--axis)');
+    x.ticks(W < 520 ? 5 : 9).forEach(function (tv) {
+      svg.append('text').attr('x', x(tv)).attr('y', H - mg.b + 17).attr('text-anchor', 'middle').text(d3.format('d')(tv));
+    });
+    var line = d3.line().defined(function (d) { return d != null; }).x(function (d, k) { return x(yrs[k]); }).y(function (d) { return y(d); });
+    [[lg, GOOGLE], [lc, CORP]].forEach(function (pair) {
+      svg.append('path').attr('d', line(pair[0])).style('fill', 'none').style('stroke', pair[1])
+        .attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round');
+    });
+    svg.selectAll('.pt').data(lc.map(function (v, k) { return { v: v, k: k }; }).filter(function (d) { return d.v != null; }))
+      .join('circle').attr('r', 2).attr('cx', function (d) { return x(yrs[d.k]); }).attr('cy', function (d) { return y(d.v); }).style('fill', CORP);
+
+    var lg2 = el('div', 'legend'); host.appendChild(lg2);
+    [['Corpus' + (cs.journal ? ': ' + cs.journal : ' (all journals)'), CORP], ['Google Books', GOOGLE]].forEach(function (p) {
+      var b = el('span', 'leg'); var sw = el('span', 'sw'); sw.style.background = p[1]; b.append(sw, el('span', null, p[0])); lg2.appendChild(b);
+    });
+
+    var ct = counts(s.vs);
+    var hov = svg.append('g').style('display', 'none');
+    var rule = hov.append('line').attr('y1', mg.t).attr('y2', H - mg.b).style('stroke', 'var(--axis)');
+    var tip = root.append('div').attr('class', 'tip').style('display', 'none');
+    function show(ev) {
+      var px = d3.pointer(ev, svg.node())[0];
+      var yr = Math.max(yrs[0], Math.min(yrs[yrs.length - 1], Math.round(x.invert(px)))), k = yr - C.y0;
+      rule.attr('x1', x(yr)).attr('x2', x(yr)); hov.style('display', null);
+      tip.selectAll('*').remove();
+      tip.append('div').attr('class', 'tip-year').text(String(yr));
+      var rows = [
+        ['Corpus', CORP, r.corpus[k] == null ? 'too few words' : fmtV(r.corpus[k]) + (cs.smooth === 1 ? ' (' + ct.c[k] + ' hits)' : '')],
+        ['Google Books', GOOGLE, r.google[k] == null ? '—' : fmtV(r.google[k])]
+      ];
+      rows.forEach(function (row) {
+        var d = tip.append('div').attr('class', 'tip-row');
+        d.append('span').attr('class', 'sw').style('background', row[1]); d.append('span').text(row[0]); d.append('span').text(row[2]);
+      });
+      tip.style('display', 'block');
+      var box = host.getBoundingClientRect(), tw = tip.node().offsetWidth;
+      var left = (x(yr) / W) * box.width + 14;
+      if (left + tw > box.width) left = (x(yr) / W) * box.width - tw - 14;
+      tip.style('left', Math.max(0, left) + 'px');
+    }
+    function hide() { hov.style('display', 'none'); tip.style('display', 'none'); }
+    svg.append('rect').attr('x', mg.l).attr('y', mg.t).attr('width', W - mg.l - mg.r).attr('height', H - mg.t - mg.b)
+      .style('fill', 'transparent').on('pointermove', show).on('pointerdown', show).on('pointerleave', hide);
+  }
+
+  function drawRows(s, f0) {
+    var host = $('c-rows'), items = []; clear(host);
+    var g = s.g, gg = A.M.groups.get(g.name);
+    function gvals(v) { var t = A.M.terms.get(v.n); return t ? t.v : null; }
+    function item(name, vs, google, pick, cls, active) {
+      var r = rates(vs, google); items.push({ name: name, r: r, pick: pick, cls: cls || '', active: !!active });
+    }
+    var all = g.variants;
+    var activeAll = !s.era && !s.v;
+    item('All variants combined', all, gg ? gg.v : null, { term: '' }, '', activeAll);
+    var list = s.era ? [s.era] : g.eras;
+    if (g.eras.length) {
+      list.forEach(function (e) {
+        var ge = gg && gg.eras.find(function (x) { return x.name === e.name; });
+        item(cap(e.name), e.variants, ge ? ge.v : null, { term: 'era:' + e.name }, ' era', s.era && s.era.name === e.name);
+        e.variants.forEach(function (v) { item(cap(v.n), [v], gvals(v), { term: v.n }, ' indent', s.v && s.v.n === v.n); });
+      });
+    } else {
+      all.slice().sort(function (a, b) { return Math.max.apply(null, b.c) - Math.max.apply(null, a.c); })
+        .forEach(function (v) { item(cap(v.n), [v], gvals(v), { term: v.n }, '', s.v && s.v.n === v.n); });
+    }
+    items.forEach(function (it, idx) {
+      var pc = peak(it.r.corpus, f0), pg = peak(it.r.google, f0);
+      var has = (pc && pc.val > 0) || (pg && pg.val > 0);
+      if (!has && idx > 0 && !it.active) return;
+      var row = el('button', 'row crow' + (it.cls.indexOf('era') >= 0 ? ' era' : '') + (it.cls.indexOf('indent') >= 0 ? ' indent' : ''));
+      row.type = 'button'; row.setAttribute('aria-pressed', it.active ? 'true' : 'false');
+      row.onclick = function () { set(it.pick); };
+      row.appendChild(el('span', 'name', it.name));
+      var vals = it.r.corpus.slice(f0), top = pc ? pc.val : 0;
+      var sx = d3.scaleLinear([0, Math.max(1, vals.length - 1)], [2, 94]), sy = d3.scaleLinear([0, top || 1], [23, 3]);
+      var svg = d3.select(row).append('svg').attr('viewBox', '0 0 96 26').attr('aria-hidden', 'true');
+      svg.append('path').attr('d', d3.line().defined(function (d) { return d != null; }).x(function (d, k) { return sx(k); }).y(function (d) { return sy(d); })(vals))
+        .style('fill', 'none').style('stroke', CORP).attr('stroke-width', 1.5).attr('stroke-linejoin', 'round').attr('stroke-linecap', 'round');
+      row.appendChild(el('span', 'peak', pc && pc.val > 0 ? fmtV(pc.val) + ' · ' + (C.y0 + pc.i) : '—'));
+      row.appendChild(el('span', 'peak', pg && pg.val > 0 ? fmtV(pg.val) + ' · ' + (C.y0 + pg.i) : '—'));
+      host.appendChild(row);
+    });
+  }
+
+  function render() {
+    if (!active || !C || !A.M) return;
+    var s = pickSel(), f0 = Math.max(0, cs.from - C.y0);
+    $('c-sub').textContent = d3.format(',')(C.meta.records) + ' journal abstracts from ' + C.meta.journals + ' journals, ' + C.y0 + '–' + C.y1 + ', set against the Google Books data.';
+    var r = rates(s.vs, s.google);
+    drawSelects(s); drawTake(s, r, f0); drawChart(s, r, f0); drawRows(s, f0);
+  }
+
+  // ---------- events
+  $('c-group').addEventListener('change', function (e) { set({ group: e.target.value, term: '' }); });
+  $('c-variant').addEventListener('change', function (e) { set({ term: e.target.value }); });
+  $('c-journal').addEventListener('change', function (e) { set({ journal: e.target.value }); });
+  Array.prototype.forEach.call(document.querySelectorAll('.cfrom'), function (b) { b.addEventListener('click', function () { set({ from: +b.dataset.cfrom }); }); });
+  Array.prototype.forEach.call(document.querySelectorAll('.cscale'), function (b) { b.addEventListener('click', function () { set({ scale: b.dataset.cscale }); }); });
+  Array.prototype.forEach.call(document.querySelectorAll('.csmooth'), function (b) { b.addEventListener('click', function () { set({ smooth: +b.dataset.csmooth }); }); });
+  var rt = null;
+  window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(render, 150); });
+  window.addEventListener('hashchange', function () { var was = active; readHash(); if (active !== was) { showTab(active); } else render(); });
+
+  function init() {
+    readHash();
+    if (active) showTab(true);
+  }
+  A.onReady = init;
+  if (A.M) init();
 })();
 </script>
 </body>

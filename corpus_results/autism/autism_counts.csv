@@ -1,0 +1,1475 @@
+query,case_sensitive,year,count
+asperger,0,1979,1
+asperger,0,1981,1
+asperger,0,1985,5
+asperger,0,1986,1
+asperger,0,1988,6
+asperger,0,1989,5
+asperger,0,1990,4
+asperger,0,1991,3
+asperger,0,1992,7
+asperger,0,1993,10
+asperger,0,1994,14
+asperger,0,1995,8
+asperger,0,1996,19
+asperger,0,1997,28
+asperger,0,1998,20
+asperger,0,1999,49
+asperger,0,2000,52
+asperger,0,2001,66
+asperger,0,2002,41
+asperger,0,2003,55
+asperger,0,2004,83
+asperger,0,2005,77
+asperger,0,2006,118
+asperger,0,2007,86
+asperger,0,2008,134
+asperger,0,2009,94
+asperger,0,2010,96
+asperger,0,2011,100
+asperger,0,2012,115
+asperger,0,2013,119
+asperger,0,2014,67
+asperger,0,2015,65
+asperger,0,2016,49
+asperger,0,2017,10
+asperger,0,2018,6
+aspergers,0,1999,1
+aspergers,0,2000,1
+aspergers,0,2001,2
+aspergers,0,2004,6
+aspergers,0,2006,1
+aspergers,0,2007,6
+aspergers,0,2009,8
+aspergers,0,2010,3
+aspergers,0,2011,8
+aspergers,0,2012,9
+aspergers,0,2013,5
+aspergers,0,2014,4
+aspergers,0,2015,1
+aspergers,0,2016,2
+aspergers,0,2017,12
+aspergers,0,2018,8
+atypical autism,0,1994,1
+atypical autism,0,1997,1
+atypical autism,0,1998,5
+atypical autism,0,2000,1
+atypical autism,0,2004,4
+atypical autism,0,2007,5
+atypical autism,0,2008,1
+atypical autism,0,2010,5
+atypical autism,0,2012,1
+atypical autism,0,2013,5
+atypical autism,0,2014,1
+atypical autism,0,2016,2
+atypical autism,0,2017,1
+atypical pdd,0,1990,1
+atypical pervasive developmental disorder,0,1987,1
+atypical pervasive developmental disorder,0,1989,1
+atypical pervasive developmental disorder,0,1990,1
+atypical pervasive developmental disorder,0,1996,1
+atypical pervasive developmental disorder,0,1998,1
+autism,0,1955,1
+autism,0,1964,1
+autism,0,1965,1
+autism,0,1966,1
+autism,0,1970,1
+autism,0,1972,2
+autism,0,1973,2
+autism,0,1975,3
+autism,0,1976,7
+autism,0,1977,22
+autism,0,1979,29
+autism,0,1980,14
+autism,0,1981,32
+autism,0,1982,23
+autism,0,1983,21
+autism,0,1984,25
+autism,0,1985,20
+autism,0,1986,39
+autism,0,1987,46
+autism,0,1988,85
+autism,0,1989,91
+autism,0,1990,83
+autism,0,1991,121
+autism,0,1992,158
+autism,0,1993,170
+autism,0,1994,186
+autism,0,1995,202
+autism,0,1996,216
+autism,0,1997,254
+autism,0,1998,369
+autism,0,1999,419
+autism,0,2000,438
+autism,0,2001,450
+autism,0,2002,471
+autism,0,2003,492
+autism,0,2004,595
+autism,0,2005,628
+autism,0,2006,829
+autism,0,2007,1064
+autism,0,2008,1379
+autism,0,2009,1220
+autism,0,2010,1189
+autism,0,2011,1412
+autism,0,2012,1776
+autism,0,2013,2036
+autism,0,2014,2217
+autism,0,2015,2087
+autism,0,2016,2610
+autism,0,2017,2025
+autism,0,2018,1623
+autism,0,2019,41
+autism spectrum,0,1994,1
+autism spectrum,0,1996,2
+autism spectrum,0,1997,1
+autism spectrum,0,1998,3
+autism spectrum,0,1999,27
+autism spectrum,0,2000,14
+autism spectrum,0,2001,16
+autism spectrum,0,2002,31
+autism spectrum,0,2003,26
+autism spectrum,0,2004,43
+autism spectrum,0,2005,84
+autism spectrum,0,2006,126
+autism spectrum,0,2007,190
+autism spectrum,0,2008,245
+autism spectrum,0,2009,299
+autism spectrum,0,2010,374
+autism spectrum,0,2011,489
+autism spectrum,0,2012,657
+autism spectrum,0,2013,801
+autism spectrum,0,2014,1105
+autism spectrum,0,2015,1130
+autism spectrum,0,2016,1685
+autism spectrum,0,2017,1270
+autism spectrum,0,2018,961
+autism spectrum,0,2019,11
+autisms,0,1986,1
+autisms,0,1994,9
+autisms,0,1995,1
+autisms,0,1996,1
+autisms,0,1998,2
+autisms,0,2017,2
+autisms,0,2018,1
+autist,0,2010,1
+autistic,0,1963,1
+autistic,0,1964,14
+autistic,0,1965,2
+autistic,0,1966,6
+autistic,0,1967,23
+autistic,0,1968,7
+autistic,0,1969,6
+autistic,0,1970,4
+autistic,0,1971,4
+autistic,0,1972,9
+autistic,0,1973,26
+autistic,0,1974,16
+autistic,0,1975,11
+autistic,0,1976,28
+autistic,0,1977,51
+autistic,0,1978,47
+autistic,0,1979,76
+autistic,0,1980,80
+autistic,0,1981,91
+autistic,0,1982,72
+autistic,0,1983,129
+autistic,0,1984,117
+autistic,0,1985,81
+autistic,0,1986,120
+autistic,0,1987,141
+autistic,0,1988,177
+autistic,0,1989,219
+autistic,0,1990,152
+autistic,0,1991,133
+autistic,0,1992,138
+autistic,0,1993,140
+autistic,0,1994,123
+autistic,0,1995,143
+autistic,0,1996,96
+autistic,0,1997,147
+autistic,0,1998,129
+autistic,0,1999,118
+autistic,0,2000,114
+autistic,0,2001,137
+autistic,0,2002,145
+autistic,0,2003,134
+autistic,0,2004,179
+autistic,0,2005,128
+autistic,0,2006,212
+autistic,0,2007,189
+autistic,0,2008,237
+autistic,0,2009,204
+autistic,0,2010,206
+autistic,0,2011,241
+autistic,0,2012,273
+autistic,0,2013,303
+autistic,0,2014,322
+autistic,0,2015,267
+autistic,0,2016,310
+autistic,0,2017,276
+autistic,0,2018,371
+autistic,0,2019,5
+autistic disorder,0,1985,1
+autistic disorder,0,1989,3
+autistic disorder,0,1990,11
+autistic disorder,0,1991,3
+autistic disorder,0,1992,9
+autistic disorder,0,1993,16
+autistic disorder,0,1994,4
+autistic disorder,0,1995,10
+autistic disorder,0,1996,7
+autistic disorder,0,1997,26
+autistic disorder,0,1998,12
+autistic disorder,0,1999,15
+autistic disorder,0,2000,18
+autistic disorder,0,2001,19
+autistic disorder,0,2002,15
+autistic disorder,0,2003,16
+autistic disorder,0,2004,28
+autistic disorder,0,2005,22
+autistic disorder,0,2006,32
+autistic disorder,0,2007,21
+autistic disorder,0,2008,37
+autistic disorder,0,2009,31
+autistic disorder,0,2010,37
+autistic disorder,0,2011,30
+autistic disorder,0,2012,50
+autistic disorder,0,2013,37
+autistic disorder,0,2014,47
+autistic disorder,0,2015,22
+autistic disorder,0,2016,12
+autistic disorder,0,2017,6
+autistic disorder,0,2018,1
+autistic disorders,0,1991,1
+autistic disorders,0,1992,2
+autistic disorders,0,1993,1
+autistic disorders,0,1995,2
+autistic disorders,0,1996,1
+autistic disorders,0,1997,1
+autistic disorders,0,1998,1
+autistic disorders,0,1999,3
+autistic disorders,0,2000,3
+autistic disorders,0,2001,4
+autistic disorders,0,2002,4
+autistic disorders,0,2004,3
+autistic disorders,0,2005,3
+autistic disorders,0,2006,4
+autistic disorders,0,2007,5
+autistic disorders,0,2008,2
+autistic disorders,0,2009,4
+autistic disorders,0,2010,3
+autistic disorders,0,2011,1
+autistic disorders,0,2012,4
+autistic disorders,0,2013,4
+autistic disorders,0,2014,2
+autistic disorders,0,2015,2
+autistic disorders,0,2016,1
+autistic psychopathy,0,2005,2
+autistic psychopathy,0,2010,2
+autistic spectrum,0,1991,1
+autistic spectrum,0,1992,2
+autistic spectrum,0,1994,1
+autistic spectrum,0,1995,2
+autistic spectrum,0,1996,4
+autistic spectrum,0,1997,2
+autistic spectrum,0,1998,3
+autistic spectrum,0,1999,11
+autistic spectrum,0,2000,14
+autistic spectrum,0,2001,7
+autistic spectrum,0,2002,19
+autistic spectrum,0,2003,23
+autistic spectrum,0,2004,44
+autistic spectrum,0,2005,31
+autistic spectrum,0,2006,42
+autistic spectrum,0,2007,48
+autistic spectrum,0,2008,49
+autistic spectrum,0,2009,47
+autistic spectrum,0,2010,37
+autistic spectrum,0,2011,41
+autistic spectrum,0,2012,30
+autistic spectrum,0,2013,21
+autistic spectrum,0,2014,39
+autistic spectrum,0,2015,22
+autistic spectrum,0,2016,26
+autistic spectrum,0,2017,20
+autistic spectrum,0,2018,15
+autistically,0,1976,1
+autistics,0,1969,1
+autistics,0,1973,1
+autistics,0,1976,3
+autistics,0,1979,2
+autistics,0,1980,2
+autistics,0,1981,2
+autistics,0,1983,2
+autistics,0,1984,4
+autistics,0,1985,2
+autistics,0,1987,6
+autistics,0,1988,3
+autistics,0,1989,11
+autistics,0,1993,4
+autistics,0,1994,3
+autistics,0,1995,1
+autistics,0,1997,1
+autistics,0,2001,5
+autistics,0,2006,5
+autistics,0,2007,7
+autistics,0,2008,6
+autistics,0,2009,2
+autistics,0,2010,1
+autistics,0,2011,17
+autistics,0,2012,1
+autistics,0,2014,2
+autistics,0,2015,4
+autistics,0,2016,1
+autists,0,1984,1
+autists,0,1993,2
+autists,0,2013,1
+backward boys,0,1964,1
+backward children,0,1960,2
+backward children,0,1961,1
+backward children,0,1965,1
+backward children,0,1967,1
+borderline pathology of childhood,0,2005,1
+borderline pathology of childhood,0,2007,1
+borderline syndrome of childhood,0,1993,1
+borderline syndrome of childhood,0,2001,1
+childhood autism,0,1977,4
+childhood autism,0,1979,2
+childhood autism,0,1980,1
+childhood autism,0,1981,4
+childhood autism,0,1982,5
+childhood autism,0,1983,1
+childhood autism,0,1984,1
+childhood autism,0,1986,1
+childhood autism,0,1987,1
+childhood autism,0,1988,6
+childhood autism,0,1989,2
+childhood autism,0,1990,2
+childhood autism,0,1991,1
+childhood autism,0,1992,5
+childhood autism,0,1993,3
+childhood autism,0,1994,3
+childhood autism,0,1995,2
+childhood autism,0,1996,3
+childhood autism,0,1997,1
+childhood autism,0,1998,7
+childhood autism,0,1999,10
+childhood autism,0,2000,7
+childhood autism,0,2001,8
+childhood autism,0,2002,6
+childhood autism,0,2003,5
+childhood autism,0,2004,5
+childhood autism,0,2005,3
+childhood autism,0,2006,6
+childhood autism,0,2007,9
+childhood autism,0,2008,5
+childhood autism,0,2009,6
+childhood autism,0,2010,13
+childhood autism,0,2011,9
+childhood autism,0,2012,8
+childhood autism,0,2013,18
+childhood autism,0,2014,21
+childhood autism,0,2015,11
+childhood autism,0,2016,11
+childhood autism,0,2017,17
+childhood autism,0,2018,10
+childhood disintegrative disorder,0,1992,1
+childhood disintegrative disorder,0,1995,1
+childhood disintegrative disorder,0,1996,2
+childhood disintegrative disorder,0,1997,1
+childhood disintegrative disorder,0,1998,1
+childhood disintegrative disorder,0,1999,1
+childhood disintegrative disorder,0,2000,2
+childhood disintegrative disorder,0,2001,1
+childhood disintegrative disorder,0,2002,3
+childhood disintegrative disorder,0,2003,2
+childhood disintegrative disorder,0,2004,2
+childhood disintegrative disorder,0,2005,1
+childhood disintegrative disorder,0,2008,1
+childhood disintegrative disorder,0,2009,1
+childhood disintegrative disorder,0,2010,2
+childhood disintegrative disorder,0,2011,1
+childhood disintegrative disorder,0,2013,5
+childhood disintegrative disorder,0,2016,3
+childhood onset pervasive developmental disorder,0,1984,1
+childhood onset pervasive developmental disorder,0,1988,1
+childhood psychoses,0,1975,1
+childhood psychoses,0,1982,1
+childhood psychoses,0,1983,3
+childhood psychoses,0,1984,2
+childhood psychoses,0,1987,1
+childhood psychoses,0,1990,2
+childhood psychoses,0,1994,1
+childhood psychosis,0,1966,1
+childhood psychosis,0,1971,1
+childhood psychosis,0,1974,1
+childhood psychosis,0,1975,1
+childhood psychosis,0,1977,2
+childhood psychosis,0,1979,3
+childhood psychosis,0,1980,3
+childhood psychosis,0,1984,3
+childhood psychosis,0,1986,3
+childhood psychosis,0,1987,1
+childhood psychosis,0,1988,1
+childhood psychosis,0,1990,1
+childhood psychosis,0,1991,1
+childhood psychosis,0,1993,1
+childhood psychosis,0,1994,1
+childhood psychosis,0,1999,1
+childhood psychosis,0,2002,1
+childhood psychosis,0,2009,1
+childhood psychosis,0,2011,1
+childhood schizophrenia,0,1970,1
+childhood schizophrenia,0,1977,2
+childhood schizophrenia,0,1978,2
+childhood schizophrenia,0,1979,2
+childhood schizophrenia,0,1982,3
+childhood schizophrenia,0,1984,1
+childhood schizophrenia,0,1987,1
+childhood schizophrenia,0,1988,1
+childhood schizophrenia,0,1989,1
+childhood schizophrenia,0,1991,1
+childhood schizophrenia,0,1993,1
+childhood schizophrenia,0,1994,2
+childhood schizophrenia,0,2001,1
+childhood schizophrenia,0,2006,1
+childhood schizophrenia,0,2008,1
+childhood schizophrenia,0,2017,1
+dementia infantilis,0,2000,1
+dementia infantilis,0,2013,4
+dementia praecox,0,1943,2
+dementia praecox,0,1983,1
+dementia praecox,0,1989,1
+dementia praecox,0,1990,1
+dementia praecox,0,1991,1
+dementia praecox,0,1992,1
+dementia praecox,0,1993,2
+dementia praecox,0,1995,1
+dementia praecox,0,1996,1
+dementia praecox,0,2000,2
+dementia praecox,0,2006,1
+dementia praecox,0,2007,2
+dementia praecox,0,2008,1
+dementia praecox,0,2012,6
+dementia praecox,0,2013,2
+dementia praecox,0,2014,1
+developmental disabilities,0,1976,2
+developmental disabilities,0,1977,4
+developmental disabilities,0,1978,1
+developmental disabilities,0,1979,4
+developmental disabilities,0,1980,8
+developmental disabilities,0,1981,1
+developmental disabilities,0,1982,7
+developmental disabilities,0,1983,7
+developmental disabilities,0,1985,1
+developmental disabilities,0,1986,3
+developmental disabilities,0,1987,7
+developmental disabilities,0,1988,19
+developmental disabilities,0,1989,16
+developmental disabilities,0,1990,14
+developmental disabilities,0,1991,17
+developmental disabilities,0,1992,28
+developmental disabilities,0,1993,40
+developmental disabilities,0,1994,42
+developmental disabilities,0,1995,45
+developmental disabilities,0,1996,32
+developmental disabilities,0,1997,27
+developmental disabilities,0,1998,42
+developmental disabilities,0,1999,50
+developmental disabilities,0,2000,54
+developmental disabilities,0,2001,53
+developmental disabilities,0,2002,57
+developmental disabilities,0,2003,52
+developmental disabilities,0,2004,68
+developmental disabilities,0,2005,62
+developmental disabilities,0,2006,78
+developmental disabilities,0,2007,95
+developmental disabilities,0,2008,76
+developmental disabilities,0,2009,129
+developmental disabilities,0,2010,102
+developmental disabilities,0,2011,134
+developmental disabilities,0,2012,154
+developmental disabilities,0,2013,133
+developmental disabilities,0,2014,128
+developmental disabilities,0,2015,114
+developmental disabilities,0,2016,166
+developmental disabilities,0,2017,142
+developmental disabilities,0,2018,144
+developmental disability,0,1978,1
+developmental disability,0,1982,1
+developmental disability,0,1984,2
+developmental disability,0,1985,2
+developmental disability,0,1986,1
+developmental disability,0,1988,4
+developmental disability,0,1991,2
+developmental disability,0,1992,2
+developmental disability,0,1993,4
+developmental disability,0,1994,6
+developmental disability,0,1995,2
+developmental disability,0,1996,6
+developmental disability,0,1997,11
+developmental disability,0,1998,3
+developmental disability,0,1999,5
+developmental disability,0,2000,3
+developmental disability,0,2001,7
+developmental disability,0,2002,9
+developmental disability,0,2003,10
+developmental disability,0,2004,11
+developmental disability,0,2005,12
+developmental disability,0,2006,7
+developmental disability,0,2007,9
+developmental disability,0,2008,7
+developmental disability,0,2009,20
+developmental disability,0,2010,8
+developmental disability,0,2011,11
+developmental disability,0,2012,24
+developmental disability,0,2013,27
+developmental disability,0,2014,25
+developmental disability,0,2015,22
+developmental disability,0,2016,39
+developmental disability,0,2017,29
+developmental disability,0,2018,23
+developmentally disabled,0,1976,2
+developmentally disabled,0,1977,2
+developmentally disabled,0,1978,5
+developmentally disabled,0,1979,7
+developmentally disabled,0,1980,5
+developmentally disabled,0,1981,5
+developmentally disabled,0,1982,12
+developmentally disabled,0,1983,14
+developmentally disabled,0,1984,12
+developmentally disabled,0,1985,9
+developmentally disabled,0,1986,11
+developmentally disabled,0,1987,17
+developmentally disabled,0,1988,15
+developmentally disabled,0,1989,27
+developmentally disabled,0,1990,5
+developmentally disabled,0,1991,13
+developmentally disabled,0,1992,8
+developmentally disabled,0,1993,9
+developmentally disabled,0,1994,17
+developmentally disabled,0,1995,8
+developmentally disabled,0,1996,3
+developmentally disabled,0,1997,2
+developmentally disabled,0,1998,8
+developmentally disabled,0,1999,3
+developmentally disabled,0,2000,1
+developmentally disabled,0,2001,1
+developmentally disabled,0,2002,2
+developmentally disabled,0,2003,2
+developmentally disabled,0,2004,2
+developmentally disabled,0,2006,2
+developmentally disabled,0,2007,7
+developmentally disabled,0,2009,2
+developmentally disabled,0,2011,1
+developmentally disabled,0,2016,1
+early infantile autism,0,1976,1
+early infantile autism,0,1977,1
+early infantile autism,0,1981,1
+early infantile autism,0,1983,2
+early infantile autism,0,1984,2
+early infantile autism,0,1986,1
+early infantile autism,0,1990,3
+early infantile autism,0,1995,1
+early infantile autism,0,1999,1
+early infantile autism,0,2000,1
+early infantile autism,0,2001,2
+early infantile autism,0,2002,4
+early infantile autism,0,2014,2
+emotional deprivation,0,1966,1
+emotional deprivation,0,1971,1
+emotional deprivation,0,1972,1
+emotional deprivation,0,1979,2
+emotional deprivation,0,1980,1
+emotional deprivation,0,1981,1
+emotional deprivation,0,1984,1
+emotional deprivation,0,1985,3
+emotional deprivation,0,1988,1
+emotional deprivation,0,1989,1
+emotional deprivation,0,1990,1
+emotional deprivation,0,1992,1
+emotional deprivation,0,1993,1
+emotional deprivation,0,1994,4
+emotional deprivation,0,1997,2
+emotional deprivation,0,2003,1
+emotional deprivation,0,2004,1
+emotional deprivation,0,2005,2
+emotional deprivation,0,2006,1
+emotional deprivation,0,2007,1
+emotional deprivation,0,2008,2
+emotional deprivation,0,2010,2
+emotional deprivation,0,2011,6
+emotional deprivation,0,2012,5
+emotional deprivation,0,2015,4
+emotional deprivation,0,2016,5
+emotional deprivation,0,2017,7
+feeble - minded,0,1967,1
+feeble - minded,0,1968,2
+feeble - minded,0,2014,4
+feeble - mindedness,0,1967,1
+feeble mindedness,0,2013,1
+feeble mindedness,0,2014,1
+feebleminded,0,1946,1
+feebleminded,0,1958,1
+feebleminded,0,1981,1
+feebleminded,0,1986,1
+feebleminded,0,2012,2
+feeblemindedness,0,2004,1
+heller 's syndrome,0,2001,1
+heller syndrome,0,1992,1
+heller syndrome,0,1996,2
+idiocy,0,1968,1
+idiocy,0,1986,1
+idiocy,0,1989,5
+idiocy,0,1995,1
+idiocy,0,1999,1
+idiocy,0,2001,1
+idiocy,0,2011,1
+idiot,0,1960,1
+idiot,0,1968,1
+idiot,0,1972,1
+idiot,0,1977,2
+idiot,0,1983,1
+idiot,0,1984,2
+idiot,0,1986,2
+idiot,0,1987,1
+idiot,0,1988,3
+idiot,0,1989,2
+idiot,0,1990,4
+idiot,0,1991,3
+idiot,0,1992,1
+idiot,0,1993,1
+idiot,0,1998,1
+idiot,0,1999,1
+idiot,0,2003,1
+idiot,0,2006,1
+idiot,0,2008,2
+idiot,0,2011,1
+idiot,0,2013,1
+idiot,0,2014,1
+idiot,0,2015,2
+idiot,0,2016,2
+idiot,0,2017,1
+idiots,0,1965,1
+idiots,0,1987,4
+idiots,0,1988,2
+idiots,0,1989,1
+idiots,0,1993,1
+idiots,0,1994,2
+idiots,0,2003,2
+idiots,0,2005,1
+idiots,0,2007,1
+idiots,0,2008,1
+idiots,0,2016,1
+imbecile,0,1956,1
+imbecile,0,1962,1
+imbecile,0,1963,1
+imbecile,0,1964,1
+imbecile,0,1966,2
+imbecile,0,1968,2
+imbecile,0,2003,1
+imbeciles,0,1956,1
+imbeciles,0,1958,7
+imbeciles,0,1961,4
+imbecility,0,1968,1
+imbecility,0,2001,2
+infantile autism,0,1970,1
+infantile autism,0,1976,2
+infantile autism,0,1977,4
+infantile autism,0,1979,4
+infantile autism,0,1980,4
+infantile autism,0,1981,3
+infantile autism,0,1982,4
+infantile autism,0,1983,5
+infantile autism,0,1984,10
+infantile autism,0,1985,3
+infantile autism,0,1986,7
+infantile autism,0,1987,6
+infantile autism,0,1988,11
+infantile autism,0,1989,14
+infantile autism,0,1990,8
+infantile autism,0,1991,3
+infantile autism,0,1992,4
+infantile autism,0,1993,6
+infantile autism,0,1994,5
+infantile autism,0,1995,2
+infantile autism,0,1996,1
+infantile autism,0,1997,5
+infantile autism,0,1998,2
+infantile autism,0,1999,8
+infantile autism,0,2000,5
+infantile autism,0,2001,5
+infantile autism,0,2002,9
+infantile autism,0,2003,1
+infantile autism,0,2004,1
+infantile autism,0,2005,1
+infantile autism,0,2007,1
+infantile autism,0,2008,1
+infantile autism,0,2010,1
+infantile autism,0,2011,2
+infantile autism,0,2012,2
+infantile autism,0,2014,2
+infantile autism,0,2015,1
+infantile autism,0,2016,3
+infantile psychosis,0,1972,1
+infantile psychosis,0,1975,1
+intellectual disabilities,0,1992,4
+intellectual disabilities,0,1993,11
+intellectual disabilities,0,1994,10
+intellectual disabilities,0,1995,7
+intellectual disabilities,0,1996,30
+intellectual disabilities,0,1997,51
+intellectual disabilities,0,1998,37
+intellectual disabilities,0,1999,50
+intellectual disabilities,0,2000,53
+intellectual disabilities,0,2001,34
+intellectual disabilities,0,2002,74
+intellectual disabilities,0,2003,76
+intellectual disabilities,0,2004,109
+intellectual disabilities,0,2005,89
+intellectual disabilities,0,2006,84
+intellectual disabilities,0,2007,123
+intellectual disabilities,0,2008,159
+intellectual disabilities,0,2009,256
+intellectual disabilities,0,2010,207
+intellectual disabilities,0,2011,216
+intellectual disabilities,0,2012,177
+intellectual disabilities,0,2013,307
+intellectual disabilities,0,2014,214
+intellectual disabilities,0,2015,172
+intellectual disabilities,0,2016,318
+intellectual disabilities,0,2017,218
+intellectual disabilities,0,2018,222
+intellectual disabilities,0,2019,3
+intellectual disability,0,1985,1
+intellectual disability,0,1989,4
+intellectual disability,0,1991,1
+intellectual disability,0,1992,7
+intellectual disability,0,1993,16
+intellectual disability,0,1994,22
+intellectual disability,0,1995,22
+intellectual disability,0,1996,50
+intellectual disability,0,1997,62
+intellectual disability,0,1998,50
+intellectual disability,0,1999,34
+intellectual disability,0,2000,50
+intellectual disability,0,2001,48
+intellectual disability,0,2002,87
+intellectual disability,0,2003,69
+intellectual disability,0,2004,78
+intellectual disability,0,2005,73
+intellectual disability,0,2006,67
+intellectual disability,0,2007,106
+intellectual disability,0,2008,161
+intellectual disability,0,2009,189
+intellectual disability,0,2010,218
+intellectual disability,0,2011,298
+intellectual disability,0,2012,263
+intellectual disability,0,2013,368
+intellectual disability,0,2014,346
+intellectual disability,0,2015,309
+intellectual disability,0,2016,487
+intellectual disability,0,2017,446
+intellectual disability,0,2018,296
+intellectual disability,0,2019,2
+intellectually disabled,0,1987,1
+intellectually disabled,0,1988,2
+intellectually disabled,0,1989,2
+intellectually disabled,0,1990,1
+intellectually disabled,0,1991,1
+intellectually disabled,0,1992,2
+intellectually disabled,0,1993,5
+intellectually disabled,0,1994,6
+intellectually disabled,0,1995,2
+intellectually disabled,0,1996,1
+intellectually disabled,0,1998,4
+intellectually disabled,0,1999,6
+intellectually disabled,0,2000,3
+intellectually disabled,0,2001,3
+intellectually disabled,0,2002,5
+intellectually disabled,0,2003,10
+intellectually disabled,0,2004,1
+intellectually disabled,0,2005,7
+intellectually disabled,0,2006,2
+intellectually disabled,0,2007,5
+intellectually disabled,0,2008,10
+intellectually disabled,0,2009,7
+intellectually disabled,0,2010,13
+intellectually disabled,0,2011,14
+intellectually disabled,0,2012,7
+intellectually disabled,0,2013,8
+intellectually disabled,0,2014,13
+intellectually disabled,0,2015,15
+intellectually disabled,0,2016,6
+intellectually disabled,0,2017,4
+intellectually disabled,0,2018,4
+kanner 's syndrome,0,1976,1
+kanner 's syndrome,0,1981,1
+learning disabilities,0,1964,2
+learning disabilities,0,1965,2
+learning disabilities,0,1966,1
+learning disabilities,0,1968,3
+learning disabilities,0,1969,2
+learning disabilities,0,1970,2
+learning disabilities,0,1971,6
+learning disabilities,0,1972,5
+learning disabilities,0,1973,8
+learning disabilities,0,1974,11
+learning disabilities,0,1975,7
+learning disabilities,0,1976,14
+learning disabilities,0,1977,8
+learning disabilities,0,1978,13
+learning disabilities,0,1979,17
+learning disabilities,0,1980,10
+learning disabilities,0,1981,14
+learning disabilities,0,1982,24
+learning disabilities,0,1983,29
+learning disabilities,0,1984,25
+learning disabilities,0,1985,15
+learning disabilities,0,1986,21
+learning disabilities,0,1987,24
+learning disabilities,0,1988,20
+learning disabilities,0,1989,54
+learning disabilities,0,1990,43
+learning disabilities,0,1991,62
+learning disabilities,0,1992,57
+learning disabilities,0,1993,57
+learning disabilities,0,1994,73
+learning disabilities,0,1995,67
+learning disabilities,0,1996,110
+learning disabilities,0,1997,51
+learning disabilities,0,1998,74
+learning disabilities,0,1999,112
+learning disabilities,0,2000,78
+learning disabilities,0,2001,118
+learning disabilities,0,2002,117
+learning disabilities,0,2003,153
+learning disabilities,0,2004,111
+learning disabilities,0,2005,125
+learning disabilities,0,2006,116
+learning disabilities,0,2007,150
+learning disabilities,0,2008,90
+learning disabilities,0,2009,103
+learning disabilities,0,2010,115
+learning disabilities,0,2011,125
+learning disabilities,0,2012,112
+learning disabilities,0,2013,159
+learning disabilities,0,2014,123
+learning disabilities,0,2015,137
+learning disabilities,0,2016,138
+learning disabilities,0,2017,134
+learning disabilities,0,2018,102
+learning disability,0,1970,2
+learning disability,0,1971,1
+learning disability,0,1972,1
+learning disability,0,1973,3
+learning disability,0,1974,3
+learning disability,0,1975,3
+learning disability,0,1976,1
+learning disability,0,1977,2
+learning disability,0,1978,2
+learning disability,0,1979,8
+learning disability,0,1980,10
+learning disability,0,1981,5
+learning disability,0,1982,6
+learning disability,0,1983,6
+learning disability,0,1984,8
+learning disability,0,1985,4
+learning disability,0,1986,10
+learning disability,0,1987,12
+learning disability,0,1988,9
+learning disability,0,1989,11
+learning disability,0,1990,10
+learning disability,0,1991,10
+learning disability,0,1992,14
+learning disability,0,1993,12
+learning disability,0,1994,14
+learning disability,0,1995,9
+learning disability,0,1996,26
+learning disability,0,1997,23
+learning disability,0,1998,32
+learning disability,0,1999,33
+learning disability,0,2000,25
+learning disability,0,2001,36
+learning disability,0,2002,38
+learning disability,0,2003,35
+learning disability,0,2004,30
+learning disability,0,2005,37
+learning disability,0,2006,51
+learning disability,0,2007,46
+learning disability,0,2008,59
+learning disability,0,2009,39
+learning disability,0,2010,35
+learning disability,0,2011,41
+learning disability,0,2012,37
+learning disability,0,2013,72
+learning disability,0,2014,71
+learning disability,0,2015,60
+learning disability,0,2016,59
+learning disability,0,2017,52
+learning disability,0,2018,42
+mental defective,0,1943,1
+mental defectives,0,1943,1
+mental defectives,0,1959,1
+mental defectives,0,1960,1
+mental defectives,0,1963,2
+mental defectives,0,1964,2
+mental defectives,0,1968,1
+mental defectives,0,2003,1
+mental handicap,0,1975,2
+mental handicap,0,1977,1
+mental handicap,0,1979,1
+mental handicap,0,1981,1
+mental handicap,0,1984,1
+mental handicap,0,1985,2
+mental handicap,0,1986,6
+mental handicap,0,1987,9
+mental handicap,0,1988,13
+mental handicap,0,1989,2
+mental handicap,0,1990,8
+mental handicap,0,1991,10
+mental handicap,0,1992,4
+mental handicap,0,1993,18
+mental handicap,0,1994,7
+mental handicap,0,1995,15
+mental handicap,0,1996,2
+mental handicap,0,1997,6
+mental handicap,0,1998,10
+mental handicap,0,1999,5
+mental handicap,0,2002,1
+mental handicap,0,2003,1
+mental handicap,0,2005,2
+mental handicap,0,2007,1
+mental handicap,0,2011,1
+mental handicap,0,2012,1
+mental handicap,0,2016,1
+mental handicaps,0,1978,1
+mental handicaps,0,1985,2
+mental handicaps,0,1987,2
+mental handicaps,0,1988,5
+mental handicaps,0,1989,5
+mental handicaps,0,1992,2
+mental handicaps,0,1993,1
+mental handicaps,0,1994,1
+mental handicaps,0,1999,1
+mental handicaps,0,2007,1
+mental handicaps,0,2013,1
+mental handicaps,0,2015,1
+mental retardation,0,1965,2
+mental retardation,0,1966,1
+mental retardation,0,1967,2
+mental retardation,0,1968,3
+mental retardation,0,1969,2
+mental retardation,0,1970,2
+mental retardation,0,1971,4
+mental retardation,0,1972,3
+mental retardation,0,1973,1
+mental retardation,0,1974,3
+mental retardation,0,1975,7
+mental retardation,0,1976,4
+mental retardation,0,1977,11
+mental retardation,0,1978,10
+mental retardation,0,1979,14
+mental retardation,0,1980,14
+mental retardation,0,1981,3
+mental retardation,0,1982,11
+mental retardation,0,1983,22
+mental retardation,0,1984,19
+mental retardation,0,1985,10
+mental retardation,0,1986,25
+mental retardation,0,1987,27
+mental retardation,0,1988,46
+mental retardation,0,1989,69
+mental retardation,0,1990,76
+mental retardation,0,1991,89
+mental retardation,0,1992,106
+mental retardation,0,1993,97
+mental retardation,0,1994,143
+mental retardation,0,1995,135
+mental retardation,0,1996,121
+mental retardation,0,1997,114
+mental retardation,0,1998,110
+mental retardation,0,1999,114
+mental retardation,0,2000,107
+mental retardation,0,2001,93
+mental retardation,0,2002,88
+mental retardation,0,2003,110
+mental retardation,0,2004,113
+mental retardation,0,2005,94
+mental retardation,0,2006,110
+mental retardation,0,2007,95
+mental retardation,0,2008,92
+mental retardation,0,2009,69
+mental retardation,0,2010,61
+mental retardation,0,2011,59
+mental retardation,0,2012,45
+mental retardation,0,2013,37
+mental retardation,0,2014,16
+mental retardation,0,2015,15
+mental retardation,0,2016,22
+mental retardation,0,2017,9
+mental retardation,0,2018,2
+mentally defective,0,1959,1
+mentally defective,0,1963,1
+mentally defective,0,1966,1
+mentally defective,0,1967,2
+mentally handicapped,0,1966,1
+mentally handicapped,0,1969,1
+mentally handicapped,0,1970,2
+mentally handicapped,0,1971,1
+mentally handicapped,0,1973,3
+mentally handicapped,0,1975,5
+mentally handicapped,0,1976,4
+mentally handicapped,0,1977,5
+mentally handicapped,0,1978,10
+mentally handicapped,0,1979,2
+mentally handicapped,0,1980,4
+mentally handicapped,0,1981,9
+mentally handicapped,0,1982,11
+mentally handicapped,0,1983,7
+mentally handicapped,0,1984,16
+mentally handicapped,0,1985,14
+mentally handicapped,0,1986,13
+mentally handicapped,0,1987,22
+mentally handicapped,0,1988,15
+mentally handicapped,0,1989,17
+mentally handicapped,0,1990,11
+mentally handicapped,0,1991,15
+mentally handicapped,0,1992,7
+mentally handicapped,0,1993,16
+mentally handicapped,0,1994,7
+mentally handicapped,0,1995,13
+mentally handicapped,0,1996,3
+mentally handicapped,0,1997,5
+mentally handicapped,0,1998,3
+mentally handicapped,0,1999,3
+mentally handicapped,0,2000,2
+mentally handicapped,0,2001,2
+mentally handicapped,0,2002,1
+mentally handicapped,0,2004,2
+mentally handicapped,0,2005,1
+mentally handicapped,0,2006,2
+mentally handicapped,0,2007,5
+mentally handicapped,0,2009,1
+mentally handicapped,0,2010,1
+mentally handicapped,0,2013,1
+mentally handicapped,0,2018,1
+minimal brain damage,0,1968,1
+minimal brain damage,0,1971,1
+minimal brain damage,0,1972,1
+minimal brain damage,0,1976,4
+minimal brain damage,0,1978,2
+minimal brain damage,0,1980,1
+minimal brain damage,0,2011,1
+minimal brain dysfunction,0,1967,1
+minimal brain dysfunction,0,1970,1
+minimal brain dysfunction,0,1972,1
+minimal brain dysfunction,0,1973,1
+minimal brain dysfunction,0,1974,7
+minimal brain dysfunction,0,1975,2
+minimal brain dysfunction,0,1976,3
+minimal brain dysfunction,0,1977,3
+minimal brain dysfunction,0,1978,4
+minimal brain dysfunction,0,1979,3
+minimal brain dysfunction,0,1980,1
+minimal brain dysfunction,0,1981,1
+minimal brain dysfunction,0,1982,4
+minimal brain dysfunction,0,1983,3
+minimal brain dysfunction,0,1984,1
+minimal brain dysfunction,0,1989,1
+minimal brain dysfunction,0,1990,2
+minimal brain dysfunction,0,1991,5
+minimal brain dysfunction,0,1992,3
+minimal brain dysfunction,0,2004,1
+minimal brain dysfunction,0,2008,1
+minimal brain dysfunction,0,2010,1
+minimal cerebral dysfunction,0,1968,1
+minimal cerebral dysfunction,0,1974,1
+minimal cerebral dysfunction,0,1975,1
+minimal cerebral dysfunction,0,1976,1
+minimal cerebral dysfunction,0,1979,1
+minimal cerebral dysfunction,0,1997,1
+moron,0,1963,1
+moron,0,1968,1
+multidimensionally impaired,0,1994,1
+multidimensionally impaired,0,1998,6
+multiple complex developmental disorder,0,1993,1
+multiple complex developmental disorder,0,1995,1
+multiple complex developmental disorder,0,1998,2
+multiple complex developmental disorder,0,2001,2
+multiple complex developmental disorder,0,2007,1
+multiple complex developmental disorder,0,2008,2
+multiple complex developmental disorder,0,2012,1
+multiplex developmental disorder,0,2001,1
+on the spectrum,0,1985,1
+on the spectrum,0,1988,1
+on the spectrum,0,1995,1
+on the spectrum,0,2003,2
+on the spectrum,0,2005,1
+on the spectrum,0,2006,1
+on the spectrum,0,2010,4
+on the spectrum,0,2011,6
+on the spectrum,0,2012,1
+on the spectrum,0,2013,7
+on the spectrum,0,2014,5
+on the spectrum,0,2015,3
+on the spectrum,0,2016,5
+on the spectrum,0,2017,4
+on the spectrum,0,2018,1
+on the spectrum,0,2019,1
+parental coldness,0,1975,1
+parental coldness,0,1995,1
+parental coldness,0,2006,3
+parental coldness,0,2015,1
+pervasive developmental disorder,0,1982,4
+pervasive developmental disorder,0,1984,2
+pervasive developmental disorder,0,1986,1
+pervasive developmental disorder,0,1987,1
+pervasive developmental disorder,0,1988,6
+pervasive developmental disorder,0,1989,4
+pervasive developmental disorder,0,1990,4
+pervasive developmental disorder,0,1991,3
+pervasive developmental disorder,0,1992,5
+pervasive developmental disorder,0,1993,6
+pervasive developmental disorder,0,1994,8
+pervasive developmental disorder,0,1995,14
+pervasive developmental disorder,0,1996,13
+pervasive developmental disorder,0,1997,9
+pervasive developmental disorder,0,1998,23
+pervasive developmental disorder,0,1999,13
+pervasive developmental disorder,0,2000,18
+pervasive developmental disorder,0,2001,10
+pervasive developmental disorder,0,2002,10
+pervasive developmental disorder,0,2003,10
+pervasive developmental disorder,0,2004,28
+pervasive developmental disorder,0,2005,14
+pervasive developmental disorder,0,2006,18
+pervasive developmental disorder,0,2007,25
+pervasive developmental disorder,0,2008,25
+pervasive developmental disorder,0,2009,25
+pervasive developmental disorder,0,2010,25
+pervasive developmental disorder,0,2011,18
+pervasive developmental disorder,0,2012,23
+pervasive developmental disorder,0,2013,25
+pervasive developmental disorder,0,2014,18
+pervasive developmental disorder,0,2015,19
+pervasive developmental disorder,0,2016,15
+pervasive developmental disorder,0,2017,5
+pervasive developmental disorder,0,2018,4
+pervasive developmental disorders,0,1982,3
+pervasive developmental disorders,0,1984,1
+pervasive developmental disorders,0,1985,5
+pervasive developmental disorders,0,1986,2
+pervasive developmental disorders,0,1987,2
+pervasive developmental disorders,0,1989,4
+pervasive developmental disorders,0,1990,2
+pervasive developmental disorders,0,1991,4
+pervasive developmental disorders,0,1992,8
+pervasive developmental disorders,0,1993,3
+pervasive developmental disorders,0,1994,4
+pervasive developmental disorders,0,1995,8
+pervasive developmental disorders,0,1996,4
+pervasive developmental disorders,0,1997,6
+pervasive developmental disorders,0,1998,20
+pervasive developmental disorders,0,1999,20
+pervasive developmental disorders,0,2000,11
+pervasive developmental disorders,0,2001,3
+pervasive developmental disorders,0,2002,10
+pervasive developmental disorders,0,2003,5
+pervasive developmental disorders,0,2004,11
+pervasive developmental disorders,0,2005,22
+pervasive developmental disorders,0,2006,12
+pervasive developmental disorders,0,2007,19
+pervasive developmental disorders,0,2008,14
+pervasive developmental disorders,0,2009,16
+pervasive developmental disorders,0,2010,16
+pervasive developmental disorders,0,2011,12
+pervasive developmental disorders,0,2012,20
+pervasive developmental disorders,0,2013,8
+pervasive developmental disorders,0,2014,13
+pervasive developmental disorders,0,2015,13
+pervasive developmental disorders,0,2016,5
+pervasive developmental disorders,0,2017,1
+pervasive developmental disorders,0,2018,6
+retard,0,1963,1
+retard,0,1967,1
+retard,0,1968,1
+retard,0,1970,2
+retard,0,1971,2
+retard,0,1972,1
+retard,0,1973,3
+retard,0,1974,1
+retard,0,1975,1
+retard,0,1976,5
+retard,0,1978,2
+retard,0,1979,3
+retard,0,1980,3
+retard,0,1981,3
+retard,0,1982,2
+retard,0,1983,2
+retard,0,1984,1
+retard,0,1987,2
+retard,0,1988,3
+retard,0,1989,1
+retard,0,1990,2
+retard,0,1991,3
+retard,0,1992,2
+retard,0,1993,1
+retard,0,1994,3
+retard,0,1995,2
+retard,0,1996,2
+retard,0,1997,3
+retard,0,1998,3
+retard,0,1999,5
+retard,0,2000,3
+retard,0,2001,3
+retard,0,2004,12
+retard,0,2005,2
+retard,0,2006,1
+retard,0,2008,5
+retard,0,2009,2
+retard,0,2010,4
+retard,0,2011,7
+retard,0,2012,4
+retard,0,2013,9
+retard,0,2014,3
+retard,0,2015,3
+retard,0,2016,1
+retard,0,2017,2
+retard,0,2018,2
+retarded,0,1956,1
+retarded,0,1958,2
+retarded,0,1960,2
+retarded,0,1961,3
+retarded,0,1962,2
+retarded,0,1963,7
+retarded,0,1964,13
+retarded,0,1965,36
+retarded,0,1966,26
+retarded,0,1967,31
+retarded,0,1968,45
+retarded,0,1969,54
+retarded,0,1970,38
+retarded,0,1971,91
+retarded,0,1972,69
+retarded,0,1973,94
+retarded,0,1974,73
+retarded,0,1975,84
+retarded,0,1976,111
+retarded,0,1977,141
+retarded,0,1978,157
+retarded,0,1979,134
+retarded,0,1980,186
+retarded,0,1981,168
+retarded,0,1982,143
+retarded,0,1983,151
+retarded,0,1984,134
+retarded,0,1985,135
+retarded,0,1986,148
+retarded,0,1987,185
+retarded,0,1988,176
+retarded,0,1989,166
+retarded,0,1990,98
+retarded,0,1991,82
+retarded,0,1992,56
+retarded,0,1993,71
+retarded,0,1994,79
+retarded,0,1995,43
+retarded,0,1996,32
+retarded,0,1997,41
+retarded,0,1998,33
+retarded,0,1999,37
+retarded,0,2000,24
+retarded,0,2001,20
+retarded,0,2002,16
+retarded,0,2003,26
+retarded,0,2004,33
+retarded,0,2005,25
+retarded,0,2006,22
+retarded,0,2007,22
+retarded,0,2008,27
+retarded,0,2009,13
+retarded,0,2010,14
+retarded,0,2011,12
+retarded,0,2012,6
+retarded,0,2013,13
+retarded,0,2014,5
+retarded,0,2015,7
+retarded,0,2016,7
+retarded,0,2018,4
+retards,0,1963,1
+retards,0,1965,1
+retards,0,1969,1
+retards,0,1970,3
+retards,0,1972,1
+retards,0,1973,2
+retards,0,1974,1
+retards,0,1975,1
+retards,0,1976,2
+retards,0,1977,1
+retards,0,1978,2
+retards,0,1979,4
+retards,0,1982,1
+retards,0,1987,2
+retards,0,1988,1
+retards,0,1989,3
+retards,0,1995,1
+retards,0,1996,1
+retards,0,1999,1
+retards,0,2000,2
+retards,0,2001,1
+retards,0,2002,1
+retards,0,2003,1
+retards,0,2004,3
+retards,0,2005,2
+retards,0,2006,2
+retards,0,2007,2
+retards,0,2009,1
+retards,0,2010,1
+retards,0,2012,2
+retards,0,2015,2
+retards,0,2017,1
+retards,0,2018,1
+rett 's disorder,0,1996,1
+rett 's disorder,0,1998,1
+rett 's disorder,0,2008,1
+rett 's syndrome,0,1985,1
+rett disorder,0,2009,1
+rett syndrome,0,1988,2
+rett syndrome,0,1989,2
+rett syndrome,0,1990,4
+rett syndrome,0,1991,3
+rett syndrome,0,1992,5
+rett syndrome,0,1993,3
+rett syndrome,0,1994,2
+rett syndrome,0,1996,7
+rett syndrome,0,1997,29
+rett syndrome,0,1998,5
+rett syndrome,0,1999,3
+rett syndrome,0,2000,3
+rett syndrome,0,2001,6
+rett syndrome,0,2002,12
+rett syndrome,0,2003,6
+rett syndrome,0,2004,3
+rett syndrome,0,2005,3
+rett syndrome,0,2006,3
+rett syndrome,0,2007,1
+rett syndrome,0,2008,2
+rett syndrome,0,2009,10
+rett syndrome,0,2010,11
+rett syndrome,0,2011,20
+rett syndrome,0,2012,10
+rett syndrome,0,2013,13
+rett syndrome,0,2014,14
+rett syndrome,0,2015,14
+rett syndrome,0,2016,9
+rett syndrome,0,2017,8
+rett syndrome,0,2018,13
+rett syndromes,0,2003,1
+semantic - pragmatic disorder,0,1994,2
+semantic - pragmatic disorder,0,1998,2
+semantic - pragmatic disorder,0,1999,1
+semantic - pragmatic disorder,0,2001,1
+semantic - pragmatic disorder,0,2002,1
+semantic - pragmatic disorders,0,1998,1
+special needs,0,1962,1
+special needs,0,1971,1
+special needs,0,1972,2
+special needs,0,1975,2
+special needs,0,1976,3
+special needs,0,1977,3
+special needs,0,1978,4
+special needs,0,1979,6
+special needs,0,1980,5
+special needs,0,1981,6
+special needs,0,1982,9
+special needs,0,1983,8
+special needs,0,1984,21
+special needs,0,1985,10
+special needs,0,1986,9
+special needs,0,1987,11
+special needs,0,1988,19
+special needs,0,1989,19
+special needs,0,1990,23
+special needs,0,1991,47
+special needs,0,1992,32
+special needs,0,1993,42
+special needs,0,1994,26
+special needs,0,1995,40
+special needs,0,1996,38
+special needs,0,1997,39
+special needs,0,1998,30
+special needs,0,1999,63
+special needs,0,2000,35
+special needs,0,2001,38
+special needs,0,2002,40
+special needs,0,2003,47
+special needs,0,2004,49
+special needs,0,2005,40
+special needs,0,2006,66
+special needs,0,2007,102
+special needs,0,2008,41
+special needs,0,2009,50
+special needs,0,2010,49
+special needs,0,2011,57
+special needs,0,2012,43
+special needs,0,2013,49
+special needs,0,2014,61
+special needs,0,2015,61
+special needs,0,2016,50
+special needs,0,2017,29
+special needs,0,2018,51
+subnormal,0,1955,1
+subnormal,0,1957,1
+subnormal,0,1958,3
+subnormal,0,1960,3
+subnormal,0,1961,1
+subnormal,0,1962,1
+subnormal,0,1963,4
+subnormal,0,1964,1
+subnormal,0,1965,6
+subnormal,0,1966,7
+subnormal,0,1967,4
+subnormal,0,1968,2
+subnormal,0,1970,3
+subnormal,0,1971,1
+subnormal,0,1972,5
+subnormal,0,1973,2
+subnormal,0,1974,4
+subnormal,0,1975,6
+subnormal,0,1976,2
+subnormal,0,1977,6
+subnormal,0,1978,7
+subnormal,0,1979,7
+subnormal,0,1980,2
+subnormal,0,1981,10
+subnormal,0,1982,1
+subnormal,0,1983,13
+subnormal,0,1984,1
+subnormal,0,1985,4
+subnormal,0,1986,1
+subnormal,0,1987,4
+subnormal,0,1988,4
+subnormal,0,1989,2
+subnormal,0,1990,2
+subnormal,0,1993,1
+subnormal,0,1994,4
+subnormal,0,1995,2
+subnormal,0,1996,3
+subnormal,0,1997,1
+subnormal,0,1998,1
+subnormal,0,1999,1
+subnormal,0,2000,1
+subnormal,0,2001,4
+subnormal,0,2004,1
+subnormal,0,2005,3
+subnormal,0,2006,1
+subnormal,0,2007,1
+subnormal,0,2008,1
+subnormal,0,2009,3
+subnormal,0,2010,2
+subnormal,0,2011,2
+subnormal,0,2012,1
+subnormal,0,2015,3
+subnormal,0,2016,2
