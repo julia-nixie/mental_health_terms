@@ -147,11 +147,23 @@ PLURAL_WORDS = {
 }
 
 
+POSSESSIVE_NAMES = {"rett", "heller", "kanner", "asperger"}
+
+
+def _name_form(word: str) -> str:
+    """"rett's" and "retts" are the same name as "rett"."""
+    for suffix in ("'s", "\u2019s", "s"):
+        if word.endswith(suffix) and word[:-len(suffix)] in POSSESSIVE_NAMES:
+            return word[:-len(suffix)]
+    return word
+
+
 def merge_key(variant: str) -> str:
     """Spellings of one phrase share a key: plural vs singular last word, and hyphen/space/apostrophe
-    differences ("learning disabilities" = "learning disability", "feeble-minded" = "feeble minded").
+    differences ("learning disabilities" = "learning disability", "feeble-minded" = "feeble minded"),
+    and a possessive name ("Rett's syndrome" = "Rett syndrome" = "Retts syndrome").
     Used to show and count them as one entry."""
-    words = variant.lower().split()
+    words = [_name_form(w) for w in variant.lower().split()]
     if words:
         words[-1] = PLURAL_WORDS.get(words[-1], words[-1])
     return re.sub(r"[^a-z0-9]", "", "".join(words))
