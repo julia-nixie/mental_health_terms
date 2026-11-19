@@ -187,7 +187,6 @@ footer a { color: inherit; }
   </div>
 
   <div id="view-corpus" hidden>
-    <p class="sub" id="c-sub"></p>
     <p class="take" id="c-take" aria-live="polite"></p>
 
     <div class="controls">
@@ -205,6 +204,7 @@ footer a { color: inherit; }
       <div class="rangewrap">
         <span id="c-scale-l">Scale</span>
         <div class="ranges" role="group" aria-labelledby="c-scale-l">
+          <button type="button" class="crng cscale" data-cscale="axes" aria-pressed="false">Two axes</button>
           <button type="button" class="crng cscale" data-cscale="peak" aria-pressed="false">Own peak</button>
           <button type="button" class="crng cscale" data-cscale="pm" aria-pressed="false">Per million</button>
         </div>
@@ -220,13 +220,11 @@ footer a { color: inherit; }
 
     <section class="card" aria-labelledby="c-trend-h">
       <h2 id="c-trend-h">Corpus and Google Books</h2>
-      <p class="note">Phrases per million words in each source. Hover or tap the chart to read a year.</p>
       <div class="chart" id="c-chart">Loading…</div>
     </section>
 
     <section class="card" aria-labelledby="c-breakdown-h">
       <h2 id="c-breakdown-h">Breakdown</h2>
-      <p class="note">Click a row to focus on it. Each trend line is scaled to its own peak.</p>
       <div>
         <div class="head chead"><span>Name</span><span>Corpus trend</span><span>Corpus peak</span><span>Google peak</span></div>
         <div id="c-rows"></div>
@@ -632,9 +630,9 @@ footer a { color: inherit; }
   if (!A) return;
   var $ = A.$, cap = A.cap, fmtV = A.fmtV, el = A.el, clear = A.clear, COLORS = A.COLORS;
   var GOOGLE = COLORS[0], CORP = COLORS[1];
-  var MIN_TOK = 100000, MIN_TOK_J = 20000;       // a year needs this many words before a rate is drawn
+  var MIN_TOK = 100000, MIN_TOK_J = 20000;       // years with fewer words are drawn as hollow markers and left out of peaks
   var C = null, loading = null, active = false;
-  var cs = { group: 'autism/autistic', term: '', journal: '', from: 1960, scale: 'peak', smooth: 1 };
+  var cs = { group: 'autism/autistic', term: '', journal: '', from: 1960, scale: 'axes', smooth: 1 };
 
   // ---------- URL state (own keys; the other tab's keys are kept)
   var KEYS = ['tab', 'cg', 'cv', 'cj', 'cf', 'cs', 'cm'];
@@ -645,7 +643,7 @@ footer a { color: inherit; }
     cs.term = p.get('cv') || '';
     cs.journal = p.get('cj') || '';
     if (p.get('cf')) cs.from = +p.get('cf') || 1960;
-    if (p.get('cs')) cs.scale = p.get('cs') === 'pm' ? 'pm' : 'peak';
+    cs.scale = p.get('cs') === 'pm' ? 'pm' : p.get('cs') === 'peak' ? 'peak' : 'axes';
     if (p.get('cm')) cs.smooth = +p.get('cm') === 5 ? 5 : 1;
   }
   function writeHash() {
@@ -657,7 +655,7 @@ footer a { color: inherit; }
       if (cs.term) p.set('cv', cs.term);
       if (cs.journal) p.set('cj', cs.journal);
       if (cs.from !== 1960) p.set('cf', String(cs.from));
-      if (cs.scale !== 'peak') p.set('cs', cs.scale);
+      if (cs.scale !== 'axes') p.set('cs', cs.scale);
       if (cs.smooth !== 1) p.set('cm', String(cs.smooth));
     }
     var h = p.toString();
@@ -737,15 +735,16 @@ footer a { color: inherit; }
     } else vs.forEach(function (v) { for (i = 0; i < n; i++) out[i] += v.c[i]; });
     return { c: out, t: tok };
   }
-  // corpus rate per million words for each year (null where the pooled window has too few words)
+  // corpus rate per million words for each year; "thin" marks years with too few words to trust
   function corpusRate(ct) {
-    var n = C.n, h = (cs.smooth - 1) / 2, min = cs.journal ? MIN_TOK_J : MIN_TOK, out = new Array(n), i, k;
+    var n = C.n, h = (cs.smooth - 1) / 2, min = cs.journal ? MIN_TOK_J : MIN_TOK, out = new Array(n), thin = new Array(n), i, k;
     for (i = 0; i < n; i++) {
       var c = 0, t = 0;
       for (k = Math.max(0, i - h); k <= Math.min(n - 1, i + h); k++) { c += ct.c[k]; t += ct.t[k]; }
-      out[i] = t >= min ? c / t * 1e6 : null;
+      out[i] = t > 0 ? c / t * 1e6 : null;
+      thin[i] = t > 0 && t < min;
     }
-    return out;
+    return { v: out, thin: thin };
   }
   function googleRate(v) {
     var n = C.n, h = (cs.smooth - 1) / 2, M = A.M, out = new Array(n), i, k;
@@ -757,19 +756,26 @@ footer a { color: inherit; }
     }
     return out;
   }
-  function peak(arr, from) {
-    var bi = -1;
-    for (var i = from; i < arr.length; i++) if (arr[i] != null && (bi < 0 || arr[i] > arr[bi])) bi = i;
+  // highest value from index "from"; years flagged thin are skipped unless nothing else is left
+  function peak(arr, from, thin) {
+    var bi = -1, pass, i;
+    for (pass = 0; pass < 2 && bi < 0; pass++) {
+      for (i = from; i < arr.length; i++) {
+        if (arr[i] == null || (pass === 0 && thin && thin[i])) continue;
+        if (bi < 0 || arr[i] > arr[bi]) bi = i;
+      }
+    }
     return bi < 0 ? null : { i: bi, val: arr[bi] };
   }
   function rates(vs, google) {
-    return { corpus: corpusRate(counts(vs)), google: googleRate(google) };
+    var cr = corpusRate(counts(vs));
+    return { corpus: cr.v, thin: cr.thin, google: googleRate(google) };
   }
 
   // ---------- drawing
   function drawTake(s, r, f0) {
     var box = $('c-take'); clear(box);
-    var pc = peak(r.corpus, f0), pg = peak(r.google, f0);
+    var pc = peak(r.corpus, f0, r.thin), pg = peak(r.google, f0);
     function b(x) { return el('b', null, x); }
     if (!pc || pc.val === 0) {
       box.append(b(s.label), ' has no hits in the corpus' + (cs.journal ? ' journal' : '') + ' for these years.');
@@ -823,34 +829,53 @@ footer a { color: inherit; }
 
   function drawChart(s, r, f0) {
     var host = $('c-chart'); clear(host);
-    var W = Math.max(280, host.clientWidth || 600), H = W < 520 ? 250 : 340, mg = { t: 12, r: 14, b: 28, l: 46 };
+    var mode = cs.scale, axes = mode === 'axes';
+    var W = Math.max(280, host.clientWidth || 600), H = W < 520 ? 250 : 340, mg = { t: axes ? 24 : 12, r: axes ? 50 : 14, b: 28, l: 46 };
     var yrs = []; for (var i = f0; i < C.n; i++) yrs.push(C.y0 + i);
-    var pc = peak(r.corpus, f0), pg = peak(r.google, f0);
-    var scaled = cs.scale === 'peak';
-    var norm = function (arr, pk) { return arr.map(function (x) { return x == null ? null : (scaled ? (pk && pk.val ? x / pk.val : 0) : x); }); };
-    var lc = norm(r.corpus, pc).slice(f0), lg = norm(r.google, pg).slice(f0);
-    var ymax = scaled ? 1 : (d3.max(lc.concat(lg), function (x) { return x == null ? 0 : x; }) || 1);
+    var pc = peak(r.corpus, f0, r.thin), pg = peak(r.google, f0);
+    var maxC = pc ? pc.val : 0, maxG = pg ? pg.val : 0;
+    var lc = r.corpus.slice(f0), lg = r.google.slice(f0), tn = r.thin.slice(f0);
     var x = d3.scaleLinear([yrs[0], yrs[yrs.length - 1]], [mg.l, W - mg.r]);
-    var y = d3.scaleLinear([0, ymax * 1.06], [H - mg.b, mg.t]);
-    if (!scaled) y.nice(5);
+    var rng = [H - mg.b, mg.t], kc = 1, kg = 1, yG, yC;
+    if (mode === 'peak') {
+      kc = maxC ? 1 / maxC : 0; kg = maxG ? 1 / maxG : 0;
+      yG = yC = d3.scaleLinear([0, 1.06], rng);
+    } else if (mode === 'pm') {
+      yG = yC = d3.scaleLinear([0, (Math.max(maxC, maxG) || 1) * 1.06], rng).nice(5);
+    } else {
+      yG = d3.scaleLinear([0, (maxG || 1) * 1.06], rng).nice(5);
+      yC = d3.scaleLinear([0, (maxC || 1) * 1.06], rng).nice(5);
+    }
     var root = d3.select(host);
     var svg = root.append('svg').attr('viewBox', '0 0 ' + W + ' ' + H).attr('width', '100%').attr('role', 'img')
       .attr('aria-label', 'Line chart comparing ' + s.label + ' in the corpus and in Google Books, ' + yrs[0] + ' to ' + yrs[yrs.length - 1]);
-    y.ticks(5).forEach(function (tv) {
-      svg.append('line').attr('x1', mg.l).attr('x2', W - mg.r).attr('y1', y(tv)).attr('y2', y(tv)).style('stroke', 'var(--grid)');
-      svg.append('text').attr('x', mg.l - 8).attr('y', y(tv)).attr('dy', '0.32em').attr('text-anchor', 'end').text(scaled ? d3.format('.0%')(tv) : fmtV(tv));
+    svg.append('defs').append('clipPath').attr('id', 'c-clip').append('rect')
+      .attr('x', mg.l).attr('y', mg.t - 2).attr('width', W - mg.l - mg.r).attr('height', H - mg.t - mg.b + 2);
+    yG.ticks(5).forEach(function (tv) {
+      svg.append('line').attr('x1', mg.l).attr('x2', W - mg.r).attr('y1', yG(tv)).attr('y2', yG(tv)).style('stroke', 'var(--grid)');
+      svg.append('text').attr('x', mg.l - 8).attr('y', yG(tv)).attr('dy', '0.32em').attr('text-anchor', 'end')
+        .style('fill', axes ? GOOGLE : null).text(mode === 'peak' ? d3.format('.0%')(tv) : fmtV(tv));
     });
+    if (axes) {
+      yC.ticks(5).forEach(function (tv) {
+        svg.append('text').attr('x', W - mg.r + 8).attr('y', yC(tv)).attr('dy', '0.32em').attr('text-anchor', 'start').style('fill', CORP).text(fmtV(tv));
+      });
+      svg.append('text').attr('x', mg.l).attr('y', 11).attr('text-anchor', 'start').style('fill', GOOGLE).text('Google Books, per million');
+      svg.append('text').attr('x', W - mg.r).attr('y', 11).attr('text-anchor', 'end').style('fill', CORP).text('Corpus, per million words');
+    }
     svg.append('line').attr('x1', mg.l).attr('x2', W - mg.r).attr('y1', H - mg.b).attr('y2', H - mg.b).style('stroke', 'var(--axis)');
     x.ticks(W < 520 ? 5 : 9).forEach(function (tv) {
       svg.append('text').attr('x', x(tv)).attr('y', H - mg.b + 17).attr('text-anchor', 'middle').text(d3.format('d')(tv));
     });
-    var line = d3.line().defined(function (d) { return d != null; }).x(function (d, k) { return x(yrs[k]); }).y(function (d) { return y(d); });
-    [[lg, GOOGLE], [lc, CORP]].forEach(function (pair) {
-      svg.append('path').attr('d', line(pair[0])).style('fill', 'none').style('stroke', pair[1])
-        .attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round');
-    });
-    svg.selectAll('.pt').data(lc.map(function (v, k) { return { v: v, k: k }; }).filter(function (d) { return d.v != null; }))
-      .join('circle').attr('r', 2).attr('cx', function (d) { return x(yrs[d.k]); }).attr('cy', function (d) { return y(d.v); }).style('fill', CORP);
+    var plot = svg.append('g').attr('clip-path', 'url(#c-clip)');
+    function lineOf(yS, k) { return d3.line().defined(function (d) { return d != null; }).x(function (d, j) { return x(yrs[j]); }).y(function (d) { return yS(d * k); }); }
+    plot.append('path').attr('d', lineOf(yG, kg)(lg)).style('fill', 'none').style('stroke', GOOGLE)
+      .attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round');
+    plot.append('path').attr('d', lineOf(yC, kc)(lc)).style('fill', 'none').style('stroke', CORP)
+      .attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round');
+    plot.selectAll('.pt').data(lc.map(function (v, j) { return { v: v, j: j, thin: tn[j] }; }).filter(function (d) { return d.v != null; }))
+      .join('circle').attr('r', 2.4).attr('cx', function (d) { return x(yrs[d.j]); }).attr('cy', function (d) { return yC(d.v * kc); })
+      .style('fill', function (d) { return d.thin ? 'var(--panel)' : CORP; }).style('stroke', CORP).attr('stroke-width', 1.5);
 
     var lg2 = el('div', 'legend'); host.appendChild(lg2);
     [['Corpus' + (cs.journal ? ': ' + cs.journal : ' (all journals)'), CORP], ['Google Books', GOOGLE]].forEach(function (p) {
@@ -867,11 +892,8 @@ footer a { color: inherit; }
       rule.attr('x1', x(yr)).attr('x2', x(yr)); hov.style('display', null);
       tip.selectAll('*').remove();
       tip.append('div').attr('class', 'tip-year').text(String(yr));
-      var rows = [
-        ['Corpus', CORP, r.corpus[k] == null ? 'too few words' : fmtV(r.corpus[k]) + (cs.smooth === 1 ? ' (' + ct.c[k] + ' hits)' : '')],
-        ['Google Books', GOOGLE, r.google[k] == null ? '—' : fmtV(r.google[k])]
-      ];
-      rows.forEach(function (row) {
+      var cval = r.corpus[k] == null ? 'no abstracts' : fmtV(r.corpus[k]) + (cs.smooth === 1 ? ' (' + ct.c[k] + ' hits' + (r.thin[k] ? ', few words' : '') + ')' : (r.thin[k] ? ' (few words)' : ''));
+      [['Corpus', CORP, cval], ['Google Books', GOOGLE, r.google[k] == null ? '—' : fmtV(r.google[k])]].forEach(function (row) {
         var d = tip.append('div').attr('class', 'tip-row');
         d.append('span').attr('class', 'sw').style('background', row[1]); d.append('span').text(row[0]); d.append('span').text(row[2]);
       });
@@ -908,7 +930,7 @@ footer a { color: inherit; }
         .forEach(function (v) { item(cap(v.n), [v], gvals(v), { term: v.n }, '', s.v && s.v.n === v.n); });
     }
     items.forEach(function (it, idx) {
-      var pc = peak(it.r.corpus, f0), pg = peak(it.r.google, f0);
+      var pc = peak(it.r.corpus, f0, it.r.thin), pg = peak(it.r.google, f0);
       var has = (pc && pc.val > 0) || (pg && pg.val > 0);
       if (!has && idx > 0 && !it.active) return;
       var row = el('button', 'row crow' + (it.cls.indexOf('era') >= 0 ? ' era' : '') + (it.cls.indexOf('indent') >= 0 ? ' indent' : ''));
@@ -929,7 +951,6 @@ footer a { color: inherit; }
   function render() {
     if (!active || !C || !A.M) return;
     var s = pickSel(), f0 = Math.max(0, cs.from - C.y0);
-    $('c-sub').textContent = d3.format(',')(C.meta.records) + ' journal abstracts from ' + C.meta.journals + ' journals, ' + C.y0 + '–' + C.y1 + ', set against the Google Books data.';
     var r = rates(s.vs, s.google);
     drawSelects(s); drawTake(s, r, f0); drawChart(s, r, f0); drawRows(s, f0);
   }
