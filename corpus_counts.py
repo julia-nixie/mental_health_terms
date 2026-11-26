@@ -4,8 +4,8 @@
 Runs on your own machine over the whole file without loading it into memory (standard library only,
 Python 3.8+). The input is a standard CSV (commas, quoted fields; line breaks inside quotes are fine).
 
-Columns (no guessing): the id is "PMID", the text is in "AbstractText", the year is read from
-"PubDate" (and from "MedlineDate" when PubDate has no year), the journal is "JournalTitle".
+Columns (no guessing): the id is "PMID", the text is in "AbstractText", the year is "PubDate",
+the journal is "JournalTitle".
 Use --id-col, --text-cols (comma-separated, e.g. ArticleTitle,AbstractText), --year-col and
 --group-col to read other columns; the script stops and lists the columns if one is missing.
 
@@ -71,8 +71,7 @@ def main():
     ap.add_argument("--encoding", default="utf-8")
     ap.add_argument("--id-col", default="PMID", help="column with the record id (default: PMID)")
     ap.add_argument("--text-cols", default="AbstractText", help="comma-separated text columns (default: AbstractText)")
-    ap.add_argument("--year-col", default="PubDate,MedlineDate",
-                    help="column(s) holding the year or a date; tried in order (default: PubDate,MedlineDate)")
+    ap.add_argument("--year-col", default="PubDate", help="column holding the year (default: PubDate)")
     ap.add_argument("--group-col", default="JournalTitle", help="column to split by, i.e. the journal")
     ap.add_argument("--no-groups", action="store_true", help="do not split by journal")
     ap.add_argument("--no-pmids", action="store_true", help="do not write the list of matching PMIDs")
