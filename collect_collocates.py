@@ -20,7 +20,7 @@ The share column divides a collocate's frequency by the frequency of the variant
 decade (both casings), i.e. the share of the variant's occurrences that have that word next to it.
 
 Decades in which a variant has no data are skipped; variants of 5 tokens cannot take a wildcard and
-are skipped too. Completions that are hyphenation fragments ("chil-") are dropped.
+are skipped too.
 
 Output: autism_collocates.csv
     term, variant, pattern, decade, rank, collocate, frequency, share
@@ -175,7 +175,7 @@ def main():
                         toks = ngram.split()
                         w = toks[-1] if name.startswith("right") else toks[0]
                         w = w.rsplit("_", 1)[0].lower() if "_" in w else w.lower()
-                        if not w or w.endswith("-") or w.startswith("-"):
+                        if not w:
                             continue
                         tot[w] = tot.get(w, 0.0) + freq
                 top = sorted(tot.items(), key=lambda x: -x[1])[:10]
