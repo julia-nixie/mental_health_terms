@@ -19,9 +19,9 @@ Bridged patterns need the variant to have at most 3 tokens.
 
 Wildcard queries are always case-sensitive, so each variant is searched in two casings, lower case
 and first letter capitalised ("asperger" / "Asperger", "autism is" / "Autism is"). The completions
-are lower-cased and summed over both casings and over the years of the decade, and the top 10 is
-taken again from those sums. A collocate in one casing's top 10 but not the other's therefore
-counts only the casing in which it made the list, so the sums are slight underestimates.
+are lower-cased and summed over both casings and over the years of the decade; all of them are kept,
+ranked by those sums. A collocate in one casing's top 10 but not the other's counts only the casing
+in which it made the list, so its sum is a slight underestimate.
 
 The share column divides a collocate's frequency by the frequency of the variant itself in the same
 decade (both casings), i.e. the share of the variant's occurrences that have that word next to it.
@@ -214,7 +214,7 @@ def main():
                         if not w:
                             continue
                         tot[w] = tot.get(w, 0.0) + freq
-                top = sorted(tot.items(), key=lambda x: -x[1])[:10]
+                top = sorted(tot.items(), key=lambda x: -x[1])
                 for rank, (w, freq) in enumerate(top, 1):
                     rows.append([term, v, name, d0, rank, w, f"{freq:.6e}", f"{freq / base:.6f}"])
 

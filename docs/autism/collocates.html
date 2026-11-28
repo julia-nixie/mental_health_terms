@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Autism Term Neighbours</title>
-<meta name="description" content="The words that appear right before and after each autism-related term in English-language books, decade by decade from 1800 to 2022, from the Google Books Ngram Viewer: top 10 of any word, of nouns and of adjectives.">
+<meta name="description" content="The words that appear right before and after each autism-related term in English-language books, decade by decade from 1800 to 2022, from the Google Books Ngram Viewer: any word, nouns and adjectives.">
 <style>
 :root {
   color-scheme: light;
@@ -79,7 +79,7 @@ footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
   <header>
     <p class="back"><a href="index.html">← Autism terminology in books</a></p>
     <h1>The words around autism terms</h1>
-    <p class="sub">For each term, the ten words seen most often right before or right after it in English-language books, decade by decade, from the Google Books Ngram Viewer. Bars show the share of the term's uses that have that word next to it. Click a word to follow it through the decades.</p>
+    <p class="sub">For each term, the words seen most often right before or right after it in English-language books, decade by decade, from the Google Books Ngram Viewer. Bars show the share of the term's uses that have that word next to it. Click a word to follow it through the decades.</p>
   </header>
 
   <div class="controls">
@@ -105,8 +105,8 @@ footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
     <summary>How this was made</summary>
     <div class="method">
       <p>Each variant was searched with the Ngram Viewer's wildcards, once per decade: <code>variant *</code> and <code>* variant</code> for any word, <code>*_NOUN</code> and <code>*_ADJ</code> for words tagged as nouns or adjectives. The viewer returns its top 10 completions for the period searched, so every decade has its own top 10.</p>
-      <p>The viewer allows only one wildcard per query, so words one step further away were searched with a fixed word in between: <code>* with variant</code>, <code>*_NOUN with variant</code>, <code>* of variant</code>, <code>*_NOUN of variant</code>, <code>* from variant</code> and <code>* to variant</code> before the term, <code>variant in *_NOUN</code> and <code>variant and *_NOUN</code> after it (variants of up to three words, in decades in which the linking phrase itself occurs). Their results appear in the same lists as two-word entries (“children with”, “in adults”): before the term with nouns or any word, after it with nouns. Each list is the top 10 of all these entries by share.</p>
-      <p>Wildcard searches are case-sensitive, so every variant was searched in lower case and with a capital first letter (“autism” and “Autism”, “asperger” and “Asperger”). The completions were lower-cased and added up, then ranked again. A word that is in one casing's top 10 but not the other's counts only the first, so shares are slight underestimates.</p>
+      <p>The viewer allows only one wildcard per query, so words one step further away were searched with a fixed word in between: <code>* with variant</code>, <code>*_NOUN with variant</code>, <code>* of variant</code>, <code>*_NOUN of variant</code>, <code>* from variant</code> and <code>* to variant</code> before the term, <code>variant in *_NOUN</code> and <code>variant and *_NOUN</code> after it (variants of up to three words, in decades in which the linking phrase itself occurs). Their results appear in the same lists as two-word entries (“children with”, “in adults”): before the term with nouns or any word, after it with nouns. Every entry is shown, sorted by share.</p>
+      <p>Wildcard searches are case-sensitive, so every variant was searched in lower case and with a capital first letter (“autism” and “Autism”, “asperger” and “Asperger”). The completions were lower-cased and added up, and all of them are shown. A word that is in one casing's top 10 but not the other's counts only the first, so its share is a slight underestimate.</p>
       <p>The share is the word's frequency divided by the variant's own frequency in the same decade. Part-of-speech tags are assigned automatically by Google and are sometimes wrong, especially in older books. The 2010s column covers 2010 to 2022. Three terms returned no results for any query (“schizoid psychopathy in children”, “semantic-pragmatic disorder”, “multiple complex developmental disorder”). Decades in which a variant does not appear at all are left out, and the two five-word variants (“childhood onset pervasive developmental disorder(s)”) could not be searched with a wildcard.</p>
     </div>
   </details>
@@ -201,7 +201,7 @@ footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
       return decadeLabel(c.d) + ' ' + (i < 0 ? '–' : '#' + (i + 1));
     });
     var b = document.createElement('b'); b.textContent = quote(phrase(v, st.hi));
-    t.append(b, document.createTextNode(': ' + parts.join(' · ') + '  (– = not in the top 10)'));
+    t.append(b, document.createTextNode(': ' + parts.join(' · ') + '  (– = not in the list)'));
   }
 
   function fillVariants() {
