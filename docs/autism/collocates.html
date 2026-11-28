@@ -106,7 +106,7 @@ footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
     <summary>How this was made</summary>
     <div class="method">
       <p>Each variant was searched with the Ngram Viewer's wildcards, once per decade: <code>variant *</code> and <code>* variant</code> for any word, <code>*_NOUN</code> and <code>*_ADJ</code> for words tagged as nouns or adjectives. The viewer returns its top 10 completions for the period searched, so every decade has its own top 10.</p>
-      <p>The viewer allows only one wildcard per query, so words one step further away were searched with a fixed word in between: <code>* with variant</code>, <code>*_NOUN with variant</code>, <code>* of variant</code>, <code>*_NOUN of variant</code>, <code>* from variant</code> and <code>* to variant</code> before the term, <code>variant in *_NOUN</code> and <code>variant and *_NOUN</code> after it (variants of up to three words, in decades in which the linking phrase itself occurs). Their results appear in the same lists as two-word entries (“children with”, “in adults”): before the term with nouns or any word, after it with nouns. Every entry is shown, sorted by share.</p>
+      <p>The viewer allows only one wildcard per query, so words one step further away were searched with a fixed word in between: <code>* with variant</code>, <code>*_NOUN with variant</code>, <code>* of variant</code>, <code>*_NOUN of variant</code>, <code>* from variant</code> and <code>* to variant</code> before the term, <code>variant in *_NOUN</code> and <code>variant and *_NOUN</code> after it (variants of up to three words, in decades in which the linking phrase itself occurs). Their results are in the same lists, without the linking word: “children with autism” counts for “children” (before the term: nouns and any word; after it: nouns). A word found both next to the term and through a linking word (“children autism”, “children with autism”) gets the sum of both shares. Every word is shown, sorted by share; the CSV keeps each pattern separately.</p>
       <p>Wildcard searches are case-sensitive, so every variant was searched in lower case and with a capital first letter (“autism” and “Autism”, “asperger” and “Asperger”). The completions were lower-cased and added up, and all of them are shown. A word that is in one casing's top 10 but not the other's counts only the first, so its share is a slight underestimate.</p>
       <p>The share is the word's frequency divided by the variant's own frequency in the same decade. Part-of-speech tags are assigned automatically by Google and are sometimes wrong, especially in older books. The 2010s column covers 2010 to 2022. Three terms returned no results for any query (“schizoid psychopathy in children”, “semantic-pragmatic disorder”, “multiple complex developmental disorder”). Decades in which a variant does not appear at all are left out, and the two five-word variants (“childhood onset pervasive developmental disorder(s)”) could not be searched with a wildcard.</p>
     </div>
@@ -154,7 +154,7 @@ footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
   }
   function decadeLabel(d) { return d === 2010 ? '2010–22' : d + 's'; }
   function quote(s) { return '“' + s + '”'; }
-  function phrase(v, w) { return st.side === 'right' ? v + ' ' + w : w + ' ' + v; }
+  function phrase(v, w) { return quote(w) + (st.side === 'right' ? ' after ' : ' before ') + quote(v); }
 
   function render() {
     var term = D.terms[st.t], variant = term.variants[st.v];
@@ -201,7 +201,7 @@ footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
       var i = c.list.findIndex(function (x) { return x[0] === st.hi; });
       return decadeLabel(c.d) + ' ' + (i < 0 ? '–' : '#' + (i + 1));
     });
-    var b = document.createElement('b'); b.textContent = quote(phrase(v, st.hi));
+    var b = document.createElement('b'); b.textContent = phrase(v, st.hi);
     t.append(b, document.createTextNode(': ' + parts.join(' · ') + '  (– = not in the list)'));
   }
 

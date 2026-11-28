@@ -31,20 +31,23 @@ def main():
             cell.append([r["collocate"], round(float(r["share"]), 5), int(r["rank"])])
 
     # Bridged patterns ("left_with_noun": "*_NOUN with V") join the list of the plain pattern with the
-    # same side and word kind, as two-word entries ("children with"); every entry is kept and each
-    # list is sorted by share (all shares are relative to the variant's own frequency).
+    # same side and word kind. The linking word is not part of the entry ("children with autism" counts
+    # for "children"), and a word found by several patterns ("children autism", "children with autism",
+    # "children of autism") gets the sum of their shares: these phrases never overlap, and all shares
+    # are relative to the variant's own frequency. Every entry is kept; each list is sorted by share.
     for variants in data.values():
         for pats in variants.values():
             for name in [n for n in pats if n.count("_") == 2]:
-                side, link, kind = name.split("_")
+                side, _, kind = name.split("_")
                 for d, items in pats.pop(name).items():
-                    label = (lambda w: f"{w} {link}") if side == "left" else (lambda w: f"{link} {w}")
-                    pats.setdefault(f"{side}_{kind}", {}).setdefault(d, []).extend(
-                        [label(w), share, rank] for w, share, rank in items)
+                    pats.setdefault(f"{side}_{kind}", {}).setdefault(d, []).extend(items)
             for cells in pats.values():
                 for d, items in cells.items():
-                    items.sort(key=lambda x: -x[1])
-                    cells[d] = [[w, share, i] for i, (w, share, _) in enumerate(items, 1)]
+                    tot = {}
+                    for w, share, _ in items:
+                        tot[w] = tot.get(w, 0.0) + share
+                    cells[d] = [[w, round(share, 5), i] for i, (w, share) in
+                                enumerate(sorted(tot.items(), key=lambda x: -x[1]), 1)]
 
     terms = []
     with open(args.terms, newline="", encoding="utf-8") as f:
