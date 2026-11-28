@@ -33,7 +33,7 @@ FIRST_USE = [
     ("minimal brain", 1940, "1940s"), ("minimal cerebral", 1940, "1940s"),
     ("rett", 1960, "Rett, 1966"), ("refrigerator mother", 1940, "Kanner, 1949"),
     ("developmental disab", 1960, "1960s"), ("developmentally disabled", 1960, "1960s"),
-    ("learning disab", 1960, "Kirk, 1963"),
+    ("learning disab", 1960, "Kirk, 1963"), ("moron", 1910, "Goddard, 1910"),
 ]
 
 
