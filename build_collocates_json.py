@@ -14,6 +14,36 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 
+# Decade from which each diagnostic term was in use, so the page can hide earlier decades, where
+# hits come from books Google has misdated. First matching substring of the variant wins; variants
+# that match nothing (old everyday words such as "idiot", "on the spectrum") keep every decade.
+FIRST_USE = [
+    ("autism spectrum", 1980, "Wing, 1980s"), ("autistic spectrum", 1980, "Wing, 1980s"),
+    ("early infantile autism", 1940, "Kanner, 1943"), ("kanner", 1940, "Kanner, 1943"),
+    ("autistic psychopathy", 1940, "Asperger, 1944"),
+    ("pdd", 1980, "DSM-III, 1980"), ("pervasive developmental", 1980, "DSM-III, 1980"),
+    ("autistic disorder", 1980, "DSM-III, 1980"),
+    ("infantile autism", 1940, "Kanner, 1943"), ("childhood autism", 1940, "after Kanner, 1943"),
+    ("atypical autism", 1940, "after Kanner, 1943"),
+    ("autis", 1910, "Bleuler, 1911"), ("asperger", 1940, "Asperger, 1944"),
+    ("dementia praecox", 1890, "Kraepelin, 1893"), ("dementia infantilis", 1900, "Heller, 1908"),
+    ("heller", 1900, "Heller, 1908"), ("childhood disintegrative", 1990, "ICD-10 and DSM-IV, 1990s"),
+    ("schizophrenic reaction", 1950, "DSM-I, 1952"), ("schizophrenia childhood", 1950, "DSM-I, 1952"),
+    ("childhood schizophrenia", 1930, "1930s"), ("symbiotic", 1950, "Mahler, 1952"),
+    ("minimal brain", 1940, "1940s"), ("minimal cerebral", 1940, "1940s"),
+    ("rett", 1960, "Rett, 1966"), ("refrigerator mother", 1940, "Kanner, 1949"),
+    ("developmental disab", 1960, "1960s"), ("developmentally disabled", 1960, "1960s"),
+    ("learning disab", 1960, "Kirk, 1963"),
+]
+
+
+def first_use(variant):
+    v = variant.lower()
+    for key, decade, src in FIRST_USE:
+        if key in v:
+            return decade, src
+    return None, None
+
 
 def main():
     ap = argparse.ArgumentParser()
@@ -25,6 +55,8 @@ def main():
     data, decades = {}, set()
     with open(args.csv, newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):
+            if len(r["collocate"]) < 2 and not r["pattern"].endswith("any"):
+                continue        # one-letter "nouns"/"adjectives": initials, "J" of journal names
             d = int(r["decade"])
             decades.add(d)
             cell = data.setdefault(r["term"], {}).setdefault(r["variant"], {}) \
@@ -35,7 +67,11 @@ def main():
     with open(args.terms, newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):
             vs = [v.strip() for v in r["variants"].split(";") if v.strip()]
-            got = [{"v": v, "p": data[r["term"]][v]} for v in vs if v in data.get(r["term"], {})]
+            got = []
+            for v in vs:
+                if v in data.get(r["term"], {}):
+                    d, src = first_use(v)
+                    got.append({"v": v, "p": data[r["term"]][v], **({"from": d, "src": src} if d else {})})
             if got:
                 terms.append({"term": r["term"], "variants": got})
 
