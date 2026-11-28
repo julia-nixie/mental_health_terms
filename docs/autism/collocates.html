@@ -80,7 +80,7 @@ footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
   <header>
     <p class="back"><a href="index.html">← Autism terminology in books</a></p>
     <h1>The words around autism terms</h1>
-    <p class="sub">For each term, the words seen most often right before or right after it in English-language books, decade by decade, from the Google Books Ngram Viewer. Bars show the share of the term's uses that have that word next to it. Click a word to follow it through the decades.</p>
+    <p class="sub">For each term, the words seen most often around it in English-language books, decade by decade, from the Google Books Ngram Viewer. Bars show the share of the term's uses that have that word around it. Click a word to follow it through the decades.</p>
   </header>
 
   <div class="controls">
@@ -89,10 +89,6 @@ footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
     <div class="seg-wrap"><span id="kind-l">Words</span>
       <div class="seg" role="group" aria-labelledby="kind-l">
         <button type="button" data-kind="any">Any word</button><button type="button" data-kind="noun">Nouns</button><button type="button" data-kind="adj">Adjectives</button>
-      </div></div>
-    <div class="seg-wrap"><span id="side-l">Position</span>
-      <div class="seg" role="group" aria-labelledby="side-l">
-        <button type="button" data-side="left">Before</button><button type="button" data-side="right">After</button>
       </div></div>
     <label class="check" id="fw-wrap"><input type="checkbox" id="fw"> Hide function words</label>
   </div>
@@ -106,7 +102,7 @@ footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
     <summary>How this was made</summary>
     <div class="method">
       <p>Each variant was searched with the Ngram Viewer's wildcards, once per decade: <code>variant *</code> and <code>* variant</code> for any word, <code>*_NOUN</code> and <code>*_ADJ</code> for words tagged as nouns or adjectives. The viewer returns its top 10 completions for the period searched, so every decade has its own top 10.</p>
-      <p>The viewer allows only one wildcard per query, so words one step further away were searched with a fixed word in between: <code>* with variant</code>, <code>*_NOUN with variant</code>, <code>* of variant</code>, <code>*_NOUN of variant</code>, <code>* from variant</code> and <code>* to variant</code> before the term, <code>variant in *_NOUN</code> and <code>variant and *_NOUN</code> after it (variants of up to three words, in decades in which the linking phrase itself occurs). Their results appear in the same lists as two-word entries (“children with”, “in adults”): before the term with nouns or any word, after it with nouns. Every entry is shown, sorted by share.</p>
+      <p>The viewer allows only one wildcard per query, so words one step further away were searched with a fixed word in between: <code>* with variant</code>, <code>*_NOUN with variant</code>, <code>* of variant</code>, <code>*_NOUN of variant</code>, <code>* from variant</code> and <code>* to variant</code> before the term, <code>variant in *_NOUN</code> and <code>variant and *_NOUN</code> after it (variants of up to three words, in decades in which the linking phrase itself occurs). All results of the same word kind are combined in one list, before and after the term, without the linking word: “children with autism” and “autism in children” both count for “children”. A word found by several patterns gets the sum of their shares (the phrases never overlap). Every word is shown, sorted by share; the CSV keeps each pattern and side separately.</p>
       <p>Wildcard searches are case-sensitive, so every variant was searched in lower case and with a capital first letter (“autism” and “Autism”, “asperger” and “Asperger”). The completions were lower-cased and added up, and all of them are shown. A word that is in one casing's top 10 but not the other's counts only the first, so its share is a slight underestimate.</p>
       <p>The share is the word's frequency divided by the variant's own frequency in the same decade. Part-of-speech tags are assigned automatically by Google and are sometimes wrong, especially in older books. The 2010s column covers 2010 to 2022. Three terms returned no results for any query (“schizoid psychopathy in children”, “semantic-pragmatic disorder”, “multiple complex developmental disorder”). Decades in which a variant does not appear at all are left out, and the two five-word variants (“childhood onset pervasive developmental disorder(s)”) could not be searched with a wildcard.</p>
     </div>
@@ -124,20 +120,19 @@ footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
     'all any each some more most other another one if when where while because though although since until unless whether ' +
     'like very only even just own same s').split(' '));
   var LABEL = { any: 'word', noun: 'noun', adj: 'adjective' };
-  var D, st = { t: 0, v: 0, kind: 'noun', side: 'right', fw: false, hi: null };
+  var D, st = { t: 0, v: 0, kind: 'noun', fw: false, hi: null };
 
   function readURL() {
     var p = new URLSearchParams(location.search);
     if (p.has('t')) st.t = +p.get('t') || 0;
     if (p.has('v')) st.v = +p.get('v') || 0;
     if (['any', 'noun', 'adj'].indexOf(p.get('k')) >= 0) st.kind = p.get('k');
-    if (['left', 'right'].indexOf(p.get('s')) >= 0) st.side = p.get('s');
     st.fw = p.get('fw') === '1';
     st.hi = p.get('w') || null;
   }
   function writeURL() {
     var p = new URLSearchParams();
-    p.set('t', st.t); p.set('v', st.v); p.set('k', st.kind); p.set('s', st.side);
+    p.set('t', st.t); p.set('v', st.v); p.set('k', st.kind);
     if (st.fw) p.set('fw', '1');
     if (st.hi) p.set('w', st.hi);
     try { history.replaceState(null, '', '?' + p.toString()); } catch (e) {}
@@ -145,7 +140,7 @@ footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
 
   function cells() {
     var variant = D.terms[st.t].variants[st.v];
-    var cell = variant.p[st.side + '_' + st.kind] || {};
+    var cell = variant.p[st.kind] || {};
     var hide = st.kind === 'any' && st.fw;
     return D.decades.filter(function (d) { return cell[d]; }).map(function (d) {
       var list = cell[d].filter(function (x) { return !(hide && FW.has(x[0])); });
@@ -154,21 +149,20 @@ footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
   }
   function decadeLabel(d) { return d === 2010 ? '2010–22' : d + 's'; }
   function quote(s) { return '“' + s + '”'; }
-  function phrase(v, w) { return st.side === 'right' ? v + ' ' + w : w + ' ' + v; }
+  function phrase(v, w) { return quote(w) + ' around ' + quote(v); }
 
   function render() {
     var term = D.terms[st.t], variant = term.variants[st.v];
     var cs = cells();
     $('fw-wrap').hidden = st.kind !== 'any';
     document.querySelectorAll('[data-kind]').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.kind === st.kind); });
-    document.querySelectorAll('[data-side]').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.side === st.side); });
 
     var max = 0;
     cs.forEach(function (c) { c.list.forEach(function (x) { if (x[1] > max) max = x[1]; }); });
     var g = $('grid'); g.textContent = '';
     if (!cs.length) {
       var e = document.createElement('p'); e.className = 'empty';
-      e.textContent = 'No ' + LABEL[st.kind] + 's found ' + (st.side === 'right' ? 'after' : 'before') + ' ' + quote(variant.v) + ' in any decade.';
+      e.textContent = 'No ' + LABEL[st.kind] + 's found around ' + quote(variant.v) + ' in any decade.';
       g.appendChild(e);
     }
     cs.forEach(function (c) {
@@ -201,7 +195,7 @@ footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
       var i = c.list.findIndex(function (x) { return x[0] === st.hi; });
       return decadeLabel(c.d) + ' ' + (i < 0 ? '–' : '#' + (i + 1));
     });
-    var b = document.createElement('b'); b.textContent = quote(phrase(v, st.hi));
+    var b = document.createElement('b'); b.textContent = phrase(v, st.hi);
     t.append(b, document.createTextNode(': ' + parts.join(' · ') + '  (– = not in the list)'));
   }
 
@@ -218,14 +212,13 @@ footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
     if (st.t >= D.terms.length) st.t = 0;
     var ts = $('term');
     D.terms.forEach(function (t, i) { var o = document.createElement('option'); o.value = i; o.textContent = t.term; ts.appendChild(o); });
-    if (!location.search) {   // default: "autistic" + following nouns shows the shift best
+    if (!location.search) {   // default selection: "autistic", nouns
       D.terms.forEach(function (t, i) { t.variants.forEach(function (v, j) { if (v.v === 'autistic') { st.t = i; st.v = j; } }); });
     }
     ts.value = st.t; fillVariants();
     ts.addEventListener('change', function () { st.t = +ts.value; st.v = 0; st.hi = null; fillVariants(); render(); });
     $('variant').addEventListener('change', function () { st.v = +this.value; st.hi = null; render(); });
     document.querySelectorAll('[data-kind]').forEach(function (b) { b.addEventListener('click', function () { st.kind = b.dataset.kind; st.hi = null; render(); }); });
-    document.querySelectorAll('[data-side]').forEach(function (b) { b.addEventListener('click', function () { st.side = b.dataset.side; st.hi = null; render(); }); });
     $('fw').checked = st.fw;
     $('fw').addEventListener('change', function () { st.fw = this.checked; render(); });
     $('grid').addEventListener('click', function (e) {
