@@ -1,3 +1,5 @@
 ngram_cache.json
 __pycache__/
 autism_cache.json
+collocate_cache.json
+collocate_run.log

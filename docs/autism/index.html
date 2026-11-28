@@ -97,6 +97,8 @@ footer a { color: inherit; }
 .tab { font: inherit; color: var(--fg2); background: transparent; border: 0; border-bottom: 2px solid transparent; padding: 10px 14px; cursor: pointer; margin-bottom: -1px; }
 .tab.on { color: var(--fg); border-bottom-color: var(--fg); font-weight: 600; }
 .tab:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.tablink { text-decoration: none; margin-left: auto; }
+.tablink:hover { color: var(--fg); }
 #view-ngram, #view-corpus { display: grid; gap: 20px; }
 .head.chead, .row.crow { grid-template-columns: minmax(0, 1fr) 96px 7.5rem 7.5rem; }
 .chead span:nth-child(3), .chead span:nth-child(4) { text-align: right; }
@@ -120,6 +122,7 @@ footer a { color: inherit; }
   <div class="tabs" role="tablist" aria-label="Data source">
     <button type="button" class="tab on" id="tab-ngram" role="tab" aria-selected="true">Google Books</button>
     <button type="button" class="tab" id="tab-corpus" role="tab" aria-selected="false">Corpus vs Google</button>
+    <a class="tab tablink" href="collocates.html">Neighbouring words →</a>
   </div>
 
   <div id="view-ngram">

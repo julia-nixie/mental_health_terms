@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autism Term Neighbours</title>
+<meta name="description" content="The words that appear right before and after each autism-related term in English-language books, decade by decade from 1800 to 2022, from the Google Books Ngram Viewer: top 10 of any word, of nouns and of adjectives.">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f4f4f2; --panel: #fcfcfb; --fg: #0b0b0b; --fg2: #52514e; --border: #dcdbd6;
+  --grid: #e9e8e4; --hover: #efeeea; --bar: #d9e6f7; --hi: #2a78d6; --hi-bg: #dcebfb;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --r: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #121211; --panel: #1a1a19; --fg: #f0efec; --fg2: #c3c2b7; --border: #34332f;
+    --grid: #2a2a27; --hover: #242422; --bar: #1f3550; --hi: #6aa8f0; --hi-bg: #1d3a5e;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #121211; --panel: #1a1a19; --fg: #f0efec; --fg2: #c3c2b7; --border: #34332f;
+  --grid: #2a2a27; --hover: #242422; --bar: #1f3550; --hi: #6aa8f0; --hi-bg: #1d3a5e;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.45;
+  padding: 28px max(16px, env(safe-area-inset-right, 0px)) 48px max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 1100px; margin-inline: auto; display: grid; gap: 20px; min-width: 0; }
+h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.7rem, 4vw, 2.4rem); margin: 0 0 6px; line-height: 1.12; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+.back { font-size: .85rem; color: var(--fg2); }
+.sub { color: var(--fg2); max-width: 72ch; }
+.take { font-size: 1.1rem; line-height: 1.5; max-width: 72ch; min-height: 3em; }
+.take b { font-weight: 600; }
+.controls { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; }
+.field { display: grid; gap: 4px; min-width: 0; flex: 1 1 13rem; max-width: 22rem; }
+.field label, .seg-wrap > span { font-size: .8rem; color: var(--fg2); }
+select { width: 100%; font: inherit; color: var(--fg); background: var(--panel); border: 1px solid var(--border); border-radius: var(--r); padding: 8px 10px; }
+.seg-wrap { display: grid; gap: 4px; }
+.seg { display: flex; border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; background: var(--panel); }
+.seg button { font: inherit; font-size: .85rem; color: var(--fg2); background: transparent; border: 0; padding: 8px 12px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--border); }
+.seg button[aria-pressed="true"] { color: var(--fg); background: var(--hover); font-weight: 600; }
+.check { display: inline-flex; gap: 6px; align-items: center; font-size: .85rem; color: var(--fg2); padding-bottom: 8px; cursor: pointer; }
+button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.card { background: var(--panel); border: 1px solid var(--border); border-radius: var(--r); padding: 18px; display: grid; gap: 10px; min-width: 0; }
+.note { color: var(--fg2); font-size: .8rem; }
+.scroller { overflow-x: auto; min-width: 0; padding-bottom: 4px; }
+.grid { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(8.5rem, 1fr); gap: 10px; min-width: min-content; }
+.col h3 { font-size: .8rem; font-weight: 600; color: var(--fg2); margin: 0 0 6px; font-variant-numeric: tabular-nums; border-bottom: 1px solid var(--border); padding-bottom: 4px; }
+.col ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.w { position: relative; display: flex; justify-content: space-between; gap: 6px; width: 100%; font: inherit; font-size: .85rem; text-align: left;
+  color: var(--fg); background: transparent; border: 0; border-radius: 4px; padding: 3px 6px; cursor: pointer; overflow: hidden; }
+.w .bar { position: absolute; inset: 0 auto 0 0; background: var(--bar); z-index: 0; border-radius: 4px; }
+.w span { position: relative; z-index: 1; }
+.w .word { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.w .pct { color: var(--fg2); font-size: .75rem; font-variant-numeric: tabular-nums; flex: none; }
+.w:hover { outline: 1px solid var(--border); }
+.w.hi { box-shadow: inset 0 0 0 2px var(--hi); }
+.w.hi .bar { background: var(--hi-bg); }
+.w.hi .word { font-weight: 600; }
+.empty { color: var(--fg2); font-size: .85rem; padding: 12px 0; }
+.trace { font-size: .85rem; color: var(--fg2); min-height: 1.4em; }
+.trace b { color: var(--fg); }
+details summary { cursor: pointer; }
+.method { display: grid; gap: 6px; }
+.method p { max-width: 80ch; }
+footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
+[hidden] { display: none !important; }
+@media (max-width: 520px) { .card { padding: 14px; } .grid { grid-auto-columns: 8rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="back"><a href="index.html">← Autism terminology in books</a></p>
+    <h1>The words around autism terms</h1>
+    <p class="sub">For each term, the ten words seen most often right before or right after it in English-language books, decade by decade, from the Google Books Ngram Viewer. Bars show the share of the term's uses that have that word next to it. Click a word to follow it through the decades.</p>
+  </header>
+
+  <p class="take" id="take" aria-live="polite"></p>
+
+  <div class="controls">
+    <div class="field"><label for="term">Term</label><select id="term"></select></div>
+    <div class="field"><label for="variant">Variant</label><select id="variant"></select></div>
+    <div class="seg-wrap"><span id="kind-l">Words</span>
+      <div class="seg" role="group" aria-labelledby="kind-l">
+        <button type="button" data-kind="any">Any word</button><button type="button" data-kind="noun">Nouns</button><button type="button" data-kind="adj">Adjectives</button>
+      </div></div>
+    <div class="seg-wrap"><span id="side-l">Position</span>
+      <div class="seg" role="group" aria-labelledby="side-l">
+        <button type="button" data-side="left">Before</button><button type="button" data-side="right">After</button>
+      </div></div>
+    <label class="check" id="fw-wrap"><input type="checkbox" id="fw"> Hide function words</label>
+  </div>
+
+  <section class="card" aria-label="Top neighbouring words by decade">
+    <p class="trace" id="trace"></p>
+    <div class="scroller"><div class="grid" id="grid"></div></div>
+  </section>
+
+  <details class="card">
+    <summary>How this was made</summary>
+    <div class="method">
+      <p>Each variant was searched with the Ngram Viewer's wildcards, once per decade: <code>variant *</code> and <code>* variant</code> for any word, <code>*_NOUN</code> and <code>*_ADJ</code> for words tagged as nouns or adjectives. The viewer returns its top 10 completions for the period searched, so every decade has its own top 10.</p>
+      <p>Wildcard searches are case-sensitive, so every variant was searched in lower case and with a capital first letter (“autism” and “Autism”, “asperger” and “Asperger”). The completions were lower-cased and added up, then ranked again. A word that is in one casing's top 10 but not the other's counts only the first, so shares are slight underestimates.</p>
+      <p>The share is the word's frequency divided by the variant's own frequency in the same decade. Part-of-speech tags are assigned automatically by Google and are sometimes wrong, especially in older books, and pieces of hyphenated words split across lines (“chil-”) are dropped. The 2010s column covers 2010 to 2022. Decades in which a variant does not appear at all are left out, and the two five-word variants (“childhood onset pervasive developmental disorder(s)”) could not be searched with a wildcard.</p>
+    </div>
+  </details>
+
+  <footer>Data: Google Books Ngram Viewer, English corpus (2019 edition), 1800–2022, no smoothing.</footer>
+</div>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var FW = new Set(('a an the and or but nor of to in on at by for with from as into onto upon about than then that this these those which who whom whose what ' +
+    'is are was were be been being am has have had do does did can could may might must shall should will would not no ' +
+    'it its it\'s he she they we you i his her their our your my him them us me there here so such also both either neither ' +
+    'all any each some more most other another one if when where while because though although since until unless whether ' +
+    'like very only even just own same s').split(' '));
+  var LABEL = { any: 'word', noun: 'noun', adj: 'adjective' };
+  var D, st = { t: 0, v: 0, kind: 'noun', side: 'right', fw: true, hi: null };
+
+  function readURL() {
+    var p = new URLSearchParams(location.search);
+    if (p.has('t')) st.t = +p.get('t') || 0;
+    if (p.has('v')) st.v = +p.get('v') || 0;
+    if (['any', 'noun', 'adj'].indexOf(p.get('k')) >= 0) st.kind = p.get('k');
+    if (['left', 'right'].indexOf(p.get('s')) >= 0) st.side = p.get('s');
+    if (p.has('fw')) st.fw = p.get('fw') !== '0';
+    st.hi = p.get('w') || null;
+  }
+  function writeURL() {
+    var p = new URLSearchParams();
+    p.set('t', st.t); p.set('v', st.v); p.set('k', st.kind); p.set('s', st.side);
+    if (!st.fw) p.set('fw', '0');
+    if (st.hi) p.set('w', st.hi);
+    try { history.replaceState(null, '', '?' + p.toString()); } catch (e) {}
+  }
+
+  function cells() {
+    var variant = D.terms[st.t].variants[st.v];
+    var cell = variant.p[st.side + '_' + st.kind] || {};
+    var hide = st.kind === 'any' && st.fw;
+    return D.decades.filter(function (d) { return cell[d]; }).map(function (d) {
+      var list = cell[d].filter(function (x) { return !(hide && FW.has(x[0])); });
+      return { d: d, list: list };
+    });
+  }
+  function decadeLabel(d) { return d === 2010 ? '2010–22' : d + 's'; }
+  function quote(s) { return '“' + s + '”'; }
+  function phrase(v, w) { return st.side === 'right' ? v + ' ' + w : w + ' ' + v; }
+
+  function render() {
+    var term = D.terms[st.t], variant = term.variants[st.v];
+    var cs = cells();
+    $('fw-wrap').hidden = st.kind !== 'any';
+    document.querySelectorAll('[data-kind]').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.kind === st.kind); });
+    document.querySelectorAll('[data-side]').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.side === st.side); });
+
+    var max = 0;
+    cs.forEach(function (c) { c.list.forEach(function (x) { if (x[1] > max) max = x[1]; }); });
+    var g = $('grid'); g.textContent = '';
+    if (!cs.length) {
+      var e = document.createElement('p'); e.className = 'empty';
+      e.textContent = 'No ' + LABEL[st.kind] + 's found ' + (st.side === 'right' ? 'after' : 'before') + ' ' + quote(variant.v) + ' in any decade.';
+      g.appendChild(e);
+    }
+    cs.forEach(function (c) {
+      var col = document.createElement('div'); col.className = 'col';
+      var h = document.createElement('h3'); h.textContent = decadeLabel(c.d); col.appendChild(h);
+      var ol = document.createElement('ol');
+      c.list.forEach(function (x) {
+        var li = document.createElement('li');
+        var b = document.createElement('button'); b.type = 'button'; b.className = 'w' + (x[0] === st.hi ? ' hi' : '');
+        b.dataset.w = x[0];
+        b.title = phrase(variant.v, x[0]) + ': ' + (x[1] * 100).toFixed(2) + '% of uses in the ' + decadeLabel(c.d);
+        b.setAttribute('aria-pressed', x[0] === st.hi);
+        var bar = document.createElement('span'); bar.className = 'bar'; bar.style.width = (max ? x[1] / max * 100 : 0) + '%';
+        var w = document.createElement('span'); w.className = 'word'; w.textContent = x[0];
+        var pc = document.createElement('span'); pc.className = 'pct'; pc.textContent = pct(x[1]);
+        b.append(bar, w, pc); li.appendChild(b); ol.appendChild(li);
+      });
+      if (!c.list.length) { var n = document.createElement('li'); n.className = 'note'; n.textContent = 'only function words'; ol.appendChild(n); }
+      col.appendChild(ol); g.appendChild(col);
+    });
+    renderTake(variant.v, cs);
+    renderTrace(variant.v, cs);
+    writeURL();
+  }
+  function pct(s) { var p = s * 100; return p >= 10 ? p.toFixed(0) + '%' : p >= 1 ? p.toFixed(1) + '%' : p.toFixed(2) + '%'; }
+
+  function renderTake(v, cs) {
+    var t = $('take'); t.textContent = '';
+    var withData = cs.filter(function (c) { return c.list.length; });
+    if (!withData.length) { t.textContent = 'Nothing to show for this choice.'; return; }
+    var first = withData[0], last = withData[withData.length - 1];
+    var add = function (s, bold) { var n = bold ? document.createElement('b') : document.createTextNode(s); if (bold) n.textContent = s; t.appendChild(n); };
+    var where = st.side === 'right' ? 'after ' : 'before ';
+    if (first === last) {
+      add('In the ' + decadeLabel(first.d) + ', the ' + LABEL[st.kind] + ' seen most often ' + where + quote(v) + ' is ');
+      add(quote(first.list[0][0]), true); add('.');
+      return;
+    }
+    add('In the ' + decadeLabel(first.d) + ', the ' + LABEL[st.kind] + ' seen most often ' + where + quote(v) + ' was ');
+    add(quote(first.list[0][0]), true);
+    if (first.list[0][0] === last.list[0][0]) { add(', and in ' + decadeLabel(last.d) + ' it still is.'); return; }
+    add('; in ' + decadeLabel(last.d) + ' it is ');
+    add(quote(last.list[0][0]), true);
+    var gone = first.list.slice(0, 10).filter(function (x) { return !last.list.some(function (y) { return y[0] === x[0]; }); }).length;
+    add('. ' + gone + ' of the first decade’s top ' + first.list.length + ' are no longer in the list.');
+  }
+
+  function renderTrace(v, cs) {
+    var t = $('trace'); t.textContent = '';
+    if (!st.hi) { t.textContent = 'Click a word to see its rank in every decade.'; return; }
+    var parts = cs.map(function (c) {
+      var i = c.list.findIndex(function (x) { return x[0] === st.hi; });
+      return decadeLabel(c.d) + ' ' + (i < 0 ? '–' : '#' + (i + 1));
+    });
+    var b = document.createElement('b'); b.textContent = quote(phrase(v, st.hi));
+    t.append(b, document.createTextNode(': ' + parts.join(' · ') + '  (– = not in the top 10)'));
+  }
+
+  function fillVariants() {
+    var vs = D.terms[st.t].variants, sel = $('variant'); sel.textContent = '';
+    vs.forEach(function (v, i) { var o = document.createElement('option'); o.value = i; o.textContent = v.v; sel.appendChild(o); });
+    if (st.v >= vs.length) st.v = 0;
+    sel.value = st.v;
+  }
+
+  function init(data) {
+    D = data;
+    readURL();
+    if (st.t >= D.terms.length) st.t = 0;
+    var ts = $('term');
+    D.terms.forEach(function (t, i) { var o = document.createElement('option'); o.value = i; o.textContent = t.term; ts.appendChild(o); });
+    if (!location.search) {   // default: "autistic" + following nouns shows the shift best
+      D.terms.forEach(function (t, i) { t.variants.forEach(function (v, j) { if (v.v === 'autistic') { st.t = i; st.v = j; } }); });
+    }
+    ts.value = st.t; fillVariants();
+    ts.addEventListener('change', function () { st.t = +ts.value; st.v = 0; st.hi = null; fillVariants(); render(); });
+    $('variant').addEventListener('change', function () { st.v = +this.value; st.hi = null; render(); });
+    document.querySelectorAll('[data-kind]').forEach(function (b) { b.addEventListener('click', function () { st.kind = b.dataset.kind; st.hi = null; render(); }); });
+    document.querySelectorAll('[data-side]').forEach(function (b) { b.addEventListener('click', function () { st.side = b.dataset.side; st.hi = null; render(); }); });
+    $('fw').checked = st.fw;
+    $('fw').addEventListener('change', function () { st.fw = this.checked; render(); });
+    $('grid').addEventListener('click', function (e) {
+      var b = e.target.closest('.w'); if (!b) return;
+      st.hi = st.hi === b.dataset.w ? null : b.dataset.w; render();
+      var again = document.querySelector('.w[data-w="' + CSS.escape(b.dataset.w) + '"]'); if (again) again.focus();
+    });
+    render();
+  }
+
+  fetch('collocates.json').then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(init).catch(function (e) { $('take').textContent = 'Could not load the data (' + e.message + ').'; });
+})();
+</script>
+</body>
+</html>
