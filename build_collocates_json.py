@@ -30,17 +30,18 @@ def main():
                        .setdefault(r["pattern"], {}).setdefault(str(d), [])
             cell.append([r["collocate"], round(float(r["share"]), 5), int(r["rank"])])
 
-    # Bridged patterns ("left_with_noun": "*_NOUN with V") join the list of the plain pattern with the
-    # same side and word kind. The linking word is not part of the entry ("children with autism" counts
-    # for "children"), and a word found by several patterns ("children autism", "children with autism",
-    # "children of autism") gets the sum of their shares: these phrases never overlap, and all shares
-    # are relative to the variant's own frequency. Every entry is kept; each list is sorted by share.
+    # All patterns of the same word kind are combined into one list per kind ("any", "noun", "adj"):
+    # before and after the term, next to it or through a linking word. The linking word is not part of
+    # the entry ("children with autism" counts for "children"), and a word found by several patterns
+    # ("children autism", "children with autism", "autism in children") gets the sum of their shares:
+    # these phrases never overlap, and all shares are relative to the variant's own frequency.
+    # Every entry is kept; each list is sorted by share.
     for variants in data.values():
         for pats in variants.values():
-            for name in [n for n in pats if n.count("_") == 2]:
-                side, _, kind = name.split("_")
+            for name in [n for n in pats if "_" in n]:
+                kind = name.rsplit("_", 1)[1]
                 for d, items in pats.pop(name).items():
-                    pats.setdefault(f"{side}_{kind}", {}).setdefault(d, []).extend(items)
+                    pats.setdefault(kind, {}).setdefault(d, []).extend(items)
             for cells in pats.values():
                 for d, items in cells.items():
                     tot = {}
