@@ -99,6 +99,8 @@ def main():
     ap.add_argument("--terms", default=str(HERE / "autism_terms.csv"))
     ap.add_argument("--out", default=str(HERE / "autism_collocates.csv"))
     ap.add_argument("--cache", default=str(HERE / "collocate_cache.json"))
+    ap.add_argument("--bases", default=str(HERE / "autism_collocate_bases.csv"),
+                    help="frequency of each variant itself per decade (the denominator of share)")
     args = ap.parse_args()
 
     cache_path = Path(args.cache)
@@ -195,13 +197,14 @@ def main():
             time.sleep(PAUSE)
 
     # ---- 3. merge casings, rank, write ----
-    rows = []
+    rows, bases = [], []
     for (term, v), qs in forms.items():
         found = [series(q) for q in qs]
         for d0, d1 in decades():
             base = sum(sum(s[d0 - START:d1 - START + 1]) for _, s in found if s)
             if not base:
                 continue
+            bases.append([term, v, d0, f"{base:.6e}"])
             for name, p in list(PATTERNS.items()) + [(n, pg[0]) for n, pg in BRIDGED.items()]:
                 tot = {}
                 for sp, s in found:
@@ -223,6 +226,11 @@ def main():
         wr.writerow(["term", "variant", "pattern", "decade", "rank", "collocate", "frequency", "share"])
         wr.writerows(rows)
     print(f"wrote {len(rows)} rows to {args.out}", file=sys.stderr)
+    with open(args.bases, "w", newline="", encoding="utf-8") as f:
+        wr = csv.writer(f)
+        wr.writerow(["term", "variant", "decade", "frequency"])
+        wr.writerows(bases)
+    print(f"wrote {len(bases)} rows to {args.bases}", file=sys.stderr)
 
 
 if __name__ == "__main__":
