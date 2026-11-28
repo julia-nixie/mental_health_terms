@@ -77,7 +77,7 @@ def spellings(q: str):
 
 
 # Short single words that look like abbreviations to the rule below but are ordinary words.
-NOT_ACRONYMS = {"pica", "mania", "jetlag"}
+NOT_ACRONYMS = {"pica", "mania", "jetlag", "rett", "retts", "moron", "morons", "idiot", "idiocy", "retard", "autist", "autism"}
 
 # Abbreviations whose capitals are also everyday words or abbreviations ("ED" = "Ed."/edition,
 # "AN", "SAD", "DID", "HAND", ...). They show a large background in books long before the
@@ -92,7 +92,7 @@ def is_acronym(variant: str, all_variants) -> bool:
     searched UPPER-CASE and case-sensitively, so 'SAD' does not also count the
     ordinary word 'sad'. Single-variant terms (e.g. 'pica') are real words."""
     v = variant.strip()
-    return (v.lower() not in NOT_ACRONYMS and " " not in v and len(v) <= 6
+    return (v.lower() not in NOT_ACRONYMS and " " not in v and len(v) <= 6 and "'" not in v
             and any(" " in o.strip() for o in all_variants))
 
 
@@ -135,6 +135,38 @@ def candidate_windows(query: str):
                     continue
                 out.append(" ".join(w))
     return list(dict.fromkeys(out))
+
+
+PLURAL_WORDS = {
+    "disorders": "disorder", "syndromes": "syndrome", "disabilities": "disability", "defectives": "defective",
+    "handicaps": "handicap", "mothers": "mother", "conditions": "condition", "psychoses": "psychosis",
+    "episodes": "episode", "attacks": "attack", "phobias": "phobia", "dysfunctions": "dysfunction",
+    "diseases": "disease", "idiots": "idiot", "imbeciles": "imbecile", "morons": "moron", "retards": "retard",
+    "children": "child", "pupils": "pupil", "boys": "boy", "autisms": "autism", "autistics": "autistic",
+    "autists": "autist",
+}
+
+
+POSSESSIVE_NAMES = {"rett", "heller", "kanner", "asperger"}
+
+
+def _name_form(word: str) -> str:
+    """"rett's" and "retts" are the same name as "rett"."""
+    for suffix in ("'s", "\u2019s", "s"):
+        if word.endswith(suffix) and word[:-len(suffix)] in POSSESSIVE_NAMES:
+            return word[:-len(suffix)]
+    return word
+
+
+def merge_key(variant: str) -> str:
+    """Spellings of one phrase share a key: plural vs singular last word, and hyphen/space/apostrophe
+    differences ("learning disabilities" = "learning disability", "feeble-minded" = "feeble minded"),
+    and a possessive name ("Rett's syndrome" = "Rett syndrome" = "Retts syndrome").
+    Used to show and count them as one entry."""
+    words = [_name_form(w) for w in variant.lower().split()]
+    if words:
+        words[-1] = PLURAL_WORDS.get(words[-1], words[-1])
+    return re.sub(r"[^a-z0-9]", "", "".join(words))
 
 
 def token_count(query: str) -> int:
@@ -218,6 +250,8 @@ def main():
                     help="also search abbreviations that are everyday words (ED, AN, SAD, DID, ...)")
     ap.add_argument("--keep-overlaps", action="store_true",
                     help="do not subtract occurrences inside longer phrases (double counting)")
+    ap.add_argument("--variants-output", default=None,
+                    help="also write each searched phrase's own yearly values (term, query, year, frequency)")
     ap.add_argument("--no-truncate", action="store_true",
                     help="drop variants over 5 tokens instead of cutting them to 5")
     args = ap.parse_args()
@@ -307,8 +341,9 @@ def main():
             choice[(i, v)] = pick
 
     final, truncated, dropped = [], [], []      # final[i] = [(query, ci), ...]
+    final_src = []                              # final_src[i][(query, ci)] = the CSV variant it came from
     for i, (_, _, variants) in enumerate(terms):
-        used = []
+        used, src = [], {}
         for v in variants:
             if (not args.keep_ambiguous and not args.no_acronym_case
                     and v.strip().lower() in AMBIGUOUS_ABBREVIATIONS and is_acronym(v, variants)):
@@ -318,6 +353,7 @@ def main():
             if token_count(q) <= MAX_NGRAM:
                 if (q, c) not in used:
                     used.append((q, c))
+                    src[(q, c)] = v
                 continue
             if args.no_truncate:
                 dropped.append((v, "too long"))
@@ -329,8 +365,10 @@ def main():
                 dropped.append((v, f"window '{t}' duplicates another variant of the same term"))
             else:
                 used.append((t, ci))
+                src[(t, ci)] = v
                 truncated.append((v, t))
         final.append(used)
+        final_src.append(src)
 
     pairs = []                                  # every (query, case_insensitive) in use
     for used in final:
@@ -421,6 +459,32 @@ def main():
             for y, x in zip(years, total):
                 w.writerow([term, category, y, f"{x:.6e}", str(has_data).lower()])
 
+    if args.variants_output:
+        # Plural and spelling forms of one phrase are written as ONE variant (summed); its name is
+        # the first form listed in the terms file.
+        with open(args.variants_output, "w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f)
+            w.writerow(["term", "variant", "year", "frequency"])
+            for (term, _, variants), used, src in zip(terms, final, final_src):
+                name_of, rank_of = {}, {}
+                for n, v in enumerate(variants):
+                    last = v.lower().split()[-1] if v.split() else ""
+                    rank = (last in PLURAL_WORDS, n)        # a singular form names the entry
+                    k = merge_key(v)
+                    if k not in rank_of or rank < rank_of[k]:
+                        rank_of[k], name_of[k] = rank, v.strip()
+                merged = {}
+                for pr in used:
+                    series = exclusive.get(pr)
+                    if not series:
+                        continue
+                    label = name_of[merge_key(src[pr])]
+                    acc = merged.setdefault(label, [0.0] * len(years))
+                    for k, x in enumerate(series[:len(years)]):
+                        acc[k] += x
+                for label, acc in merged.items():
+                    for y, x in zip(years, acc):
+                        w.writerow([term, label, y, f"{x:.6e}"])
     if reduced:
         print(f"Overlap removed from {len(reduced)} phrases (largest first):", file=sys.stderr)
         for lost, q, bs, before, after in sorted(reduced, reverse=True)[:25]:

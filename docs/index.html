@@ -492,7 +492,7 @@ footer a { color: inherit; }
 
   // ---------- load
   readHash();
-  fetch('data.json').then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+  fetch('data.json?v=3af8bfb527').then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function (data) { M = buildModel(data); $('nterms').textContent = String(M.terms.size); lastW = $('chart').clientWidth; render(); })
     .catch(function (err) { $('chart').textContent = 'The data could not be loaded (' + err.message + '). Reload the page to try again.'; });
 })();

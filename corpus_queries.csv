@@ -1,0 +1,131 @@
+set,term,variant,query,case_sensitive
+autism,autism/autistic,autism,autism,0
+autism,autism/autistic,autisms,autisms,0
+autism,autism/autistic,autistic,autistic,0
+autism,autism/autistic,autistics,autistics,0
+autism,autism/autistic,autist,autist,0
+autism,autism/autistic,autists,autists,0
+autism,autism/autistic,autistically,autistically,0
+autism,asperger,asperger,asperger,0
+autism,asperger,aspergers,aspergers,0
+autism,spectrum disorder,autism spectrum,autism spectrum,0
+autism,spectrum disorder,autistic spectrum,autistic spectrum,0
+autism,spectrum disorder,on the spectrum,on the spectrum,0
+autism,intellectual disability,idiot,idiot,0
+autism,intellectual disability,imbecile,imbecile,0
+autism,intellectual disability,moron,moron,0
+autism,intellectual disability,feeble-minded,feeble - minded,0
+autism,intellectual disability,feebleminded,feebleminded,0
+autism,intellectual disability,feeble minded,feeble minded,0
+autism,intellectual disability,mental defective,mental defective,0
+autism,intellectual disability,idiocy,idiocy,0
+autism,intellectual disability,imbecility,imbecility,0
+autism,intellectual disability,feeble-mindedness,feeble - mindedness,0
+autism,intellectual disability,feeble mindedness,feeble mindedness,0
+autism,intellectual disability,feeblemindedness,feeblemindedness,0
+autism,intellectual disability,mentally defective,mentally defective,0
+autism,intellectual disability,retard,retard,0
+autism,intellectual disability,retarded,retarded,0
+autism,intellectual disability,mental retardation,mental retardation,0
+autism,intellectual disability,subnormal,subnormal,0
+autism,intellectual disability,backward child,backward child,0
+autism,intellectual disability,backward children,backward children,0
+autism,intellectual disability,backward pupils,backward pupils,0
+autism,intellectual disability,backward pupil,backward pupil,0
+autism,intellectual disability,mentally backward,mentally backward,0
+autism,intellectual disability,backward boy,backward boy,0
+autism,intellectual disability,backward boys,backward boys,0
+autism,intellectual disability,mental handicap,mental handicap,0
+autism,intellectual disability,mentally handicapped,mentally handicapped,0
+autism,intellectual disability,intellectual disability,intellectual disability,0
+autism,intellectual disability,intellectually disabled,intellectually disabled,0
+autism,intellectual disability,idiots,idiots,0
+autism,intellectual disability,imbeciles,imbeciles,0
+autism,intellectual disability,morons,morons,0
+autism,intellectual disability,mental defectives,mental defectives,0
+autism,intellectual disability,retards,retards,0
+autism,intellectual disability,mental handicaps,mental handicaps,0
+autism,intellectual disability,intellectual disabilities,intellectual disabilities,0
+autism,dementia,dementia praecox,dementia praecox,0
+autism,dementia,dementia infantilis,dementia infantilis,0
+autism,dementia,heller's syndrome,heller 's syndrome,0
+autism,dementia,heller syndrome,heller syndrome,0
+autism,dementia,childhood disintegrative disorder,childhood disintegrative disorder,0
+autism,dementia,heller's syndromes,heller 's syndromes,0
+autism,dementia,childhood disintegrative disorders,childhood disintegrative disorders,0
+autism,dementia,heller syndromes,heller syndromes,0
+autism,schizoid psychopathy in children,schizoid psychopathy in children,schizoid psychopathy in children,0
+autism,early infantile autism,early infantile autism,early infantile autism,0
+autism,early infantile autism,kanner's syndrome,kanner 's syndrome,0
+autism,early infantile autism,kanner syndrome,kanner syndrome,0
+autism,early infantile autism,kanner's syndromes,kanner 's syndromes,0
+autism,early infantile autism,kanner syndromes,kanner syndromes,0
+autism,autistic psychopathy,autistic psychopathy,autistic psychopathy,0
+autism,childhood schizophrenia,childhood schizophrenia,childhood schizophrenia,0
+autism,childhood schizophrenia,schizophrenic reaction childhood type,schizophrenic reaction childhood type,0
+autism,childhood schizophrenia,schizophrenia childhood type,schizophrenia childhood type,0
+autism,symbiotic infantile psychosis,symbiotic infantile psychosis,symbiotic infantile psychosis,0
+autism,symbiotic infantile psychosis,infantile psychosis,infantile psychosis,0
+autism,symbiotic infantile psychosis,childhood psychosis,childhood psychosis,0
+autism,symbiotic infantile psychosis,symbiotic infantile psychoses,symbiotic infantile psychoses,0
+autism,symbiotic infantile psychosis,infantile psychoses,infantile psychoses,0
+autism,symbiotic infantile psychosis,childhood psychoses,childhood psychoses,0
+autism,minimal brain dysfunction,minimal brain dysfunction,minimal brain dysfunction,0
+autism,minimal brain dysfunction,minimal brain damage,minimal brain damage,0
+autism,minimal brain dysfunction,minimal cerebral dysfunction,minimal cerebral dysfunction,0
+autism,minimal brain dysfunction,minimal brain dysfunctions,minimal brain dysfunctions,0
+autism,minimal brain dysfunction,minimal cerebral dysfunctions,minimal cerebral dysfunctions,0
+autism,infantile autism,infantile autism,infantile autism,0
+autism,infantile autism,childhood onset pdd,childhood onset pdd,0
+autism,infantile autism,atypical pdd,atypical pdd,0
+autism,infantile autism,childhood onset pervasive developmental disorder,childhood onset pervasive developmental disorder,0
+autism,infantile autism,atypical pervasive developmental disorder,atypical pervasive developmental disorder,0
+autism,infantile autism,childhood onset pervasive developmental disorders,childhood onset pervasive developmental disorders,0
+autism,infantile autism,atypical pervasive developmental disorders,atypical pervasive developmental disorders,0
+autism,autistic disorder,autistic disorder,autistic disorder,0
+autism,autistic disorder,pervasive developmental disorder,pervasive developmental disorder,0
+autism,autistic disorder,autistic disorders,autistic disorders,0
+autism,autistic disorder,pervasive developmental disorders,pervasive developmental disorders,0
+autism,rett's disorder,rett syndrome,rett syndrome,0
+autism,rett's disorder,rett's syndrome,rett 's syndrome,0
+autism,rett's disorder,retts syndrome,retts syndrome,0
+autism,rett's disorder,rett disorder,rett disorder,0
+autism,rett's disorder,rett's disorder,rett 's disorder,0
+autism,rett's disorder,retts disorder,retts disorder,0
+autism,rett's disorder,rett disease,rett disease,0
+autism,rett's disorder,rett's disease,rett 's disease,0
+autism,rett's disorder,retts disease,retts disease,0
+autism,rett's disorder,rett syndromes,rett syndromes,0
+autism,rett's disorder,rett's syndromes,rett 's syndromes,0
+autism,rett's disorder,retts syndromes,retts syndromes,0
+autism,rett's disorder,rett disorders,rett disorders,0
+autism,rett's disorder,rett's disorders,rett 's disorders,0
+autism,rett's disorder,retts disorders,retts disorders,0
+autism,rett's disorder,rett diseases,rett diseases,0
+autism,rett's disorder,rett's diseases,rett 's diseases,0
+autism,rett's disorder,retts diseases,retts diseases,0
+autism,atypical autism,atypical autism,atypical autism,0
+autism,atypical autism,childhood autism,childhood autism,0
+autism,semantic-pragmatic disorder,semantic-pragmatic disorder,semantic - pragmatic disorder,0
+autism,semantic-pragmatic disorder,semantic-pragmatic disorders,semantic - pragmatic disorders,0
+autism,semantic-pragmatic disorder,semantic pragmatic disorder,semantic pragmatic disorder,0
+autism,semantic-pragmatic disorder,semantic pragmatic disorders,semantic pragmatic disorders,0
+autism,multiple complex developmental disorder,multiple complex developmental disorder,multiple complex developmental disorder,0
+autism,multiple complex developmental disorder,multiplex developmental disorder,multiplex developmental disorder,0
+autism,multiple complex developmental disorder,borderline syndrome of childhood,borderline syndrome of childhood,0
+autism,multiple complex developmental disorder,childhood borderline syndrome,childhood borderline syndrome,0
+autism,multiple complex developmental disorder,borderline pathology of childhood,borderline pathology of childhood,0
+autism,multiple complex developmental disorder,multidimensionally impaired,multidimensionally impaired,0
+autism,multiple complex developmental disorder,multiple complex developmental disorders,multiple complex developmental disorders,0
+autism,multiple complex developmental disorder,multiplex developmental disorders,multiplex developmental disorders,0
+autism,multiple complex developmental disorder,childhood borderline syndromes,childhood borderline syndromes,0
+autism,developmental disability,developmental disability,developmental disability,0
+autism,developmental disability,learning disability,learning disability,0
+autism,developmental disability,developmentally disabled,developmentally disabled,0
+autism,developmental disability,special needs,special needs,0
+autism,developmental disability,developmental disabilities,developmental disabilities,0
+autism,developmental disability,learning disabilities,learning disabilities,0
+autism,refrigerator mother,refrigerator mother,refrigerator mother,0
+autism,refrigerator mother,emotional deprivation,emotional deprivation,0
+autism,refrigerator mother,parental coldness,parental coldness,0
+autism,refrigerator mother,refrigerator mothers,refrigerator mothers,0
