@@ -50,7 +50,8 @@ button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-v
 .card { background: var(--panel); border: 1px solid var(--border); border-radius: var(--r); padding: 18px; display: grid; gap: 10px; min-width: 0; }
 .note { color: var(--fg2); font-size: .8rem; }
 .scroller { overflow-x: auto; min-width: 0; padding-bottom: 4px; }
-.grid { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(8.5rem, 1fr); gap: 10px; min-width: min-content; }
+.grid { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(11rem, 1fr); gap: 10px; min-width: min-content; }
+.col { min-width: 0; }
 .col h3 { font-size: .8rem; font-weight: 600; color: var(--fg2); margin: 0 0 6px; font-variant-numeric: tabular-nums; border-bottom: 1px solid var(--border); padding-bottom: 4px; }
 .col ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
 .w { position: relative; display: flex; justify-content: space-between; gap: 6px; width: 100%; font: inherit; font-size: .85rem; text-align: left;
@@ -71,7 +72,7 @@ details summary { cursor: pointer; }
 .method p { max-width: 80ch; }
 footer { color: var(--fg2); font-size: .8rem; max-width: 80ch; }
 [hidden] { display: none !important; }
-@media (max-width: 520px) { .card { padding: 14px; } .grid { grid-auto-columns: 8rem; } }
+@media (max-width: 520px) { .card { padding: 14px; } .grid { grid-auto-columns: 10rem; } }
 </style>
 </head>
 <body>
