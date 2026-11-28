@@ -9,6 +9,13 @@ top 10 completions for that decade:
     left_noun   "*_NOUN <variant>"     previous word, tagged noun    ("childhood autism")
     right_adj   "<variant> *_ADJ"      next word, tagged adjective
     left_adj    "*_ADJ <variant>"      previous word, tagged adjective ("infantile autism")
+and eight bridged ones, where the wildcard is one fixed word away (one wildcard per query is all
+the viewer allows), queried only in decades where the bridge phrase itself occurs:
+    left_with_any "* with <variant>"   left_with_noun "*_NOUN with <variant>"  ("children with autism")
+    left_of_any   "* of <variant>"     left_of_noun   "*_NOUN of <variant>"    ("diagnosis of autism")
+    left_from_any "* from <variant>"   left_to_any    "* to <variant>"
+    right_in_noun "<variant> in *_NOUN"   right_and_noun "<variant> and *_NOUN"
+Bridged patterns need the variant to have at most 3 tokens.
 
 Wildcard queries are always case-sensitive, so each variant is searched in two casings, lower case
 and first letter capitalised ("asperger" / "Asperger", "autism is" / "Autism is"). The completions
@@ -51,6 +58,15 @@ PATTERNS = {
     "right_noun": "{} *_NOUN", "left_noun": "*_NOUN {}",
     "right_adj": "{} *_ADJ", "left_adj": "*_ADJ {}",
 }
+# Bridged patterns: the wildcard sits one fixed word away from the variant (the viewer allows only one
+# wildcard per query). Each is queried only in decades where its bridge phrase ("with autism") occurs.
+BRIDGED = {
+    "left_with_any": ("* with {}", "with {}"), "left_with_noun": ("*_NOUN with {}", "with {}"),
+    "left_of_any": ("* of {}", "of {}"), "left_of_noun": ("*_NOUN of {}", "of {}"),
+    "left_from_any": ("* from {}", "from {}"), "left_to_any": ("* to {}", "to {}"),
+    "right_in_noun": ("{} in *_NOUN", "{} in"), "right_and_noun": ("{} and *_NOUN", "{} and"),
+}
+GATE_BATCH = 50
 
 
 def decades():
@@ -124,7 +140,21 @@ def main():
                 return sp, s
         return q, None
 
-    # ---- 2. wildcard queries per (form, decade) where the form has data ----
+    # ---- 1b. yearly series of each bridge phrase, for the forms that have data and room for it ----
+    gates = sorted({g.format(sp) for qs in forms.values() for q in qs for sp, s in [series(q)]
+                    if s and len(sp.split()) <= 3 for _, g in BRIDGED.values()}
+                   - {k[5:] for k in cache if k.startswith("gate|")})
+    for i in range(0, len(gates), GATE_BATCH):
+        batch = gates[i:i + GATE_BATCH]
+        data = fetch(",".join("[" + q + "]" for q in batch), START, END)
+        got = {r["ngram"].replace(" ", ""): r["timeseries"] for r in data}
+        for q in batch:
+            cache["gate|" + q] = got.get(q.replace(" ", ""))
+        save()
+        print(f"bridge phrases {i + len(batch)}/{len(gates)}", file=sys.stderr)
+        time.sleep(PAUSE)
+
+    # ---- 2. wildcard queries per (form, decade) where the form (or bridge phrase) has data ----
     jobs = []                                    # (decade, pattern, query)
     for qs in forms.values():
         for q in qs:
@@ -135,6 +165,12 @@ def main():
                 if any(s[d0 - START:d1 - START + 1]):
                     for p in PATTERNS.values():
                         jobs.append((d0, d1, p.format(sp)))
+                    if len(sp.split()) > 3:
+                        continue
+                    for p, g in BRIDGED.values():
+                        gs = cache.get("gate|" + g.format(sp))
+                        if gs and any(gs[d0 - START:d1 - START + 1]):
+                            jobs.append((d0, d1, p.format(sp)))
     todo = [j for j in dict.fromkeys(jobs) if f"wild|{j[0]}|{j[2]}" not in cache]
     print(f"{len(jobs)} wildcard queries, {len(todo)} to fetch", file=sys.stderr)
     by_decade = {}
@@ -166,7 +202,7 @@ def main():
             base = sum(sum(s[d0 - START:d1 - START + 1]) for _, s in found if s)
             if not base:
                 continue
-            for name, p in PATTERNS.items():
+            for name, p in list(PATTERNS.items()) + [(n, pg[0]) for n, pg in BRIDGED.items()]:
                 tot = {}
                 for sp, s in found:
                     if not s:
